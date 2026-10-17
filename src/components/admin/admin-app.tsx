@@ -322,6 +322,7 @@ function MatchEditor({
   );
   const [events, setEvents] = useState<MatchEvent[]>(match.events ?? []);
 
+  // Reset uniquement au changement de match (pas à chaque save, sinon ça écrase la saisie)
   useEffect(() => {
     setHomeScore(String(match.homeScore ?? 0));
     setAwayScore(String(match.awayScore ?? 0));
@@ -329,7 +330,10 @@ function MatchEditor({
       match.status === "live" || match.status === "finished" ? match.status : "scheduled"
     );
     setEvents(match.events ?? []);
-  }, [match.id, match.homeScore, match.awayScore, match.status, match.events, live]);
+    setEvTeam(match.homeTeamId);
+    setEvPlayer("");
+    setEvAssist("");
+  }, [match.id]);
 
   const [evType, setEvType] = useState<MatchEventType>("goal");
   const [evTeam, setEvTeam] = useState(home.id);
@@ -378,13 +382,35 @@ function MatchEditor({
     const scored = scoreFromGoals(events, home.id, away.id);
     setHomeScore(String(scored.homeScore));
     setAwayScore(String(scored.awayScore));
+    if (status === "scheduled") setStatus("finished");
   }
 
   function save() {
+    const hs = Math.max(0, Number(homeScore) || 0);
+    const as = Math.max(0, Number(awayScore) || 0);
+    const hasEvents = events.length > 0;
+    // Si on encode un résultat, on force au moins "finished" (sauf live explicite)
+    const nextStatus =
+      status === "live"
+        ? "live"
+        : status === "finished" || hasEvents || hs > 0 || as > 0 || status === "scheduled"
+          ? // scheduled + saisie de score → terminé
+            status === "live"
+              ? "live"
+              : "finished"
+          : status;
+
+    const finalStatus: "scheduled" | "live" | "finished" =
+      status === "live" ? "live" : "finished";
+
+    setStatus(finalStatus);
+    setHomeScore(String(hs));
+    setAwayScore(String(as));
+
     onSave({
-      status,
-      homeScore: status === "scheduled" ? null : Number(homeScore) || 0,
-      awayScore: status === "scheduled" ? null : Number(awayScore) || 0,
+      status: finalStatus,
+      homeScore: hs,
+      awayScore: as,
       events,
     });
   }
