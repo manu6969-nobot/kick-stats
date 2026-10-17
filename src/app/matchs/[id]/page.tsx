@@ -4,14 +4,16 @@ import { StatBar } from "@/components/stat-bar";
 import { TeamBadge } from "@/components/team-badge";
 import { Badge } from "@/components/ui/badge";
 import { matches } from "@/data/championship";
+import { eventLabel, getMergedMatch, summarizeCards } from "@/lib/live-results";
 import {
   formatLongDate,
-  getMatch,
   getPlayer,
   getTeam,
   playerDisplayName,
 } from "@/lib/stats";
 import type { Metadata } from "next";
+
+export const dynamic = "force-dynamic";
 
 export function generateStaticParams() {
   return matches.map((m) => ({ id: m.id }));
@@ -23,7 +25,7 @@ export async function generateMetadata({
   params: Promise<{ id: string }>;
 }): Promise<Metadata> {
   const { id } = await params;
-  const match = getMatch(id);
+  const match = getMergedMatch(id);
   if (!match) return { title: "Match" };
   const home = getTeam(match.homeTeamId);
   const away = getTeam(match.awayTeamId);
@@ -32,26 +34,19 @@ export async function generateMetadata({
   };
 }
 
-const eventLabels: Record<string, string> = {
-  goal: "But",
-  own_goal: "CSC",
-  yellow: "Carton jaune",
-  red: "Carton rouge",
-  sub: "Remplacement",
-};
-
 export default async function MatchPage({
   params,
 }: {
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const match = getMatch(id);
+  const match = getMergedMatch(id);
   if (!match) notFound();
 
   const home = getTeam(match.homeTeamId)!;
   const away = getTeam(match.awayTeamId)!;
   const played = match.status === "finished";
+  const cards = summarizeCards(match.events);
 
   return (
     <div className="space-y-10">
@@ -85,11 +80,11 @@ export default async function MatchPage({
             </Link>
 
             <div className="text-center">
-              {played ? (
+              {played || match.status === "live" ? (
                 <p className="animate-score-pop font-display text-5xl font-extrabold tabular-nums tracking-wide sm:text-6xl">
-                  {match.homeScore}
+                  {match.homeScore ?? 0}
                   <span className="mx-2 text-score">–</span>
-                  {match.awayScore}
+                  {match.awayScore ?? 0}
                 </p>
               ) : (
                 <p className="font-display text-3xl font-bold text-white/70">vs</p>
@@ -125,7 +120,7 @@ export default async function MatchPage({
               const isHome = event.teamId === home.id;
               return (
                 <li
-                  key={`${event.minute}-${index}`}
+                  key={event.id ?? `${event.minute}-${index}`}
                   className="flex items-start gap-3 border-b border-border/50 py-2 last:border-0"
                 >
                   <span className="w-10 shrink-0 font-display text-lg font-bold tabular-nums text-pitch">
@@ -133,7 +128,7 @@ export default async function MatchPage({
                   </span>
                   <div className={`flex-1 ${isHome ? "" : "text-right"}`}>
                     <p className="font-medium">
-                      {eventLabels[event.type] ?? event.type}
+                      {eventLabel(event.type)}
                       {player && (
                         <>
                           {" · "}
@@ -154,11 +149,27 @@ export default async function MatchPage({
                         </Link>
                       </p>
                     )}
+                    {event.type === "second_yellow" && (
+                      <p className="text-xs text-loss">Expulsion pour 2e carton jaune</p>
+                    )}
+                    {event.type === "red" && (
+                      <p className="text-xs text-loss">Expulsion — rouge direct</p>
+                    )}
                   </div>
                 </li>
               );
             })}
           </ol>
+          {(cards.yellowCards > 0 || cards.redCards > 0) && (
+            <p className="text-sm text-muted-foreground">
+              Cartons : {cards.yellowCards} jaune{cards.yellowCards > 1 ? "s" : ""} ·{" "}
+              {cards.redCards} rouge{cards.redCards > 1 ? "s" : ""}
+              {cards.redFromSecondYellow > 0 &&
+                ` (dont ${cards.redFromSecondYellow} via 2e jaune)`}
+              {cards.redDirect > 0 &&
+                ` (dont ${cards.redDirect} direct${cards.redDirect > 1 ? "s" : ""})`}
+            </p>
+          )}
         </section>
       )}
 
@@ -189,10 +200,13 @@ export default async function MatchPage({
         </section>
       )}
 
-      {!played && (
+      {!played && match.status !== "live" && (
         <p className="rounded-xl border border-dashed border-border bg-muted/40 px-4 py-6 text-center text-muted-foreground">
-          Match à venir — les stats et le score apparaîtront une fois le résultat saisi
-          dans <code className="text-foreground">src/data/championship.ts</code>.
+          Match à venir — encodez le résultat dans{" "}
+          <Link href="/admin" className="underline">
+            l&apos;admin
+          </Link>
+          .
         </p>
       )}
     </div>

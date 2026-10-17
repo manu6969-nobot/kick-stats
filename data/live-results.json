@@ -1,0 +1,389 @@
+{
+  "updatedAt": "2026-10-17T15:58:22.413904Z",
+  "matches": {
+    "m1": {
+      "status": "finished",
+      "homeScore": 8,
+      "awayScore": 1,
+      "events": []
+    },
+    "m2": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 1,
+      "events": []
+    },
+    "m3": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 1,
+      "events": []
+    },
+    "m4": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 1,
+      "events": []
+    },
+    "m5": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 0,
+      "events": []
+    },
+    "m6": {
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 1,
+      "events": []
+    },
+    "m7": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 2,
+      "events": []
+    },
+    "m8": {
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 1,
+      "events": []
+    },
+    "m9": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 0,
+      "events": []
+    },
+    "m10": {
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 4,
+      "events": []
+    },
+    "m11": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 2,
+      "events": []
+    },
+    "m12": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 0,
+      "events": []
+    },
+    "m13": {
+      "status": "finished",
+      "homeScore": 4,
+      "awayScore": 1,
+      "events": []
+    },
+    "m14": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 2,
+      "events": []
+    },
+    "m15": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 1,
+      "events": []
+    },
+    "m16": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 2,
+      "events": []
+    },
+    "m17": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 3,
+      "events": []
+    },
+    "m18": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 3,
+      "events": []
+    },
+    "m19": {
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 0,
+      "events": []
+    },
+    "m20": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 3,
+      "events": []
+    },
+    "m21": {
+      "status": "finished",
+      "homeScore": 6,
+      "awayScore": 1,
+      "events": []
+    },
+    "m22": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 0,
+      "events": []
+    },
+    "m23": {
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 0,
+      "events": []
+    },
+    "m24": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 1,
+      "events": []
+    },
+    "m25": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 1,
+      "events": []
+    },
+    "m26": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 1,
+      "events": []
+    },
+    "m27": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 2,
+      "events": []
+    },
+    "m28": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 0,
+      "events": []
+    },
+    "m29": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 0,
+      "events": []
+    },
+    "m30": {
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 0,
+      "events": []
+    },
+    "m31": {
+      "status": "finished",
+      "homeScore": 5,
+      "awayScore": 1,
+      "events": []
+    },
+    "m32": {
+      "status": "finished",
+      "homeScore": 4,
+      "awayScore": 2,
+      "events": []
+    },
+    "m33": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 3,
+      "events": []
+    },
+    "m34": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 4,
+      "events": []
+    },
+    "m35": {
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 0,
+      "events": []
+    },
+    "m36": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 3,
+      "events": []
+    },
+    "m37": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 1,
+      "events": []
+    },
+    "m38": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 1,
+      "events": []
+    },
+    "m39": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 3,
+      "events": []
+    },
+    "m40": {
+      "status": "finished",
+      "homeScore": 8,
+      "awayScore": 1,
+      "events": []
+    },
+    "m41": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 3,
+      "events": []
+    },
+    "m42": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 2,
+      "events": []
+    },
+    "m43": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 0,
+      "events": []
+    },
+    "m44": {
+      "status": "finished",
+      "homeScore": 5,
+      "awayScore": 1,
+      "events": []
+    },
+    "m45": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 1,
+      "events": []
+    },
+    "m46": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 5,
+      "events": []
+    },
+    "m47": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 3,
+      "events": []
+    },
+    "m48": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 3,
+      "events": []
+    },
+    "m49": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 1,
+      "events": []
+    },
+    "m50": {
+      "status": "finished",
+      "homeScore": 4,
+      "awayScore": 1,
+      "events": []
+    },
+    "m51": {
+      "status": "finished",
+      "homeScore": 4,
+      "awayScore": 1,
+      "events": []
+    },
+    "m52": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 3,
+      "events": []
+    },
+    "m53": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 3,
+      "events": []
+    },
+    "m54": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 2,
+      "events": []
+    },
+    "m55": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 4,
+      "events": []
+    },
+    "m56": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 1,
+      "events": []
+    },
+    "m57": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 1,
+      "events": []
+    },
+    "m58": {
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 3,
+      "events": []
+    },
+    "m59": {
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 2,
+      "events": []
+    },
+    "m60": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 1,
+      "events": []
+    },
+    "m61": {
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 2,
+      "events": []
+    },
+    "m62": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 1,
+      "events": []
+    },
+    "m63": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 5,
+      "events": []
+    },
+    "m64": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 1,
+      "events": []
+    }
+  }
+}

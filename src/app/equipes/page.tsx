@@ -2,6 +2,7 @@ import Link from "next/link";
 import { PageHeader } from "@/components/page-header";
 import { TeamBadge } from "@/components/team-badge";
 import { teams } from "@/data/championship";
+import { getMergedMatches } from "@/lib/live-results";
 import { computeStandings, getTeamPlayers } from "@/lib/stats";
 import type { Metadata } from "next";
 
@@ -9,8 +10,10 @@ export const metadata: Metadata = {
   title: "Équipes",
 };
 
+export const dynamic = "force-dynamic";
+
 export default function EquipesPage() {
-  const standings = computeStandings();
+  const standings = computeStandings(getMergedMatches());
   const rankByTeam = new Map(standings.map((r, i) => [r.teamId, i + 1]));
 
   return (

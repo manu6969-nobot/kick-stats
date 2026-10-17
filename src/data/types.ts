@@ -34,13 +34,35 @@ export interface Player {
   age: number;
 }
 
+export type MatchEventType =
+  | "goal"
+  | "own_goal"
+  | "yellow"
+  | "second_yellow"
+  | "red"
+  | "sub";
+
 export interface MatchEvent {
+  id?: string;
   minute: number;
-  type: "goal" | "own_goal" | "yellow" | "red" | "sub";
+  type: MatchEventType;
   teamId: TeamId;
   playerId?: PlayerId;
   assistId?: PlayerId;
   detail?: string;
+}
+
+/** Résultat saisi (admin) — superpose le calendrier de base. */
+export interface LiveMatchResult {
+  status: MatchStatus;
+  homeScore: number | null;
+  awayScore: number | null;
+  events: MatchEvent[];
+}
+
+export interface LiveResultsFile {
+  updatedAt: string;
+  matches: Record<MatchId, LiveMatchResult>;
 }
 
 export interface MatchStats {

@@ -1,4 +1,4 @@
-import { matches, playerStats, players, teams } from "@/data/championship";
+import { matches as baseMatches, playerStats, players, teams } from "@/data/championship";
 import type {
   Match,
   Player,
@@ -7,6 +7,7 @@ import type {
   Team,
   TeamId,
 } from "@/data/types";
+import { computePlayerStatsFromMatches } from "@/lib/live-results-shared";
 
 export function getTeam(id: TeamId): Team | undefined {
   return teams.find((t) => t.id === id);
@@ -16,8 +17,8 @@ export function getPlayer(id: string): Player | undefined {
   return players.find((p) => p.id === id);
 }
 
-export function getMatch(id: string): Match | undefined {
-  return matches.find((m) => m.id === id);
+export function getBaseMatch(id: string): Match | undefined {
+  return baseMatches.find((m) => m.id === id);
 }
 
 export function getTeamPlayers(teamId: TeamId): Player[] {
@@ -26,8 +27,32 @@ export function getTeamPlayers(teamId: TeamId): Player[] {
     .sort((a, b) => a.number - b.number);
 }
 
-export function getPlayerStats(playerId: string): PlayerSeasonStats | undefined {
+export function getManualPlayerStats(playerId: string): PlayerSeasonStats | undefined {
   return playerStats.find((s) => s.playerId === playerId);
+}
+
+/** Stats manuelles + dérivées des événements de match. */
+export function getPlayerStats(
+  playerId: string,
+  allMatches?: Match[]
+): PlayerSeasonStats | undefined {
+  const manual = getManualPlayerStats(playerId);
+  if (!allMatches?.length) return manual;
+  const derived = computePlayerStatsFromMatches(allMatches).find(
+    (s) => s.playerId === playerId
+  );
+  if (!manual && !derived) return undefined;
+  if (!manual) return derived;
+  if (!derived) return manual;
+  return {
+    playerId,
+    appearances: Math.max(manual.appearances, derived.appearances),
+    goals: Math.max(manual.goals, derived.goals),
+    assists: Math.max(manual.assists, derived.assists),
+    yellowCards: Math.max(manual.yellowCards, derived.yellowCards),
+    redCards: Math.max(manual.redCards, derived.redCards),
+    minutes: Math.max(manual.minutes, derived.minutes),
+  };
 }
 
 export function formatDate(iso: string): string {
@@ -58,7 +83,7 @@ function emptyHomeAway() {
   };
 }
 
-export function computeStandings(): StandingRow[] {
+export function computeStandings(allMatches: Match[] = baseMatches): StandingRow[] {
   const map = new Map<TeamId, StandingRow>();
 
   for (const team of teams) {
@@ -78,8 +103,10 @@ export function computeStandings(): StandingRow[] {
     });
   }
 
-  const finished = matches
-    .filter((m) => m.status === "finished" && m.homeScore != null && m.awayScore != null)
+  const finished = allMatches
+    .filter(
+      (m) => m.status === "finished" && m.homeScore != null && m.awayScore != null
+    )
     .sort((a, b) => a.date.localeCompare(b.date) || a.kickoff.localeCompare(b.kickoff));
 
   for (const match of finished) {
@@ -141,38 +168,60 @@ export function computeStandings(): StandingRow[] {
   });
 }
 
-export function getMatchdays(): number[] {
-  return [...new Set(matches.map((m) => m.matchday))].sort((a, b) => a - b);
+export function getMatchdays(allMatches: Match[] = baseMatches): number[] {
+  return [...new Set(allMatches.map((m) => m.matchday))].sort((a, b) => a - b);
 }
 
-export function getMatchesByMatchday(matchday: number): Match[] {
-  return matches
+export function getMatchesByMatchday(
+  matchday: number,
+  allMatches: Match[] = baseMatches
+): Match[] {
+  return allMatches
     .filter((m) => m.matchday === matchday)
     .sort((a, b) => a.date.localeCompare(b.date) || a.kickoff.localeCompare(b.kickoff));
 }
 
-export function getLatestResults(limit = 4): Match[] {
-  return matches
+export function getLatestResults(limit = 4, allMatches: Match[] = baseMatches): Match[] {
+  return allMatches
     .filter((m) => m.status === "finished")
     .sort((a, b) => b.date.localeCompare(a.date) || b.kickoff.localeCompare(a.kickoff))
     .slice(0, limit);
 }
 
-export function getUpcomingFixtures(limit = 4): Match[] {
-  return matches
+export function getUpcomingFixtures(limit = 4, allMatches: Match[] = baseMatches): Match[] {
+  return allMatches
     .filter((m) => m.status === "scheduled" || m.status === "live")
     .sort((a, b) => a.date.localeCompare(b.date) || a.kickoff.localeCompare(b.kickoff))
     .slice(0, limit);
 }
 
-export function getTeamMatches(teamId: TeamId): Match[] {
-  return matches
+export function getTeamMatches(teamId: TeamId, allMatches: Match[] = baseMatches): Match[] {
+  return allMatches
     .filter((m) => m.homeTeamId === teamId || m.awayTeamId === teamId)
     .sort((a, b) => a.date.localeCompare(b.date));
 }
 
-export function getTopScorers(limit = 10) {
-  return playerStats
+export function getTopScorers(limit = 10, allMatches?: Match[]) {
+  const derived = allMatches ? computePlayerStatsFromMatches(allMatches) : [];
+  const byId = new Map<string, PlayerSeasonStats>();
+  for (const s of playerStats) byId.set(s.playerId, { ...s });
+  for (const s of derived) {
+    const cur = byId.get(s.playerId);
+    if (!cur) byId.set(s.playerId, { ...s });
+    else {
+      byId.set(s.playerId, {
+        playerId: s.playerId,
+        appearances: Math.max(cur.appearances, s.appearances),
+        goals: Math.max(cur.goals, s.goals),
+        assists: Math.max(cur.assists, s.assists),
+        yellowCards: Math.max(cur.yellowCards, s.yellowCards),
+        redCards: Math.max(cur.redCards, s.redCards),
+        minutes: Math.max(cur.minutes, s.minutes),
+      });
+    }
+  }
+
+  return [...byId.values()]
     .map((s) => {
       const player = getPlayer(s.playerId);
       if (!player) return null;
@@ -188,16 +237,9 @@ export function getTopScorers(limit = 10) {
     .slice(0, limit);
 }
 
-export function getTopAssists(limit = 10) {
-  return playerStats
-    .map((s) => {
-      const player = getPlayer(s.playerId);
-      if (!player) return null;
-      const team = getTeam(player.teamId);
-      if (!team) return null;
-      return { stats: s, player, team };
-    })
-    .filter((x): x is NonNullable<typeof x> => x != null && x.stats.assists > 0)
+export function getTopAssists(limit = 10, allMatches?: Match[]) {
+  return getTopScorers(1000, allMatches)
+    .filter((x) => x.stats.assists > 0)
     .sort((a, b) => {
       if (b.stats.assists !== a.stats.assists) return b.stats.assists - a.stats.assists;
       return b.stats.goals - a.stats.goals;
@@ -213,3 +255,5 @@ export function positionLabel(position: Player["position"]): string {
   const labels = { GB: "Gardien", DEF: "Défenseur", MIL: "Milieu", ATT: "Attaquant" };
   return labels[position];
 }
+
+export { baseMatches };

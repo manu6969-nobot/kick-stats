@@ -4,7 +4,8 @@ import { MatchRow } from "@/components/match-row";
 import { StandingsTable } from "@/components/standings-table";
 import { TeamBadge } from "@/components/team-badge";
 import { buttonVariants } from "@/components/ui/button";
-import { matches, meta, players, teams } from "@/data/championship";
+import { meta, players, teams } from "@/data/championship";
+import { getMergedMatches } from "@/lib/live-results";
 import {
   computeStandings,
   getLatestResults,
@@ -15,12 +16,15 @@ import {
 } from "@/lib/stats";
 import { cn } from "@/lib/utils";
 
+export const dynamic = "force-dynamic";
+
 export default function HomePage() {
-  const standings = computeStandings();
-  const results = getLatestResults(4);
-  const upcoming = getUpcomingFixtures(8);
-  const scorers = getTopScorers(5);
-  const matchdayCount = getMatchdays().length;
+  const allMatches = getMergedMatches();
+  const standings = computeStandings(allMatches);
+  const results = getLatestResults(4, allMatches);
+  const upcoming = getUpcomingFixtures(8, allMatches);
+  const scorers = getTopScorers(5, allMatches);
+  const matchdayCount = getMatchdays(allMatches).length;
 
   return (
     <div className="space-y-12">
@@ -42,7 +46,7 @@ export default function HomePage() {
             </h1>
             <p className="mt-4 max-w-md text-base text-white/75 sm:text-lg">
               {meta.tagline}. {teams.length} équipes · {matchdayCount} journées ·{" "}
-              {matches.length} matchs au calendrier.
+              {allMatches.length} matchs au calendrier.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -81,7 +85,7 @@ export default function HomePage() {
             href: "/calendrier",
             icon: CalendarDays,
             title: "Calendrier",
-            text: `${matchdayCount} journées · ${matches.length} rencontres officielles`,
+            text: `${matchdayCount} journées · ${allMatches.length} rencontres officielles`,
           },
           {
             href: "/joueurs",
@@ -129,37 +133,42 @@ export default function HomePage() {
               Tous les joueurs
             </Link>
           </div>
-          {scorers.length === 0 ? (
+          {scorers.length === 0 || scorers.every((s) => s.stats.goals === 0) ? (
             <p className="rounded-xl border border-dashed border-border bg-card px-4 py-8 text-center text-sm text-muted-foreground">
-              Aucun buteur pour l&apos;instant. Ajoutez joueurs et stats dans{" "}
-              <code className="text-foreground">src/data/championship.ts</code>.
+              Les buteurs apparaîtront dès l&apos;encodage des buts dans{" "}
+              <Link href="/admin" className="underline">
+                l&apos;admin
+              </Link>
+              .
             </p>
           ) : (
             <ol className="overflow-hidden rounded-xl border border-border/80 bg-card shadow-sm">
-              {scorers.map(({ player, team, stats }, index) => (
-                <li key={player.id}>
-                  <Link
-                    href={`/joueurs/${player.id}`}
-                    className="flex items-center gap-3 border-b border-border/60 px-4 py-3 last:border-0 hover:bg-muted/50"
-                  >
-                    <span className="w-5 font-display text-lg font-bold text-muted-foreground">
-                      {index + 1}
-                    </span>
-                    <TeamBadge team={team} size="sm" />
-                    <div className="min-w-0 flex-1">
-                      <p className="truncate font-medium">
-                        {playerDisplayName(player)}
-                      </p>
-                      <p className="truncate text-xs text-muted-foreground">
-                        {team.name}
-                      </p>
-                    </div>
-                    <span className="font-display text-xl font-bold tabular-nums text-pitch">
-                      {stats.goals}
-                    </span>
-                  </Link>
-                </li>
-              ))}
+              {scorers
+                .filter((s) => s.stats.goals > 0)
+                .map(({ player, team, stats }, index) => (
+                  <li key={player.id}>
+                    <Link
+                      href={`/joueurs/${player.id}`}
+                      className="flex items-center gap-3 border-b border-border/60 px-4 py-3 last:border-0 hover:bg-muted/50"
+                    >
+                      <span className="w-5 font-display text-lg font-bold text-muted-foreground">
+                        {index + 1}
+                      </span>
+                      <TeamBadge team={team} size="sm" />
+                      <div className="min-w-0 flex-1">
+                        <p className="truncate font-medium">
+                          {playerDisplayName(player)}
+                        </p>
+                        <p className="truncate text-xs text-muted-foreground">
+                          {team.name}
+                        </p>
+                      </div>
+                      <span className="font-display text-xl font-bold tabular-nums text-pitch">
+                        {stats.goals}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
             </ol>
           )}
         </section>

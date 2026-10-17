@@ -1,7 +1,7 @@
 import { MatchRow } from "@/components/match-row";
 import { PageHeader } from "@/components/page-header";
 import { Badge } from "@/components/ui/badge";
-import { matches } from "@/data/championship";
+import { getMergedMatches } from "@/lib/live-results";
 import { getMatchdays, getMatchesByMatchday } from "@/lib/stats";
 import type { Metadata } from "next";
 
@@ -9,15 +9,18 @@ export const metadata: Metadata = {
   title: "Calendrier",
 };
 
+export const dynamic = "force-dynamic";
+
 export default function CalendrierPage() {
-  const matchdays = getMatchdays();
+  const allMatches = getMergedMatches();
+  const matchdays = getMatchdays(allMatches);
 
   return (
     <div>
       <PageHeader
         eyebrow="Programme officiel"
         title="Calendrier & résultats"
-        description={`${matches.length} matchs · ${matchdays.length} journées · 8 rencontres par journée.`}
+        description={`${allMatches.length} matchs · ${matchdays.length} journées · 8 rencontres par journée.`}
       />
 
       <nav
@@ -37,7 +40,7 @@ export default function CalendrierPage() {
 
       <div className="space-y-10">
         {matchdays.map((day) => {
-          const dayMatches = getMatchesByMatchday(day);
+          const dayMatches = getMatchesByMatchday(day, allMatches);
           const allDone = dayMatches.every((m) => m.status === "finished");
           const anyDone = dayMatches.some((m) => m.status === "finished");
           return (

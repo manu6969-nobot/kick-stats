@@ -47,6 +47,16 @@ Le classement général et les tableaux domicile / extérieur sont **calculés a
 | `/joueurs` / `/joueurs/[id]` | Buteurs, passeurs, fiches |
 | `/matchs/[id]` | Feuille de match + stats détaillées |
 
+## Admin (saisie des résultats)
+
+Page : [`/admin`](http://127.0.0.1:43123/admin)
+
+- Mot de passe par défaut : `p1admin`
+- Sur Vercel, définissez la variable d’environnement `ADMIN_PASSWORD`
+- Encodez score, buteurs (minute), passes, cartons jaunes / rouges
+- **2 jaunes = rouge** : le 2e jaune du même joueur devient automatiquement « 2e jaune (rouge) », distinct du rouge direct
+- Les données sont dans `data/live-results.json` — sur Vercel, téléchargez le JSON depuis l’admin et committez-le pour publier durablement
+
 ## Déployer sur Vercel (via GitHub)
 
 1. Créez un dépôt GitHub et poussez ce projet.

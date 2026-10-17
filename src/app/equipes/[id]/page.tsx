@@ -5,6 +5,7 @@ import { MatchRow } from "@/components/match-row";
 import { PageHeader } from "@/components/page-header";
 import { TeamBadge } from "@/components/team-badge";
 import { teams } from "@/data/championship";
+import { getMergedMatches } from "@/lib/live-results";
 import {
   computeStandings,
   getPlayerStats,
@@ -15,6 +16,8 @@ import {
   positionLabel,
 } from "@/lib/stats";
 import type { Metadata } from "next";
+
+export const dynamic = "force-dynamic";
 
 export function generateStaticParams() {
   return teams.map((t) => ({ id: t.id }));
@@ -39,11 +42,12 @@ export default async function EquipePage({
   const team = getTeam(id);
   if (!team) notFound();
 
-  const standings = computeStandings();
+  const allMatches = getMergedMatches();
+  const standings = computeStandings(allMatches);
   const row = standings.find((s) => s.teamId === id)!;
   const rank = standings.findIndex((s) => s.teamId === id) + 1;
   const squad = getTeamPlayers(id);
-  const teamMatches = getTeamMatches(id);
+  const teamMatches = getTeamMatches(id, allMatches);
 
   return (
     <div className="space-y-10">
@@ -137,7 +141,7 @@ export default async function EquipePage({
         <div className="overflow-hidden rounded-xl border border-border/80 bg-card">
           <ul className="divide-y divide-border/70">
             {squad.map((player) => {
-              const stats = getPlayerStats(player.id);
+              const stats = getPlayerStats(player.id, allMatches);
               return (
                 <li key={player.id}>
                   <Link
