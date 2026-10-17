@@ -77,10 +77,12 @@ export default async function JoueurPage({
             <p className="text-muted-foreground">Nationalité</p>
             <p className="font-semibold">{player.nationality}</p>
           </div>
-          <div>
-            <p className="text-muted-foreground">Âge</p>
-            <p className="font-semibold">{player.age} ans</p>
-          </div>
+          {player.age > 0 && (
+            <div>
+              <p className="text-muted-foreground">Âge</p>
+              <p className="font-semibold">{player.age} ans</p>
+            </div>
+          )}
         </div>
       </div>
 

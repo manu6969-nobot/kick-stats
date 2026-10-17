@@ -96,6 +96,9 @@ export default function JoueursPage() {
                     </TableCell>
                     <TableCell className="text-muted-foreground">
                       {positionLabel(player.position)}
+                      <span className="ml-2 text-xs opacity-70 sm:hidden">
+                        #{player.number}
+                      </span>
                     </TableCell>
                     <TableCell className="text-center tabular-nums">{stats.appearances}</TableCell>
                     <TableCell className="text-center font-display font-bold tabular-nums">

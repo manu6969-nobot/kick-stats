@@ -7,6 +7,7 @@ Stack : **Next.js**, **TypeScript**, **Tailwind CSS**, **shadcn/ui** — prêt p
 Sources Excel dans `data/` :
 - `luxresdownP-4.xlsx` — calendrier (**16 équipes**, **30 journées**, **240 matchs**)
 - `luxresdownP-5.xlsx` — résultats connus (scores intégrés, classement calculé)
+- `effectifs_clubs.xlsx` — effectifs (**390 joueurs**)
 
 ## Lancer en local
 

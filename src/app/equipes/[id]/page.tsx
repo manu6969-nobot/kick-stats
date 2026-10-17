@@ -150,7 +150,9 @@ export default async function EquipePage({
                     <div className="min-w-0 flex-1">
                       <p className="font-medium">{playerDisplayName(player)}</p>
                       <p className="text-xs text-muted-foreground">
-                        {positionLabel(player.position)} · {player.nationality} · {player.age} ans
+                        {positionLabel(player.position)}
+                        {player.nationality ? ` · ${player.nationality}` : ""}
+                        {player.age > 0 ? ` · ${player.age} ans` : ""}
                       </p>
                     </div>
                     <div className="hidden text-right text-sm sm:block">
