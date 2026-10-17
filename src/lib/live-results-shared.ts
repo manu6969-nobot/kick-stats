@@ -1,7 +1,16 @@
 import type { LiveMatchResult, Match, MatchEvent, PlayerSeasonStats } from "@/data/types";
 
+/** Entrée « vide » laissée par un ancien Effacer — on l’ignore. */
+export function isEmptyLiveResult(live?: LiveMatchResult | null): boolean {
+  if (!live) return true;
+  if (live.status === "scheduled" && live.homeScore == null && live.awayScore == null) {
+    return (live.events?.length ?? 0) === 0;
+  }
+  return false;
+}
+
 export function applyLiveResult(base: Match, live?: LiveMatchResult): Match {
-  if (!live) return base;
+  if (!live || isEmptyLiveResult(live)) return base;
   return {
     ...base,
     status: live.status,

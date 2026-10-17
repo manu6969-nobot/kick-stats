@@ -105,7 +105,7 @@ export function AdminApp() {
     setAuthed(false);
   }
 
-  async function saveLive(next: LiveResultsFile) {
+  async function saveLive(next: LiveResultsFile, label = "Résultat enregistré") {
     setSaving(true);
     setMessage("");
     setLive(next);
@@ -120,23 +120,44 @@ export function AdminApp() {
       if (!res.ok) {
         setMessage(data.error || "Erreur d’enregistrement");
       } else if (data.hint) {
-        setMessage(`Enregistré (session). ${data.hint}`);
+        setMessage(`${label}. ${data.hint}`);
       } else {
-        setMessage("Enregistré dans data/live-results.json");
+        setMessage(`${label} ✓`);
       }
     } catch {
-      setMessage("Hors-ligne : sauvegarde locale uniquement (navigateur).");
+      setMessage(`${label} (local navigateur uniquement).`);
     } finally {
       setSaving(false);
     }
   }
 
-  function updateMatchResult(matchId: string, result: LiveMatchResult) {
+  function updateMatchResult(matchId: string, result: LiveMatchResult | null) {
+    const matches = { ...live.matches };
+    if (
+      result == null ||
+      (result.status === "scheduled" &&
+        result.homeScore == null &&
+        result.awayScore == null &&
+        (!result.events || result.events.length === 0))
+    ) {
+      delete matches[matchId];
+      const next: LiveResultsFile = {
+        updatedAt: new Date().toISOString(),
+        matches,
+      };
+      void saveLive(next, "Résultat effacé");
+      return;
+    }
+
+    matches[matchId] = result;
     const next: LiveResultsFile = {
       updatedAt: new Date().toISOString(),
-      matches: { ...live.matches, [matchId]: result },
+      matches,
     };
-    void saveLive(next);
+    void saveLive(
+      next,
+      `Score enregistré ${result.homeScore ?? 0}-${result.awayScore ?? 0}`
+    );
   }
 
   function downloadJson() {
@@ -269,8 +290,8 @@ export function AdminApp() {
         <div className="rounded-xl border border-border/80 bg-card p-4 shadow-sm sm:p-5">
           {selected ? (
             <MatchEditor
+              key={selected.id}
               match={selected}
-              live={live.matches[selected.id]}
               onSave={(result) => updateMatchResult(selected.id, result)}
             />
           ) : (
@@ -297,14 +318,21 @@ export function AdminApp() {
   );
 }
 
+function isPastMatch(dateIso: string) {
+  const today = new Date();
+  const y = today.getFullYear();
+  const m = String(today.getMonth() + 1).padStart(2, "0");
+  const d = String(today.getDate()).padStart(2, "0");
+  const todayIso = `${y}-${m}-${d}`;
+  return dateIso <= todayIso;
+}
+
 function MatchEditor({
   match,
-  live,
   onSave,
 }: {
   match: Match;
-  live?: LiveMatchResult;
-  onSave: (result: LiveMatchResult) => void;
+  onSave: (result: LiveMatchResult | null) => void;
 }) {
   const home = getTeam(match.homeTeamId)!;
   const away = getTeam(match.awayTeamId)!;
@@ -315,26 +343,18 @@ function MatchEditor({
     .filter((p) => p.teamId === away.id)
     .sort((a, b) => a.lastName.localeCompare(b.lastName, "fr"));
 
+  const past = isPastMatch(match.date);
+  const initialStatus: "scheduled" | "live" | "finished" =
+    match.status === "live" || match.status === "finished"
+      ? match.status
+      : past
+        ? "finished"
+        : "scheduled";
+
   const [homeScore, setHomeScore] = useState(String(match.homeScore ?? 0));
   const [awayScore, setAwayScore] = useState(String(match.awayScore ?? 0));
-  const [status, setStatus] = useState<"scheduled" | "live" | "finished">(
-    match.status === "live" || match.status === "finished" ? match.status : "scheduled"
-  );
+  const [status, setStatus] = useState<"scheduled" | "live" | "finished">(initialStatus);
   const [events, setEvents] = useState<MatchEvent[]>(match.events ?? []);
-
-  // Reset uniquement au changement de match (pas à chaque save, sinon ça écrase la saisie)
-  useEffect(() => {
-    setHomeScore(String(match.homeScore ?? 0));
-    setAwayScore(String(match.awayScore ?? 0));
-    setStatus(
-      match.status === "live" || match.status === "finished" ? match.status : "scheduled"
-    );
-    setEvents(match.events ?? []);
-    setEvTeam(match.homeTeamId);
-    setEvPlayer("");
-    setEvAssist("");
-  }, [match.id]);
-
   const [evType, setEvType] = useState<MatchEventType>("goal");
   const [evTeam, setEvTeam] = useState(home.id);
   const [evPlayer, setEvPlayer] = useState("");
@@ -355,10 +375,6 @@ function MatchEditor({
     };
     incoming = normalizeCardEvent(events, incoming);
 
-    if (incoming.type === "second_yellow") {
-      // feedback visuel via alert soft
-    }
-
     const nextEvents = [...events, incoming].sort((a, b) => a.minute - b.minute);
     setEvents(nextEvents);
 
@@ -366,7 +382,7 @@ function MatchEditor({
       const scored = scoreFromGoals(nextEvents, home.id, away.id);
       setHomeScore(String(scored.homeScore));
       setAwayScore(String(scored.awayScore));
-      if (status === "scheduled") setStatus("finished");
+      if (status !== "live") setStatus("finished");
     }
 
     setEvMinute(String(minute));
@@ -382,26 +398,14 @@ function MatchEditor({
     const scored = scoreFromGoals(events, home.id, away.id);
     setHomeScore(String(scored.homeScore));
     setAwayScore(String(scored.awayScore));
-    if (status === "scheduled") setStatus("finished");
+    if (status !== "live") setStatus("finished");
   }
 
   function save() {
-    const hs = Math.max(0, Number(homeScore) || 0);
-    const as = Math.max(0, Number(awayScore) || 0);
-    const hasEvents = events.length > 0;
-    // Si on encode un résultat, on force au moins "finished" (sauf live explicite)
-    const nextStatus =
-      status === "live"
-        ? "live"
-        : status === "finished" || hasEvents || hs > 0 || as > 0 || status === "scheduled"
-          ? // scheduled + saisie de score → terminé
-            status === "live"
-              ? "live"
-              : "finished"
-          : status;
-
-    const finalStatus: "scheduled" | "live" | "finished" =
-      status === "live" ? "live" : "finished";
+    const hs = Math.max(0, Number.parseInt(String(homeScore), 10) || 0);
+    const as = Math.max(0, Number.parseInt(String(awayScore), 10) || 0);
+    // Toujours persister un vrai résultat (terminé), sauf si Live est choisi
+    const finalStatus: "live" | "finished" = status === "live" ? "live" : "finished";
 
     setStatus(finalStatus);
     setHomeScore(String(hs));
@@ -416,11 +420,11 @@ function MatchEditor({
   }
 
   function clearResult() {
-    setStatus("scheduled");
+    setStatus(past ? "finished" : "scheduled");
     setHomeScore("0");
     setAwayScore("0");
     setEvents([]);
-    onSave({ status: "scheduled", homeScore: null, awayScore: null, events: [] });
+    onSave(null);
   }
 
   return (
@@ -439,6 +443,13 @@ function MatchEditor({
         </Badge>
       </div>
 
+      {past && match.status === "scheduled" && (
+        <p className="rounded-md border border-score/40 bg-score/10 px-3 py-2 text-sm">
+          Date dépassée — saisissez le score puis cliquez{" "}
+          <strong>Enregistrer le score</strong> (le match passera en Terminé).
+        </p>
+      )}
+
       <div className="grid grid-cols-3 gap-3">
         <label className="space-y-1 text-sm">
           <span className="text-muted-foreground">Score {home.shortName}</span>
@@ -453,13 +464,12 @@ function MatchEditor({
         <label className="space-y-1 text-sm">
           <span className="text-muted-foreground">Statut</span>
           <select
-            value={status}
-            onChange={(e) => setStatus(e.target.value as typeof status)}
+            value={status === "scheduled" ? "finished" : status}
+            onChange={(e) => setStatus(e.target.value as "live" | "finished")}
             className="w-full rounded-md border border-border px-2 py-1.5"
           >
-            <option value="scheduled">Programmé</option>
-            <option value="live">En cours</option>
             <option value="finished">Terminé</option>
+            <option value="live">En cours</option>
           </select>
         </label>
         <label className="space-y-1 text-sm">
@@ -479,7 +489,7 @@ function MatchEditor({
           Score depuis les buts
         </Button>
         <Button type="button" size="sm" onClick={save}>
-          Enregistrer
+          Enregistrer le score
         </Button>
         <Button type="button" size="sm" variant="ghost" onClick={clearResult}>
           Effacer résultat
