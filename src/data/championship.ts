@@ -7,13 +7,13 @@ import type {
 } from "./types";
 
 /**
- * Calendrier officiel P4 — Province de Luxembourg (saison 2026-2027).
+ * Calendrier officiel P1 — Province de Luxembourg (saison 2026-2027).
  * Sources : luxresdownP 4.xlsx (calendrier), luxresdownP 5.xlsx (résultats),
  * effectifs_clubs.xlsx (joueurs).
  */
 export const meta: ChampionshipMeta = {
-  name: "P4 Luxembourg",
-  shortName: "P4L",
+  name: "P1 Luxembourg",
+  shortName: "P1L",
   season: "2026-2027",
   tagline: "Calendrier et statistiques du championnat provincial",
   country: "Belgique",

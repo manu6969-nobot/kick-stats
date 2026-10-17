@@ -1,6 +1,6 @@
-# P4 Luxembourg — Stats Championnat
+# P1 Luxembourg — Stats Championnat
 
-Site de statistiques pour le championnat provincial **P4 Luxembourg** (Belgique) : classement, calendrier / résultats, fiches équipes, stats domicile–extérieur, stats de match et classements joueurs.
+Site de statistiques pour le championnat provincial **P1 Luxembourg** (Belgique) : classement, calendrier / résultats, fiches équipes, stats domicile–extérieur, stats de match et classements joueurs.
 
 Stack : **Next.js**, **TypeScript**, **Tailwind CSS**, **shadcn/ui** — prêt pour **Vercel** + **GitHub**.
 
