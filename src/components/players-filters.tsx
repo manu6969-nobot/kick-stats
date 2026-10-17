@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { TeamBadge } from "@/components/team-badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Table,
   TableBody,
@@ -12,14 +11,17 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import type { Player, PlayerSeasonStats, Team } from "@/data/types";
+import { players, playerStats, teams } from "@/data/championship";
+import type { Player, Team } from "@/data/types";
 import { playerDisplayName, positionLabel } from "@/lib/stats";
 import { cn } from "@/lib/utils";
 
 type PlayerRow = {
   player: Player;
   team: Team;
-  stats: PlayerSeasonStats | null;
+  goals: number;
+  assists: number;
+  appearances: number;
 };
 
 const POSITIONS = [
@@ -31,139 +33,198 @@ const POSITIONS = [
 ] as const;
 
 type PosFilter = (typeof POSITIONS)[number]["id"];
+type MainTab = "effectif" | "buteurs" | "passeurs";
 
-export function PlayersFilters({
-  rows,
-  teams,
-}: {
-  rows: PlayerRow[];
-  teams: Team[];
-}) {
-  const [tab, setTab] = useState<"effectif" | "buteurs" | "passeurs">("effectif");
+function buildRows(): PlayerRow[] {
+  const statsByPlayer = new Map(playerStats.map((s) => [s.playerId, s]));
+  const teamById = new Map(teams.map((t) => [t.id, t]));
+
+  return players
+    .map((player) => {
+      const team = teamById.get(player.teamId);
+      if (!team) return null;
+      const stats = statsByPlayer.get(player.id);
+      return {
+        player,
+        team,
+        goals: stats?.goals ?? 0,
+        assists: stats?.assists ?? 0,
+        appearances: stats?.appearances ?? 0,
+      };
+    })
+    .filter((row): row is PlayerRow => row != null)
+    .sort((a, b) => {
+      const byTeam = a.team.name.localeCompare(b.team.name, "fr");
+      if (byTeam !== 0) return byTeam;
+      return a.player.lastName.localeCompare(b.player.lastName, "fr");
+    });
+}
+
+const ALL_ROWS = buildRows();
+const TEAMS_SORTED = [...teams].sort((a, b) => a.name.localeCompare(b.name, "fr"));
+
+export function PlayersFilters() {
+  const [tab, setTab] = useState<MainTab>("effectif");
   const [position, setPosition] = useState<PosFilter>("all");
   const [teamId, setTeamId] = useState<string>("all");
 
   const filtered = useMemo(() => {
-    return rows.filter(({ player }) => {
+    return ALL_ROWS.filter(({ player }) => {
       if (position !== "all" && player.position !== position) return false;
       if (teamId !== "all" && player.teamId !== teamId) return false;
       return true;
     });
-  }, [rows, position, teamId]);
+  }, [position, teamId]);
 
   const scorers = useMemo(
     () =>
-      [...rows]
-        .filter((r) => (r.stats?.goals ?? 0) > 0)
-        .sort((a, b) => {
-          const g = (b.stats?.goals ?? 0) - (a.stats?.goals ?? 0);
-          if (g !== 0) return g;
-          return (b.stats?.assists ?? 0) - (a.stats?.assists ?? 0);
-        }),
-    [rows]
+      [...ALL_ROWS]
+        .filter((r) => r.goals > 0)
+        .sort((a, b) => b.goals - a.goals || b.assists - a.assists),
+    []
   );
 
-  const assists = useMemo(
+  const assistsLeaders = useMemo(
     () =>
-      [...rows]
-        .filter((r) => (r.stats?.assists ?? 0) > 0)
-        .sort((a, b) => {
-          const p = (b.stats?.assists ?? 0) - (a.stats?.assists ?? 0);
-          if (p !== 0) return p;
-          return (b.stats?.goals ?? 0) - (a.stats?.goals ?? 0);
-        }),
-    [rows]
+      [...ALL_ROWS]
+        .filter((r) => r.assists > 0)
+        .sort((a, b) => b.assists - a.assists || b.goals - a.goals),
+    []
   );
+
+  const selectedTeam = TEAMS_SORTED.find((t) => t.id === teamId);
 
   return (
-    <div className="animate-rise-delay-1 space-y-6">
-      <Tabs
-        value={tab}
-        onValueChange={(value) =>
-          setTab(value as "effectif" | "buteurs" | "passeurs")
-        }
-        className="gap-6"
+    <div className="space-y-6">
+      <div
+        role="tablist"
+        aria-label="Vues joueurs"
+        className="inline-flex h-auto flex-wrap gap-1 rounded-lg bg-muted/80 p-1"
       >
-        <TabsList className="h-auto flex-wrap bg-muted/80 p-1">
-          <TabsTrigger value="effectif" className="px-3 py-1.5">
-            Effectif ({rows.length})
-          </TabsTrigger>
-          <TabsTrigger value="buteurs" className="px-3 py-1.5">
-            Buteurs
-          </TabsTrigger>
-          <TabsTrigger value="passeurs" className="px-3 py-1.5">
-            Passeurs
-          </TabsTrigger>
-        </TabsList>
+        {(
+          [
+            { id: "effectif", label: `Effectif (${ALL_ROWS.length})` },
+            { id: "buteurs", label: "Buteurs" },
+            { id: "passeurs", label: "Passeurs" },
+          ] as const
+        ).map((item) => (
+          <button
+            key={item.id}
+            type="button"
+            role="tab"
+            aria-selected={tab === item.id}
+            onClick={() => setTab(item.id)}
+            className={cn(
+              "rounded-md px-3 py-1.5 text-sm font-medium transition",
+              tab === item.id
+                ? "bg-background text-foreground shadow-sm"
+                : "text-muted-foreground hover:text-foreground"
+            )}
+          >
+            {item.label}
+          </button>
+        ))}
+      </div>
 
-        <TabsContent value="effectif" className="space-y-4">
-          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+      {tab === "effectif" && (
+        <div className="space-y-4">
+          <div className="space-y-3">
+            <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              Poste
+            </p>
             <div className="flex flex-wrap gap-1.5">
-              {POSITIONS.map((pos) => (
+              {POSITIONS.map((pos) => {
+                const count =
+                  pos.id === "all"
+                    ? ALL_ROWS.length
+                    : ALL_ROWS.filter((r) => r.player.position === pos.id).length;
+                return (
+                  <button
+                    key={pos.id}
+                    type="button"
+                    onClick={() => setPosition(pos.id)}
+                    className={cn(
+                      "rounded-md border px-3 py-1.5 text-sm font-medium transition",
+                      position === pos.id
+                        ? "border-primary bg-primary text-primary-foreground"
+                        : "border-border/80 bg-card text-muted-foreground hover:border-primary/40 hover:text-foreground"
+                    )}
+                  >
+                    {pos.label}
+                    <span className="ml-1 opacity-70">({count})</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="space-y-3">
+            <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              Équipe
+            </p>
+            <div className="flex flex-wrap gap-1.5">
+              <button
+                type="button"
+                onClick={() => setTeamId("all")}
+                className={cn(
+                  "rounded-md border px-3 py-1.5 text-sm font-medium transition",
+                  teamId === "all"
+                    ? "border-primary bg-primary text-primary-foreground"
+                    : "border-border/80 bg-card text-muted-foreground hover:border-primary/40 hover:text-foreground"
+                )}
+              >
+                Toutes
+              </button>
+              {TEAMS_SORTED.map((team) => (
                 <button
-                  key={pos.id}
+                  key={team.id}
                   type="button"
-                  onClick={() => setPosition(pos.id)}
+                  onClick={() => setTeamId(team.id)}
                   className={cn(
-                    "rounded-md border px-3 py-1.5 text-sm font-medium transition",
-                    position === pos.id
+                    "inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1.5 text-sm font-medium transition",
+                    teamId === team.id
                       ? "border-primary bg-primary text-primary-foreground"
                       : "border-border/80 bg-card text-muted-foreground hover:border-primary/40 hover:text-foreground"
                   )}
                 >
-                  {pos.label}
-                  {pos.id !== "all" && (
-                    <span className="ml-1 opacity-70">
-                      (
-                      {
-                        rows.filter((r) => r.player.position === pos.id).length
-                      }
-                      )
-                    </span>
-                  )}
+                  <TeamBadge team={team} size="sm" />
+                  {team.shortName}
                 </button>
               ))}
             </div>
-            <label className="flex items-center gap-2 text-sm text-muted-foreground">
-              Équipe
-              <select
-                value={teamId}
-                onChange={(e) => setTeamId(e.target.value)}
-                className="rounded-md border border-border bg-card px-2.5 py-1.5 text-sm text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
-              >
-                <option value="all">Toutes</option>
-                {teams.map((team) => (
-                  <option key={team.id} value={team.id}>
-                    {team.name}
-                  </option>
-                ))}
-              </select>
-            </label>
+            {selectedTeam && (
+              <p className="text-sm text-muted-foreground">
+                Filtre actif :{" "}
+                <span className="font-medium text-foreground">{selectedTeam.name}</span>
+              </p>
+            )}
           </div>
 
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm font-medium">
             {filtered.length} joueur{filtered.length > 1 ? "s" : ""}
+            {position !== "all"
+              ? ` · ${POSITIONS.find((p) => p.id === position)?.label}`
+              : ""}
+            {selectedTeam ? ` · ${selectedTeam.shortName}` : ""}
           </p>
 
-          <PlayersTable rows={filtered} showStats={false} />
-        </TabsContent>
+          <PlayersTable key={`${teamId}-${position}`} rows={filtered} />
+        </div>
+      )}
 
-        <TabsContent value="buteurs">
-          {scorers.length === 0 ? (
-            <EmptyStats message="Aucun buteur enregistré pour l’instant. Les buts apparaîtront ici dès que les stats joueurs seront saisies." />
-          ) : (
-            <LeaderTable rows={scorers} mode="goals" />
-          )}
-        </TabsContent>
+      {tab === "buteurs" &&
+        (scorers.length === 0 ? (
+          <EmptyStats message="Aucun buteur enregistré pour l’instant. Les buts apparaîtront ici dès que les stats joueurs seront saisies." />
+        ) : (
+          <LeaderTable rows={scorers} mode="goals" />
+        ))}
 
-        <TabsContent value="passeurs">
-          {assists.length === 0 ? (
-            <EmptyStats message="Aucune passe décisive enregistrée pour l’instant." />
-          ) : (
-            <LeaderTable rows={assists} mode="assists" />
-          )}
-        </TabsContent>
-      </Tabs>
+      {tab === "passeurs" &&
+        (assistsLeaders.length === 0 ? (
+          <EmptyStats message="Aucune passe décisive enregistrée pour l’instant." />
+        ) : (
+          <LeaderTable rows={assistsLeaders} mode="assists" />
+        ))}
     </div>
   );
 }
@@ -176,13 +237,7 @@ function EmptyStats({ message }: { message: string }) {
   );
 }
 
-function PlayersTable({
-  rows,
-  showStats,
-}: {
-  rows: PlayerRow[];
-  showStats: boolean;
-}) {
+function PlayersTable({ rows }: { rows: PlayerRow[] }) {
   if (rows.length === 0) {
     return (
       <p className="rounded-xl border border-dashed border-border bg-card px-4 py-10 text-center text-sm text-muted-foreground">
@@ -200,13 +255,6 @@ function PlayersTable({
             <TableHead>Joueur</TableHead>
             <TableHead>Équipe</TableHead>
             <TableHead>Poste</TableHead>
-            {showStats && (
-              <>
-                <TableHead className="text-center">MJ</TableHead>
-                <TableHead className="text-center">Buts</TableHead>
-                <TableHead className="text-center">Passes</TableHead>
-              </>
-            )}
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -235,13 +283,6 @@ function PlayersTable({
               <TableCell className="text-muted-foreground">
                 {positionLabel(player.position)}
               </TableCell>
-              {showStats && (
-                <>
-                  <TableCell className="text-center tabular-nums">—</TableCell>
-                  <TableCell className="text-center tabular-nums">—</TableCell>
-                  <TableCell className="text-center tabular-nums">—</TableCell>
-                </>
-              )}
             </TableRow>
           ))}
         </TableBody>
@@ -271,7 +312,7 @@ function LeaderTable({
           </TableRow>
         </TableHeader>
         <TableBody>
-          {rows.map(({ player, team, stats }, index) => (
+          {rows.map(({ player, team, goals, assists, appearances }, index) => (
             <TableRow key={player.id}>
               <TableCell className="text-center font-display font-bold text-muted-foreground">
                 {index + 1}
@@ -296,7 +337,7 @@ function LeaderTable({
                   mode === "goals" && "text-lg font-bold text-pitch"
                 )}
               >
-                {stats?.goals ?? 0}
+                {goals}
               </TableCell>
               <TableCell
                 className={cn(
@@ -304,11 +345,9 @@ function LeaderTable({
                   mode === "assists" && "text-lg font-bold text-pitch"
                 )}
               >
-                {stats?.assists ?? 0}
+                {assists}
               </TableCell>
-              <TableCell className="text-center tabular-nums">
-                {stats?.appearances ?? 0}
-              </TableCell>
+              <TableCell className="text-center tabular-nums">{appearances}</TableCell>
             </TableRow>
           ))}
         </TableBody>

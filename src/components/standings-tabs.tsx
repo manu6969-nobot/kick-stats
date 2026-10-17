@@ -12,9 +12,9 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { StandingRow } from "@/data/types";
 import { getTeam } from "@/lib/stats";
+import { cn } from "@/lib/utils";
 
 export function StandingsTabs({ standings }: { standings: StandingRow[] }) {
   const [tab, setTab] = useState<"general" | "home" | "away">("general");
@@ -42,31 +42,46 @@ export function StandingsTabs({ standings }: { standings: StandingRow[] }) {
   });
 
   return (
-    <Tabs
-      value={tab}
-      onValueChange={(value) => setTab(value as typeof tab)}
-      className="animate-rise-delay-1 gap-6"
-    >
-      <TabsList className="h-auto flex-wrap bg-muted/80 p-1">
-        <TabsTrigger value="general" className="px-3 py-1.5">
-          Général
-        </TabsTrigger>
-        <TabsTrigger value="home" className="px-3 py-1.5">
-          Domicile
-        </TabsTrigger>
-        <TabsTrigger value="away" className="px-3 py-1.5">
-          Extérieur
-        </TabsTrigger>
-      </TabsList>
+    <div className="animate-rise-delay-1 space-y-6">
+      <div
+        role="tablist"
+        className="inline-flex h-auto flex-wrap gap-1 rounded-lg bg-muted/80 p-1"
+      >
+        {(
+          [
+            { id: "general", label: "Général" },
+            { id: "home", label: "Domicile" },
+            { id: "away", label: "Extérieur" },
+          ] as const
+        ).map((item) => (
+          <button
+            key={item.id}
+            type="button"
+            role="tab"
+            aria-selected={tab === item.id}
+            onClick={() => setTab(item.id)}
+            className={cn(
+              "rounded-md px-3 py-1.5 text-sm font-medium transition",
+              tab === item.id
+                ? "bg-background text-foreground shadow-sm"
+                : "text-muted-foreground hover:text-foreground"
+            )}
+          >
+            {item.label}
+          </button>
+        ))}
+      </div>
 
-      <TabsContent value="general" className="space-y-4">
-        <StandingsTable rows={standings} />
-        <p className="text-sm text-muted-foreground">
-          Or : places européennes · Rouge : zone de relégation (indicatif).
-        </p>
-      </TabsContent>
+      {tab === "general" && (
+        <div className="space-y-4">
+          <StandingsTable rows={standings} />
+          <p className="text-sm text-muted-foreground">
+            Or : places européennes · Rouge : zone de relégation (indicatif).
+          </p>
+        </div>
+      )}
 
-      <TabsContent value="home">
+      {tab === "home" && (
         <SplitTable
           rows={homeRows.map((r) => ({
             teamId: r.teamId,
@@ -80,9 +95,9 @@ export function StandingsTabs({ standings }: { standings: StandingRow[] }) {
             form: r.form,
           }))}
         />
-      </TabsContent>
+      )}
 
-      <TabsContent value="away">
+      {tab === "away" && (
         <SplitTable
           rows={awayRows.map((r) => ({
             teamId: r.teamId,
@@ -96,8 +111,8 @@ export function StandingsTabs({ standings }: { standings: StandingRow[] }) {
             form: r.form,
           }))}
         />
-      </TabsContent>
-    </Tabs>
+      )}
+    </div>
   );
 }
 

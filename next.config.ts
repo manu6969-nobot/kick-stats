@@ -1,9 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
+  /* cacheComponents désactivé : il empêchait l'hydratation des filtres client */
   turbopack: {
     rules: {
       "*.css": {
