@@ -310,18 +310,44 @@ export function AdminApp() {
         </div>
       </div>
 
-      <p className="text-xs text-muted-foreground">
-        Astuce Vercel : après saisie,{" "}
-        <button type="button" className="underline" onClick={downloadJson}>
-          téléchargez le JSON
-        </button>{" "}
-        et remplacez <code>data/live-results.json</code> puis poussez sur GitHub pour
-        publier à tous. Voir aussi{" "}
-        <Link href="/" className="underline">
-          le site public
-        </Link>
-        .
-      </p>
+      <div className="rounded-lg border border-border/80 bg-muted/30 px-3 py-3 text-xs text-muted-foreground space-y-1.5">
+        <p className="font-medium text-foreground">Publier sur le site (Vercel)</p>
+        <p>
+          Télécharger le JSON ne change pas le site tout seul. Il faut mettre à
+          jour le fichier sur GitHub :
+        </p>
+        <ol className="list-decimal pl-4 space-y-1">
+          <li>
+            Cliquez{" "}
+            <button type="button" className="underline" onClick={downloadJson}>
+              Télécharger JSON
+            </button>
+          </li>
+          <li>
+            Ouvrez{" "}
+            <a
+              className="underline"
+              href="https://github.com/manu6969-nobot/kick-stats/blob/main/data/live-results.json"
+              target="_blank"
+              rel="noreferrer"
+            >
+              data/live-results.json
+            </a>{" "}
+            sur GitHub → icône crayon
+          </li>
+          <li>Effacez tout, collez le contenu du fichier téléchargé → Commit changes</li>
+          <li>Attendez 1–2 min le redéploiement Vercel, puis rechargez le site</li>
+        </ol>
+        <p>
+          Option durable : ajoutez <code>GITHUB_TOKEN</code> dans Vercel (PAT avec
+          droit Contents) pour publier automatiquement à chaque enregistrement.
+          Voir aussi{" "}
+          <Link href="/" className="underline">
+            le site public
+          </Link>
+          .
+        </p>
+      </div>
     </div>
   );
 }

@@ -76,16 +76,25 @@ export function readLiveResultsFile(): LiveResultsFile {
   return bundled ?? emptyLiveResults();
 }
 
-export function writeLiveResultsFile(data: LiveResultsFile): {
-  ok: boolean;
-  path: string;
-  persistedToRepo: boolean;
+export function prepareLiveResultsPayload(data: LiveResultsFile): {
+  payload: LiveResultsFile;
+  json: string;
 } {
   const payload: LiveResultsFile = {
     ...sanitizeLiveResults(data),
     updatedAt: new Date().toISOString(),
   };
-  const json = JSON.stringify(payload, null, 2);
+  return { payload, json: `${JSON.stringify(payload, null, 2)}\n` };
+}
+
+export function writeLiveResultsFile(data: LiveResultsFile): {
+  ok: boolean;
+  path: string;
+  persistedToRepo: boolean;
+  payload: LiveResultsFile;
+  json: string;
+} {
+  const { payload, json } = prepareLiveResultsPayload(data);
 
   try {
     writeFileSync(/*turbopackIgnore: true*/ TMP_PATH, json, "utf8");
@@ -98,13 +107,31 @@ export function writeLiveResultsFile(data: LiveResultsFile): {
       recursive: true,
     });
     writeFileSync(/*turbopackIgnore: true*/ DATA_PATH, json, "utf8");
-    return { ok: true, path: DATA_PATH, persistedToRepo: true };
+    return {
+      ok: true,
+      path: DATA_PATH,
+      persistedToRepo: true,
+      payload,
+      json,
+    };
   } catch {
     try {
       writeFileSync(/*turbopackIgnore: true*/ TMP_PATH, json, "utf8");
-      return { ok: true, path: TMP_PATH, persistedToRepo: false };
+      return {
+        ok: true,
+        path: TMP_PATH,
+        persistedToRepo: false,
+        payload,
+        json,
+      };
     } catch {
-      return { ok: false, path: TMP_PATH, persistedToRepo: false };
+      return {
+        ok: false,
+        path: TMP_PATH,
+        persistedToRepo: false,
+        payload,
+        json,
+      };
     }
   }
 }
