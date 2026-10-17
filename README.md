@@ -4,7 +4,9 @@ Site de statistiques pour le championnat provincial **P4 Luxembourg** (Belgique)
 
 Stack : **Next.js**, **TypeScript**, **Tailwind CSS**, **shadcn/ui** — prêt pour **Vercel** + **GitHub**.
 
-Calendrier source : `data/luxresdownP-4.xlsx` → **16 équipes**, **30 journées**, **240 matchs**.
+Sources Excel dans `data/` :
+- `luxresdownP-4.xlsx` — calendrier (**16 équipes**, **30 journées**, **240 matchs**)
+- `luxresdownP-5.xlsx` — résultats connus (scores intégrés, classement calculé)
 
 ## Lancer en local
 
