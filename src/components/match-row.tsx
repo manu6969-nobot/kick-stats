@@ -12,7 +12,7 @@ export function MatchRow({ match }: { match: Match }) {
   return (
     <Link
       href={`/matchs/${match.id}`}
-      className="group grid grid-cols-[1fr_auto_1fr] items-center gap-2 rounded-lg border border-border/70 bg-card px-3 py-3 transition hover:border-primary/30 hover:shadow-sm sm:gap-4 sm:px-4"
+      className="group relative grid grid-cols-[1fr_auto_1fr] items-center gap-2 rounded-lg border border-border/70 bg-card px-3 py-3 transition hover:border-primary/30 hover:shadow-sm sm:gap-4 sm:px-4"
     >
       <div className="flex items-center justify-end gap-2 sm:gap-3">
         <span className="hidden text-right text-sm font-medium sm:block">{home.name}</span>
