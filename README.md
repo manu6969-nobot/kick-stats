@@ -1,14 +1,16 @@
-# Ligue Horizon — Stats Championnat
+# P4 Luxembourg — Stats Championnat
 
-Site professionnel de statistiques pour un championnat de football : classement, calendrier / résultats, fiches équipes, stats domicile–extérieur, stats de match et classements joueurs.
+Site de statistiques pour le championnat provincial **P4 Luxembourg** (Belgique) : classement, calendrier / résultats, fiches équipes, stats domicile–extérieur, stats de match et classements joueurs.
 
 Stack : **Next.js**, **TypeScript**, **Tailwind CSS**, **shadcn/ui** — prêt pour **Vercel** + **GitHub**.
+
+Calendrier source : `data/luxresdownP-4.xlsx` → **16 équipes**, **30 journées**, **240 matchs**.
 
 ## Lancer en local
 
 ```bash
 npm install
-npm run dev -- --port 43123
+npm run dev
 ```
 
 Ouvrez [http://127.0.0.1:43123](http://127.0.0.1:43123).
@@ -25,8 +27,8 @@ Vous pouvez y modifier :
 
 - le nom du championnat et la saison (`meta`)
 - les **équipes** (ville, stade, couleurs, coach)
-- les **joueurs** (numéro, poste, nationalité)
-- les **matchs** (scores, événements, stats possession / tirs / etc.)
+- les **joueurs** (numéro, poste, nationalité) — liste vide pour l’instant
+- les **matchs** : passez `status` à `"finished"` et ajoutez `homeScore` / `awayScore` (+ `events`, `stats`)
 - les **stats saison** des joueurs (`playerStats`)
 
 Le classement général et les tableaux domicile / extérieur sont **calculés automatiquement** à partir des matchs terminés.

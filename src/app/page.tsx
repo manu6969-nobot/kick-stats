@@ -4,10 +4,11 @@ import { MatchRow } from "@/components/match-row";
 import { StandingsTable } from "@/components/standings-table";
 import { TeamBadge } from "@/components/team-badge";
 import { buttonVariants } from "@/components/ui/button";
-import { meta } from "@/data/championship";
+import { matches, meta, players, teams } from "@/data/championship";
 import {
   computeStandings,
   getLatestResults,
+  getMatchdays,
   getTopScorers,
   getUpcomingFixtures,
   playerDisplayName,
@@ -17,8 +18,9 @@ import { cn } from "@/lib/utils";
 export default function HomePage() {
   const standings = computeStandings();
   const results = getLatestResults(4);
-  const upcoming = getUpcomingFixtures(4);
+  const upcoming = getUpcomingFixtures(8);
   const scorers = getTopScorers(5);
+  const matchdayCount = getMatchdays().length;
 
   return (
     <div className="space-y-12">
@@ -39,8 +41,8 @@ export default function HomePage() {
               {meta.name}
             </h1>
             <p className="mt-4 max-w-md text-base text-white/75 sm:text-lg">
-              {meta.tagline}. Classement en direct, calendrier, stats de match et
-              classements joueurs — le tout dans un site prêt pour Vercel.
+              {meta.tagline}. {teams.length} équipes · {matchdayCount} journées ·{" "}
+              {matches.length} matchs au calendrier.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -79,13 +81,16 @@ export default function HomePage() {
             href: "/calendrier",
             icon: CalendarDays,
             title: "Calendrier",
-            text: "Résultats, scores et prochaines journées",
+            text: `${matchdayCount} journées · ${matches.length} rencontres officielles`,
           },
           {
             href: "/joueurs",
             icon: Users,
             title: "Stats joueurs",
-            text: "Buteurs, passeurs et fiches individuelles",
+            text:
+              players.length > 0
+                ? "Buteurs, passeurs et fiches individuelles"
+                : "Ajoutez vos joueurs dans championship.ts",
           },
         ].map((item) => (
           <Link
@@ -124,42 +129,67 @@ export default function HomePage() {
               Tous les joueurs
             </Link>
           </div>
-          <ol className="overflow-hidden rounded-xl border border-border/80 bg-card shadow-sm">
-            {scorers.map(({ player, team, stats }, index) => (
-              <li key={player.id}>
-                <Link
-                  href={`/joueurs/${player.id}`}
-                  className="flex items-center gap-3 border-b border-border/60 px-4 py-3 last:border-0 hover:bg-muted/50"
-                >
-                  <span className="w-5 font-display text-lg font-bold text-muted-foreground">
-                    {index + 1}
-                  </span>
-                  <TeamBadge team={team} size="sm" />
-                  <div className="min-w-0 flex-1">
-                    <p className="truncate font-medium">{playerDisplayName(player)}</p>
-                    <p className="truncate text-xs text-muted-foreground">{team.name}</p>
-                  </div>
-                  <span className="font-display text-xl font-bold tabular-nums text-pitch">
-                    {stats.goals}
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ol>
+          {scorers.length === 0 ? (
+            <p className="rounded-xl border border-dashed border-border bg-card px-4 py-8 text-center text-sm text-muted-foreground">
+              Aucun buteur pour l&apos;instant. Ajoutez joueurs et stats dans{" "}
+              <code className="text-foreground">src/data/championship.ts</code>.
+            </p>
+          ) : (
+            <ol className="overflow-hidden rounded-xl border border-border/80 bg-card shadow-sm">
+              {scorers.map(({ player, team, stats }, index) => (
+                <li key={player.id}>
+                  <Link
+                    href={`/joueurs/${player.id}`}
+                    className="flex items-center gap-3 border-b border-border/60 px-4 py-3 last:border-0 hover:bg-muted/50"
+                  >
+                    <span className="w-5 font-display text-lg font-bold text-muted-foreground">
+                      {index + 1}
+                    </span>
+                    <TeamBadge team={team} size="sm" />
+                    <div className="min-w-0 flex-1">
+                      <p className="truncate font-medium">
+                        {playerDisplayName(player)}
+                      </p>
+                      <p className="truncate text-xs text-muted-foreground">
+                        {team.name}
+                      </p>
+                    </div>
+                    <span className="font-display text-xl font-bold tabular-nums text-pitch">
+                      {stats.goals}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ol>
+          )}
         </section>
       </div>
 
       <div className="grid gap-10 lg:grid-cols-2">
         <section className="space-y-4">
           <h2 className="font-display text-2xl font-bold">Derniers résultats</h2>
-          <div className="space-y-2">
-            {results.map((match) => (
-              <MatchRow key={match.id} match={match} />
-            ))}
-          </div>
+          {results.length === 0 ? (
+            <p className="rounded-xl border border-dashed border-border bg-card px-4 py-8 text-center text-sm text-muted-foreground">
+              Saison pas encore commencée — les scores apparaîtront ici.
+            </p>
+          ) : (
+            <div className="space-y-2">
+              {results.map((match) => (
+                <MatchRow key={match.id} match={match} />
+              ))}
+            </div>
+          )}
         </section>
         <section className="space-y-4">
-          <h2 className="font-display text-2xl font-bold">Prochains matchs</h2>
+          <div className="flex items-end justify-between gap-4">
+            <h2 className="font-display text-2xl font-bold">Prochains matchs</h2>
+            <Link
+              href="/calendrier"
+              className="text-sm font-medium text-pitch hover:underline"
+            >
+              Calendrier complet
+            </Link>
+          </div>
           <div className="space-y-2">
             {upcoming.map((match) => (
               <MatchRow key={match.id} match={match} />

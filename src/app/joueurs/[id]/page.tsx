@@ -13,7 +13,9 @@ import {
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
-  return players.map((p) => ({ id: p.id }));
+  const params = players.map((p) => ({ id: p.id }));
+  // Cache Components exige au moins un résultat même sans joueurs encore saisis.
+  return params.length > 0 ? params : [{ id: "_" }];
 }
 
 export async function generateMetadata({

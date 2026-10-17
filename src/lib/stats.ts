@@ -173,12 +173,14 @@ export function getTeamMatches(teamId: TeamId): Match[] {
 
 export function getTopScorers(limit = 10) {
   return playerStats
-    .map((s) => ({
-      stats: s,
-      player: getPlayer(s.playerId)!,
-      team: getTeam(getPlayer(s.playerId)!.teamId)!,
-    }))
-    .filter((x) => x.player)
+    .map((s) => {
+      const player = getPlayer(s.playerId);
+      if (!player) return null;
+      const team = getTeam(player.teamId);
+      if (!team) return null;
+      return { stats: s, player, team };
+    })
+    .filter((x): x is NonNullable<typeof x> => x != null)
     .sort((a, b) => {
       if (b.stats.goals !== a.stats.goals) return b.stats.goals - a.stats.goals;
       return b.stats.assists - a.stats.assists;
@@ -188,12 +190,14 @@ export function getTopScorers(limit = 10) {
 
 export function getTopAssists(limit = 10) {
   return playerStats
-    .map((s) => ({
-      stats: s,
-      player: getPlayer(s.playerId)!,
-      team: getTeam(getPlayer(s.playerId)!.teamId)!,
-    }))
-    .filter((x) => x.player && x.stats.assists > 0)
+    .map((s) => {
+      const player = getPlayer(s.playerId);
+      if (!player) return null;
+      const team = getTeam(player.teamId);
+      if (!team) return null;
+      return { stats: s, player, team };
+    })
+    .filter((x): x is NonNullable<typeof x> => x != null && x.stats.assists > 0)
     .sort((a, b) => {
       if (b.stats.assists !== a.stats.assists) return b.stats.assists - a.stats.assists;
       return b.stats.goals - a.stats.goals;

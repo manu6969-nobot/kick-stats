@@ -40,9 +40,17 @@ export default function JoueursPage() {
       <PageHeader
         eyebrow="Individuels"
         title="Stats joueurs"
-        description="Buteurs, passeurs et fiches complètes — remplacez les chiffres dans championship.ts."
+        description="Buteurs, passeurs et fiches complètes — ajoutez vos données dans championship.ts."
       />
 
+      {players.length === 0 ? (
+        <p className="animate-rise-delay-1 rounded-xl border border-dashed border-border bg-card px-4 py-12 text-center text-muted-foreground">
+          Aucun joueur saisi pour l&apos;instant.
+          <br />
+          Ajoutez l&apos;effectif et les stats dans{" "}
+          <code className="text-foreground">src/data/championship.ts</code>.
+        </p>
+      ) : (
       <Tabs defaultValue="buteurs" className="animate-rise-delay-1 gap-6">
         <TabsList className="h-auto flex-wrap bg-muted/80 p-1">
           <TabsTrigger value="buteurs">Buteurs</TabsTrigger>
@@ -106,6 +114,7 @@ export default function JoueursPage() {
           </div>
         </TabsContent>
       </Tabs>
+      )}
     </div>
   );
 }
