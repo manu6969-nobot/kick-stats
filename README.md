@@ -55,7 +55,28 @@ Page : [`/admin`](http://127.0.0.1:43123/admin)
 - Sur Vercel, définissez la variable d’environnement `ADMIN_PASSWORD`
 - Encodez score, buteurs (minute), passes, cartons jaunes / rouges
 - **2 jaunes = rouge** : le 2e jaune du même joueur devient automatiquement « 2e jaune (rouge) », distinct du rouge direct
-- Les données sont dans `data/live-results.json` — sur Vercel, téléchargez le JSON depuis l’admin et committez-le pour publier durablement
+- Les données sont dans `data/live-results.json`
+- **Important** : sur Vercel, enregistrer un score ne le publie pas tout seul. Il faut mettre à jour le fichier sur GitHub (sinon le site ne change pas pour les visiteurs).
+
+### Publier un résultat (sans token)
+
+1. Admin → **Télécharger JSON**
+2. Sur GitHub, ouvrez [`data/live-results.json`](https://github.com/manu6969-nobot/kick-stats/blob/main/data/live-results.json) → crayon
+3. Collez le contenu du fichier téléchargé → **Commit changes**
+4. Attendez 1–2 min le redéploiement Vercel, puis rechargez le site (Ctrl+Shift+R)
+
+### Publier automatiquement (recommandé)
+
+Sur Vercel → Project → Settings → Environment Variables :
+
+| Variable | Valeur |
+|---|---|
+| `ADMIN_PASSWORD` | votre mot de passe admin |
+| `GITHUB_TOKEN` | Personal Access Token GitHub (droit **Contents: Read and write**) |
+| `GITHUB_REPO` | `manu6969-nobot/kick-stats` (optionnel) |
+| `GITHUB_BRANCH` | `main` (optionnel) |
+
+Ensuite chaque **Enregistrer le score** committe le JSON sur GitHub et Vercel redéploie.
 
 ## Déployer sur Vercel (via GitHub)
 
@@ -63,8 +84,7 @@ Page : [`/admin`](http://127.0.0.1:43123/admin)
 2. Sur [vercel.com](https://vercel.com) → **Add New Project** → importez le dépôt.
 3. Framework : **Next.js** (détecté automatiquement). Laissez les commandes par défaut (`npm run build`).
 4. Cliquez sur **Deploy**. Chaque push sur `main` redéploie le site.
-
-Aucune variable d’environnement n’est requise pour la démo.
+5. Ajoutez `ADMIN_PASSWORD` (et idéalement `GITHUB_TOKEN`) dans les variables d’environnement.
 
 ## Scripts
 
