@@ -149,14 +149,22 @@ export function AdminApp() {
       return;
     }
 
-    matches[matchId] = result;
+    // Jamais persister « programmé » avec un score : forcer terminé
+    const normalized: LiveMatchResult =
+      result.status === "scheduled" &&
+      result.homeScore != null &&
+      result.awayScore != null
+        ? { ...result, status: "finished" }
+        : result;
+
+    matches[matchId] = normalized;
     const next: LiveResultsFile = {
       updatedAt: new Date().toISOString(),
       matches,
     };
     void saveLive(
       next,
-      `Score enregistré ${result.homeScore ?? 0}-${result.awayScore ?? 0}`
+      `Score enregistré ${normalized.homeScore ?? 0}-${normalized.awayScore ?? 0}`
     );
   }
 

@@ -4,7 +4,10 @@ import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
 import path from "path";
 import type { LiveResultsFile, Match } from "@/data/types";
 import { matches as baseMatches } from "@/data/championship";
-import { applyLiveResult } from "@/lib/live-results-shared";
+import {
+  applyLiveResult,
+  isEmptyLiveResult,
+} from "@/lib/live-results-shared";
 import bundledLive from "../../data/live-results.json";
 
 export * from "@/lib/live-results-shared";
@@ -16,11 +19,30 @@ export function emptyLiveResults(): LiveResultsFile {
   return { updatedAt: new Date().toISOString(), matches: {} };
 }
 
+/** Retire les entrées vides (status scheduled + scores null). */
+export function sanitizeLiveResults(data: LiveResultsFile): LiveResultsFile {
+  const matches: LiveResultsFile["matches"] = {};
+  for (const [id, result] of Object.entries(data.matches ?? {})) {
+    if (isEmptyLiveResult(result)) continue;
+    // Normalise score + programmé → terminé
+    if (
+      result.status === "scheduled" &&
+      result.homeScore != null &&
+      result.awayScore != null
+    ) {
+      matches[id] = { ...result, status: "finished" };
+    } else {
+      matches[id] = result;
+    }
+  }
+  return { updatedAt: data.updatedAt, matches };
+}
+
 function parseLive(raw: unknown): LiveResultsFile | null {
   if (!raw || typeof raw !== "object") return null;
   const data = raw as LiveResultsFile;
   if (!data.matches || typeof data.matches !== "object") return null;
-  return data;
+  return sanitizeLiveResults(data);
 }
 
 export function readLiveResultsFile(): LiveResultsFile {
@@ -60,7 +82,7 @@ export function writeLiveResultsFile(data: LiveResultsFile): {
   persistedToRepo: boolean;
 } {
   const payload: LiveResultsFile = {
-    ...data,
+    ...sanitizeLiveResults(data),
     updatedAt: new Date().toISOString(),
   };
   const json = JSON.stringify(payload, null, 2);

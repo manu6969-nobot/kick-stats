@@ -11,9 +11,20 @@ export function isEmptyLiveResult(live?: LiveMatchResult | null): boolean {
 
 export function applyLiveResult(base: Match, live?: LiveMatchResult): Match {
   if (!live || isEmptyLiveResult(live)) return base;
+
+  // Anciennes saisies admin : score présent mais statut resté « programmé »
+  let status = live.status;
+  if (
+    status === "scheduled" &&
+    live.homeScore != null &&
+    live.awayScore != null
+  ) {
+    status = "finished";
+  }
+
   return {
     ...base,
-    status: live.status,
+    status,
     homeScore: live.homeScore ?? undefined,
     awayScore: live.awayScore ?? undefined,
     events: live.events ?? [],
