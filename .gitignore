@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# RBFA scrape dump (régénérable, volumineux)
+/data/rbfa-raw.json
+
+# Fichiers temporaires de sync
+/kick-stats-a-jour.zip
+/update-from-78d489f.patch

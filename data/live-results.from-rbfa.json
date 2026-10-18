@@ -1,0 +1,4893 @@
+{
+  "updatedAt": "2026-10-18T08:20:34.933Z",
+  "matches": {
+    "m1": {
+      "status": "finished",
+      "homeScore": 8,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565516-1-goal-Macalli",
+          "minute": 1,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-23",
+          "detail": "Thomas Macalli"
+        },
+        {
+          "id": "rbfa-7565516-20-goal-Thiry",
+          "minute": 20,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-16",
+          "detail": "Lucas Thiry"
+        },
+        {
+          "id": "rbfa-7565516-30-goal-Nkokolo",
+          "minute": 30,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-14",
+          "detail": "Arnold Nkokolo"
+        },
+        {
+          "id": "rbfa-7565516-32-yellow-Poncelet",
+          "minute": 32,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-11",
+          "detail": "Gilles Poncelet"
+        },
+        {
+          "id": "rbfa-7565516-39-penalty-Wauthy",
+          "minute": 39,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-19",
+          "detail": "penalty · Jeremy Wauthy"
+        },
+        {
+          "id": "rbfa-7565516-50-goal-Macalli",
+          "minute": 50,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-23",
+          "detail": "Thomas Macalli"
+        },
+        {
+          "id": "rbfa-7565516-55-goal-Nkokolo",
+          "minute": 55,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-14",
+          "detail": "Arnold Nkokolo"
+        },
+        {
+          "id": "rbfa-7565516-60-goal-Hubert",
+          "minute": 60,
+          "type": "goal",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-25",
+          "detail": "Arthur Hubert"
+        },
+        {
+          "id": "rbfa-7565516-65-yellow-Nkokolo",
+          "minute": 65,
+          "type": "yellow",
+          "teamId": "assenois",
+          "playerId": "p-assenois-14",
+          "detail": "Arnold Nkokolo"
+        },
+        {
+          "id": "rbfa-7565516-79-goal-Wauthy",
+          "minute": 79,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-19",
+          "detail": "Jeremy Wauthy"
+        },
+        {
+          "id": "rbfa-7565516-93-goal-Debra",
+          "minute": 93,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-21",
+          "detail": "Julien Debra"
+        }
+      ]
+    },
+    "m2": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565512-6-yellow-Clotuche",
+          "minute": 6,
+          "type": "yellow",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-6",
+          "detail": "Sébastien Clotuche"
+        },
+        {
+          "id": "rbfa-7565512-36-goal-Chisogne",
+          "minute": 36,
+          "type": "goal",
+          "teamId": "houffalize",
+          "detail": "Mickaël Chisogne"
+        },
+        {
+          "id": "rbfa-7565512-41-goal-Djim",
+          "minute": 41,
+          "type": "goal",
+          "teamId": "marloie",
+          "playerId": "p-marloie-17",
+          "detail": "Tony Djim"
+        },
+        {
+          "id": "rbfa-7565512-44-yellow-Despas",
+          "minute": 44,
+          "type": "yellow",
+          "teamId": "marloie",
+          "playerId": "p-marloie-3",
+          "detail": "Guillaume Despas"
+        },
+        {
+          "id": "rbfa-7565512-50-yellow-Lambert",
+          "minute": 50,
+          "type": "yellow",
+          "teamId": "marloie",
+          "playerId": "p-marloie-4",
+          "detail": "Louis Lambert"
+        },
+        {
+          "id": "rbfa-7565512-55-yellow-Bastin",
+          "minute": 55,
+          "type": "yellow",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-18",
+          "detail": "François Vincent Bastin"
+        },
+        {
+          "id": "rbfa-7565512-65-goal-Horman",
+          "minute": 65,
+          "type": "goal",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-32",
+          "detail": "Jules Horman"
+        },
+        {
+          "id": "rbfa-7565512-80-yellow-Mosquera Acosta",
+          "minute": 80,
+          "type": "yellow",
+          "teamId": "marloie",
+          "detail": "Santiago Mosquera Acosta"
+        },
+        {
+          "id": "rbfa-7565512-85-yellow-Fautre",
+          "minute": 85,
+          "type": "yellow",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-8",
+          "detail": "Corentin Fautre"
+        }
+      ]
+    },
+    "m3": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565518-27-goal-Lefort",
+          "minute": 27,
+          "type": "goal",
+          "teamId": "libin",
+          "playerId": "p-libin-22",
+          "detail": "Thomas Lefort"
+        },
+        {
+          "id": "rbfa-7565518-28-yellow-Mays",
+          "minute": 28,
+          "type": "yellow",
+          "teamId": "libin",
+          "playerId": "p-libin-8",
+          "detail": "Alexis Harry Mays"
+        },
+        {
+          "id": "rbfa-7565518-36-yellow-Istace",
+          "minute": 36,
+          "type": "yellow",
+          "teamId": "libin",
+          "playerId": "p-libin-2",
+          "detail": "Axel Istace"
+        },
+        {
+          "id": "rbfa-7565518-36-goal-Bah",
+          "minute": 36,
+          "type": "goal",
+          "teamId": "florenville",
+          "playerId": "p-florenville-18",
+          "detail": "Bachir Bah"
+        },
+        {
+          "id": "rbfa-7565518-43-yellow-Bourgeois",
+          "minute": 43,
+          "type": "yellow",
+          "teamId": "libin",
+          "detail": "Mattéo André Bourgeois"
+        },
+        {
+          "id": "rbfa-7565518-46-yellow-Mouton",
+          "minute": 46,
+          "type": "yellow",
+          "teamId": "florenville",
+          "playerId": "p-florenville-8",
+          "detail": "Mathis Mouton"
+        },
+        {
+          "id": "rbfa-7565518-57-yellow-Evrard",
+          "minute": 57,
+          "type": "yellow",
+          "teamId": "florenville",
+          "playerId": "p-florenville-14",
+          "detail": "Romain Evrard"
+        },
+        {
+          "id": "rbfa-7565518-80-yellow-Ollier",
+          "minute": 80,
+          "type": "yellow",
+          "teamId": "florenville",
+          "playerId": "p-florenville-9",
+          "detail": "Kévin Munick Ollier"
+        },
+        {
+          "id": "rbfa-7565518-89-goal-Soyer",
+          "minute": 89,
+          "type": "goal",
+          "teamId": "libin",
+          "playerId": "p-libin-10",
+          "detail": "Anthony Soyer"
+        },
+        {
+          "id": "rbfa-7565518-90-yellow-Cornerotte",
+          "minute": 90,
+          "type": "yellow",
+          "teamId": "florenville",
+          "playerId": "p-florenville-1",
+          "detail": "Eliot Louis Cornerotte"
+        }
+      ]
+    },
+    "m5": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 0,
+      "events": [
+        {
+          "id": "rbfa-7565515-30-yellow-Trogh",
+          "minute": 30,
+          "type": "yellow",
+          "teamId": "arlon",
+          "playerId": "p-arlon-10",
+          "detail": "Tom Trogh"
+        },
+        {
+          "id": "rbfa-7565515-33-yellow-Gérard",
+          "minute": 33,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-14",
+          "detail": "Arnaud Gérard"
+        },
+        {
+          "id": "rbfa-7565515-35-yellow-Bossennec",
+          "minute": 35,
+          "type": "yellow",
+          "teamId": "arlon",
+          "playerId": "p-arlon-12",
+          "detail": "Mathieu Bossennec"
+        },
+        {
+          "id": "rbfa-7565515-39-yellow-Filograsso",
+          "minute": 39,
+          "type": "yellow",
+          "teamId": "arlon",
+          "playerId": "p-arlon-23",
+          "detail": "Quentin Loïc Filograsso"
+        },
+        {
+          "id": "rbfa-7565515-57-goal-Dubru",
+          "minute": 57,
+          "type": "goal",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-13",
+          "detail": "Lucas Dubru"
+        },
+        {
+          "id": "rbfa-7565515-65-yellow-Da Silva",
+          "minute": 65,
+          "type": "yellow",
+          "teamId": "arlon",
+          "playerId": "p-arlon-21",
+          "detail": "William Da Silva"
+        },
+        {
+          "id": "rbfa-7565515-69-yellow-Limpach",
+          "minute": 69,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-17",
+          "detail": "Jean Limpach"
+        },
+        {
+          "id": "rbfa-7565515-89-yellow-Daoust",
+          "minute": 89,
+          "type": "yellow",
+          "teamId": "arlon",
+          "playerId": "p-arlon-22",
+          "detail": "Romain Daoust"
+        }
+      ]
+    },
+    "m4": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565514-50-yellow-Fraiture",
+          "minute": 50,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-18",
+          "detail": "Nicolas Fraiture"
+        },
+        {
+          "id": "rbfa-7565514-64-yellow-Pinson",
+          "minute": 64,
+          "type": "yellow",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-5",
+          "detail": "Arnaud Pinson"
+        },
+        {
+          "id": "rbfa-7565514-73-goal-Sass",
+          "minute": 73,
+          "type": "goal",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-15",
+          "detail": "Igor Sass"
+        },
+        {
+          "id": "rbfa-7565514-77-yellow-Guissen",
+          "minute": 77,
+          "type": "yellow",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-9",
+          "detail": "Fabien Guissen"
+        },
+        {
+          "id": "rbfa-7565514-83-yellow-Wattiaux",
+          "minute": 83,
+          "type": "yellow",
+          "teamId": "vaux-sur-sure",
+          "detail": "Boris Wattiaux"
+        },
+        {
+          "id": "rbfa-7565514-86-goal-Zitella",
+          "minute": 86,
+          "type": "goal",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-15",
+          "detail": "Yanis Zitella"
+        }
+      ]
+    },
+    "m7": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 2,
+      "events": [
+        {
+          "id": "rbfa-7565517-8-goal-Marechal",
+          "minute": 8,
+          "type": "goal",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-5",
+          "detail": "Romain Marechal"
+        },
+        {
+          "id": "rbfa-7565517-17-yellow-Fiévet",
+          "minute": 17,
+          "type": "yellow",
+          "teamId": "roy",
+          "playerId": "p-roy-22",
+          "detail": "Julien Fiévet"
+        },
+        {
+          "id": "rbfa-7565517-37-yellow-Apeke",
+          "minute": 37,
+          "type": "yellow",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-8",
+          "detail": "Prince Mohamed Apeke"
+        },
+        {
+          "id": "rbfa-7565517-41-goal-Raskin",
+          "minute": 41,
+          "type": "goal",
+          "teamId": "roy",
+          "playerId": "p-roy-19",
+          "detail": "Valentin Raskin"
+        },
+        {
+          "id": "rbfa-7565517-57-yellow-Ella Ella",
+          "minute": 57,
+          "type": "yellow",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-18",
+          "detail": "Johan Ngo'O Ella Ella"
+        },
+        {
+          "id": "rbfa-7565517-57-yellow-Roberty",
+          "minute": 57,
+          "type": "yellow",
+          "teamId": "harre-manhay",
+          "detail": "Jérôme Jean-Marie Roberty"
+        },
+        {
+          "id": "rbfa-7565517-61-yellow-Raskin",
+          "minute": 61,
+          "type": "yellow",
+          "teamId": "roy",
+          "playerId": "p-roy-23",
+          "detail": "Mathys Raskin"
+        },
+        {
+          "id": "rbfa-7565517-70-yellow-Ipanga Kebantima",
+          "minute": 70,
+          "type": "yellow",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-13",
+          "detail": "Izziel Ipanga Kebantima"
+        },
+        {
+          "id": "rbfa-7565517-91-red-Gauthier",
+          "minute": 91,
+          "type": "red",
+          "teamId": "roy",
+          "playerId": "p-roy-5",
+          "detail": "Damien Gauthier"
+        },
+        {
+          "id": "rbfa-7565517-91-yellow-Mateke",
+          "minute": 91,
+          "type": "yellow",
+          "teamId": "roy",
+          "playerId": "p-roy-8",
+          "detail": "Aime Parker Mateke"
+        },
+        {
+          "id": "rbfa-7565517-92-penalty-Roberty",
+          "minute": 92,
+          "type": "goal",
+          "teamId": "harre-manhay",
+          "detail": "penalty · Jérôme Jean-Marie Roberty"
+        }
+      ]
+    },
+    "m6": {
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565511-41-yellow-Dropsy",
+          "minute": 41,
+          "type": "yellow",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-13",
+          "detail": "Martin Dropsy"
+        },
+        {
+          "id": "rbfa-7565511-43-goal-Pelenga",
+          "minute": 43,
+          "type": "goal",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-19",
+          "detail": "Berly Pelenga"
+        },
+        {
+          "id": "rbfa-7565511-48-yellow-Muller",
+          "minute": 48,
+          "type": "yellow",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-15",
+          "detail": "Liam Muller"
+        },
+        {
+          "id": "rbfa-7565511-57-yellow-Polis",
+          "minute": 57,
+          "type": "yellow",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-7",
+          "detail": "David Polis"
+        },
+        {
+          "id": "rbfa-7565511-73-yellow-Carlier",
+          "minute": 73,
+          "type": "yellow",
+          "teamId": "oppagne",
+          "detail": "Noah Carlier"
+        },
+        {
+          "id": "rbfa-7565511-83-yellow-Jacquemart",
+          "minute": 83,
+          "type": "yellow",
+          "teamId": "bastogne",
+          "detail": "Frédéric Jacquemart"
+        },
+        {
+          "id": "rbfa-7565511-84-yellow-Pelenga",
+          "minute": 84,
+          "type": "yellow",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-19",
+          "detail": "Berly Pelenga"
+        },
+        {
+          "id": "rbfa-7565511-93-yellow-Gruslin",
+          "minute": 93,
+          "type": "yellow",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-5",
+          "detail": "Guillaume Gruslin"
+        },
+        {
+          "id": "rbfa-7565511-95-red-Benoit",
+          "minute": 95,
+          "type": "red",
+          "teamId": "oppagne",
+          "detail": "Christophe Benoit"
+        }
+      ]
+    },
+    "m8": {
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565513-39-yellow-Mustafaj",
+          "minute": 39,
+          "type": "yellow",
+          "teamId": "aye",
+          "playerId": "p-aye-9",
+          "detail": "Burim Mustafaj"
+        },
+        {
+          "id": "rbfa-7565513-64-yellow-Gerard",
+          "minute": 64,
+          "type": "yellow",
+          "teamId": "aye",
+          "playerId": "p-aye-6",
+          "detail": "Denis Gerard"
+        },
+        {
+          "id": "rbfa-7565513-75-goal-Perreaux",
+          "minute": 75,
+          "type": "goal",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-14",
+          "detail": "Mathieu Perreaux"
+        },
+        {
+          "id": "rbfa-7565513-85-yellow-Maury",
+          "minute": 85,
+          "type": "yellow",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-6",
+          "detail": "Noah Maury"
+        },
+        {
+          "id": "rbfa-7565513-87-yellow-Fouarge",
+          "minute": 87,
+          "type": "yellow",
+          "teamId": "aye",
+          "detail": "Nael Fouarge"
+        }
+      ]
+    },
+    "m9": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 0,
+      "events": [
+        {
+          "id": "rbfa-7565520-26-goal-Sikpe Gabiam",
+          "minute": 26,
+          "type": "goal",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-21",
+          "detail": "Ayité Hervé Sikpe Gabiam"
+        },
+        {
+          "id": "rbfa-7565520-35-yellow-Poitoux",
+          "minute": 35,
+          "type": "yellow",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-20",
+          "detail": "Basile Vincent Poitoux"
+        },
+        {
+          "id": "rbfa-7565520-42-yellow-Gruslin",
+          "minute": 42,
+          "type": "yellow",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-5",
+          "detail": "Guillaume Gruslin"
+        },
+        {
+          "id": "rbfa-7565520-42-yellow-Rodrigues Da Silva",
+          "minute": 42,
+          "type": "yellow",
+          "teamId": "libin",
+          "playerId": "p-libin-9",
+          "detail": "Hugo Rodrigues Da Silva"
+        },
+        {
+          "id": "rbfa-7565520-43-yellow-Soyer",
+          "minute": 43,
+          "type": "yellow",
+          "teamId": "libin",
+          "playerId": "p-libin-10",
+          "detail": "Anthony Soyer"
+        },
+        {
+          "id": "rbfa-7565520-48-goal-Sikpe Gabiam",
+          "minute": 48,
+          "type": "goal",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-21",
+          "detail": "Ayité Hervé Sikpe Gabiam"
+        },
+        {
+          "id": "rbfa-7565520-62-goal-Brisy",
+          "minute": 62,
+          "type": "goal",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-10",
+          "detail": "Tristan Brisy"
+        }
+      ]
+    },
+    "m10": {
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 4,
+      "events": [
+        {
+          "id": "rbfa-7565521-3-goal-Diallo",
+          "minute": 3,
+          "type": "goal",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-29",
+          "detail": "Saidou Diallo"
+        },
+        {
+          "id": "rbfa-7565521-10-goal-Fautre",
+          "minute": 10,
+          "type": "goal",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-8",
+          "detail": "Corentin Fautre"
+        },
+        {
+          "id": "rbfa-7565521-34-goal-Diallo",
+          "minute": 34,
+          "type": "goal",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-29",
+          "detail": "Saidou Diallo"
+        },
+        {
+          "id": "rbfa-7565521-42-yellow-Bah",
+          "minute": 42,
+          "type": "yellow",
+          "teamId": "florenville",
+          "playerId": "p-florenville-18",
+          "detail": "Bachir Bah"
+        },
+        {
+          "id": "rbfa-7565521-47-yellow-Charbeau",
+          "minute": 47,
+          "type": "yellow",
+          "teamId": "florenville",
+          "playerId": "p-florenville-3",
+          "detail": "Mathieu Charbeau"
+        },
+        {
+          "id": "rbfa-7565521-69-yellow-Moing",
+          "minute": 69,
+          "type": "yellow",
+          "teamId": "florenville",
+          "playerId": "p-florenville-7",
+          "detail": "Brian Patrick Moing"
+        },
+        {
+          "id": "rbfa-7565521-85-yellow-Camara",
+          "minute": 85,
+          "type": "yellow",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-27",
+          "detail": "Aboubacar Sidiki Camara"
+        },
+        {
+          "id": "rbfa-7565521-87-goal-Horman",
+          "minute": 87,
+          "type": "goal",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-32",
+          "detail": "Jules Horman"
+        },
+        {
+          "id": "rbfa-7565521-91-yellow-Tombal",
+          "minute": 91,
+          "type": "yellow",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-15",
+          "detail": "Xavier Tombal"
+        }
+      ]
+    },
+    "m13": {
+      "status": "finished",
+      "homeScore": 4,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565523-5-goal-Lambert",
+          "minute": 5,
+          "type": "goal",
+          "teamId": "marloie",
+          "playerId": "p-marloie-4",
+          "detail": "Louis Lambert"
+        },
+        {
+          "id": "rbfa-7565523-41-yellow-Lambert",
+          "minute": 41,
+          "type": "yellow",
+          "teamId": "marloie",
+          "playerId": "p-marloie-4",
+          "detail": "Louis Lambert"
+        },
+        {
+          "id": "rbfa-7565523-69-yellow-Lucas",
+          "minute": 69,
+          "type": "yellow",
+          "teamId": "marloie",
+          "playerId": "p-marloie-5",
+          "detail": "Ivan Lucas"
+        },
+        {
+          "id": "rbfa-7565523-72-goal-Lambert",
+          "minute": 72,
+          "type": "goal",
+          "teamId": "marloie",
+          "playerId": "p-marloie-12",
+          "detail": "Maxime Lambert"
+        },
+        {
+          "id": "rbfa-7565523-72-goal-Mustafaj",
+          "minute": 72,
+          "type": "goal",
+          "teamId": "aye",
+          "playerId": "p-aye-9",
+          "detail": "Burim Mustafaj"
+        },
+        {
+          "id": "rbfa-7565523-78-goal-Djim",
+          "minute": 78,
+          "type": "goal",
+          "teamId": "marloie",
+          "playerId": "p-marloie-17",
+          "detail": "Tony Djim"
+        },
+        {
+          "id": "rbfa-7565523-90-goal-Lambert",
+          "minute": 90,
+          "type": "goal",
+          "teamId": "marloie",
+          "playerId": "p-marloie-12",
+          "detail": "Maxime Lambert"
+        },
+        {
+          "id": "rbfa-7565523-92-yellow-Lejeune",
+          "minute": 92,
+          "type": "yellow",
+          "teamId": "aye",
+          "playerId": "p-aye-1",
+          "detail": "Florian Lejeune"
+        }
+      ]
+    },
+    "m14": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 2,
+      "events": [
+        {
+          "id": "rbfa-7565526-12-yellow-Bossennec",
+          "minute": 12,
+          "type": "yellow",
+          "teamId": "arlon",
+          "playerId": "p-arlon-12",
+          "detail": "Mathieu Bossennec"
+        },
+        {
+          "id": "rbfa-7565526-38-goal-Cravatte",
+          "minute": 38,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-4",
+          "detail": "Quentin Cravatte"
+        },
+        {
+          "id": "rbfa-7565526-47-goal-Lejeune",
+          "minute": 47,
+          "type": "goal",
+          "teamId": "arlon",
+          "playerId": "p-arlon-8",
+          "detail": "Quentin Lejeune"
+        },
+        {
+          "id": "rbfa-7565526-51-yellow-Njia",
+          "minute": 51,
+          "type": "yellow",
+          "teamId": "arlon",
+          "playerId": "p-arlon-28",
+          "detail": "Yann Daddy Njia"
+        },
+        {
+          "id": "rbfa-7565526-70-yellow-Erdeljan",
+          "minute": 70,
+          "type": "yellow",
+          "teamId": "arlon",
+          "playerId": "p-arlon-13",
+          "detail": "Esteban Erdeljan"
+        },
+        {
+          "id": "rbfa-7565526-73-red-Sacre",
+          "minute": 73,
+          "type": "red",
+          "teamId": "arlon",
+          "playerId": "p-arlon-2",
+          "detail": "Karl Sacre"
+        },
+        {
+          "id": "rbfa-7565526-82-yellow-Cravatte",
+          "minute": 82,
+          "type": "yellow",
+          "teamId": "assenois",
+          "playerId": "p-assenois-4",
+          "detail": "Quentin Cravatte"
+        },
+        {
+          "id": "rbfa-7565526-84-yellow-Ndikumana",
+          "minute": 84,
+          "type": "yellow",
+          "teamId": "assenois",
+          "detail": "Trésor Ndikumana"
+        },
+        {
+          "id": "rbfa-7565526-85-yellow-Dechamps",
+          "minute": 85,
+          "type": "yellow",
+          "teamId": "assenois",
+          "playerId": "p-assenois-5",
+          "detail": "Theo Dechamps"
+        },
+        {
+          "id": "rbfa-7565526-94-goal-Ndikumana",
+          "minute": 94,
+          "type": "goal",
+          "teamId": "assenois",
+          "detail": "Trésor Ndikumana"
+        },
+        {
+          "id": "rbfa-7565526-98-yellow-Aubry",
+          "minute": 98,
+          "type": "yellow",
+          "teamId": "assenois",
+          "playerId": "p-assenois-20",
+          "detail": "Nicolas Aubry"
+        },
+        {
+          "id": "rbfa-7565526-98-yellow-Debra",
+          "minute": 98,
+          "type": "yellow",
+          "teamId": "assenois",
+          "playerId": "p-assenois-21",
+          "detail": "Julien Debra"
+        }
+      ]
+    },
+    "m12": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 0,
+      "events": [
+        {
+          "id": "rbfa-7565524-22-goal-Schroeder",
+          "minute": 22,
+          "type": "goal",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-20",
+          "detail": "Robin Schroeder"
+        },
+        {
+          "id": "rbfa-7565524-48-goal-Schroeder",
+          "minute": 48,
+          "type": "goal",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-20",
+          "detail": "Robin Schroeder"
+        },
+        {
+          "id": "rbfa-7565524-59-yellow-Wattiaux",
+          "minute": 59,
+          "type": "yellow",
+          "teamId": "vaux-sur-sure",
+          "detail": "Boris Wattiaux"
+        },
+        {
+          "id": "rbfa-7565524-78-penalty-Schroeder",
+          "minute": 78,
+          "type": "goal",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-20",
+          "detail": "penalty · Robin Schroeder"
+        }
+      ]
+    },
+    "m11": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 2,
+      "events": [
+        {
+          "id": "rbfa-7565522-12-goal-Lockman",
+          "minute": 12,
+          "type": "goal",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-8",
+          "detail": "Mathis Lockman"
+        },
+        {
+          "id": "rbfa-7565522-50-yellow-Crowin",
+          "minute": 50,
+          "type": "yellow",
+          "teamId": "roy",
+          "playerId": "p-roy-4",
+          "detail": "Igor Crowin"
+        },
+        {
+          "id": "rbfa-7565522-53-yellow-Lockman",
+          "minute": 53,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-8",
+          "detail": "Mathis Lockman"
+        },
+        {
+          "id": "rbfa-7565522-59-goal-Lockman",
+          "minute": 59,
+          "type": "goal",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-8",
+          "detail": "Mathis Lockman"
+        },
+        {
+          "id": "rbfa-7565522-83-yellow-Clausse",
+          "minute": 83,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "detail": "Yoann Clausse"
+        },
+        {
+          "id": "rbfa-7565522-85-goal-Magonette",
+          "minute": 85,
+          "type": "goal",
+          "teamId": "roy",
+          "playerId": "p-roy-7",
+          "detail": "Henri Magonette"
+        },
+        {
+          "id": "rbfa-7565522-93-yellow-Gravé",
+          "minute": 93,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-6",
+          "detail": "Benjamin Gravé"
+        },
+        {
+          "id": "rbfa-7565522-93-red-Alie",
+          "minute": 93,
+          "type": "red",
+          "teamId": "roy",
+          "playerId": "p-roy-3",
+          "detail": "Baptiste Alie"
+        }
+      ]
+    },
+    "m16": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 2,
+      "events": [
+        {
+          "id": "rbfa-7565519-1-goal-Carlier",
+          "minute": 1,
+          "type": "goal",
+          "teamId": "oppagne",
+          "detail": "Noah Carlier"
+        },
+        {
+          "id": "rbfa-7565519-70-yellow-Samray",
+          "minute": 70,
+          "type": "yellow",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-7",
+          "detail": "Florian Samray"
+        },
+        {
+          "id": "rbfa-7565519-71-goal-Biondolillo",
+          "minute": 71,
+          "type": "goal",
+          "teamId": "harre-manhay",
+          "detail": "Alessio Biondolillo"
+        },
+        {
+          "id": "rbfa-7565519-82-goal-Lizen",
+          "minute": 82,
+          "type": "goal",
+          "teamId": "oppagne",
+          "detail": "Mattéo Lizen"
+        },
+        {
+          "id": "rbfa-7565519-87-yellow-Petitjean",
+          "minute": 87,
+          "type": "yellow",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-15",
+          "detail": "Wannes Petitjean"
+        },
+        {
+          "id": "rbfa-7565519-90-goal-Ovi",
+          "minute": 90,
+          "type": "goal",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-16",
+          "detail": "Assoma Josias Ovi"
+        },
+        {
+          "id": "rbfa-7565519-90-yellow-Cornélis",
+          "minute": 90,
+          "type": "yellow",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-4",
+          "detail": "Justin Cornélis"
+        }
+      ]
+    },
+    "m15": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565525-24-yellow-Limpach",
+          "minute": 24,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-17",
+          "detail": "Jean Limpach"
+        },
+        {
+          "id": "rbfa-7565525-56-yellow-Laffargue",
+          "minute": 56,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "detail": "Matthieu Laffargue"
+        },
+        {
+          "id": "rbfa-7565525-72-goal-Meyers",
+          "minute": 72,
+          "type": "goal",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-19",
+          "detail": "Nathan Meyers"
+        },
+        {
+          "id": "rbfa-7565525-76-yellow-Fraiture",
+          "minute": 76,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-18",
+          "detail": "Nicolas Fraiture"
+        },
+        {
+          "id": "rbfa-7565525-76-yellow-Parisse",
+          "minute": 76,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-9",
+          "detail": "Antoine Parisse"
+        },
+        {
+          "id": "rbfa-7565525-79-goal-Guillaume",
+          "minute": 79,
+          "type": "goal",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-19",
+          "detail": "Lilian Guillaume"
+        },
+        {
+          "id": "rbfa-7565525-81-yellow-Dewalque",
+          "minute": 81,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-11",
+          "detail": "Florent Dewalque"
+        }
+      ]
+    },
+    "m20": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 3,
+      "events": [
+        {
+          "id": "rbfa-7565534-4-goal-Diallo",
+          "minute": 4,
+          "type": "goal",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-29",
+          "detail": "Saidou Diallo"
+        },
+        {
+          "id": "rbfa-7565534-18-goal-Diallo",
+          "minute": 18,
+          "type": "goal",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-29",
+          "detail": "Saidou Diallo"
+        },
+        {
+          "id": "rbfa-7565534-23-goal-Fautré",
+          "minute": 23,
+          "type": "goal",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-30",
+          "detail": "Noa Fautré"
+        },
+        {
+          "id": "rbfa-7565534-54-yellow-Mays",
+          "minute": 54,
+          "type": "yellow",
+          "teamId": "libin",
+          "playerId": "p-libin-8",
+          "detail": "Alexis Harry Mays"
+        },
+        {
+          "id": "rbfa-7565534-56-goal-Nicolas",
+          "minute": 56,
+          "type": "goal",
+          "teamId": "libin",
+          "playerId": "p-libin-25",
+          "detail": "Hugo Nicolas"
+        },
+        {
+          "id": "rbfa-7565534-60-yellow-Renquin",
+          "minute": 60,
+          "type": "yellow",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-14",
+          "detail": "Xavier Renquin"
+        },
+        {
+          "id": "rbfa-7565534-67-penalty-Lefort",
+          "minute": 67,
+          "type": "goal",
+          "teamId": "libin",
+          "playerId": "p-libin-22",
+          "detail": "penalty · Thomas Lefort"
+        },
+        {
+          "id": "rbfa-7565534-90-goal-Soyer",
+          "minute": 90,
+          "type": "goal",
+          "teamId": "libin",
+          "playerId": "p-libin-10",
+          "detail": "Anthony Soyer"
+        }
+      ]
+    },
+    "m17": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 3,
+      "events": [
+        {
+          "id": "rbfa-7565530-3-goal-Benassy",
+          "minute": 3,
+          "type": "goal",
+          "teamId": "marloie",
+          "playerId": "p-marloie-8",
+          "detail": "Baptiste Benassy"
+        },
+        {
+          "id": "rbfa-7565530-26-goal-Djim",
+          "minute": 26,
+          "type": "goal",
+          "teamId": "marloie",
+          "playerId": "p-marloie-17",
+          "detail": "Tony Djim"
+        },
+        {
+          "id": "rbfa-7565530-30-goal-Guissen",
+          "minute": 30,
+          "type": "goal",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-9",
+          "detail": "Fabien Guissen"
+        },
+        {
+          "id": "rbfa-7565530-66-yellow-Wattiaux",
+          "minute": 66,
+          "type": "yellow",
+          "teamId": "vaux-sur-sure",
+          "detail": "Boris Wattiaux"
+        },
+        {
+          "id": "rbfa-7565530-81-goal-Dewalque",
+          "minute": 81,
+          "type": "goal",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-19",
+          "detail": "Sylvain Dewalque"
+        },
+        {
+          "id": "rbfa-7565530-89-goal-Mbazoa",
+          "minute": 89,
+          "type": "goal",
+          "teamId": "marloie",
+          "playerId": "p-marloie-20",
+          "detail": "Edgar Mbazoa"
+        },
+        {
+          "id": "rbfa-7565530-89-yellow-Arifi",
+          "minute": 89,
+          "type": "yellow",
+          "teamId": "marloie",
+          "playerId": "p-marloie-14",
+          "detail": "Besfort Arifi"
+        },
+        {
+          "id": "rbfa-7565530-90-yellow-Poncelet",
+          "minute": 90,
+          "type": "yellow",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-14",
+          "detail": "Gilles Poncelet"
+        }
+      ]
+    },
+    "m21": {
+      "status": "finished",
+      "homeScore": 6,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565532-12-yellow-Dewalque",
+          "minute": 12,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-11",
+          "detail": "Florent Dewalque"
+        },
+        {
+          "id": "rbfa-7565532-15-goal-Nkokolo",
+          "minute": 15,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-14",
+          "detail": "Arnold Nkokolo"
+        },
+        {
+          "id": "rbfa-7565532-19-goal-Debra",
+          "minute": 19,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-21",
+          "detail": "Julien Debra"
+        },
+        {
+          "id": "rbfa-7565532-52-goal-Cravatte",
+          "minute": 52,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-4",
+          "detail": "Quentin Cravatte"
+        },
+        {
+          "id": "rbfa-7565532-62-goal-Debra",
+          "minute": 62,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-21",
+          "detail": "Julien Debra"
+        },
+        {
+          "id": "rbfa-7565532-68-goal-Guillaume",
+          "minute": 68,
+          "type": "goal",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-19",
+          "detail": "Lilian Guillaume"
+        },
+        {
+          "id": "rbfa-7565532-85-goal-Poncin",
+          "minute": 85,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-11",
+          "detail": "Cyril Poncin"
+        },
+        {
+          "id": "rbfa-7565532-85-yellow-Bouillon",
+          "minute": 85,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-4",
+          "detail": "Robin Bouillon"
+        },
+        {
+          "id": "rbfa-7565532-88-goal-Ndikumana",
+          "minute": 88,
+          "type": "goal",
+          "teamId": "assenois",
+          "detail": "Trésor Ndikumana"
+        }
+      ]
+    },
+    "m18": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 3,
+      "events": [
+        {
+          "id": "rbfa-7565531-16-goal-Limpach",
+          "minute": 16,
+          "type": "goal",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-17",
+          "detail": "Jean Limpach"
+        },
+        {
+          "id": "rbfa-7565531-16-yellow-Jourdan",
+          "minute": 16,
+          "type": "yellow",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-13",
+          "detail": "Baptiste Jourdan"
+        },
+        {
+          "id": "rbfa-7565531-24-goal-Schroeder",
+          "minute": 24,
+          "type": "goal",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-20",
+          "detail": "Robin Schroeder"
+        },
+        {
+          "id": "rbfa-7565531-26-goal-Jourdan",
+          "minute": 26,
+          "type": "goal",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-13",
+          "detail": "Baptiste Jourdan"
+        },
+        {
+          "id": "rbfa-7565531-42-yellow-Gérard",
+          "minute": 42,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-14",
+          "detail": "Arnaud Gérard"
+        },
+        {
+          "id": "rbfa-7565531-54-yellow-Schroeder",
+          "minute": 54,
+          "type": "yellow",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-8",
+          "detail": "Gilles Schroeder"
+        },
+        {
+          "id": "rbfa-7565531-63-yellow-Limpach",
+          "minute": 63,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-17",
+          "detail": "Jean Limpach"
+        },
+        {
+          "id": "rbfa-7565531-83-yellow-Parisse",
+          "minute": 83,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-9",
+          "detail": "Antoine Parisse"
+        },
+        {
+          "id": "rbfa-7565531-86-yellow-Hannard",
+          "minute": 86,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "detail": "Mattéo Hannard"
+        },
+        {
+          "id": "rbfa-7565531-88-yellow-Duroy",
+          "minute": 88,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-3",
+          "detail": "Amaury Duroy"
+        },
+        {
+          "id": "rbfa-7565531-88-penalty-Perreaux",
+          "minute": 88,
+          "type": "goal",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-14",
+          "detail": "penalty · Mathieu Perreaux"
+        }
+      ]
+    },
+    "m19": {
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 0,
+      "events": [
+        {
+          "id": "rbfa-7565528-35-yellow-Samray",
+          "minute": 35,
+          "type": "yellow",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-7",
+          "detail": "Florian Samray"
+        },
+        {
+          "id": "rbfa-7565528-37-yellow-Apeke",
+          "minute": 37,
+          "type": "yellow",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-8",
+          "detail": "Prince Mohamed Apeke"
+        },
+        {
+          "id": "rbfa-7565528-40-yellow-Weyders",
+          "minute": 40,
+          "type": "yellow",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-9",
+          "detail": "Romain Weyders"
+        },
+        {
+          "id": "rbfa-7565528-81-yellow-Belche",
+          "minute": 81,
+          "type": "yellow",
+          "teamId": "bastogne",
+          "detail": "Mattias Belche"
+        },
+        {
+          "id": "rbfa-7565528-85-yellow-Fabere",
+          "minute": 85,
+          "type": "yellow",
+          "teamId": "harre-manhay",
+          "detail": "Patrick Fabere"
+        }
+      ]
+    },
+    "m22": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 0,
+      "events": [
+        {
+          "id": "rbfa-7565533-14-goal-Fiévet",
+          "minute": 14,
+          "type": "goal",
+          "teamId": "roy",
+          "playerId": "p-roy-22",
+          "detail": "Julien Fiévet"
+        },
+        {
+          "id": "rbfa-7565533-34-yellow-Neetens",
+          "minute": 34,
+          "type": "yellow",
+          "teamId": "arlon",
+          "playerId": "p-arlon-9",
+          "detail": "Yassin Neetens"
+        },
+        {
+          "id": "rbfa-7565533-36-yellow-Gauthier",
+          "minute": 36,
+          "type": "yellow",
+          "teamId": "roy",
+          "playerId": "p-roy-5",
+          "detail": "Damien Gauthier"
+        },
+        {
+          "id": "rbfa-7565533-50-yellow-Guillaume",
+          "minute": 50,
+          "type": "yellow",
+          "teamId": "roy",
+          "playerId": "p-roy-15",
+          "detail": "William Guillaume"
+        },
+        {
+          "id": "rbfa-7565533-55-yellow-Lejeune",
+          "minute": 55,
+          "type": "yellow",
+          "teamId": "arlon",
+          "playerId": "p-arlon-8",
+          "detail": "Quentin Lejeune"
+        },
+        {
+          "id": "rbfa-7565533-64-goal-Raskin",
+          "minute": 64,
+          "type": "goal",
+          "teamId": "roy",
+          "playerId": "p-roy-19",
+          "detail": "Valentin Raskin"
+        },
+        {
+          "id": "rbfa-7565533-73-goal-Piergentili",
+          "minute": 73,
+          "type": "goal",
+          "teamId": "roy",
+          "detail": "Alessandro Piergentili"
+        },
+        {
+          "id": "rbfa-7565533-73-yellow-Magonette",
+          "minute": 73,
+          "type": "yellow",
+          "teamId": "roy",
+          "playerId": "p-roy-7",
+          "detail": "Henri Magonette"
+        }
+      ]
+    },
+    "m23": {
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 0,
+      "events": [
+        {
+          "id": "rbfa-7565527-32-yellow-Gerarts",
+          "minute": 32,
+          "type": "yellow",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-18",
+          "detail": "Matheo Jaime Gerarts"
+        },
+        {
+          "id": "rbfa-7565527-33-yellow-Englebert",
+          "minute": 33,
+          "type": "yellow",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-5",
+          "detail": "Erwin Englebert"
+        },
+        {
+          "id": "rbfa-7565527-44-yellow-Guébenne",
+          "minute": 44,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-18",
+          "detail": "Nathan Guébenne"
+        },
+        {
+          "id": "rbfa-7565527-55-yellow-Piret",
+          "minute": 55,
+          "type": "yellow",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-16",
+          "detail": "Quentin Piret"
+        },
+        {
+          "id": "rbfa-7565527-66-yellow-Grégoire",
+          "minute": 66,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-7",
+          "detail": "Jordan Grégoire"
+        },
+        {
+          "id": "rbfa-7565527-71-yellow-Hubert",
+          "minute": 71,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-25",
+          "detail": "Arthur Hubert"
+        },
+        {
+          "id": "rbfa-7565527-72-yellow-Thiry",
+          "minute": 72,
+          "type": "yellow",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-9",
+          "detail": "Noah Thiry"
+        },
+        {
+          "id": "rbfa-7565527-83-yellow-Gravé",
+          "minute": 83,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-6",
+          "detail": "Benjamin Gravé"
+        },
+        {
+          "id": "rbfa-7565527-91-yellow-Collignon",
+          "minute": 91,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-22",
+          "detail": "Bryan Collignon"
+        }
+      ]
+    },
+    "m24": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565529-15-goal-Fouarge",
+          "minute": 15,
+          "type": "goal",
+          "teamId": "aye",
+          "detail": "Nael Fouarge"
+        },
+        {
+          "id": "rbfa-7565529-57-yellow-Pietri",
+          "minute": 57,
+          "type": "yellow",
+          "teamId": "florenville",
+          "playerId": "p-florenville-16",
+          "detail": "Eros Karl Pietri"
+        },
+        {
+          "id": "rbfa-7565529-60-yellow-Philippe",
+          "minute": 60,
+          "type": "yellow",
+          "teamId": "aye",
+          "playerId": "p-aye-22",
+          "detail": "Théo Fabian Philippe"
+        },
+        {
+          "id": "rbfa-7565529-64-goal-Bah",
+          "minute": 64,
+          "type": "goal",
+          "teamId": "florenville",
+          "playerId": "p-florenville-18",
+          "detail": "Bachir Bah"
+        },
+        {
+          "id": "rbfa-7565529-76-yellow-Ollier",
+          "minute": 76,
+          "type": "yellow",
+          "teamId": "florenville",
+          "playerId": "p-florenville-9",
+          "detail": "Kévin Munick Ollier"
+        },
+        {
+          "id": "rbfa-7565529-91-yellow-Mustafaj",
+          "minute": 91,
+          "type": "yellow",
+          "teamId": "aye",
+          "playerId": "p-aye-9",
+          "detail": "Burim Mustafaj"
+        },
+        {
+          "id": "rbfa-7565529-93-yellow-Cornerotte",
+          "minute": 93,
+          "type": "yellow",
+          "teamId": "florenville",
+          "playerId": "p-florenville-1",
+          "detail": "Eliot Louis Cornerotte"
+        },
+        {
+          "id": "rbfa-7565529-94-yellow-Marotte",
+          "minute": 94,
+          "type": "yellow",
+          "teamId": "aye",
+          "playerId": "p-aye-15",
+          "detail": "Noah Marotte"
+        }
+      ]
+    },
+    "m25": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565536-41-yellow-Diallo",
+          "minute": 41,
+          "type": "yellow",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-29",
+          "detail": "Saidou Diallo"
+        },
+        {
+          "id": "rbfa-7565536-46-goal-Fouarge",
+          "minute": 46,
+          "type": "goal",
+          "teamId": "aye",
+          "detail": "Nael Fouarge"
+        },
+        {
+          "id": "rbfa-7565536-48-yellow-Mahin",
+          "minute": 48,
+          "type": "yellow",
+          "teamId": "aye",
+          "playerId": "p-aye-20",
+          "detail": "Cyril Mahin"
+        },
+        {
+          "id": "rbfa-7565536-72-yellow-Lecaillie",
+          "minute": 72,
+          "type": "yellow",
+          "teamId": "aye",
+          "playerId": "p-aye-19",
+          "detail": "Arnaud Lecaillie"
+        },
+        {
+          "id": "rbfa-7565536-78-goal-Behrami",
+          "minute": 78,
+          "type": "goal",
+          "teamId": "houffalize",
+          "detail": "Mikail Behrami"
+        },
+        {
+          "id": "rbfa-7565536-79-yellow-Chauveheid",
+          "minute": 79,
+          "type": "yellow",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-28",
+          "detail": "Rayane Chauveheid"
+        },
+        {
+          "id": "rbfa-7565536-79-yellow-Lejeune",
+          "minute": 79,
+          "type": "yellow",
+          "teamId": "aye",
+          "playerId": "p-aye-1",
+          "detail": "Florian Lejeune"
+        },
+        {
+          "id": "rbfa-7565536-92-goal-Behrami",
+          "minute": 92,
+          "type": "goal",
+          "teamId": "houffalize",
+          "detail": "Mikail Behrami"
+        },
+        {
+          "id": "rbfa-7565536-94-goal-Diallo",
+          "minute": 94,
+          "type": "goal",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-29",
+          "detail": "Saidou Diallo"
+        },
+        {
+          "id": "rbfa-7565536-94-red-Clotuche",
+          "minute": 94,
+          "type": "red",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-6",
+          "detail": "Sébastien Clotuche"
+        }
+      ]
+    },
+    "m29": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 0,
+      "events": [
+        {
+          "id": "rbfa-7565542-25-penalty-Lambert",
+          "minute": 25,
+          "type": "goal",
+          "teamId": "marloie",
+          "playerId": "p-marloie-12",
+          "detail": "penalty · Maxime Lambert"
+        },
+        {
+          "id": "rbfa-7565542-76-yellow-Klein",
+          "minute": 76,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "detail": "Valentin Klein"
+        },
+        {
+          "id": "rbfa-7565542-84-yellow-Schmit",
+          "minute": 84,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "detail": "Olivier Schmit"
+        }
+      ]
+    },
+    "m28": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 0,
+      "events": [
+        {
+          "id": "rbfa-7565541-45-yellow-Degros",
+          "minute": 45,
+          "type": "yellow",
+          "teamId": "assenois",
+          "playerId": "p-assenois-22",
+          "detail": "Pierre-Frederic Degros"
+        },
+        {
+          "id": "rbfa-7565541-60-yellow-Ndikumana",
+          "minute": 60,
+          "type": "yellow",
+          "teamId": "assenois",
+          "detail": "Trésor Ndikumana"
+        },
+        {
+          "id": "rbfa-7565541-88-yellow-Schroeder",
+          "minute": 88,
+          "type": "yellow",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-8",
+          "detail": "Gilles Schroeder"
+        },
+        {
+          "id": "rbfa-7565541-92-yellow-Maury",
+          "minute": 92,
+          "type": "yellow",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-6",
+          "detail": "Noah Maury"
+        },
+        {
+          "id": "rbfa-7565541-93-penalty-Schroeder",
+          "minute": 93,
+          "type": "goal",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-8",
+          "detail": "penalty · Gilles Schroeder"
+        },
+        {
+          "id": "rbfa-7565541-93-red-Thiry",
+          "minute": 93,
+          "type": "red",
+          "teamId": "assenois",
+          "playerId": "p-assenois-16",
+          "detail": "Lucas Thiry"
+        }
+      ]
+    },
+    "m27": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 2,
+      "events": [
+        {
+          "id": "rbfa-7565539-18-goal-Gerarts",
+          "minute": 18,
+          "type": "goal",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-18",
+          "detail": "Matheo Jaime Gerarts"
+        },
+        {
+          "id": "rbfa-7565539-56-goal-Dropsy",
+          "minute": 56,
+          "type": "goal",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-13",
+          "detail": "Martin Dropsy"
+        },
+        {
+          "id": "rbfa-7565539-60-yellow-Collin",
+          "minute": 60,
+          "type": "yellow",
+          "teamId": "oppagne",
+          "detail": "Gilles Collin"
+        },
+        {
+          "id": "rbfa-7565539-60-yellow-Lamy",
+          "minute": 60,
+          "type": "yellow",
+          "teamId": "oppagne",
+          "detail": "Valère Louis Lamy"
+        },
+        {
+          "id": "rbfa-7565539-67-yellow-Rocca",
+          "minute": 67,
+          "type": "yellow",
+          "teamId": "arlon",
+          "playerId": "p-arlon-17",
+          "detail": "Gaëtan Régis Rocca"
+        },
+        {
+          "id": "rbfa-7565539-70-yellow-Dropsy",
+          "minute": 70,
+          "type": "yellow",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-13",
+          "detail": "Martin Dropsy"
+        },
+        {
+          "id": "rbfa-7565539-71-yellow-Neetens",
+          "minute": 71,
+          "type": "yellow",
+          "teamId": "arlon",
+          "playerId": "p-arlon-9",
+          "detail": "Yassin Neetens"
+        },
+        {
+          "id": "rbfa-7565539-82-yellow-Davies",
+          "minute": 82,
+          "type": "yellow",
+          "teamId": "arlon",
+          "playerId": "p-arlon-6",
+          "detail": "Edouard Davies"
+        },
+        {
+          "id": "rbfa-7565539-84-yellow-Hugot",
+          "minute": 84,
+          "type": "yellow",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-6",
+          "detail": "Louis Hugot"
+        },
+        {
+          "id": "rbfa-7565539-92-goal-Zane",
+          "minute": 92,
+          "type": "goal",
+          "teamId": "arlon",
+          "playerId": "p-arlon-18",
+          "detail": "Abdoul Samad Zane"
+        }
+      ]
+    },
+    "m26": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565535-52-goal-Dewalque",
+          "minute": 52,
+          "type": "goal",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-19",
+          "detail": "Sylvain Dewalque"
+        },
+        {
+          "id": "rbfa-7565535-54-yellow-Moing",
+          "minute": 54,
+          "type": "yellow",
+          "teamId": "florenville",
+          "playerId": "p-florenville-7",
+          "detail": "Brian Patrick Moing"
+        },
+        {
+          "id": "rbfa-7565535-63-goal-Corvisy",
+          "minute": 63,
+          "type": "goal",
+          "teamId": "florenville",
+          "detail": "Corentin Serge Corvisy"
+        },
+        {
+          "id": "rbfa-7565535-68-yellow-Pietri",
+          "minute": 68,
+          "type": "yellow",
+          "teamId": "florenville",
+          "playerId": "p-florenville-16",
+          "detail": "Eros Karl Pietri"
+        },
+        {
+          "id": "rbfa-7565535-69-goal-Bah",
+          "minute": 69,
+          "type": "goal",
+          "teamId": "florenville",
+          "playerId": "p-florenville-18",
+          "detail": "Bachir Bah"
+        },
+        {
+          "id": "rbfa-7565535-79-yellow-Flamant",
+          "minute": 79,
+          "type": "yellow",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-3",
+          "detail": "Noe Flamant"
+        },
+        {
+          "id": "rbfa-7565535-89-goal-Emond",
+          "minute": 89,
+          "type": "goal",
+          "teamId": "florenville",
+          "playerId": "p-florenville-19",
+          "detail": "Victor Emond"
+        },
+        {
+          "id": "rbfa-7565535-90-yellow-Guissen",
+          "minute": 90,
+          "type": "yellow",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-9",
+          "detail": "Fabien Guissen"
+        }
+      ]
+    },
+    "m30": {
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 0,
+      "events": [
+        {
+          "id": "rbfa-7565538-41-yellow-Muller",
+          "minute": 41,
+          "type": "yellow",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-15",
+          "detail": "Liam Muller"
+        },
+        {
+          "id": "rbfa-7565538-64-yellow-Poitoux",
+          "minute": 64,
+          "type": "yellow",
+          "teamId": "bastogne",
+          "detail": "Mattis Christophe Poitoux"
+        },
+        {
+          "id": "rbfa-7565538-71-yellow-Schinckus",
+          "minute": 71,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-20",
+          "detail": "Jordan Schinckus"
+        },
+        {
+          "id": "rbfa-7565538-72-yellow-Berg",
+          "minute": 72,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-3",
+          "detail": "Romain Berg"
+        },
+        {
+          "id": "rbfa-7565538-75-yellow-Jacob",
+          "minute": 75,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "detail": "Mael Jacob"
+        },
+        {
+          "id": "rbfa-7565538-82-yellow-Gruslin",
+          "minute": 82,
+          "type": "yellow",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-5",
+          "detail": "Guillaume Gruslin"
+        },
+        {
+          "id": "rbfa-7565538-87-yellow-Gravé",
+          "minute": 87,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-6",
+          "detail": "Benjamin Gravé"
+        }
+      ]
+    },
+    "m31": {
+      "status": "finished",
+      "homeScore": 5,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565537-11-goal-Chikatara",
+          "minute": 11,
+          "type": "goal",
+          "teamId": "harre-manhay",
+          "detail": "Ugochukwu Precious Chikatara"
+        },
+        {
+          "id": "rbfa-7565537-16-goal-Keita",
+          "minute": 16,
+          "type": "goal",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-19",
+          "detail": "Alhassane Keita"
+        },
+        {
+          "id": "rbfa-7565537-22-red-Istace",
+          "minute": 22,
+          "type": "red",
+          "teamId": "libin",
+          "playerId": "p-libin-2",
+          "detail": "Axel Istace"
+        },
+        {
+          "id": "rbfa-7565537-25-yellow-Mays",
+          "minute": 25,
+          "type": "yellow",
+          "teamId": "libin",
+          "playerId": "p-libin-8",
+          "detail": "Alexis Harry Mays"
+        },
+        {
+          "id": "rbfa-7565537-32-goal-Keita",
+          "minute": 32,
+          "type": "goal",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-19",
+          "detail": "Alhassane Keita"
+        },
+        {
+          "id": "rbfa-7565537-35-penalty-Roberty",
+          "minute": 35,
+          "type": "goal",
+          "teamId": "harre-manhay",
+          "detail": "penalty · Jérôme Jean-Marie Roberty"
+        },
+        {
+          "id": "rbfa-7565537-38-yellow-Roberty",
+          "minute": 38,
+          "type": "yellow",
+          "teamId": "harre-manhay",
+          "detail": "Jérôme Jean-Marie Roberty"
+        },
+        {
+          "id": "rbfa-7565537-47-yellow-Bourgeois",
+          "minute": 47,
+          "type": "yellow",
+          "teamId": "libin",
+          "detail": "Mattéo André Bourgeois"
+        },
+        {
+          "id": "rbfa-7565537-57-goal-Keita",
+          "minute": 57,
+          "type": "goal",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-19",
+          "detail": "Alhassane Keita"
+        },
+        {
+          "id": "rbfa-7565537-58-yellow-Simon",
+          "minute": 58,
+          "type": "yellow",
+          "teamId": "libin",
+          "detail": "Benjamin Simon"
+        },
+        {
+          "id": "rbfa-7565537-70-goal-Nicolas",
+          "minute": 70,
+          "type": "goal",
+          "teamId": "libin",
+          "playerId": "p-libin-25",
+          "detail": "Hugo Nicolas"
+        },
+        {
+          "id": "rbfa-7565537-75-yellow-Ipanga Kebantima",
+          "minute": 75,
+          "type": "yellow",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-13",
+          "detail": "Izziel Ipanga Kebantima"
+        }
+      ]
+    },
+    "m32": {
+      "status": "finished",
+      "homeScore": 4,
+      "awayScore": 2,
+      "events": [
+        {
+          "id": "rbfa-7565540-12-goal-Hougardy",
+          "minute": 12,
+          "type": "goal",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-20",
+          "detail": "Goran Nicolas Hougardy"
+        },
+        {
+          "id": "rbfa-7565540-31-yellow-Bouillon",
+          "minute": 31,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-4",
+          "detail": "Robin Bouillon"
+        },
+        {
+          "id": "rbfa-7565540-31-goal-Guillaume",
+          "minute": 31,
+          "type": "goal",
+          "teamId": "roy",
+          "playerId": "p-roy-15",
+          "detail": "William Guillaume"
+        },
+        {
+          "id": "rbfa-7565540-65-goal-Poncin",
+          "minute": 65,
+          "type": "goal",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-22",
+          "detail": "Jordan Poncin"
+        },
+        {
+          "id": "rbfa-7565540-66-goal-Guillaume",
+          "minute": 66,
+          "type": "goal",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-19",
+          "detail": "Lilian Guillaume"
+        },
+        {
+          "id": "rbfa-7565540-72-yellow-Cleymans",
+          "minute": 72,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-10",
+          "detail": "Kieran Cleymans"
+        },
+        {
+          "id": "rbfa-7565540-72-yellow-Chanly",
+          "minute": 72,
+          "type": "yellow",
+          "teamId": "roy",
+          "detail": "François Chanly"
+        },
+        {
+          "id": "rbfa-7565540-75-red-Mateke",
+          "minute": 75,
+          "type": "red",
+          "teamId": "roy",
+          "playerId": "p-roy-8",
+          "detail": "Aime Parker Mateke"
+        },
+        {
+          "id": "rbfa-7565540-84-yellow-Wergifosse",
+          "minute": 84,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-13",
+          "detail": "Aloïs David Wergifosse"
+        },
+        {
+          "id": "rbfa-7565540-87-yellow-Andrianne",
+          "minute": 87,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-3",
+          "detail": "Yannis Andrianne"
+        },
+        {
+          "id": "rbfa-7565540-87-yellow-Alie",
+          "minute": 87,
+          "type": "yellow",
+          "teamId": "roy",
+          "detail": "Maxim Alie"
+        },
+        {
+          "id": "rbfa-7565540-90-goal-Fiévet",
+          "minute": 90,
+          "type": "goal",
+          "teamId": "roy",
+          "playerId": "p-roy-22",
+          "detail": "Julien Fiévet"
+        },
+        {
+          "id": "rbfa-7565540-94-goal-Poncin",
+          "minute": 94,
+          "type": "goal",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-22",
+          "detail": "Jordan Poncin"
+        },
+        {
+          "id": "rbfa-7565540-96-yellow-Fiévet",
+          "minute": 96,
+          "type": "yellow",
+          "teamId": "roy",
+          "playerId": "p-roy-22",
+          "detail": "Julien Fiévet"
+        }
+      ]
+    },
+    "m33": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 3,
+      "events": [
+        {
+          "id": "rbfa-7565546-12-goal-Fautré",
+          "minute": 12,
+          "type": "goal",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-30",
+          "detail": "Noa Fautré"
+        },
+        {
+          "id": "rbfa-7565546-16-yellow-Idmansour",
+          "minute": 16,
+          "type": "yellow",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-26",
+          "detail": "Ilias Idmansour"
+        },
+        {
+          "id": "rbfa-7565546-24-yellow-Vankerkhoven",
+          "minute": 24,
+          "type": "yellow",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-24",
+          "detail": "Diego Vankerkhoven"
+        },
+        {
+          "id": "rbfa-7565546-43-goal-Diallo",
+          "minute": 43,
+          "type": "goal",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-29",
+          "detail": "Saidou Diallo"
+        },
+        {
+          "id": "rbfa-7565546-45-yellow-Sass",
+          "minute": 45,
+          "type": "yellow",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-15",
+          "detail": "Igor Sass"
+        },
+        {
+          "id": "rbfa-7565546-45-yellow-Diallo",
+          "minute": 45,
+          "type": "yellow",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-29",
+          "detail": "Saidou Diallo"
+        },
+        {
+          "id": "rbfa-7565546-54-penalty-Dewalque",
+          "minute": 54,
+          "type": "goal",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-19",
+          "detail": "penalty · Sylvain Dewalque"
+        },
+        {
+          "id": "rbfa-7565546-57-yellow-Sensique",
+          "minute": 57,
+          "type": "yellow",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-16",
+          "detail": "Alan Sensique"
+        },
+        {
+          "id": "rbfa-7565546-58-goal-Fautre",
+          "minute": 58,
+          "type": "goal",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-8",
+          "detail": "Corentin Fautre"
+        }
+      ]
+    },
+    "m36": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 3,
+      "events": [
+        {
+          "id": "rbfa-7565548-13-goal-Aubry",
+          "minute": 13,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-20",
+          "detail": "Nicolas Aubry"
+        },
+        {
+          "id": "rbfa-7565548-26-goal-Soumahoro",
+          "minute": 26,
+          "type": "goal",
+          "teamId": "marloie",
+          "detail": "Mamadou Soumahoro"
+        },
+        {
+          "id": "rbfa-7565548-27-goal-Ioakimidou",
+          "minute": 27,
+          "type": "goal",
+          "teamId": "marloie",
+          "detail": "Charlin Ioakimidou"
+        },
+        {
+          "id": "rbfa-7565548-39-yellow-Mosquera Acosta",
+          "minute": 39,
+          "type": "yellow",
+          "teamId": "marloie",
+          "detail": "Santiago Mosquera Acosta"
+        },
+        {
+          "id": "rbfa-7565548-66-goal-Mbazoa",
+          "minute": 66,
+          "type": "goal",
+          "teamId": "marloie",
+          "playerId": "p-marloie-20",
+          "detail": "Edgar Mbazoa"
+        },
+        {
+          "id": "rbfa-7565548-71-goal-Debra",
+          "minute": 71,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-21",
+          "detail": "Julien Debra"
+        },
+        {
+          "id": "rbfa-7565548-89-yellow-Hayon",
+          "minute": 89,
+          "type": "yellow",
+          "teamId": "marloie",
+          "detail": "Geoffrey Hayon"
+        }
+      ]
+    },
+    "m37": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565550-23-goal-Fouarge",
+          "minute": 23,
+          "type": "goal",
+          "teamId": "aye",
+          "detail": "Nael Fouarge"
+        },
+        {
+          "id": "rbfa-7565550-52-yellow-Vincent",
+          "minute": 52,
+          "type": "yellow",
+          "teamId": "aye",
+          "playerId": "p-aye-17",
+          "detail": "William Vincent"
+        },
+        {
+          "id": "rbfa-7565550-70-goal-Nicolas",
+          "minute": 70,
+          "type": "goal",
+          "teamId": "libin",
+          "playerId": "p-libin-25",
+          "detail": "Hugo Nicolas"
+        },
+        {
+          "id": "rbfa-7565550-75-goal-Nicolas",
+          "minute": 75,
+          "type": "goal",
+          "teamId": "libin",
+          "playerId": "p-libin-25",
+          "detail": "Hugo Nicolas"
+        },
+        {
+          "id": "rbfa-7565550-76-yellow-Molitor",
+          "minute": 76,
+          "type": "yellow",
+          "teamId": "libin",
+          "playerId": "p-libin-23",
+          "detail": "Hugo Molitor"
+        },
+        {
+          "id": "rbfa-7565550-80-yellow-Poncelet",
+          "minute": 80,
+          "type": "yellow",
+          "teamId": "libin",
+          "playerId": "p-libin-16",
+          "detail": "Nathan Poncelet"
+        },
+        {
+          "id": "rbfa-7565550-92-goal-Schingtienne",
+          "minute": 92,
+          "type": "goal",
+          "teamId": "libin",
+          "playerId": "p-libin-18",
+          "detail": "Louis Schingtienne"
+        }
+      ]
+    },
+    "m35": {
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 0,
+      "events": [
+        {
+          "id": "rbfa-7565544-14-yellow-Bossennec",
+          "minute": 14,
+          "type": "yellow",
+          "teamId": "arlon",
+          "playerId": "p-arlon-12",
+          "detail": "Mathieu Bossennec"
+        },
+        {
+          "id": "rbfa-7565544-14-yellow-Joachim",
+          "minute": 14,
+          "type": "yellow",
+          "teamId": "arlon",
+          "playerId": "p-arlon-25",
+          "detail": "Aurélien Joachim"
+        },
+        {
+          "id": "rbfa-7565544-21-yellow-Daoust",
+          "minute": 21,
+          "type": "yellow",
+          "teamId": "arlon",
+          "playerId": "p-arlon-22",
+          "detail": "Romain Daoust"
+        },
+        {
+          "id": "rbfa-7565544-25-yellow-Poitoux",
+          "minute": 25,
+          "type": "yellow",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-20",
+          "detail": "Basile Vincent Poitoux"
+        },
+        {
+          "id": "rbfa-7565544-39-yellow-Belche",
+          "minute": 39,
+          "type": "yellow",
+          "teamId": "bastogne",
+          "detail": "Mattias Belche"
+        },
+        {
+          "id": "rbfa-7565544-68-yellow-Neetens",
+          "minute": 68,
+          "type": "yellow",
+          "teamId": "arlon",
+          "playerId": "p-arlon-9",
+          "detail": "Yassin Neetens"
+        }
+      ]
+    },
+    "m34": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 4,
+      "events": [
+        {
+          "id": "rbfa-7565547-5-goal-Ngassam Foudjem",
+          "minute": 5,
+          "type": "goal",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-20",
+          "detail": "Yohann Ngassam Foudjem"
+        },
+        {
+          "id": "rbfa-7565547-12-goal-Emond",
+          "minute": 12,
+          "type": "goal",
+          "teamId": "florenville",
+          "playerId": "p-florenville-19",
+          "detail": "Victor Emond"
+        },
+        {
+          "id": "rbfa-7565547-20-yellow-Huberty",
+          "minute": 20,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-15",
+          "detail": "Kevin Huberty"
+        },
+        {
+          "id": "rbfa-7565547-23-goal-Emond",
+          "minute": 23,
+          "type": "goal",
+          "teamId": "florenville",
+          "playerId": "p-florenville-19",
+          "detail": "Victor Emond"
+        },
+        {
+          "id": "rbfa-7565547-30-yellow-Limpach",
+          "minute": 30,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-17",
+          "detail": "Jean Limpach"
+        },
+        {
+          "id": "rbfa-7565547-30-yellow-Dupuis",
+          "minute": 30,
+          "type": "yellow",
+          "teamId": "florenville",
+          "playerId": "p-florenville-13",
+          "detail": "Simon Dupuis"
+        },
+        {
+          "id": "rbfa-7565547-40-goal-Limpach",
+          "minute": 40,
+          "type": "goal",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-17",
+          "detail": "Jean Limpach"
+        },
+        {
+          "id": "rbfa-7565547-43-yellow-Rosman",
+          "minute": 43,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-22",
+          "detail": "Joakim Rosman"
+        },
+        {
+          "id": "rbfa-7565547-48-yellow-Ollier",
+          "minute": 48,
+          "type": "yellow",
+          "teamId": "florenville",
+          "playerId": "p-florenville-9",
+          "detail": "Kévin Munick Ollier"
+        },
+        {
+          "id": "rbfa-7565547-54-goal-Leclerc",
+          "minute": 54,
+          "type": "goal",
+          "teamId": "florenville",
+          "playerId": "p-florenville-20",
+          "detail": "Quentin Leclerc"
+        },
+        {
+          "id": "rbfa-7565547-66-yellow-Schmit",
+          "minute": 66,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "detail": "Olivier Schmit"
+        },
+        {
+          "id": "rbfa-7565547-75-yellow-Laruccia",
+          "minute": 75,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "detail": "Luca Laruccia"
+        },
+        {
+          "id": "rbfa-7565547-79-goal-Emond",
+          "minute": 79,
+          "type": "goal",
+          "teamId": "florenville",
+          "playerId": "p-florenville-19",
+          "detail": "Victor Emond"
+        },
+        {
+          "id": "rbfa-7565547-84-yellow-Gomez",
+          "minute": 84,
+          "type": "yellow",
+          "teamId": "florenville",
+          "playerId": "p-florenville-5",
+          "detail": "Maxime Gomez"
+        },
+        {
+          "id": "rbfa-7565547-87-yellow-Mezouari",
+          "minute": 87,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "detail": "Merouane Mezouari"
+        },
+        {
+          "id": "rbfa-7565547-91-yellow-Parisse",
+          "minute": 91,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-9",
+          "detail": "Antoine Parisse"
+        },
+        {
+          "id": "rbfa-7565547-92-goal-Hannard",
+          "minute": 92,
+          "type": "goal",
+          "teamId": "nothomb",
+          "detail": "Mattéo Hannard"
+        }
+      ]
+    },
+    "m39": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 3,
+      "events": [
+        {
+          "id": "rbfa-7565549-15-goal-Schroeder",
+          "minute": 15,
+          "type": "goal",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-20",
+          "detail": "Robin Schroeder"
+        },
+        {
+          "id": "rbfa-7565549-25-red-Wallens",
+          "minute": 25,
+          "type": "red",
+          "teamId": "roy",
+          "playerId": "p-roy-12",
+          "detail": "Tom Wallens"
+        },
+        {
+          "id": "rbfa-7565549-35-yellow-Schroeder",
+          "minute": 35,
+          "type": "yellow",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-20",
+          "detail": "Robin Schroeder"
+        },
+        {
+          "id": "rbfa-7565549-40-goal-Raskin",
+          "minute": 40,
+          "type": "goal",
+          "teamId": "roy",
+          "playerId": "p-roy-19",
+          "detail": "Valentin Raskin"
+        },
+        {
+          "id": "rbfa-7565549-57-yellow-Borrey",
+          "minute": 57,
+          "type": "yellow",
+          "teamId": "roy",
+          "playerId": "p-roy-14",
+          "detail": "Antoine Borrey"
+        },
+        {
+          "id": "rbfa-7565549-60-yellow-Giboux",
+          "minute": 60,
+          "type": "yellow",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-10",
+          "detail": "Mathéo Giboux"
+        },
+        {
+          "id": "rbfa-7565549-77-goal-Fiévet",
+          "minute": 77,
+          "type": "goal",
+          "teamId": "roy",
+          "playerId": "p-roy-22",
+          "detail": "Julien Fiévet"
+        },
+        {
+          "id": "rbfa-7565549-79-yellow-Guillaume",
+          "minute": 79,
+          "type": "yellow",
+          "teamId": "roy",
+          "playerId": "p-roy-15",
+          "detail": "William Guillaume"
+        },
+        {
+          "id": "rbfa-7565549-86-goal-Schroeder",
+          "minute": 86,
+          "type": "goal",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-20",
+          "detail": "Robin Schroeder"
+        },
+        {
+          "id": "rbfa-7565549-90-goal-Baudot",
+          "minute": 90,
+          "type": "goal",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-15",
+          "detail": "Thomas Baudot"
+        }
+      ]
+    },
+    "m38": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565543-9-yellow-Demeuse",
+          "minute": 9,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-5",
+          "detail": "Nathan Demeuse"
+        },
+        {
+          "id": "rbfa-7565543-20-yellow-Scheid",
+          "minute": 20,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-8",
+          "detail": "Lucas Scheid"
+        },
+        {
+          "id": "rbfa-7565543-24-yellow-Théodore",
+          "minute": 24,
+          "type": "yellow",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-10",
+          "detail": "Aubrey Théodore"
+        },
+        {
+          "id": "rbfa-7565543-31-goal-Dewalque",
+          "minute": 31,
+          "type": "goal",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-11",
+          "detail": "Florent Dewalque"
+        },
+        {
+          "id": "rbfa-7565543-50-penalty-Piret",
+          "minute": 50,
+          "type": "goal",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-16",
+          "detail": "penalty · Quentin Piret"
+        },
+        {
+          "id": "rbfa-7565543-68-goal-Lardinois",
+          "minute": 68,
+          "type": "goal",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-20",
+          "detail": "Basiel Lardinois"
+        },
+        {
+          "id": "rbfa-7565543-93-yellow-Andrianne",
+          "minute": 93,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-3",
+          "detail": "Yannis Andrianne"
+        },
+        {
+          "id": "rbfa-7565543-94-penalty-Gerarts",
+          "minute": 94,
+          "type": "goal",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-18",
+          "detail": "penalty · Matheo Jaime Gerarts"
+        }
+      ]
+    },
+    "m40": {
+      "status": "finished",
+      "homeScore": 8,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565545-15-goal-Ella Ella",
+          "minute": 15,
+          "type": "goal",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-18",
+          "detail": "Johan Ngo'O Ella Ella"
+        },
+        {
+          "id": "rbfa-7565545-18-goal-Keita",
+          "minute": 18,
+          "type": "goal",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-19",
+          "detail": "Alhassane Keita"
+        },
+        {
+          "id": "rbfa-7565545-19-goal-Keita",
+          "minute": 19,
+          "type": "goal",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-19",
+          "detail": "Alhassane Keita"
+        },
+        {
+          "id": "rbfa-7565545-22-goal-Collignon",
+          "minute": 22,
+          "type": "goal",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-22",
+          "detail": "Bryan Collignon"
+        },
+        {
+          "id": "rbfa-7565545-30-goal-Ella Ella",
+          "minute": 30,
+          "type": "goal",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-18",
+          "detail": "Johan Ngo'O Ella Ella"
+        },
+        {
+          "id": "rbfa-7565545-41-yellow-Poncelet",
+          "minute": 41,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-11",
+          "detail": "Gilles Poncelet"
+        },
+        {
+          "id": "rbfa-7565545-47-yellow-Collignon",
+          "minute": 47,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-22",
+          "detail": "Bryan Collignon"
+        },
+        {
+          "id": "rbfa-7565545-50-yellow-Berg",
+          "minute": 50,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-3",
+          "detail": "Romain Berg"
+        },
+        {
+          "id": "rbfa-7565545-60-goal-Apeke",
+          "minute": 60,
+          "type": "goal",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-8",
+          "detail": "Prince Mohamed Apeke"
+        },
+        {
+          "id": "rbfa-7565545-70-goal-Ella Ella",
+          "minute": 70,
+          "type": "goal",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-18",
+          "detail": "Johan Ngo'O Ella Ella"
+        },
+        {
+          "id": "rbfa-7565545-71-goal-Chikatara",
+          "minute": 71,
+          "type": "goal",
+          "teamId": "harre-manhay",
+          "detail": "Ugochukwu Precious Chikatara"
+        },
+        {
+          "id": "rbfa-7565545-90-goal-Ipanga Kebantima",
+          "minute": 90,
+          "type": "goal",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-13",
+          "detail": "Izziel Ipanga Kebantima"
+        }
+      ]
+    },
+    "m41": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 3,
+      "events": [
+        {
+          "id": "rbfa-7565554-4-goal-Nicolas",
+          "minute": 4,
+          "type": "goal",
+          "teamId": "libin",
+          "playerId": "p-libin-25",
+          "detail": "Hugo Nicolas"
+        },
+        {
+          "id": "rbfa-7565554-20-goal-Pierret",
+          "minute": 20,
+          "type": "goal",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-9",
+          "detail": "Antoine Pierret"
+        },
+        {
+          "id": "rbfa-7565554-30-goal-Lefort",
+          "minute": 30,
+          "type": "goal",
+          "teamId": "libin",
+          "playerId": "p-libin-22",
+          "detail": "Thomas Lefort"
+        },
+        {
+          "id": "rbfa-7565554-44-goal-Hubert",
+          "minute": 44,
+          "type": "goal",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-25",
+          "detail": "Arthur Hubert"
+        },
+        {
+          "id": "rbfa-7565554-57-yellow-Nicolas",
+          "minute": 57,
+          "type": "yellow",
+          "teamId": "libin",
+          "playerId": "p-libin-25",
+          "detail": "Hugo Nicolas"
+        },
+        {
+          "id": "rbfa-7565554-74-yellow-Merche",
+          "minute": 74,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-19",
+          "detail": "Maxime Merche"
+        },
+        {
+          "id": "rbfa-7565554-83-yellow-Goosse",
+          "minute": 83,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-5",
+          "detail": "Cyprien Goosse"
+        },
+        {
+          "id": "rbfa-7565554-89-goal-Lefort",
+          "minute": 89,
+          "type": "goal",
+          "teamId": "libin",
+          "playerId": "p-libin-22",
+          "detail": "Thomas Lefort"
+        }
+      ]
+    },
+    "m43": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 0,
+      "events": [
+        {
+          "id": "rbfa-7565552-9-yellow-Limpach",
+          "minute": 9,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-17",
+          "detail": "Jean Limpach"
+        },
+        {
+          "id": "rbfa-7565552-54-goal-Renquin",
+          "minute": 54,
+          "type": "goal",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-14",
+          "detail": "Xavier Renquin"
+        },
+        {
+          "id": "rbfa-7565552-58-yellow-Hannard",
+          "minute": 58,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "detail": "Mattéo Hannard"
+        },
+        {
+          "id": "rbfa-7565552-60-yellow-Fautré",
+          "minute": 60,
+          "type": "yellow",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-30",
+          "detail": "Noa Fautré"
+        },
+        {
+          "id": "rbfa-7565552-60-yellow-Huberty",
+          "minute": 60,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-15",
+          "detail": "Kevin Huberty"
+        },
+        {
+          "id": "rbfa-7565552-62-yellow-Clotuche",
+          "minute": 62,
+          "type": "yellow",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-6",
+          "detail": "Sébastien Clotuche"
+        },
+        {
+          "id": "rbfa-7565552-79-yellow-Fautré",
+          "minute": 79,
+          "type": "yellow",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-23",
+          "detail": "Jul Fautré"
+        },
+        {
+          "id": "rbfa-7565552-85-red-Chauveheid",
+          "minute": 85,
+          "type": "red",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-28",
+          "detail": "Rayane Chauveheid"
+        },
+        {
+          "id": "rbfa-7565552-85-red-Laffargue",
+          "minute": 85,
+          "type": "red",
+          "teamId": "nothomb",
+          "detail": "Matthieu Laffargue"
+        },
+        {
+          "id": "rbfa-7565552-87-yellow-Gérard",
+          "minute": 87,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-14",
+          "detail": "Arnaud Gérard"
+        }
+      ]
+    },
+    "m42": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 2,
+      "events": [
+        {
+          "id": "rbfa-7565558-1-yellow-Soumahoro",
+          "minute": 1,
+          "type": "yellow",
+          "teamId": "marloie",
+          "detail": "Mamadou Soumahoro"
+        },
+        {
+          "id": "rbfa-7565558-2-penalty-Dulaunoy",
+          "minute": 2,
+          "type": "goal",
+          "teamId": "roy",
+          "playerId": "p-roy-21",
+          "detail": "penalty · Vincent Dulaunoy"
+        },
+        {
+          "id": "rbfa-7565558-22-goal-Lucas",
+          "minute": 22,
+          "type": "goal",
+          "teamId": "marloie",
+          "playerId": "p-marloie-5",
+          "detail": "Ivan Lucas"
+        },
+        {
+          "id": "rbfa-7565558-25-goal-Lambert",
+          "minute": 25,
+          "type": "goal",
+          "teamId": "marloie",
+          "playerId": "p-marloie-12",
+          "detail": "Maxime Lambert"
+        },
+        {
+          "id": "rbfa-7565558-36-goal-Piergentili",
+          "minute": 36,
+          "type": "goal",
+          "teamId": "roy",
+          "detail": "Alessandro Piergentili"
+        },
+        {
+          "id": "rbfa-7565558-56-yellow-Hayon",
+          "minute": 56,
+          "type": "yellow",
+          "teamId": "marloie",
+          "detail": "Geoffrey Hayon"
+        }
+      ]
+    },
+    "m46": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 5,
+      "events": [
+        {
+          "id": "rbfa-7565551-18-goal-Wauthy",
+          "minute": 18,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-19",
+          "detail": "Jeremy Wauthy"
+        },
+        {
+          "id": "rbfa-7565551-21-goal-Wauthy",
+          "minute": 21,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-19",
+          "detail": "Jeremy Wauthy"
+        },
+        {
+          "id": "rbfa-7565551-22-goal-Debra",
+          "minute": 22,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-21",
+          "detail": "Julien Debra"
+        },
+        {
+          "id": "rbfa-7565551-25-yellow-Cravatte",
+          "minute": 25,
+          "type": "yellow",
+          "teamId": "assenois",
+          "playerId": "p-assenois-4",
+          "detail": "Quentin Cravatte"
+        },
+        {
+          "id": "rbfa-7565551-32-yellow-Ara",
+          "minute": 32,
+          "type": "yellow",
+          "teamId": "assenois",
+          "playerId": "p-assenois-3",
+          "detail": "Nikola Ara"
+        },
+        {
+          "id": "rbfa-7565551-33-penalty-Denis",
+          "minute": 33,
+          "type": "goal",
+          "teamId": "florenville",
+          "playerId": "p-florenville-12",
+          "detail": "penalty · Ryan Denis"
+        },
+        {
+          "id": "rbfa-7565551-41-yellow-Thiry",
+          "minute": 41,
+          "type": "yellow",
+          "teamId": "assenois",
+          "playerId": "p-assenois-16",
+          "detail": "Lucas Thiry"
+        },
+        {
+          "id": "rbfa-7565551-44-goal-Nkokolo",
+          "minute": 44,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-14",
+          "detail": "Arnold Nkokolo"
+        },
+        {
+          "id": "rbfa-7565551-80-yellow-Debra",
+          "minute": 80,
+          "type": "yellow",
+          "teamId": "assenois",
+          "playerId": "p-assenois-21",
+          "detail": "Julien Debra"
+        },
+        {
+          "id": "rbfa-7565551-86-goal-Leclerc",
+          "minute": 86,
+          "type": "goal",
+          "teamId": "florenville",
+          "playerId": "p-florenville-20",
+          "detail": "Quentin Leclerc"
+        },
+        {
+          "id": "rbfa-7565551-90-goal-Aubry",
+          "minute": 90,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-20",
+          "detail": "Nicolas Aubry"
+        }
+      ]
+    },
+    "m45": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565557-25-goal-Oury",
+          "minute": 25,
+          "type": "goal",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-19",
+          "detail": "Luka Gregory Oury"
+        },
+        {
+          "id": "rbfa-7565557-60-yellow-Bonjean",
+          "minute": 60,
+          "type": "yellow",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-12",
+          "detail": "Martin Bonjean"
+        },
+        {
+          "id": "rbfa-7565557-69-yellow-Thiry",
+          "minute": 69,
+          "type": "yellow",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-9",
+          "detail": "Noah Thiry"
+        },
+        {
+          "id": "rbfa-7565557-70-goal-Lardinois",
+          "minute": 70,
+          "type": "goal",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-20",
+          "detail": "Basiel Lardinois"
+        },
+        {
+          "id": "rbfa-7565557-73-goal-Grandjean",
+          "minute": 73,
+          "type": "goal",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-5",
+          "detail": "Baptiste Grandjean"
+        },
+        {
+          "id": "rbfa-7565557-81-yellow-Doyen",
+          "minute": 81,
+          "type": "yellow",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-9",
+          "detail": "Henri Doyen"
+        },
+        {
+          "id": "rbfa-7565557-94-yellow-Collin",
+          "minute": 94,
+          "type": "yellow",
+          "teamId": "oppagne",
+          "detail": "Gilles Collin"
+        }
+      ]
+    },
+    "m44": {
+      "status": "finished",
+      "homeScore": 5,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565555-10-penalty-Joachim",
+          "minute": 10,
+          "type": "goal",
+          "teamId": "arlon",
+          "playerId": "p-arlon-25",
+          "detail": "penalty · Aurélien Joachim"
+        },
+        {
+          "id": "rbfa-7565555-12-goal-Njia",
+          "minute": 12,
+          "type": "goal",
+          "teamId": "arlon",
+          "playerId": "p-arlon-28",
+          "detail": "Yann Daddy Njia"
+        },
+        {
+          "id": "rbfa-7565555-33-goal-Daoust",
+          "minute": 33,
+          "type": "goal",
+          "teamId": "arlon",
+          "playerId": "p-arlon-22",
+          "detail": "Romain Daoust"
+        },
+        {
+          "id": "rbfa-7565555-39-goal-Joachim",
+          "minute": 39,
+          "type": "goal",
+          "teamId": "arlon",
+          "playerId": "p-arlon-25",
+          "detail": "Aurélien Joachim"
+        },
+        {
+          "id": "rbfa-7565555-60-yellow-Aigbedion",
+          "minute": 60,
+          "type": "yellow",
+          "teamId": "arlon",
+          "playerId": "p-arlon-19",
+          "detail": "Kelly Aisosa Aigbedion"
+        },
+        {
+          "id": "rbfa-7565555-61-goal-Lejeune",
+          "minute": 61,
+          "type": "goal",
+          "teamId": "arlon",
+          "playerId": "p-arlon-8",
+          "detail": "Quentin Lejeune"
+        },
+        {
+          "id": "rbfa-7565555-65-yellow-Courail",
+          "minute": 65,
+          "type": "yellow",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-10",
+          "detail": "Elias Courail"
+        },
+        {
+          "id": "rbfa-7565555-67-yellow-Frunze",
+          "minute": 67,
+          "type": "yellow",
+          "teamId": "arlon",
+          "detail": "Jorge Frunze"
+        },
+        {
+          "id": "rbfa-7565555-68-penalty-Roberty",
+          "minute": 68,
+          "type": "goal",
+          "teamId": "harre-manhay",
+          "detail": "penalty · Jérôme Jean-Marie Roberty"
+        }
+      ]
+    },
+    "m48": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 3,
+      "events": [
+        {
+          "id": "rbfa-7565556-19-goal-Poitoux",
+          "minute": 19,
+          "type": "goal",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-20",
+          "detail": "Basile Vincent Poitoux"
+        },
+        {
+          "id": "rbfa-7565556-32-yellow-Poitoux",
+          "minute": 32,
+          "type": "yellow",
+          "teamId": "bastogne",
+          "detail": "Mattis Christophe Poitoux"
+        },
+        {
+          "id": "rbfa-7565556-38-penalty-Louvins",
+          "minute": 38,
+          "type": "goal",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-6",
+          "detail": "penalty · Yohan Louvins"
+        },
+        {
+          "id": "rbfa-7565556-38-yellow-Jacquemart",
+          "minute": 38,
+          "type": "yellow",
+          "teamId": "bastogne",
+          "detail": "Frédéric Jacquemart"
+        },
+        {
+          "id": "rbfa-7565556-45-goal-Wergifosse",
+          "minute": 45,
+          "type": "goal",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-13",
+          "detail": "Aloïs David Wergifosse"
+        },
+        {
+          "id": "rbfa-7565556-53-goal-Hougardy",
+          "minute": 53,
+          "type": "goal",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-20",
+          "detail": "Goran Nicolas Hougardy"
+        },
+        {
+          "id": "rbfa-7565556-61-yellow-Belche",
+          "minute": 61,
+          "type": "yellow",
+          "teamId": "bastogne",
+          "detail": "Mattias Belche"
+        },
+        {
+          "id": "rbfa-7565556-64-goal-Louvins",
+          "minute": 64,
+          "type": "goal",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-6",
+          "detail": "Yohan Louvins"
+        },
+        {
+          "id": "rbfa-7565556-77-yellow-Dewalque",
+          "minute": 77,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-11",
+          "detail": "Florent Dewalque"
+        },
+        {
+          "id": "rbfa-7565556-83-yellow-Andrianne",
+          "minute": 83,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-3",
+          "detail": "Yannis Andrianne"
+        },
+        {
+          "id": "rbfa-7565556-92-yellow-Piette",
+          "minute": 92,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-6",
+          "detail": "Justin Piette"
+        },
+        {
+          "id": "rbfa-7565556-93-yellow-Demeuse",
+          "minute": 93,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-5",
+          "detail": "Nathan Demeuse"
+        }
+      ]
+    },
+    "m47": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 3,
+      "events": [
+        {
+          "id": "rbfa-7565553-10-goal-Wattiaux",
+          "minute": 10,
+          "type": "goal",
+          "teamId": "vaux-sur-sure",
+          "detail": "Boris Wattiaux"
+        },
+        {
+          "id": "rbfa-7565553-14-goal-Mahin",
+          "minute": 14,
+          "type": "goal",
+          "teamId": "aye",
+          "playerId": "p-aye-20",
+          "detail": "Cyril Mahin"
+        },
+        {
+          "id": "rbfa-7565553-16-goal-Manand",
+          "minute": 16,
+          "type": "goal",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-12",
+          "detail": "Allan Manand"
+        },
+        {
+          "id": "rbfa-7565553-31-goal-Dewalque",
+          "minute": 31,
+          "type": "goal",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-19",
+          "detail": "Sylvain Dewalque"
+        },
+        {
+          "id": "rbfa-7565553-50-goal-Fouarge",
+          "minute": 50,
+          "type": "goal",
+          "teamId": "aye",
+          "detail": "Nael Fouarge"
+        },
+        {
+          "id": "rbfa-7565553-52-yellow-Gerard",
+          "minute": 52,
+          "type": "yellow",
+          "teamId": "aye",
+          "playerId": "p-aye-6",
+          "detail": "Denis Gerard"
+        },
+        {
+          "id": "rbfa-7565553-80-goal-Etienne",
+          "minute": 80,
+          "type": "goal",
+          "teamId": "aye",
+          "detail": "Marvin Etienne"
+        },
+        {
+          "id": "rbfa-7565553-80-yellow-Pinson",
+          "minute": 80,
+          "type": "yellow",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-5",
+          "detail": "Arnaud Pinson"
+        }
+      ]
+    },
+    "m49": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565560-20-yellow-Maury",
+          "minute": 20,
+          "type": "yellow",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-6",
+          "detail": "Noah Maury"
+        },
+        {
+          "id": "rbfa-7565560-28-yellow-Pelenga",
+          "minute": 28,
+          "type": "yellow",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-19",
+          "detail": "Berly Pelenga"
+        },
+        {
+          "id": "rbfa-7565560-37-yellow-Van Den Eynde",
+          "minute": 37,
+          "type": "yellow",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-8",
+          "detail": "Gillian Van Den Eynde"
+        },
+        {
+          "id": "rbfa-7565560-38-yellow-Schroeder",
+          "minute": 38,
+          "type": "yellow",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-20",
+          "detail": "Robin Schroeder"
+        },
+        {
+          "id": "rbfa-7565560-52-goal-Pierre",
+          "minute": 52,
+          "type": "goal",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-16",
+          "detail": "Romeo Pierre"
+        },
+        {
+          "id": "rbfa-7565560-65-yellow-Pierre",
+          "minute": 65,
+          "type": "yellow",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-16",
+          "detail": "Romeo Pierre"
+        },
+        {
+          "id": "rbfa-7565560-90-yellow-Muller",
+          "minute": 90,
+          "type": "yellow",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-15",
+          "detail": "Liam Muller"
+        },
+        {
+          "id": "rbfa-7565560-90-goal-Jourdan",
+          "minute": 90,
+          "type": "goal",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-13",
+          "detail": "Baptiste Jourdan"
+        }
+      ]
+    },
+    "m50": {
+      "status": "finished",
+      "homeScore": 4,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565566-36-yellow-Dewalque",
+          "minute": 36,
+          "type": "yellow",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-19",
+          "detail": "Sylvain Dewalque"
+        },
+        {
+          "id": "rbfa-7565566-45-penalty-Dewalque",
+          "minute": 45,
+          "type": "goal",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-19",
+          "detail": "penalty · Sylvain Dewalque"
+        },
+        {
+          "id": "rbfa-7565566-48-penalty-Lefort",
+          "minute": 48,
+          "type": "goal",
+          "teamId": "libin",
+          "playerId": "p-libin-22",
+          "detail": "penalty · Thomas Lefort"
+        },
+        {
+          "id": "rbfa-7565566-50-goal-Robert",
+          "minute": 50,
+          "type": "goal",
+          "teamId": "libin",
+          "playerId": "p-libin-17",
+          "detail": "Louis Robert"
+        },
+        {
+          "id": "rbfa-7565566-51-yellow-Manand",
+          "minute": 51,
+          "type": "yellow",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-12",
+          "detail": "Allan Manand"
+        },
+        {
+          "id": "rbfa-7565566-65-goal-Nicolas",
+          "minute": 65,
+          "type": "goal",
+          "teamId": "libin",
+          "playerId": "p-libin-25",
+          "detail": "Hugo Nicolas"
+        },
+        {
+          "id": "rbfa-7565566-72-goal-Bourgeois",
+          "minute": 72,
+          "type": "goal",
+          "teamId": "libin",
+          "detail": "Mattéo André Bourgeois"
+        }
+      ]
+    },
+    "m52": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 3,
+      "events": [
+        {
+          "id": "rbfa-7565562-9-yellow-Lockman",
+          "minute": 9,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-8",
+          "detail": "Mathis Lockman"
+        },
+        {
+          "id": "rbfa-7565562-13-yellow-Lejeune",
+          "minute": 13,
+          "type": "yellow",
+          "teamId": "arlon",
+          "playerId": "p-arlon-8",
+          "detail": "Quentin Lejeune"
+        },
+        {
+          "id": "rbfa-7565562-55-goal-Erdeljan",
+          "minute": 55,
+          "type": "goal",
+          "teamId": "arlon",
+          "playerId": "p-arlon-13",
+          "detail": "Esteban Erdeljan"
+        },
+        {
+          "id": "rbfa-7565562-58-yellow-Berg",
+          "minute": 58,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-3",
+          "detail": "Romain Berg"
+        },
+        {
+          "id": "rbfa-7565562-68-goal-Daoust",
+          "minute": 68,
+          "type": "goal",
+          "teamId": "arlon",
+          "playerId": "p-arlon-22",
+          "detail": "Romain Daoust"
+        },
+        {
+          "id": "rbfa-7565562-80-goal-Aigbedion",
+          "minute": 80,
+          "type": "goal",
+          "teamId": "arlon",
+          "playerId": "p-arlon-19",
+          "detail": "Kelly Aisosa Aigbedion"
+        },
+        {
+          "id": "rbfa-7565562-82-goal-Hubert",
+          "minute": 82,
+          "type": "goal",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-25",
+          "detail": "Arthur Hubert"
+        },
+        {
+          "id": "rbfa-7565562-85-yellow-Guébenne",
+          "minute": 85,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-18",
+          "detail": "Nathan Guébenne"
+        },
+        {
+          "id": "rbfa-7565562-88-yellow-Aigbedion",
+          "minute": 88,
+          "type": "yellow",
+          "teamId": "arlon",
+          "playerId": "p-arlon-19",
+          "detail": "Kelly Aisosa Aigbedion"
+        }
+      ]
+    },
+    "m51": {
+      "status": "finished",
+      "homeScore": 4,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565563-44-yellow-Bechet",
+          "minute": 44,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-4",
+          "detail": "Sylvain Bechet"
+        },
+        {
+          "id": "rbfa-7565563-60-goal-Parisse",
+          "minute": 60,
+          "type": "goal",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-9",
+          "detail": "Antoine Parisse"
+        },
+        {
+          "id": "rbfa-7565563-86-goal-Mairlot",
+          "minute": 86,
+          "type": "goal",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-27",
+          "detail": "Martin Mairlot"
+        },
+        {
+          "id": "rbfa-7565563-86-yellow-Gérard",
+          "minute": 86,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-14",
+          "detail": "Arnaud Gérard"
+        },
+        {
+          "id": "rbfa-7565563-89-goal-Dubru",
+          "minute": 89,
+          "type": "goal",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-13",
+          "detail": "Lucas Dubru"
+        },
+        {
+          "id": "rbfa-7565563-90-goal-Gerard",
+          "minute": 90,
+          "type": "goal",
+          "teamId": "aye",
+          "playerId": "p-aye-6",
+          "detail": "Denis Gerard"
+        }
+      ]
+    },
+    "m54": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 2,
+      "events": [
+        {
+          "id": "rbfa-7565564-22-yellow-Toussaint",
+          "minute": 22,
+          "type": "yellow",
+          "teamId": "assenois",
+          "playerId": "p-assenois-17",
+          "detail": "Evan Toussaint"
+        },
+        {
+          "id": "rbfa-7565564-38-yellow-Pirotte",
+          "minute": 38,
+          "type": "yellow",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-12",
+          "detail": "Noan Pirotte"
+        },
+        {
+          "id": "rbfa-7565564-44-penalty-Tombal",
+          "minute": 44,
+          "type": "goal",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-15",
+          "detail": "penalty · Xavier Tombal"
+        },
+        {
+          "id": "rbfa-7565564-45-goal-Nkokolo",
+          "minute": 45,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-14",
+          "detail": "Arnold Nkokolo"
+        },
+        {
+          "id": "rbfa-7565564-50-yellow-Debra",
+          "minute": 50,
+          "type": "yellow",
+          "teamId": "assenois",
+          "playerId": "p-assenois-21",
+          "detail": "Julien Debra"
+        },
+        {
+          "id": "rbfa-7565564-60-penalty-Nkokolo",
+          "minute": 60,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-14",
+          "detail": "penalty · Arnold Nkokolo"
+        },
+        {
+          "id": "rbfa-7565564-64-yellow-Aubry",
+          "minute": 64,
+          "type": "yellow",
+          "teamId": "assenois",
+          "playerId": "p-assenois-20",
+          "detail": "Nicolas Aubry"
+        },
+        {
+          "id": "rbfa-7565564-93-goal-Diouf",
+          "minute": 93,
+          "type": "goal",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-22",
+          "detail": "Massamba Diouf"
+        },
+        {
+          "id": "rbfa-7565564-94-yellow-Wauthy",
+          "minute": 94,
+          "type": "yellow",
+          "teamId": "assenois",
+          "playerId": "p-assenois-19",
+          "detail": "Jeremy Wauthy"
+        }
+      ]
+    },
+    "m53": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 3,
+      "events": [
+        {
+          "id": "rbfa-7565559-53-goal-Djim",
+          "minute": 53,
+          "type": "goal",
+          "teamId": "marloie",
+          "playerId": "p-marloie-17",
+          "detail": "Tony Djim"
+        },
+        {
+          "id": "rbfa-7565559-74-goal-Hugot",
+          "minute": 74,
+          "type": "goal",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-6",
+          "detail": "Louis Hugot"
+        },
+        {
+          "id": "rbfa-7565559-78-goal-Ioakimidou",
+          "minute": 78,
+          "type": "goal",
+          "teamId": "marloie",
+          "detail": "Charlin Ioakimidou"
+        },
+        {
+          "id": "rbfa-7565559-82-yellow-Ioakimidou",
+          "minute": 82,
+          "type": "yellow",
+          "teamId": "marloie",
+          "detail": "Charlin Ioakimidou"
+        },
+        {
+          "id": "rbfa-7565559-88-yellow-Lambert",
+          "minute": 88,
+          "type": "yellow",
+          "teamId": "marloie",
+          "playerId": "p-marloie-4",
+          "detail": "Louis Lambert"
+        },
+        {
+          "id": "rbfa-7565559-89-yellow-Dropsy",
+          "minute": 89,
+          "type": "yellow",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-13",
+          "detail": "Martin Dropsy"
+        },
+        {
+          "id": "rbfa-7565559-91-yellow-Gerarts",
+          "minute": 91,
+          "type": "yellow",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-18",
+          "detail": "Matheo Jaime Gerarts"
+        },
+        {
+          "id": "rbfa-7565559-92-goal-Lambert",
+          "minute": 92,
+          "type": "goal",
+          "teamId": "marloie",
+          "playerId": "p-marloie-12",
+          "detail": "Maxime Lambert"
+        }
+      ]
+    },
+    "m55": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 4,
+      "events": [
+        {
+          "id": "rbfa-7565565-8-goal-Leclerc",
+          "minute": 8,
+          "type": "goal",
+          "teamId": "florenville",
+          "playerId": "p-florenville-20",
+          "detail": "Quentin Leclerc"
+        },
+        {
+          "id": "rbfa-7565565-11-goal-Denis",
+          "minute": 11,
+          "type": "goal",
+          "teamId": "florenville",
+          "playerId": "p-florenville-12",
+          "detail": "Ryan Denis"
+        },
+        {
+          "id": "rbfa-7565565-21-goal-Denis",
+          "minute": 21,
+          "type": "goal",
+          "teamId": "florenville",
+          "playerId": "p-florenville-12",
+          "detail": "Ryan Denis"
+        },
+        {
+          "id": "rbfa-7565565-51-goal-Pietri",
+          "minute": 51,
+          "type": "goal",
+          "teamId": "florenville",
+          "playerId": "p-florenville-16",
+          "detail": "Eros Karl Pietri"
+        },
+        {
+          "id": "rbfa-7565565-53-goal-Raskin",
+          "minute": 53,
+          "type": "goal",
+          "teamId": "roy",
+          "playerId": "p-roy-23",
+          "detail": "Mathys Raskin"
+        },
+        {
+          "id": "rbfa-7565565-74-yellow-Moing",
+          "minute": 74,
+          "type": "yellow",
+          "teamId": "florenville",
+          "playerId": "p-florenville-7",
+          "detail": "Brian Patrick Moing"
+        },
+        {
+          "id": "rbfa-7565565-84-yellow-Bah",
+          "minute": 84,
+          "type": "yellow",
+          "teamId": "florenville",
+          "playerId": "p-florenville-18",
+          "detail": "Bachir Bah"
+        }
+      ]
+    },
+    "m56": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565561-22-goal-Keita",
+          "minute": 22,
+          "type": "goal",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-19",
+          "detail": "Alhassane Keita"
+        },
+        {
+          "id": "rbfa-7565561-42-yellow-Samray",
+          "minute": 42,
+          "type": "yellow",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-7",
+          "detail": "Florian Samray"
+        },
+        {
+          "id": "rbfa-7565561-51-yellow-Guillaume",
+          "minute": 51,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-19",
+          "detail": "Lilian Guillaume"
+        },
+        {
+          "id": "rbfa-7565561-62-yellow-Roberty",
+          "minute": 62,
+          "type": "yellow",
+          "teamId": "harre-manhay",
+          "detail": "Jérôme Jean-Marie Roberty"
+        },
+        {
+          "id": "rbfa-7565561-62-yellow-Vandormael",
+          "minute": 62,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "detail": "Grégory Vandormael"
+        },
+        {
+          "id": "rbfa-7565561-63-goal-Amory",
+          "minute": 63,
+          "type": "goal",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-17",
+          "detail": "Mathys Amory"
+        },
+        {
+          "id": "rbfa-7565561-74-yellow-Levaux",
+          "minute": 74,
+          "type": "yellow",
+          "teamId": "harre-manhay",
+          "detail": "Mattéo Jean Levaux"
+        },
+        {
+          "id": "rbfa-7565561-84-yellow-Courail",
+          "minute": 84,
+          "type": "yellow",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-10",
+          "detail": "Elias Courail"
+        },
+        {
+          "id": "rbfa-7565561-84-yellow-Stasser",
+          "minute": 84,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-9",
+          "detail": "Louis Stasser"
+        }
+      ]
+    },
+    "m60": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565568-28-yellow-Idmansour",
+          "minute": 28,
+          "type": "yellow",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-26",
+          "detail": "Ilias Idmansour"
+        },
+        {
+          "id": "rbfa-7565568-44-goal-Alie",
+          "minute": 44,
+          "type": "goal",
+          "teamId": "roy",
+          "detail": "Maxim Alie"
+        },
+        {
+          "id": "rbfa-7565568-59-yellow-Alie",
+          "minute": 59,
+          "type": "yellow",
+          "teamId": "roy",
+          "detail": "Maxim Alie"
+        },
+        {
+          "id": "rbfa-7565568-62-yellow-Toussaint",
+          "minute": 62,
+          "type": "yellow",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-16",
+          "detail": "Aryl Toussaint"
+        },
+        {
+          "id": "rbfa-7565568-80-yellow-Dulaunoy",
+          "minute": 80,
+          "type": "yellow",
+          "teamId": "roy",
+          "playerId": "p-roy-21",
+          "detail": "Vincent Dulaunoy"
+        },
+        {
+          "id": "rbfa-7565568-88-goal-Fautre",
+          "minute": 88,
+          "type": "goal",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-8",
+          "detail": "Corentin Fautre"
+        },
+        {
+          "id": "rbfa-7565568-91-goal-Diallo",
+          "minute": 91,
+          "type": "goal",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-29",
+          "detail": "Saidou Diallo"
+        }
+      ]
+    },
+    "m57": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565574-17-yellow-Louvins",
+          "minute": 17,
+          "type": "yellow",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-6",
+          "detail": "Yohan Louvins"
+        },
+        {
+          "id": "rbfa-7565574-28-yellow-Poitoux",
+          "minute": 28,
+          "type": "yellow",
+          "teamId": "bastogne",
+          "detail": "Mattis Christophe Poitoux"
+        },
+        {
+          "id": "rbfa-7565574-40-goal-Djim",
+          "minute": 40,
+          "type": "goal",
+          "teamId": "marloie",
+          "playerId": "p-marloie-17",
+          "detail": "Tony Djim"
+        },
+        {
+          "id": "rbfa-7565574-49-yellow-Hmidet",
+          "minute": 49,
+          "type": "yellow",
+          "teamId": "marloie",
+          "detail": "Ayoub Hmidet"
+        },
+        {
+          "id": "rbfa-7565574-52-penalty-Pelenga",
+          "minute": 52,
+          "type": "goal",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-19",
+          "detail": "penalty · Berly Pelenga"
+        },
+        {
+          "id": "rbfa-7565574-74-goal-Mbazoa",
+          "minute": 74,
+          "type": "goal",
+          "teamId": "marloie",
+          "playerId": "p-marloie-20",
+          "detail": "Edgar Mbazoa"
+        },
+        {
+          "id": "rbfa-7565574-87-yellow-Delmé",
+          "minute": 87,
+          "type": "yellow",
+          "teamId": "marloie",
+          "playerId": "p-marloie-1",
+          "detail": "Charles Delmé"
+        },
+        {
+          "id": "rbfa-7565574-89-yellow-Benassy",
+          "minute": 89,
+          "type": "yellow",
+          "teamId": "marloie",
+          "playerId": "p-marloie-8",
+          "detail": "Baptiste Benassy"
+        },
+        {
+          "id": "rbfa-7565574-91-yellow-Bouterbiat",
+          "minute": 91,
+          "type": "yellow",
+          "teamId": "marloie",
+          "detail": "Samy Bouterbiat"
+        },
+        {
+          "id": "rbfa-7565574-92-yellow-Macoir",
+          "minute": 92,
+          "type": "yellow",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-7",
+          "detail": "Pascal Macoir"
+        }
+      ]
+    },
+    "m59": {
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 2,
+      "events": [
+        {
+          "id": "rbfa-7565573-22-yellow-Courail",
+          "minute": 22,
+          "type": "yellow",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-10",
+          "detail": "Elias Courail"
+        },
+        {
+          "id": "rbfa-7565573-42-yellow-Chisogne",
+          "minute": 42,
+          "type": "yellow",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-3",
+          "detail": "Martin Chisogne"
+        },
+        {
+          "id": "rbfa-7565573-44-goal-Chikatara",
+          "minute": 44,
+          "type": "goal",
+          "teamId": "harre-manhay",
+          "detail": "Ugochukwu Precious Chikatara"
+        },
+        {
+          "id": "rbfa-7565573-57-yellow-Gillet",
+          "minute": 57,
+          "type": "yellow",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-11",
+          "detail": "Augustin Gillet"
+        },
+        {
+          "id": "rbfa-7565573-63-yellow-Moufanin",
+          "minute": 63,
+          "type": "yellow",
+          "teamId": "harre-manhay",
+          "detail": "Sohail Moufanin"
+        },
+        {
+          "id": "rbfa-7565573-74-yellow-Schroeder",
+          "minute": 74,
+          "type": "yellow",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-20",
+          "detail": "Robin Schroeder"
+        },
+        {
+          "id": "rbfa-7565573-82-goal-Hérion",
+          "minute": 82,
+          "type": "goal",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-12",
+          "detail": "Augustin François Hérion"
+        },
+        {
+          "id": "rbfa-7565573-85-yellow-Schroeder",
+          "minute": 85,
+          "type": "yellow",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-8",
+          "detail": "Gilles Schroeder"
+        }
+      ]
+    },
+    "m62": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565571-4-goal-Njia",
+          "minute": 4,
+          "type": "goal",
+          "teamId": "arlon",
+          "playerId": "p-arlon-28",
+          "detail": "Yann Daddy Njia"
+        },
+        {
+          "id": "rbfa-7565571-6-goal-Njia",
+          "minute": 6,
+          "type": "goal",
+          "teamId": "arlon",
+          "playerId": "p-arlon-28",
+          "detail": "Yann Daddy Njia"
+        },
+        {
+          "id": "rbfa-7565571-30-goal-Daoust",
+          "minute": 30,
+          "type": "goal",
+          "teamId": "arlon",
+          "playerId": "p-arlon-22",
+          "detail": "Romain Daoust"
+        },
+        {
+          "id": "rbfa-7565571-67-penalty-Lefort",
+          "minute": 67,
+          "type": "goal",
+          "teamId": "libin",
+          "playerId": "p-libin-22",
+          "detail": "penalty · Thomas Lefort"
+        },
+        {
+          "id": "rbfa-7565571-83-yellow-Daoust",
+          "minute": 83,
+          "type": "yellow",
+          "teamId": "arlon",
+          "playerId": "p-arlon-22",
+          "detail": "Romain Daoust"
+        },
+        {
+          "id": "rbfa-7565571-83-yellow-Philippe",
+          "minute": 83,
+          "type": "yellow",
+          "teamId": "libin",
+          "playerId": "p-libin-26",
+          "detail": "William Philippe"
+        }
+      ]
+    },
+    "m58": {
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 3,
+      "events": [
+        {
+          "id": "rbfa-7565570-16-goal-Sicaja",
+          "minute": 16,
+          "type": "goal",
+          "teamId": "nothomb",
+          "detail": "Christian Sicaja"
+        },
+        {
+          "id": "rbfa-7565570-19-yellow-Van Daele",
+          "minute": 19,
+          "type": "yellow",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-17",
+          "detail": "Louka Van Daele"
+        },
+        {
+          "id": "rbfa-7565570-33-yellow-Wattiaux",
+          "minute": 33,
+          "type": "yellow",
+          "teamId": "vaux-sur-sure",
+          "detail": "Boris Wattiaux"
+        },
+        {
+          "id": "rbfa-7565570-47-yellow-Flamant",
+          "minute": 47,
+          "type": "yellow",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-3",
+          "detail": "Noe Flamant"
+        },
+        {
+          "id": "rbfa-7565570-57-goal-Dubru",
+          "minute": 57,
+          "type": "goal",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-13",
+          "detail": "Lucas Dubru"
+        },
+        {
+          "id": "rbfa-7565570-72-penalty-Dubru",
+          "minute": 72,
+          "type": "goal",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-13",
+          "detail": "penalty · Lucas Dubru"
+        },
+        {
+          "id": "rbfa-7565570-89-yellow-Bechet",
+          "minute": 89,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-4",
+          "detail": "Sylvain Bechet"
+        }
+      ]
+    },
+    "m61": {
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 2,
+      "events": [
+        {
+          "id": "rbfa-7565567-19-goal-Carlier",
+          "minute": 19,
+          "type": "goal",
+          "teamId": "oppagne",
+          "detail": "Noah Carlier"
+        },
+        {
+          "id": "rbfa-7565567-44-goal-Warnier",
+          "minute": 44,
+          "type": "goal",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-11",
+          "detail": "Dylan Warnier"
+        },
+        {
+          "id": "rbfa-7565567-44-yellow-Thiry",
+          "minute": 44,
+          "type": "yellow",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-9",
+          "detail": "Noah Thiry"
+        },
+        {
+          "id": "rbfa-7565567-55-yellow-Gerarts",
+          "minute": 55,
+          "type": "yellow",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-18",
+          "detail": "Matheo Jaime Gerarts"
+        }
+      ]
+    },
+    "m63": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 5,
+      "events": [
+        {
+          "id": "rbfa-7565569-25-yellow-Mustafaj",
+          "minute": 25,
+          "type": "yellow",
+          "teamId": "aye",
+          "playerId": "p-aye-9",
+          "detail": "Burim Mustafaj"
+        },
+        {
+          "id": "rbfa-7565569-27-yellow-Menten",
+          "minute": 27,
+          "type": "yellow",
+          "teamId": "aye",
+          "playerId": "p-aye-16",
+          "detail": "Louis Simon Menten"
+        },
+        {
+          "id": "rbfa-7565569-31-yellow-Mathieu",
+          "minute": 31,
+          "type": "yellow",
+          "teamId": "aye",
+          "detail": "Fabrice Mathieu"
+        },
+        {
+          "id": "rbfa-7565569-43-goal-Paquet",
+          "minute": 43,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-15",
+          "detail": "Tom Paquet"
+        },
+        {
+          "id": "rbfa-7565569-63-goal-Paquet",
+          "minute": 63,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-15",
+          "detail": "Tom Paquet"
+        },
+        {
+          "id": "rbfa-7565569-64-goal-Fouarge",
+          "minute": 64,
+          "type": "goal",
+          "teamId": "aye",
+          "detail": "Nael Fouarge"
+        },
+        {
+          "id": "rbfa-7565569-74-penalty-Lecaillie",
+          "minute": 74,
+          "type": "goal",
+          "teamId": "aye",
+          "playerId": "p-aye-19",
+          "detail": "penalty · Arnaud Lecaillie"
+        },
+        {
+          "id": "rbfa-7565569-76-yellow-Marotte",
+          "minute": 76,
+          "type": "yellow",
+          "teamId": "aye",
+          "playerId": "p-aye-15",
+          "detail": "Noah Marotte"
+        },
+        {
+          "id": "rbfa-7565569-76-goal-Wauthy",
+          "minute": 76,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-19",
+          "detail": "Jeremy Wauthy"
+        },
+        {
+          "id": "rbfa-7565569-85-goal-Wauthy",
+          "minute": 85,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-19",
+          "detail": "Jeremy Wauthy"
+        },
+        {
+          "id": "rbfa-7565569-93-goal-Ndikumana",
+          "minute": 93,
+          "type": "goal",
+          "teamId": "assenois",
+          "detail": "Trésor Ndikumana"
+        }
+      ]
+    },
+    "m64": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565572-21-yellow-Piette",
+          "minute": 21,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-6",
+          "detail": "Justin Piette"
+        },
+        {
+          "id": "rbfa-7565572-26-goal-Piette",
+          "minute": 26,
+          "type": "goal",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-6",
+          "detail": "Justin Piette"
+        },
+        {
+          "id": "rbfa-7565572-40-yellow-Andrianne",
+          "minute": 40,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-3",
+          "detail": "Yannis Andrianne"
+        },
+        {
+          "id": "rbfa-7565572-44-goal-Hougardy",
+          "minute": 44,
+          "type": "goal",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-20",
+          "detail": "Goran Nicolas Hougardy"
+        },
+        {
+          "id": "rbfa-7565572-48-goal-Hougardy",
+          "minute": 48,
+          "type": "goal",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-20",
+          "detail": "Goran Nicolas Hougardy"
+        },
+        {
+          "id": "rbfa-7565572-70-yellow-Georges",
+          "minute": 70,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "detail": "Baptiste Georges"
+        },
+        {
+          "id": "rbfa-7565572-71-goal-Copine",
+          "minute": 71,
+          "type": "goal",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-14",
+          "detail": "Charles Copine"
+        },
+        {
+          "id": "rbfa-7565572-76-yellow-Hougardy",
+          "minute": 76,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-20",
+          "detail": "Goran Nicolas Hougardy"
+        },
+        {
+          "id": "rbfa-7565572-85-yellow-Gravé",
+          "minute": 85,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-6",
+          "detail": "Benjamin Gravé"
+        }
+      ]
+    },
+    "m67": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 0,
+      "events": [
+        {
+          "id": "rbfa-7565580-57-goal-Nkokolo",
+          "minute": 57,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-14",
+          "detail": "Arnold Nkokolo"
+        },
+        {
+          "id": "rbfa-7565580-67-yellow-Aubry",
+          "minute": 67,
+          "type": "yellow",
+          "teamId": "assenois",
+          "playerId": "p-assenois-20",
+          "detail": "Nicolas Aubry"
+        },
+        {
+          "id": "rbfa-7565580-82-yellow-Pantusa",
+          "minute": 82,
+          "type": "yellow",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-13",
+          "detail": "Hugo Pantusa"
+        },
+        {
+          "id": "rbfa-7565580-87-goal-Thiry",
+          "minute": 87,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-16",
+          "detail": "Lucas Thiry"
+        }
+      ]
+    },
+    "m66": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565578-3-yellow-Hutin",
+          "minute": 3,
+          "type": "yellow",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-12",
+          "detail": "Simon Hutin"
+        },
+        {
+          "id": "rbfa-7565578-4-goal-Bozet",
+          "minute": 4,
+          "type": "goal",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-12",
+          "detail": "Clément Bozet"
+        },
+        {
+          "id": "rbfa-7565578-21-goal-Collignon",
+          "minute": 21,
+          "type": "goal",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-22",
+          "detail": "Bryan Collignon"
+        },
+        {
+          "id": "rbfa-7565578-55-yellow-Maury",
+          "minute": 55,
+          "type": "yellow",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-6",
+          "detail": "Noah Maury"
+        },
+        {
+          "id": "rbfa-7565578-83-goal-Colleaux",
+          "minute": 83,
+          "type": "goal",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-16",
+          "detail": "Louis Colleaux"
+        },
+        {
+          "id": "rbfa-7565578-85-goal-Poncelet",
+          "minute": 85,
+          "type": "goal",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-11",
+          "detail": "Gilles Poncelet"
+        },
+        {
+          "id": "rbfa-7565578-90-yellow-Pierret",
+          "minute": 90,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-9",
+          "detail": "Antoine Pierret"
+        }
+      ]
+    },
+    "m68": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565582-23-goal-Poncelet",
+          "minute": 23,
+          "type": "goal",
+          "teamId": "libin",
+          "playerId": "p-libin-16",
+          "detail": "Nathan Poncelet"
+        },
+        {
+          "id": "rbfa-7565582-45-goal-Laurent",
+          "minute": 45,
+          "type": "goal",
+          "teamId": "nothomb",
+          "detail": "Alexandre Laurent"
+        },
+        {
+          "id": "rbfa-7565582-65-yellow-Poncelet",
+          "minute": 65,
+          "type": "yellow",
+          "teamId": "libin",
+          "playerId": "p-libin-15",
+          "detail": "Corentin Poncelet"
+        },
+        {
+          "id": "rbfa-7565582-75-yellow-Bechet",
+          "minute": 75,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-4",
+          "detail": "Sylvain Bechet"
+        },
+        {
+          "id": "rbfa-7565582-81-yellow-Limpach",
+          "minute": 81,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-17",
+          "detail": "Jean Limpach"
+        }
+      ]
+    },
+    "m69": {
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 0,
+      "events": [
+        {
+          "id": "rbfa-7565579-26-yellow-Cachbach",
+          "minute": 26,
+          "type": "yellow",
+          "teamId": "arlon",
+          "playerId": "p-arlon-4",
+          "detail": "Lilian Cachbach"
+        },
+        {
+          "id": "rbfa-7565579-45-yellow-Andrianne",
+          "minute": 45,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-3",
+          "detail": "Yannis Andrianne"
+        },
+        {
+          "id": "rbfa-7565579-67-yellow-Stasser",
+          "minute": 67,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-9",
+          "detail": "Louis Stasser"
+        },
+        {
+          "id": "rbfa-7565579-80-yellow-Poncin",
+          "minute": 80,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-22",
+          "detail": "Jordan Poncin"
+        },
+        {
+          "id": "rbfa-7565579-83-yellow-Dewalque",
+          "minute": 83,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-11",
+          "detail": "Florent Dewalque"
+        },
+        {
+          "id": "rbfa-7565579-84-yellow-Frunze",
+          "minute": 84,
+          "type": "yellow",
+          "teamId": "arlon",
+          "detail": "Jorge Frunze"
+        },
+        {
+          "id": "rbfa-7565579-91-yellow-Amory",
+          "minute": 91,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "detail": "Laurent Amory"
+        },
+        {
+          "id": "rbfa-7565579-91-yellow-Lentz",
+          "minute": 91,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "detail": "Florence Pauline Lentz"
+        }
+      ]
+    }
+  }
+}

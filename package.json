@@ -6,7 +6,10 @@
     "dev": "next dev --port 43123 --webpack",
     "build": "next build",
     "start": "next start --port 43123",
-    "lint": "eslint"
+    "lint": "eslint",
+    "rbfa:extract": "node scripts/rbfa-extract.mjs",
+    "rbfa:apply": "node scripts/rbfa-extract.mjs --apply",
+    "rbfa:remap": "node scripts/rbfa-remap.mjs --apply"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",

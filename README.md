@@ -9,6 +9,31 @@ Sources Excel dans `data/` :
 - `luxresdownP-5.xlsx` — résultats connus (scores intégrés, classement calculé)
 - `effectifs_clubs.xlsx` — effectifs (**390 joueurs**)
 
+## Extraire les résultats depuis RBFA (rbfa.be)
+
+Les scores, buteurs et cartons de la **1re Provinciale Luxembourg** sont récupérés via l’API GraphQL publique de la RBFA (série `CHP_131416`), puis convertis au format `data/live-results.json`.
+
+```bash
+# 1. Télécharge calendrier + détails des matchs terminés (~2 min)
+npm run rbfa:extract
+
+# 2. Produit data/live-results.from-rbfa.json
+#    et avec --apply fusionne dans data/live-results.json :
+npm run rbfa:apply
+
+# Si le dump brut existe déjà (data/rbfa-raw.json) :
+npm run rbfa:remap
+```
+
+Fichiers produits :
+| Fichier | Rôle |
+|---------|------|
+| `data/live-results.from-rbfa.json` | JSON injectable (scores + événements) |
+| `data/rbfa-team-map.json` | Correspondance clubs RBFA ↔ ids kick-stats |
+| `data/rbfa-raw.json` | Dump brut (gitignoré, régénérable) |
+
+Exemple : Assenois–Bercheux (`m1`) → `8-1` avec buts/cartons à la minute, liés aux joueurs du site quand le nom correspond.
+
 ## Lancer en local
 
 ```bash
