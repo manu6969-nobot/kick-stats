@@ -12,10 +12,10 @@ type Props = {
 };
 
 function formLetter(result: TeamFormResult) {
-  // Style tableau belge / FR : Gagné / Nul / Perdu
-  if (result === "W") return "G";
+  // Victoire / Nul / Défaite
+  if (result === "W") return "V";
   if (result === "D") return "N";
-  return "P";
+  return "D";
 }
 
 export function TeamSeasonStats({
