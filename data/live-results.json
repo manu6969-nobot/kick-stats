@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-18T08:19:55.524Z",
+  "updatedAt": "2026-10-18T08:19:59.342Z",
   "matches": {
     "m1": {
       "status": "finished",
@@ -407,6 +407,12 @@
       "status": "finished",
       "homeScore": 1,
       "awayScore": 1,
+      "events": []
+    },
+    "m69": {
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 0,
       "events": []
     }
   }
