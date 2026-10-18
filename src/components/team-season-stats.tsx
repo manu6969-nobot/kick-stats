@@ -1,4 +1,4 @@
-import { CalendarCheck2, RectangleVertical, Goal } from "lucide-react";
+import { CalendarCheck2, Goal } from "lucide-react";
 import type { TeamFormResult } from "@/lib/stats";
 import { cn } from "@/lib/utils";
 
@@ -50,8 +50,8 @@ export function TeamSeasonStats({
       value: yellowCards,
       color: "text-draw",
       icon: (
-        <RectangleVertical
-          className="size-5 fill-draw text-draw"
+        <span
+          className="inline-block h-5 w-3.5 rounded-[2px] bg-draw shadow-sm"
           aria-hidden
         />
       ),
@@ -61,8 +61,8 @@ export function TeamSeasonStats({
       value: redCards,
       color: "text-loss",
       icon: (
-        <RectangleVertical
-          className="size-5 fill-loss text-loss"
+        <span
+          className="inline-block h-5 w-3.5 rounded-[2px] bg-loss shadow-sm"
           aria-hidden
         />
       ),
