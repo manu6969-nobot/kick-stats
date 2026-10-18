@@ -1,5 +1,61 @@
 import "server-only";
 
+import type { LiveResultsFile } from "@/data/types";
+
+function repoConfig() {
+  return {
+    repo: process.env.GITHUB_REPO?.trim() || "manu6969-nobot/kick-stats",
+    branch: process.env.GITHUB_BRANCH?.trim() || "main",
+    path: "data/live-results.json",
+    token: process.env.GITHUB_TOKEN?.trim() || "",
+  };
+}
+
+/**
+ * Lit data/live-results.json depuis GitHub (source partagée entre toutes les
+ * fonctions Vercel). Fonctionne en public sans token.
+ */
+export async function fetchLiveResultsFromGitHub(): Promise<LiveResultsFile | null> {
+  const { repo, branch, path, token } = repoConfig();
+
+  // 1) API GitHub (évite le cache CDN raw, et marche si le dépôt devient privé)
+  if (token) {
+    try {
+      const api = `https://api.github.com/repos/${repo}/contents/${path}?ref=${encodeURIComponent(branch)}`;
+      const res = await fetch(api, {
+        headers: {
+          Accept: "application/vnd.github.raw+json",
+          Authorization: `Bearer ${token}`,
+          "X-GitHub-Api-Version": "2022-11-28",
+          "User-Agent": "p1-luxembourg-admin",
+        },
+        cache: "no-store",
+      });
+      if (res.ok) {
+        const data = (await res.json()) as LiveResultsFile;
+        if (data?.matches) return data;
+      }
+    } catch {
+      /* fallback raw */
+    }
+  }
+
+  // 2) raw.githubusercontent.com (dépôt public, sans token)
+  try {
+    const rawUrl = `https://raw.githubusercontent.com/${repo}/${branch}/${path}?t=${Date.now()}`;
+    const res = await fetch(rawUrl, {
+      cache: "no-store",
+      headers: { "User-Agent": "p1-luxembourg-admin", Accept: "application/json" },
+    });
+    if (!res.ok) return null;
+    const data = (await res.json()) as LiveResultsFile;
+    if (!data?.matches) return null;
+    return data;
+  } catch {
+    return null;
+  }
+}
+
 /**
  * Publie data/live-results.json sur GitHub via l’API Contents.
  * Variables Vercel :
@@ -13,20 +69,16 @@ export async function commitLiveResultsToGitHub(json: string): Promise<{
   message: string;
   url?: string;
 }> {
-  const token = process.env.GITHUB_TOKEN?.trim();
+  const { repo, branch, path, token } = repoConfig();
   if (!token) {
     return {
       ok: true,
       committed: false,
       message:
-        "Pas de GITHUB_TOKEN : téléchargez le JSON, remplacez data/live-results.json sur GitHub, puis attendez le redéploiement Vercel.",
+        "GITHUB_TOKEN manquant : le score est sauvé ici mais n’apparaît PAS sur le calendrier. Ajoutez GITHUB_TOKEN dans Vercel → Settings → Environment Variables.",
     };
   }
 
-  const repo =
-    process.env.GITHUB_REPO?.trim() || "manu6969-nobot/kick-stats";
-  const branch = process.env.GITHUB_BRANCH?.trim() || "main";
-  const path = "data/live-results.json";
   const api = `https://api.github.com/repos/${repo}/contents/${path}`;
   const headers = {
     Accept: "application/vnd.github+json",
@@ -88,7 +140,8 @@ export async function commitLiveResultsToGitHub(json: string): Promise<{
     return {
       ok: true,
       committed: true,
-      message: "Résultat publié sur GitHub — Vercel redéploie automatiquement.",
+      message:
+        "Résultat publié sur GitHub — calendrier et classement se mettent à jour tout de suite.",
       url: data.commit?.html_url || data.content?.html_url,
     };
   } catch (e) {
@@ -102,4 +155,8 @@ export async function commitLiveResultsToGitHub(json: string): Promise<{
 
 export function githubPersistConfigured() {
   return Boolean(process.env.GITHUB_TOKEN?.trim());
+}
+
+export function isVercelRuntime() {
+  return process.env.VERCEL === "1";
 }

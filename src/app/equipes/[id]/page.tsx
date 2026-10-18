@@ -42,7 +42,7 @@ export default async function EquipePage({
   const team = getTeam(id);
   if (!team) notFound();
 
-  const allMatches = getMergedMatches();
+  const allMatches = await getMergedMatches();
   const standings = computeStandings(allMatches);
   const row = standings.find((s) => s.teamId === id)!;
   const rank = standings.findIndex((s) => s.teamId === id) + 1;

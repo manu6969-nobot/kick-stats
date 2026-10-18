@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 
 export const dynamic = "force-dynamic";
 
-export default function CalendrierPage() {
-  const allMatches = getMergedMatches();
+export default async function CalendrierPage() {
+  const allMatches = await getMergedMatches();
   const matchdays = getMatchdays(allMatches);
 
   return (

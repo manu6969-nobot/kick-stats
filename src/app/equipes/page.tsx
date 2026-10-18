@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 
 export const dynamic = "force-dynamic";
 
-export default function EquipesPage() {
-  const standings = computeStandings(getMergedMatches());
+export default async function EquipesPage() {
+  const standings = computeStandings(await getMergedMatches());
   const rankByTeam = new Map(standings.map((r, i) => [r.teamId, i + 1]));
 
   return (

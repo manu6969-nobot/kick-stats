@@ -4,8 +4,9 @@ import { isAdminAuthenticated } from "@/lib/admin-auth";
 import {
   commitLiveResultsToGitHub,
   githubPersistConfigured,
+  isVercelRuntime,
 } from "@/lib/github-persist";
-import { readLiveResultsFile, writeLiveResultsFile } from "@/lib/live-results";
+import { loadLiveResults, writeLiveResultsFile } from "@/lib/live-results";
 
 export const dynamic = "force-dynamic";
 
@@ -13,7 +14,7 @@ export async function GET() {
   if (!(await isAdminAuthenticated())) {
     return NextResponse.json({ error: "Non autorisé" }, { status: 401 });
   }
-  return NextResponse.json(readLiveResultsFile());
+  return NextResponse.json(await loadLiveResults());
 }
 
 export async function PUT(request: Request) {
@@ -38,22 +39,37 @@ export async function PUT(request: Request) {
     );
   }
 
-  // Sur Vercel le disque n’est pas durable → commit GitHub si token configuré
+  // Sur Vercel : il FAUT publier sur GitHub sinon calendrier/classement
+  // (autres instances) ne voient pas le score.
   let github: Awaited<ReturnType<typeof commitLiveResultsToGitHub>> | null =
     null;
-  if (!result.persistedToRepo || githubPersistConfigured()) {
+  const mustPublish = isVercelRuntime() || !result.persistedToRepo;
+  if (mustPublish || githubPersistConfigured()) {
     github = await commitLiveResultsToGitHub(result.json);
   }
 
   const published = result.persistedToRepo || Boolean(github?.committed);
+
+  if (isVercelRuntime() && !github?.committed) {
+    return NextResponse.json({
+      ok: true,
+      warning: true,
+      path: result.path,
+      persistedToRepo: result.persistedToRepo,
+      publishedToGitHub: false,
+      updatedAt: result.payload.updatedAt,
+      hint:
+        github?.message ||
+        "Score enregistré uniquement sur ce serveur. Ajoutez GITHUB_TOKEN dans Vercel pour que le calendrier et le classement se mettent à jour.",
+    });
+  }
+
   let hint: string | null = null;
   if (github?.committed) {
     hint = github.message;
   } else if (!published) {
     hint =
-      "Sur Vercel ce n’est pas encore public. Sur GitHub : ouvrez data/live-results.json → crayon → collez le JSON téléchargé → Commit changes. Puis attendez 1–2 min (redéploiement Vercel).";
-  } else if (github && !github.committed && github.message) {
-    hint = github.message;
+      "Score local OK. Pour le site public : ajoutez GITHUB_TOKEN sur Vercel, ou collez le JSON sur GitHub (data/live-results.json).";
   }
 
   return NextResponse.json({

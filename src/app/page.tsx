@@ -18,8 +18,8 @@ import { cn } from "@/lib/utils";
 
 export const dynamic = "force-dynamic";
 
-export default function HomePage() {
-  const allMatches = getMergedMatches();
+export default async function HomePage() {
+  const allMatches = await getMergedMatches();
   const standings = computeStandings(allMatches);
   const results = getLatestResults(4, allMatches);
   const upcoming = getUpcomingFixtures(8, allMatches);

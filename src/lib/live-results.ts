@@ -5,6 +5,10 @@ import path from "path";
 import type { LiveResultsFile, Match } from "@/data/types";
 import { matches as baseMatches } from "@/data/championship";
 import {
+  fetchLiveResultsFromGitHub,
+  isVercelRuntime,
+} from "@/lib/github-persist";
+import {
   applyLiveResult,
   isEmptyLiveResult,
 } from "@/lib/live-results-shared";
@@ -24,7 +28,6 @@ export function sanitizeLiveResults(data: LiveResultsFile): LiveResultsFile {
   const matches: LiveResultsFile["matches"] = {};
   for (const [id, result] of Object.entries(data.matches ?? {})) {
     if (isEmptyLiveResult(result)) continue;
-    // Normalise score + programmé → terminé
     if (
       result.status === "scheduled" &&
       result.homeScore != null &&
@@ -45,8 +48,14 @@ function parseLive(raw: unknown): LiveResultsFile | null {
   return sanitizeLiveResults(data);
 }
 
-export function readLiveResultsFile(): LiveResultsFile {
-  // /tmp d'abord (saisies admin sur l'instance courante)
+function newer(a: LiveResultsFile, b: LiveResultsFile): LiveResultsFile {
+  const ta = Date.parse(a.updatedAt || "") || 0;
+  const tb = Date.parse(b.updatedAt || "") || 0;
+  return ta >= tb ? a : b;
+}
+
+/** Lecture disque locale uniquement (/tmp → fichier repo → bundle). */
+export function readLiveResultsFileLocal(): LiveResultsFile {
   try {
     if (existsSync(/*turbopackIgnore: true*/ TMP_PATH)) {
       const raw = JSON.parse(
@@ -59,7 +68,6 @@ export function readLiveResultsFile(): LiveResultsFile {
     /* ignore */
   }
 
-  // Fichier repo (local writable)
   try {
     if (existsSync(/*turbopackIgnore: true*/ DATA_PATH)) {
       const raw = JSON.parse(
@@ -74,6 +82,30 @@ export function readLiveResultsFile(): LiveResultsFile {
 
   const bundled = parseLive(bundledLive);
   return bundled ?? emptyLiveResults();
+}
+
+/**
+ * Source de vérité pour les pages publiques.
+ * Sur Vercel : GitHub (partagé entre toutes les instances) + /tmp si plus récent.
+ * En local : fichier disque.
+ */
+export async function loadLiveResults(): Promise<LiveResultsFile> {
+  const local = readLiveResultsFileLocal();
+
+  if (isVercelRuntime() || process.env.LIVE_RESULTS_FROM_GITHUB === "1") {
+    const remote = await fetchLiveResultsFromGitHub();
+    if (remote) {
+      const remoteClean = sanitizeLiveResults(remote);
+      return newer(local, remoteClean);
+    }
+  }
+
+  return local;
+}
+
+/** @deprecated Préférer loadLiveResults() — synchrone = disque local seulement. */
+export function readLiveResultsFile(): LiveResultsFile {
+  return readLiveResultsFileLocal();
 }
 
 export function prepareLiveResultsPayload(data: LiveResultsFile): {
@@ -136,17 +168,19 @@ export function writeLiveResultsFile(data: LiveResultsFile): {
   }
 }
 
-export function getMergedMatches(
-  live: LiveResultsFile = readLiveResultsFile()
-): Match[] {
-  return baseMatches.map((m) => applyLiveResult(m, live.matches[m.id]));
+export async function getMergedMatches(
+  live?: LiveResultsFile
+): Promise<Match[]> {
+  const data = live ?? (await loadLiveResults());
+  return baseMatches.map((m) => applyLiveResult(m, data.matches[m.id]));
 }
 
-export function getMergedMatch(
+export async function getMergedMatch(
   id: string,
-  live: LiveResultsFile = readLiveResultsFile()
-): Match | undefined {
+  live?: LiveResultsFile
+): Promise<Match | undefined> {
+  const data = live ?? (await loadLiveResults());
   const base = baseMatches.find((m) => m.id === id);
   if (!base) return undefined;
-  return applyLiveResult(base, live.matches[id]);
+  return applyLiveResult(base, data.matches[id]);
 }

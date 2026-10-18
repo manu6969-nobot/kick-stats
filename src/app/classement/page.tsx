@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 
 export const dynamic = "force-dynamic";
 
-export default function ClassementPage() {
-  const standings = computeStandings(getMergedMatches());
+export default async function ClassementPage() {
+  const standings = computeStandings(await getMergedMatches());
 
   return (
     <div>

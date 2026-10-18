@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
-import { readLiveResultsFile } from "@/lib/live-results";
+import { loadLiveResults } from "@/lib/live-results";
 
 export const dynamic = "force-dynamic";
 
 export async function GET() {
-  const live = readLiveResultsFile();
+  const live = await loadLiveResults();
   return NextResponse.json(live, {
     headers: { "Cache-Control": "no-store" },
   });

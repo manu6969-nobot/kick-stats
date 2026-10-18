@@ -56,27 +56,22 @@ Page : [`/admin`](http://127.0.0.1:43123/admin)
 - Encodez score, buteurs (minute), passes, cartons jaunes / rouges
 - **2 jaunes = rouge** : le 2e jaune du même joueur devient automatiquement « 2e jaune (rouge) », distinct du rouge direct
 - Les données sont dans `data/live-results.json`
-- **Important** : sur Vercel, enregistrer un score ne le publie pas tout seul. Il faut mettre à jour le fichier sur GitHub (sinon le site ne change pas pour les visiteurs).
+- **Sur Vercel, `GITHUB_TOKEN` est obligatoire** pour que le calendrier / classement / fiches match voient les scores. Sans token, l’admin enregistre seulement sur une machine éphémère : les autres pages ne changent pas.
 
-### Publier un résultat (sans token)
+### Publier automatiquement (obligatoire sur Vercel)
 
-1. Admin → **Télécharger JSON**
-2. Sur GitHub, ouvrez [`data/live-results.json`](https://github.com/manu6969-nobot/kick-stats/blob/main/data/live-results.json) → crayon
-3. Collez le contenu du fichier téléchargé → **Commit changes**
-4. Attendez 1–2 min le redéploiement Vercel, puis rechargez le site (Ctrl+Shift+R)
-
-### Publier automatiquement (recommandé)
-
-Sur Vercel → Project → Settings → Environment Variables :
+1. Projet **`kick-stats`** uniquement (supprimez les doublons)
+2. **Settings** → **Environment Variables** :
 
 | Variable | Valeur |
 |---|---|
 | `ADMIN_PASSWORD` | votre mot de passe admin |
-| `GITHUB_TOKEN` | Personal Access Token GitHub (droit **Contents: Read and write**) |
-| `GITHUB_REPO` | `manu6969-nobot/kick-stats` (optionnel) |
-| `GITHUB_BRANCH` | `main` (optionnel) |
+| `GITHUB_TOKEN` | Personal Access Token GitHub (cochez **repo**) |
+| `GITHUB_REPO` | `manu6969-nobot/kick-stats` |
 
-Ensuite chaque **Enregistrer le score** committe le JSON sur GitHub et Vercel redéploie.
+3. **Deployments** → **⋯** → **Redeploy**
+
+Ensuite **Enregistrer le score** écrit sur GitHub et **toutes les pages** (calendrier, classement, match) se mettent à jour immédiatement.
 
 ## Déployer sur Vercel (via GitHub)
 

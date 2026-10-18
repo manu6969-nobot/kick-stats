@@ -119,6 +119,8 @@ export function AdminApp() {
       const data = await res.json();
       if (!res.ok) {
         setMessage(data.error || "Erreur d’enregistrement");
+      } else if (data.warning && data.hint) {
+        setMessage(`${label} — ⚠️ ${data.hint}`);
       } else if (data.hint) {
         setMessage(`${label}. ${data.hint}`);
       } else {
@@ -311,39 +313,36 @@ export function AdminApp() {
       </div>
 
       <div className="rounded-lg border border-border/80 bg-muted/30 px-3 py-3 text-xs text-muted-foreground space-y-1.5">
-        <p className="font-medium text-foreground">Publier sur le site (Vercel)</p>
-        <p>
-          Télécharger le JSON ne change pas le site tout seul. Il faut mettre à
-          jour le fichier sur GitHub :
+        <p className="font-medium text-foreground">
+          Pourquoi le calendrier ne change pas ?
         </p>
-        <ol className="list-decimal pl-4 space-y-1">
-          <li>
-            Cliquez{" "}
-            <button type="button" className="underline" onClick={downloadJson}>
-              Télécharger JSON
-            </button>
-          </li>
-          <li>
-            Ouvrez{" "}
-            <a
-              className="underline"
-              href="https://github.com/manu6969-nobot/kick-stats/blob/main/data/live-results.json"
-              target="_blank"
-              rel="noreferrer"
-            >
-              data/live-results.json
-            </a>{" "}
-            sur GitHub → icône crayon
-          </li>
-          <li>Effacez tout, collez le contenu du fichier téléchargé → Commit changes</li>
-          <li>Attendez 1–2 min le redéploiement Vercel, puis rechargez le site</li>
-        </ol>
         <p>
-          Option durable : ajoutez <code>GITHUB_TOKEN</code> dans Vercel (PAT avec
-          droit Contents) pour publier automatiquement à chaque enregistrement.
-          Voir aussi{" "}
-          <Link href="/" className="underline">
-            le site public
+          Sur Vercel, sans <code>GITHUB_TOKEN</code>, le score reste bloqué dans
+          l’admin et <strong>n’apparaît pas</strong> sur calendrier / classement.
+        </p>
+        <p>
+          Dans le projet <strong>kick-stats</strong> → Settings → Environment
+          Variables → ajoutez <code>GITHUB_TOKEN</code> (jeton GitHub avec droit{" "}
+          <code>repo</code>) + <code>GITHUB_REPO=manu6969-nobot/kick-stats</code>{" "}
+          → Redeploy. Ensuite chaque enregistrement met à jour tout le site.
+        </p>
+        <p>
+          Secours :{" "}
+          <button type="button" className="underline" onClick={downloadJson}>
+            Télécharger JSON
+          </button>{" "}
+          puis le coller dans{" "}
+          <a
+            className="underline"
+            href="https://github.com/manu6969-nobot/kick-stats/blob/main/data/live-results.json"
+            target="_blank"
+            rel="noreferrer"
+          >
+            data/live-results.json
+          </a>{" "}
+          sur GitHub. Voir aussi{" "}
+          <Link href="/calendrier" className="underline">
+            le calendrier
           </Link>
           .
         </p>

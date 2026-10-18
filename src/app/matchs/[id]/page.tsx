@@ -25,7 +25,7 @@ export async function generateMetadata({
   params: Promise<{ id: string }>;
 }): Promise<Metadata> {
   const { id } = await params;
-  const match = getMergedMatch(id);
+  const match = await getMergedMatch(id);
   if (!match) return { title: "Match" };
   const home = getTeam(match.homeTeamId);
   const away = getTeam(match.awayTeamId);
@@ -40,7 +40,7 @@ export default async function MatchPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const match = getMergedMatch(id);
+  const match = await getMergedMatch(id);
   if (!match) notFound();
 
   const home = getTeam(match.homeTeamId)!;
