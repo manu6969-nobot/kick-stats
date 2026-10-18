@@ -14,13 +14,16 @@ export function MatchEventIcon({
   if (type === "goal" || type === "own_goal") {
     return (
       <span
-        className={cn("relative inline-flex size-5 items-center justify-center", className)}
+        className={cn(
+          "relative inline-flex h-5 w-5 shrink-0 items-center justify-center",
+          className
+        )}
         title={type === "own_goal" ? "CSC" : penalty ? "Pénalty" : "But"}
         aria-hidden
       >
-        <SoccerBallIcon className="size-5" />
+        <SoccerBallIcon />
         {penalty && (
-          <span className="absolute -bottom-0.5 -right-0.5 flex size-3 items-center justify-center rounded-full bg-pitch-deep text-[7px] font-bold leading-none text-white">
+          <span className="absolute -bottom-0.5 -right-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-pitch-deep text-[7px] font-bold leading-none text-white">
             P
           </span>
         )}
@@ -32,7 +35,7 @@ export function MatchEventIcon({
     return (
       <span
         className={cn(
-          "inline-block h-[18px] w-[11px] rotate-[12deg] rounded-[1px] border border-black/25 bg-[#f7d117] shadow-sm",
+          "inline-block h-[18px] w-[11px] shrink-0 rotate-[12deg] rounded-[1px] border border-black/25 bg-[#f7d117] shadow-sm",
           className
         )}
         title="Carton jaune"
@@ -43,7 +46,11 @@ export function MatchEventIcon({
 
   if (type === "second_yellow") {
     return (
-      <span className={cn("inline-flex items-center gap-0.5", className)} title="2e jaune" aria-hidden>
+      <span
+        className={cn("inline-flex shrink-0 items-center gap-0.5", className)}
+        title="2e jaune"
+        aria-hidden
+      >
         <span className="inline-block h-[18px] w-[10px] rotate-[12deg] rounded-[1px] border border-black/25 bg-[#f7d117]" />
         <span className="inline-block h-[18px] w-[10px] -rotate-[8deg] rounded-[1px] border border-black/25 bg-[#e11d2e]" />
       </span>
@@ -54,7 +61,7 @@ export function MatchEventIcon({
     return (
       <span
         className={cn(
-          "inline-block h-[18px] w-[11px] rotate-[12deg] rounded-[1px] border border-black/25 bg-[#e11d2e] shadow-sm",
+          "inline-block h-[18px] w-[11px] shrink-0 rotate-[12deg] rounded-[1px] border border-black/25 bg-[#e11d2e] shadow-sm",
           className
         )}
         title="Carton rouge"
@@ -66,11 +73,17 @@ export function MatchEventIcon({
   if (type === "sub_in" || type === "sub") {
     return (
       <span
-        className={cn("inline-flex items-center text-[#1a9e3f]", className)}
+        className={cn("inline-flex shrink-0 items-center text-[#1a9e3f]", className)}
         title="Entrée"
         aria-hidden
       >
-        <svg viewBox="0 0 22 12" className="h-3 w-[22px]" fill="currentColor">
+        <svg
+          viewBox="0 0 22 12"
+          width="22"
+          height="12"
+          className="block"
+          fill="currentColor"
+        >
           <path d="M0 4.5h12v3H0z" />
           <path d="M11 0.5l10.5 5.5L11 11.5V0.5z" />
         </svg>
@@ -81,11 +94,17 @@ export function MatchEventIcon({
   if (type === "sub_out") {
     return (
       <span
-        className={cn("inline-flex items-center text-[#e11d2e]", className)}
+        className={cn("inline-flex shrink-0 items-center text-[#e11d2e]", className)}
         title="Sortie"
         aria-hidden
       >
-        <svg viewBox="0 0 22 12" className="h-3 w-[22px]" fill="currentColor">
+        <svg
+          viewBox="0 0 22 12"
+          width="22"
+          height="12"
+          className="block"
+          fill="currentColor"
+        >
           <path d="M10 4.5h12v3H10z" />
           <path d="M11 0.5L0.5 6 11 11.5V0.5z" />
         </svg>
@@ -96,15 +115,27 @@ export function MatchEventIcon({
   return null;
 }
 
-function SoccerBallIcon({ className }: { className?: string }) {
+function SoccerBallIcon() {
   return (
-    <svg viewBox="0 0 24 24" className={className} aria-hidden>
-      <circle cx="12" cy="12" r="10" fill="#f4f4f4" stroke="#1a1a1a" strokeWidth="1.2" />
+    <svg
+      viewBox="0 0 24 24"
+      width="20"
+      height="20"
+      className="block"
+      aria-hidden
+    >
+      <circle
+        cx="12"
+        cy="12"
+        r="10"
+        fill="#f4f4f4"
+        stroke="#1a1a1a"
+        strokeWidth="1.2"
+      />
       <path
         fill="#1a1a1a"
-        d="M12 7.2 14.4 9l-.9 2.8H10.5L9.6 9 12 7.2zm0 9.6-2.4-1.8.9-2.8h3l.9 2.8L12 16.8zM7.6 9.2l1.2 2.6-2.1 1.8-2.2-.5.3-2.5 2.8-1.4zm8.8 0-2.8 1.4.3 2.5-2.2.5-2.1-1.8 1.2-2.6 2.8.0zm-8.8 5.6 2.2-.5 2.1 1.8-1.2 2.6-2.8 0-.3-2.5zm8.8 0-.3 2.5-2.8 0-1.2-2.6 2.1-1.8 2.2.5z"
+        d="M12 7.2 14.4 9l-.9 2.8H10.5L9.6 9 12 7.2zm0 9.6-2.4-1.8.9-2.8h3l.9 2.8L12 16.8zM7.6 9.2l1.2 2.6-2.1 1.8-2.2-.5.3-2.5 2.8-1.4zm8.8 0-2.8 1.4.3 2.5-2.2.5-2.1-1.8 1.2-2.6zm-8.8 5.6 2.2-.5 2.1 1.8-1.2 2.6-2.8 0-.3-2.5zm8.8 0-.3 2.5-2.8 0-1.2-2.6 2.1-1.8 2.2.5z"
       />
-      <circle cx="12" cy="12" r="10" fill="none" stroke="#1a1a1a" strokeWidth="1.2" />
     </svg>
   );
 }
