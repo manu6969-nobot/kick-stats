@@ -32,7 +32,8 @@ export async function fetchLiveResultsFromGitHub(): Promise<LiveResultsFile | nu
         cache: "no-store",
       });
       if (res.ok) {
-        const data = (await res.json()) as LiveResultsFile;
+        const text = await res.text();
+        const data = JSON.parse(text) as LiveResultsFile;
         if (data?.matches) return data;
       }
     } catch {
