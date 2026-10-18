@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { MatchEventIcon } from "@/components/match-event-icon";
 import { TeamBadge } from "@/components/team-badge";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -544,6 +545,8 @@ function MatchEditor({
               <option value="yellow">Carton jaune</option>
               <option value="red">Carton rouge (direct)</option>
               <option value="second_yellow">2e jaune (rouge)</option>
+              <option value="sub_in">Entrée</option>
+              <option value="sub_out">Sortie</option>
             </select>
           </label>
           <label className="text-sm">
@@ -634,6 +637,13 @@ function MatchEditor({
                   <span className="w-10 font-display font-bold text-pitch">
                     {ev.minute}&apos;
                   </span>
+                  <MatchEventIcon
+                    type={ev.type}
+                    penalty={Boolean(
+                      ev.detail?.toLowerCase().includes("penalty") ||
+                        ev.detail?.toLowerCase().includes("pénal")
+                    )}
+                  />
                   <div className="min-w-0 flex-1">
                     <p className="font-medium">
                       {eventLabel(ev.type)}

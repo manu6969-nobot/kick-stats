@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { MatchEventIcon } from "@/components/match-event-icon";
 import { StatBar } from "@/components/stat-bar";
 import { TeamBadge } from "@/components/team-badge";
 import { Badge } from "@/components/ui/badge";
@@ -113,33 +114,44 @@ export default async function MatchPage({
       {match.events.length > 0 && (
         <section className="animate-rise-delay-1 space-y-4">
           <h2 className="font-display text-2xl font-bold">Temps forts</h2>
-          <ol className="space-y-2 rounded-xl border border-border/80 bg-card p-4 shadow-sm">
+          <ol className="space-y-1 rounded-xl border border-border/80 bg-card p-4 shadow-sm">
             {match.events.map((event, index) => {
               const player = event.playerId ? getPlayer(event.playerId) : undefined;
               const assist = event.assistId ? getPlayer(event.assistId) : undefined;
               const isHome = event.teamId === home.id;
+              const isPenalty = Boolean(
+                event.detail?.toLowerCase().includes("penalty") ||
+                  event.detail?.toLowerCase().includes("pénal")
+              );
+              const nameFromDetail =
+                !player && event.detail
+                  ? event.detail.replace(/^penalty\s*[·•-]?\s*/i, "").trim()
+                  : undefined;
               return (
                 <li
                   key={event.id ?? `${event.minute}-${index}`}
-                  className="flex items-start gap-3 border-b border-border/50 py-2 last:border-0"
+                  className="flex items-center gap-3 border-b border-border/50 py-2.5 last:border-0"
                 >
-                  <span className="w-10 shrink-0 font-display text-lg font-bold tabular-nums text-pitch">
+                  <span className="w-10 shrink-0 font-display text-base font-bold tabular-nums text-pitch">
                     {event.minute}&apos;
                   </span>
-                  <div className={`flex-1 ${isHome ? "" : "text-right"}`}>
+                  <MatchEventIcon type={event.type} penalty={isPenalty} />
+                  <div className={`min-w-0 flex-1 ${isHome ? "" : "text-right"}`}>
                     <p className="font-medium">
-                      {eventLabel(event.type)}
-                      {player && (
-                        <>
-                          {" · "}
-                          <Link
-                            href={`/joueurs/${player.id}`}
-                            className="hover:text-primary"
-                          >
-                            {playerDisplayName(player)}
-                          </Link>
-                        </>
+                      {player ? (
+                        <Link
+                          href={`/joueurs/${player.id}`}
+                          className="hover:text-primary"
+                        >
+                          {playerDisplayName(player)}
+                        </Link>
+                      ) : (
+                        nameFromDetail || eventLabel(event.type)
                       )}
+                      <span className="ml-2 text-xs font-normal text-muted-foreground">
+                        {eventLabel(event.type)}
+                        {isPenalty ? " (P)" : ""}
+                      </span>
                     </p>
                     {assist && (
                       <p className="text-sm text-muted-foreground">
@@ -149,13 +161,10 @@ export default async function MatchPage({
                         </Link>
                       </p>
                     )}
-                    {event.type === "second_yellow" && (
-                      <p className="text-xs text-loss">Expulsion pour 2e carton jaune</p>
-                    )}
-                    {event.type === "red" && (
-                      <p className="text-xs text-loss">Expulsion — rouge direct</p>
-                    )}
                   </div>
+                  <span className="hidden text-xs text-muted-foreground sm:inline">
+                    {isHome ? home.shortName : away.shortName}
+                  </span>
                 </li>
               );
             })}

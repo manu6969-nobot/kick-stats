@@ -228,8 +228,9 @@ function mapEventKind(kind) {
     case "red":
       return "red";
     case "in":
+      return "sub_in";
     case "out":
-      return "sub";
+      return "sub_out";
     default:
       return null;
   }
@@ -243,7 +244,7 @@ function flattenEvents(detail, homeKickId, awayKickId, players) {
     for (const side of ["home", "away"]) {
       for (const ev of group[side] || []) {
         const type = mapEventKind(ev.kind);
-        if (!type || type === "sub") continue; // subs optionnels pour live-results
+        if (!type) continue;
         const teamId =
           ev.teamId === rbfaHome || side === "home" ? homeKickId : awayKickId;
         const playerId = findPlayerId(

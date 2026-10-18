@@ -54,15 +54,17 @@ function newer(a: LiveResultsFile, b: LiveResultsFile): LiveResultsFile {
   return ta >= tb ? a : b;
 }
 
-/** Lecture disque locale uniquement (/tmp → fichier repo → bundle). */
+/** Lecture disque locale uniquement (le plus récent entre /tmp et le repo → bundle). */
 export function readLiveResultsFileLocal(): LiveResultsFile {
+  let fromTmp: LiveResultsFile | null = null;
+  let fromDisk: LiveResultsFile | null = null;
+
   try {
     if (existsSync(/*turbopackIgnore: true*/ TMP_PATH)) {
       const raw = JSON.parse(
         readFileSync(/*turbopackIgnore: true*/ TMP_PATH, "utf8")
       );
-      const parsed = parseLive(raw);
-      if (parsed) return parsed;
+      fromTmp = parseLive(raw);
     }
   } catch {
     /* ignore */
@@ -73,12 +75,15 @@ export function readLiveResultsFileLocal(): LiveResultsFile {
       const raw = JSON.parse(
         readFileSync(/*turbopackIgnore: true*/ DATA_PATH, "utf8")
       );
-      const parsed = parseLive(raw);
-      if (parsed) return parsed;
+      fromDisk = parseLive(raw);
     }
   } catch {
     /* ignore */
   }
+
+  if (fromTmp && fromDisk) return newer(fromTmp, fromDisk);
+  if (fromTmp) return fromTmp;
+  if (fromDisk) return fromDisk;
 
   const bundled = parseLive(bundledLive);
   return bundled ?? emptyLiveResults();

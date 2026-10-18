@@ -168,6 +168,10 @@ export function eventLabel(type: MatchEvent["type"]): string {
       return "Carton rouge (direct)";
     case "sub":
       return "Remplacement";
+    case "sub_in":
+      return "Entrée";
+    case "sub_out":
+      return "Sortie";
     default:
       return type;
   }

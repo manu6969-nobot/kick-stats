@@ -40,7 +40,9 @@ export type MatchEventType =
   | "yellow"
   | "second_yellow"
   | "red"
-  | "sub";
+  | "sub"
+  | "sub_in"
+  | "sub_out";
 
 export interface MatchEvent {
   id?: string;

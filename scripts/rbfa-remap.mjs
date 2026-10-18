@@ -114,6 +114,8 @@ function mapEventKind(kind) {
   if (kind === "yellow") return "yellow";
   if (kind === "secondYellow" || kind === "yellowRed") return "second_yellow";
   if (kind === "red") return "red";
+  if (kind === "in") return "sub_in";
+  if (kind === "out") return "sub_out";
   return null;
 }
 
