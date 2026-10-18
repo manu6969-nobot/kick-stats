@@ -1,17 +1,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { MatchEventIcon } from "@/components/match-event-icon";
+import { MatchEventsTimeline } from "@/components/match-events-timeline";
 import { StatBar } from "@/components/stat-bar";
 import { TeamBadge } from "@/components/team-badge";
 import { Badge } from "@/components/ui/badge";
 import { matches } from "@/data/championship";
-import { eventLabel, getMergedMatch, summarizeCards } from "@/lib/live-results";
-import {
-  formatLongDate,
-  getPlayer,
-  getTeam,
-  playerDisplayName,
-} from "@/lib/stats";
+import { getMergedMatch, summarizeCards } from "@/lib/live-results";
+import { formatLongDate, getTeam } from "@/lib/stats";
 import type { Metadata } from "next";
 
 export const dynamic = "force-dynamic";
@@ -114,61 +109,7 @@ export default async function MatchPage({
       {match.events.length > 0 && (
         <section className="animate-rise-delay-1 space-y-4">
           <h2 className="font-display text-2xl font-bold">Temps forts</h2>
-          <ol className="space-y-1 rounded-xl border border-border/80 bg-card p-4 shadow-sm">
-            {match.events.map((event, index) => {
-              const player = event.playerId ? getPlayer(event.playerId) : undefined;
-              const assist = event.assistId ? getPlayer(event.assistId) : undefined;
-              const isHome = event.teamId === home.id;
-              const isPenalty = Boolean(
-                event.detail?.toLowerCase().includes("penalty") ||
-                  event.detail?.toLowerCase().includes("pénal")
-              );
-              const nameFromDetail =
-                !player && event.detail
-                  ? event.detail.replace(/^penalty\s*[·•-]?\s*/i, "").trim()
-                  : undefined;
-              return (
-                <li
-                  key={event.id ?? `${event.minute}-${index}`}
-                  className="flex items-center gap-3 border-b border-border/50 py-2.5 last:border-0"
-                >
-                  <span className="w-10 shrink-0 font-display text-base font-bold tabular-nums text-pitch">
-                    {event.minute}&apos;
-                  </span>
-                  <MatchEventIcon type={event.type} penalty={isPenalty} />
-                  <div className={`min-w-0 flex-1 ${isHome ? "" : "text-right"}`}>
-                    <p className="font-medium">
-                      {player ? (
-                        <Link
-                          href={`/joueurs/${player.id}`}
-                          className="hover:text-primary"
-                        >
-                          {playerDisplayName(player)}
-                        </Link>
-                      ) : (
-                        nameFromDetail || eventLabel(event.type)
-                      )}
-                      <span className="ml-2 text-xs font-normal text-muted-foreground">
-                        {eventLabel(event.type)}
-                        {isPenalty ? " (P)" : ""}
-                      </span>
-                    </p>
-                    {assist && (
-                      <p className="text-sm text-muted-foreground">
-                        Passe :{" "}
-                        <Link href={`/joueurs/${assist.id}`} className="hover:text-primary">
-                          {playerDisplayName(assist)}
-                        </Link>
-                      </p>
-                    )}
-                  </div>
-                  <span className="hidden text-xs text-muted-foreground sm:inline">
-                    {isHome ? home.shortName : away.shortName}
-                  </span>
-                </li>
-              );
-            })}
-          </ol>
+          <MatchEventsTimeline events={match.events} home={home} away={away} />
           {(cards.yellowCards > 0 || cards.redCards > 0) && (
             <p className="text-sm text-muted-foreground">
               Cartons : {cards.yellowCards} jaune{cards.yellowCards > 1 ? "s" : ""} ·{" "}
