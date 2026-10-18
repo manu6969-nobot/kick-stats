@@ -4,6 +4,7 @@ import { FormDots } from "@/components/form-dots";
 import { MatchRow } from "@/components/match-row";
 import { PageHeader } from "@/components/page-header";
 import { TeamBadge } from "@/components/team-badge";
+import { TeamSeasonStats } from "@/components/team-season-stats";
 import { teams } from "@/data/championship";
 import { getMergedMatches } from "@/lib/live-results";
 import {
@@ -12,6 +13,7 @@ import {
   getTeam,
   getTeamMatches,
   getTeamPlayers,
+  getTeamSeasonStats,
   playerDisplayName,
   positionLabel,
 } from "@/lib/stats";
@@ -48,6 +50,7 @@ export default async function EquipePage({
   const rank = standings.findIndex((s) => s.teamId === id) + 1;
   const squad = getTeamPlayers(id);
   const teamMatches = getTeamMatches(id, allMatches);
+  const season = getTeamSeasonStats(id, allMatches, 10);
 
   return (
     <div className="space-y-10">
@@ -91,7 +94,16 @@ export default async function EquipePage({
         </div>
       </div>
 
-      <section className="animate-rise-delay-1 grid gap-4 sm:grid-cols-2">
+      <TeamSeasonStats
+        goalsFor={season.goalsFor}
+        goalsAgainst={season.goalsAgainst}
+        played={season.played}
+        yellowCards={season.yellowCards}
+        redCards={season.redCards}
+        form={season.form}
+      />
+
+      <section className="grid gap-4 sm:grid-cols-2">
         <div className="rounded-xl border border-border/80 bg-card p-5">
           <h2 className="font-display text-xl font-bold">À domicile</h2>
           <dl className="mt-4 grid grid-cols-3 gap-3 text-center text-sm">

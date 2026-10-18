@@ -201,6 +201,63 @@ export function getTeamMatches(teamId: TeamId, allMatches: Match[] = baseMatches
     .sort((a, b) => a.date.localeCompare(b.date));
 }
 
+export type TeamFormResult = "W" | "D" | "L";
+
+/** Stats saison pour la fiche club (buts, cartons, série). */
+export function getTeamSeasonStats(
+  teamId: TeamId,
+  allMatches: Match[] = baseMatches,
+  formLength = 10
+) {
+  const finished = allMatches
+    .filter(
+      (m) =>
+        (m.homeTeamId === teamId || m.awayTeamId === teamId) &&
+        m.status === "finished" &&
+        m.homeScore != null &&
+        m.awayScore != null
+    )
+    .sort((a, b) => a.date.localeCompare(b.date) || a.kickoff.localeCompare(b.kickoff));
+
+  let goalsFor = 0;
+  let goalsAgainst = 0;
+  let yellowCards = 0;
+  let redCards = 0;
+  const form: TeamFormResult[] = [];
+
+  for (const match of finished) {
+    const isHome = match.homeTeamId === teamId;
+    const scored = isHome ? match.homeScore! : match.awayScore!;
+    const conceded = isHome ? match.awayScore! : match.homeScore!;
+    goalsFor += scored;
+    goalsAgainst += conceded;
+
+    if (scored > conceded) form.push("W");
+    else if (scored < conceded) form.push("L");
+    else form.push("D");
+
+    for (const ev of match.events ?? []) {
+      if (ev.teamId !== teamId) continue;
+      if (ev.type === "yellow") yellowCards += 1;
+      else if (ev.type === "second_yellow") {
+        yellowCards += 1;
+        redCards += 1;
+      } else if (ev.type === "red") {
+        redCards += 1;
+      }
+    }
+  }
+
+  return {
+    played: finished.length,
+    goalsFor,
+    goalsAgainst,
+    yellowCards,
+    redCards,
+    form: form.slice(-formLength),
+  };
+}
+
 export function getTopScorers(limit = 10, allMatches?: Match[]) {
   const derived = allMatches ? computePlayerStatsFromMatches(allMatches) : [];
   const byId = new Map<string, PlayerSeasonStats>();

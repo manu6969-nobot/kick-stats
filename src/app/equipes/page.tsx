@@ -1,9 +1,14 @@
 import Link from "next/link";
+import { FormDots } from "@/components/form-dots";
 import { PageHeader } from "@/components/page-header";
 import { TeamBadge } from "@/components/team-badge";
 import { teams } from "@/data/championship";
 import { getMergedMatches } from "@/lib/live-results";
-import { computeStandings, getTeamPlayers } from "@/lib/stats";
+import {
+  computeStandings,
+  getTeamPlayers,
+  getTeamSeasonStats,
+} from "@/lib/stats";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,7 +18,8 @@ export const metadata: Metadata = {
 export const dynamic = "force-dynamic";
 
 export default async function EquipesPage() {
-  const standings = computeStandings(await getMergedMatches());
+  const allMatches = await getMergedMatches();
+  const standings = computeStandings(allMatches);
   const rankByTeam = new Map(standings.map((r, i) => [r.teamId, i + 1]));
 
   return (
@@ -21,7 +27,7 @@ export default async function EquipesPage() {
       <PageHeader
         eyebrow="Clubs"
         title="Équipes"
-        description="Fiches clubs, effectifs et statistiques domicile / extérieur."
+        description="Fiches clubs : buts, cartons, série de résultats et effectifs."
       />
 
       <div className="animate-rise-delay-1 grid gap-4 sm:grid-cols-2">
@@ -29,6 +35,7 @@ export default async function EquipesPage() {
           const squad = getTeamPlayers(team.id);
           const rank = rankByTeam.get(team.id);
           const row = standings.find((s) => s.teamId === team.id);
+          const season = getTeamSeasonStats(team.id, allMatches, 5);
           return (
             <Link
               key={team.id}
@@ -51,7 +58,7 @@ export default async function EquipesPage() {
                   </p>
                 </div>
               </div>
-              <div className="grid grid-cols-3 gap-2 px-5 py-4 text-center text-sm">
+              <div className="grid grid-cols-4 gap-2 px-5 py-3 text-center text-sm">
                 <div>
                   <p className="text-muted-foreground">Rang</p>
                   <p className="font-display text-xl font-bold">{rank}</p>
@@ -61,9 +68,21 @@ export default async function EquipesPage() {
                   <p className="font-display text-xl font-bold">{row?.points ?? 0}</p>
                 </div>
                 <div>
-                  <p className="text-muted-foreground">Effectif</p>
-                  <p className="font-display text-xl font-bold">{squad.length}</p>
+                  <p className="text-muted-foreground">Buts</p>
+                  <p className="font-display text-xl font-bold tabular-nums">
+                    <span className="text-win">{season.goalsFor}</span>
+                    <span className="text-muted-foreground">:</span>
+                    <span className="text-loss">{season.goalsAgainst}</span>
+                  </p>
                 </div>
+                <div>
+                  <p className="text-muted-foreground">Joués</p>
+                  <p className="font-display text-xl font-bold">{season.played}</p>
+                </div>
+              </div>
+              <div className="flex items-center justify-between border-t border-border/70 px-5 py-3 text-xs text-muted-foreground">
+                <span>{squad.length} joueurs</span>
+                <FormDots form={season.form} />
               </div>
             </Link>
           );
