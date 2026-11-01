@@ -92,31 +92,57 @@ function scoreName(a, b) {
 }
 
 function findPlayerId(players, teamId, firstName, lastName) {
+  const fn = normalizeName(firstName);
+  const ln = normalizeName(lastName);
+  if (!ln) return undefined;
   const pool = players.filter((p) => p.teamId === teamId);
   let best;
   let bestScore = 0;
   for (const p of pool) {
-    const s = scoreName(
-      `${p.firstName} ${p.lastName}`,
-      `${firstName} ${lastName}`
+    const pfn = normalizeName(p.firstName);
+    const pln = normalizeName(p.lastName);
+    if (pln === ln && fn && pfn.startsWith(fn.slice(0, 3))) {
+      return p.id;
+    }
+    const s = Math.max(
+      scoreName(`${p.firstName} ${p.lastName}`, `${firstName} ${lastName}`),
+      scoreName(p.lastName, lastName)
     );
     if (s > bestScore) {
       bestScore = s;
       best = p;
     }
   }
-  return bestScore >= 60 ? best.id : undefined;
+  if (bestScore >= 60) return best.id;
+  if (ln.length >= 3) {
+    const sameLast = pool.filter((p) => normalizeName(p.lastName) === ln);
+    if (sameLast.length === 1) return sameLast[0].id;
+  }
+  return undefined;
 }
 
 function mapEventKind(kind) {
-  if (kind === "goal" || kind === "penalty") return "goal";
-  if (kind === "ownGoal" || kind === "own_goal") return "own_goal";
-  if (kind === "yellow") return "yellow";
-  if (kind === "secondYellow" || kind === "yellowRed") return "second_yellow";
-  if (kind === "red") return "red";
-  if (kind === "in") return "sub_in";
-  if (kind === "out") return "sub_out";
+  const k = String(kind || "")
+    .toLowerCase()
+    .replace(/[_\s-]+/g, "");
+  if (k === "goal" || k === "penalty") return "goal";
+  if (k === "owngoal") return "own_goal";
+  if (k === "yellow") return "yellow";
+  if (k === "secondyellow" || k === "yellowred") return "second_yellow";
+  if (k === "red") return "red";
+  if (k === "in") return "sub_in";
+  if (k === "out") return "sub_out";
   return null;
+}
+
+function eventDetail(kind, firstName, lastName) {
+  const name = `${firstName || ""} ${lastName || ""}`.trim();
+  const k = String(kind || "")
+    .toLowerCase()
+    .replace(/[_\s-]+/g, "");
+  if (k === "penalty") return name ? `penalty · ${name}` : "penalty";
+  if (k === "owngoal") return name ? `CSC · ${name}` : "CSC";
+  return name || undefined;
 }
 
 function flattenEvents(detail, homeKickId, awayKickId, players) {
@@ -140,10 +166,7 @@ function flattenEvents(detail, homeKickId, awayKickId, players) {
             ev.firstName || "",
             ev.lastName || ""
           ),
-          detail:
-            ev.kind === "penalty"
-              ? `penalty · ${ev.firstName || ""} ${ev.lastName || ""}`.trim()
-              : `${ev.firstName || ""} ${ev.lastName || ""}`.trim() || undefined,
+          detail: eventDetail(ev.kind, ev.firstName, ev.lastName),
         });
       }
     }

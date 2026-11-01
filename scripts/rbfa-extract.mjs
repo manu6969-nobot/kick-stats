@@ -193,37 +193,50 @@ function mapRbfaTeamToKick(rbfaName, teams, rbfaTeamId) {
 function findPlayerId(players, teamId, firstName, lastName) {
   const fn = normalizeName(firstName);
   const ln = normalizeName(lastName);
+  if (!ln) return undefined;
   const pool = players.filter((p) => p.teamId === teamId);
   let best = null;
   let bestScore = 0;
   for (const p of pool) {
-    const s =
-      scoreName(`${p.firstName} ${p.lastName}`, `${firstName} ${lastName}`) ||
-      scoreName(p.lastName, lastName);
-    if (normalizeName(p.lastName) === ln && normalizeName(p.firstName).startsWith(fn.slice(0, 3))) {
+    const pfn = normalizeName(p.firstName);
+    const pln = normalizeName(p.lastName);
+    if (pln === ln && fn && pfn.startsWith(fn.slice(0, 3))) {
       return p.id;
     }
+    const s = Math.max(
+      scoreName(`${p.firstName} ${p.lastName}`, `${firstName} ${lastName}`),
+      scoreName(p.lastName, lastName)
+    );
     if (s > bestScore) {
       bestScore = s;
       best = p;
     }
   }
-  return bestScore >= 60 ? best.id : undefined;
+  if (bestScore >= 60) return best.id;
+
+  // Nom de famille unique dans l’effectif → on lie même si le prénom diffère
+  // (ex. Christian vs Kristijan Sicaja).
+  if (ln.length >= 3) {
+    const sameLast = pool.filter((p) => normalizeName(p.lastName) === ln);
+    if (sameLast.length === 1) return sameLast[0].id;
+  }
+  return undefined;
 }
 
 function mapEventKind(kind) {
-  switch (kind) {
+  const k = String(kind || "")
+    .toLowerCase()
+    .replace(/[_\s-]+/g, "");
+  switch (k) {
     case "goal":
-      return "goal";
     case "penalty":
       return "goal";
-    case "ownGoal":
-    case "own_goal":
+    case "owngoal":
       return "own_goal";
     case "yellow":
       return "yellow";
-    case "secondYellow":
-    case "yellowRed":
+    case "secondyellow":
+    case "yellowred":
       return "second_yellow";
     case "red":
       return "red";
@@ -234,6 +247,16 @@ function mapEventKind(kind) {
     default:
       return null;
   }
+}
+
+function eventDetail(kind, firstName, lastName) {
+  const name = `${firstName || ""} ${lastName || ""}`.trim();
+  const k = String(kind || "")
+    .toLowerCase()
+    .replace(/[_\s-]+/g, "");
+  if (k === "penalty") return name ? `penalty · ${name}` : "penalty";
+  if (k === "owngoal") return name ? `CSC · ${name}` : "CSC";
+  return name || undefined;
 }
 
 function flattenEvents(detail, homeKickId, awayKickId, players) {
@@ -259,10 +282,7 @@ function flattenEvents(detail, homeKickId, awayKickId, players) {
           type,
           teamId,
           playerId,
-          detail:
-            ev.kind === "penalty"
-              ? `penalty · ${ev.firstName || ""} ${ev.lastName || ""}`.trim()
-              : `${ev.firstName || ""} ${ev.lastName || ""}`.trim() || undefined,
+          detail: eventDetail(ev.kind, ev.firstName, ev.lastName),
         });
       }
     }

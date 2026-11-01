@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01T09:55:47.557Z",
+  "updatedAt": "2026-11-01T11:30:51.664Z",
   "matches": {
     "m1": {
       "status": "finished",
@@ -91,6 +91,7 @@
           "minute": 46,
           "type": "sub_out",
           "teamId": "assenois",
+          "playerId": "p-assenois-18",
           "detail": "Oaquin Osvaldo Villalba"
         },
         {
@@ -352,6 +353,7 @@
           "minute": 80,
           "type": "yellow",
           "teamId": "marloie",
+          "playerId": "p-marloie-13",
           "detail": "Santiago Mosquera Acosta"
         },
         {
@@ -472,6 +474,14 @@
           "teamId": "libin",
           "playerId": "p-libin-8",
           "detail": "Alexis Harry Mays"
+        },
+        {
+          "id": "rbfa-7565518-68-yellowred-Mouton",
+          "minute": 68,
+          "type": "second_yellow",
+          "teamId": "florenville",
+          "playerId": "p-florenville-8",
+          "detail": "Mathis Mouton"
         },
         {
           "id": "rbfa-7565518-70-in-Ollier",
@@ -1027,6 +1037,14 @@
           "detail": "Mathys Raskin"
         },
         {
+          "id": "rbfa-7565517-64-yellowred-Fiévet",
+          "minute": 64,
+          "type": "second_yellow",
+          "teamId": "roy",
+          "playerId": "p-roy-22",
+          "detail": "Julien Fiévet"
+        },
+        {
           "id": "rbfa-7565517-65-in-Ovi",
           "minute": 65,
           "type": "sub_in",
@@ -1231,6 +1249,14 @@
           "teamId": "ochamps",
           "playerId": "p-ochamps-14",
           "detail": "Mathieu Perreaux"
+        },
+        {
+          "id": "rbfa-7565513-76-yellowred-Gerard",
+          "minute": 76,
+          "type": "second_yellow",
+          "teamId": "aye",
+          "playerId": "p-aye-6",
+          "detail": "Denis Gerard"
         },
         {
           "id": "rbfa-7565513-78-in-Muller",
@@ -1706,6 +1732,14 @@
           "teamId": "bercheux",
           "playerId": "p-bercheux-8",
           "detail": "Mathis Lockman"
+        },
+        {
+          "id": "rbfa-7565522-24-owngoal-Collignon",
+          "minute": 24,
+          "type": "own_goal",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-22",
+          "detail": "CSC · Bryan Collignon"
         },
         {
           "id": "rbfa-7565522-50-yellow-Crowin",
@@ -2379,6 +2413,14 @@
           "detail": "Theo Dechamps"
         },
         {
+          "id": "rbfa-7565526-87-owngoal-Macalli",
+          "minute": 87,
+          "type": "own_goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-9",
+          "detail": "CSC · Lucas Macalli"
+        },
+        {
           "id": "rbfa-7565526-89-in-Daoust",
           "minute": 89,
           "type": "sub_in",
@@ -2517,6 +2559,7 @@
           "minute": 70,
           "type": "sub_out",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-26",
           "detail": "Valentin Klein"
         },
         {
@@ -3014,6 +3057,7 @@
           "minute": 71,
           "type": "sub_in",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-29",
           "detail": "Christian Sicaja"
         },
         {
@@ -3021,6 +3065,7 @@
           "minute": 71,
           "type": "sub_out",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-26",
           "detail": "Valentin Klein"
         },
         {
@@ -3067,6 +3112,14 @@
           "id": "rbfa-7565531-86-yellow-Hannard",
           "minute": 86,
           "type": "yellow",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-25",
+          "detail": "Mattéo Hannard"
+        },
+        {
+          "id": "rbfa-7565531-86-yellowred-Hannard",
+          "minute": 86,
+          "type": "second_yellow",
           "teamId": "nothomb",
           "playerId": "p-nothomb-25",
           "detail": "Mattéo Hannard"
@@ -3358,6 +3411,14 @@
           "id": "rbfa-7565534-60-yellow-Renquin",
           "minute": 60,
           "type": "yellow",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-14",
+          "detail": "Xavier Renquin"
+        },
+        {
+          "id": "rbfa-7565534-66-yellowred-Renquin",
+          "minute": 66,
+          "type": "second_yellow",
           "teamId": "houffalize",
           "playerId": "p-houffalize-14",
           "detail": "Xavier Renquin"
@@ -4072,6 +4133,14 @@
           "teamId": "florenville",
           "playerId": "p-florenville-18",
           "detail": "Bachir Bah"
+        },
+        {
+          "id": "rbfa-7565529-65-yellowred-Philippe",
+          "minute": 65,
+          "type": "second_yellow",
+          "teamId": "aye",
+          "playerId": "p-aye-22",
+          "detail": "Théo Fabian Philippe"
         },
         {
           "id": "rbfa-7565529-65-in-Piret",
@@ -5042,6 +5111,7 @@
           "minute": 72,
           "type": "sub_out",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-29",
           "detail": "Christian Sicaja"
         },
         {
@@ -5049,6 +5119,7 @@
           "minute": 76,
           "type": "yellow",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-26",
           "detail": "Valentin Klein"
         },
         {
@@ -5773,6 +5844,14 @@
           "detail": "Saidou Diallo"
         },
         {
+          "id": "rbfa-7565546-45-yellowred-Idmansour",
+          "minute": 45,
+          "type": "second_yellow",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-26",
+          "detail": "Ilias Idmansour"
+        },
+        {
           "id": "rbfa-7565546-46-in-Pantusa",
           "minute": 46,
           "type": "sub_in",
@@ -5874,6 +5953,14 @@
           "teamId": "houffalize",
           "playerId": "p-houffalize-25",
           "detail": "Maxence Gengoux"
+        },
+        {
+          "id": "rbfa-7565546-67-yellowred-Diallo",
+          "minute": 67,
+          "type": "second_yellow",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-29",
+          "detail": "Saidou Diallo"
         },
         {
           "id": "rbfa-7565546-75-in-Mahy",
@@ -6015,6 +6102,7 @@
           "minute": 65,
           "type": "sub_in",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-29",
           "detail": "Christian Sicaja"
         },
         {
@@ -6022,6 +6110,7 @@
           "minute": 65,
           "type": "sub_out",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-26",
           "detail": "Valentin Klein"
         },
         {
@@ -6137,6 +6226,7 @@
           "minute": 87,
           "type": "yellow",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-28",
           "detail": "Merouane Mezouari"
         },
         {
@@ -6274,6 +6364,14 @@
           "detail": "Cyril Degives"
         },
         {
+          "id": "rbfa-7565544-78-yellowred-Neetens",
+          "minute": 78,
+          "type": "second_yellow",
+          "teamId": "arlon",
+          "playerId": "p-arlon-9",
+          "detail": "Yassin Neetens"
+        },
+        {
           "id": "rbfa-7565544-84-in-Cachbach",
           "minute": 84,
           "type": "sub_in",
@@ -6325,6 +6423,7 @@
           "minute": 26,
           "type": "goal",
           "teamId": "marloie",
+          "playerId": "p-marloie-7",
           "detail": "Mamadou Soumahoro"
         },
         {
@@ -6339,6 +6438,7 @@
           "minute": 39,
           "type": "yellow",
           "teamId": "marloie",
+          "playerId": "p-marloie-13",
           "detail": "Santiago Mosquera Acosta"
         },
         {
@@ -6369,6 +6469,7 @@
           "minute": 46,
           "type": "sub_out",
           "teamId": "marloie",
+          "playerId": "p-marloie-13",
           "detail": "Santiago Mosquera Acosta"
         },
         {
@@ -6718,6 +6819,14 @@
           "detail": "Dylan Warnier"
         },
         {
+          "id": "rbfa-7565543-49-yellowred-Scheid",
+          "minute": 49,
+          "type": "second_yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-8",
+          "detail": "Lucas Scheid"
+        },
+        {
           "id": "rbfa-7565543-50-penalty-Piret",
           "minute": 50,
           "type": "goal",
@@ -6867,6 +6976,14 @@
           "teamId": "roy",
           "playerId": "p-roy-12",
           "detail": "Tom Wallens"
+        },
+        {
+          "id": "rbfa-7565549-25-owngoal-Robinet",
+          "minute": 25,
+          "type": "own_goal",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-7",
+          "detail": "CSC · Julien Robinet"
         },
         {
           "id": "rbfa-7565549-35-yellow-Schroeder",
@@ -7113,6 +7230,14 @@
           "teamId": "bercheux",
           "playerId": "p-bercheux-3",
           "detail": "Romain Berg"
+        },
+        {
+          "id": "rbfa-7565545-51-yellowred-Poncelet",
+          "minute": 51,
+          "type": "second_yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-11",
+          "detail": "Gilles Poncelet"
         },
         {
           "id": "rbfa-7565545-60-goal-Apeke",
@@ -7452,6 +7577,7 @@
           "minute": 1,
           "type": "yellow",
           "teamId": "marloie",
+          "playerId": "p-marloie-7",
           "detail": "Mamadou Soumahoro"
         },
         {
@@ -7685,6 +7811,7 @@
           "minute": 65,
           "type": "sub_out",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-29",
           "detail": "Christian Sicaja"
         },
         {
@@ -8876,6 +9003,22 @@
           "detail": "Robin Schroeder"
         },
         {
+          "id": "rbfa-7565560-81-yellowred-Pierre",
+          "minute": 81,
+          "type": "second_yellow",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-16",
+          "detail": "Romeo Pierre"
+        },
+        {
+          "id": "rbfa-7565560-85-yellowred-Van Den Eynde",
+          "minute": 85,
+          "type": "second_yellow",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-8",
+          "detail": "Gillian Van Den Eynde"
+        },
+        {
           "id": "rbfa-7565560-90-yellow-Muller",
           "minute": 90,
           "type": "yellow",
@@ -9057,6 +9200,14 @@
           "teamId": "vaux-sur-sure",
           "playerId": "p-vaux-sur-sure-16",
           "detail": "Alan Sensique"
+        },
+        {
+          "id": "rbfa-7565566-86-yellowred-Manand",
+          "minute": 86,
+          "type": "second_yellow",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-12",
+          "detail": "Allan Manand"
         }
       ]
     },
@@ -9065,6 +9216,14 @@
       "homeScore": 4,
       "awayScore": 1,
       "events": [
+        {
+          "id": "rbfa-7565563-4-owngoal-Marotte",
+          "minute": 4,
+          "type": "own_goal",
+          "teamId": "aye",
+          "playerId": "p-aye-15",
+          "detail": "CSC · Noah Marotte"
+        },
         {
           "id": "rbfa-7565563-44-yellow-Bechet",
           "minute": 44,
@@ -9094,6 +9253,7 @@
           "minute": 65,
           "type": "sub_out",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-29",
           "detail": "Christian Sicaja"
         },
         {
@@ -10098,6 +10258,13 @@
           "detail": "Grégory Vandormael"
         },
         {
+          "id": "rbfa-7565561-62-yellowred-Vandormael",
+          "minute": 62,
+          "type": "second_yellow",
+          "teamId": "gouvy",
+          "detail": "Grégory Vandormael"
+        },
+        {
           "id": "rbfa-7565561-63-goal-Amory",
           "minute": 63,
           "type": "goal",
@@ -10289,6 +10456,7 @@
           "minute": 81,
           "type": "sub_out",
           "teamId": "marloie",
+          "playerId": "p-marloie-13",
           "detail": "Santiago Mosquera Acosta"
         },
         {
@@ -10366,6 +10534,7 @@
           "minute": 16,
           "type": "goal",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-29",
           "detail": "Christian Sicaja"
         },
         {
@@ -10499,6 +10668,7 @@
           "minute": 78,
           "type": "sub_out",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-29",
           "detail": "Christian Sicaja"
         },
         {
@@ -11201,10 +11371,19 @@
           "detail": "Louis Simon Menten"
         },
         {
+          "id": "rbfa-7565569-27-yellowred-Menten",
+          "minute": 27,
+          "type": "second_yellow",
+          "teamId": "aye",
+          "playerId": "p-aye-16",
+          "detail": "Louis Simon Menten"
+        },
+        {
           "id": "rbfa-7565569-31-yellow-Mathieu",
           "minute": 31,
           "type": "yellow",
           "teamId": "aye",
+          "playerId": "p-aye-2",
           "detail": "Fabrice Mathieu"
         },
         {
@@ -11934,6 +12113,7 @@
           "minute": 78,
           "type": "sub_out",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-26",
           "detail": "Valentin Klein"
         },
         {
@@ -12413,6 +12593,7 @@
           "minute": 91,
           "type": "yellow",
           "teamId": "gouvy",
+          "playerId": "p-gouvy-16",
           "detail": "Laurent Amory"
         },
         {
@@ -12498,6 +12679,7 @@
           "minute": 69,
           "type": "sub_in",
           "teamId": "assenois",
+          "playerId": "p-assenois-18",
           "detail": "Oaquin Osvaldo Villalba"
         },
         {
@@ -12817,6 +12999,7 @@
           "minute": 43,
           "type": "yellow",
           "teamId": "marloie",
+          "playerId": "p-marloie-7",
           "detail": "Mamadou Soumahoro"
         },
         {
@@ -12933,6 +13116,14 @@
           "type": "sub_out",
           "teamId": "harre-manhay",
           "detail": "Ugochukwu Precious Chikatara"
+        },
+        {
+          "id": "rbfa-7565577-74-yellowred-Apeke",
+          "minute": 74,
+          "type": "second_yellow",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-8",
+          "detail": "Prince Mohamed Apeke"
         },
         {
           "id": "rbfa-7565577-75-penalty-Keita",
@@ -13587,6 +13778,7 @@
           "minute": 56,
           "type": "sub_out",
           "teamId": "assenois",
+          "playerId": "p-assenois-18",
           "detail": "Oaquin Osvaldo Villalba"
         },
         {
@@ -13625,6 +13817,7 @@
           "minute": 67,
           "type": "sub_in",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-29",
           "detail": "Christian Sicaja"
         },
         {
@@ -14418,6 +14611,14 @@
           "teamId": "aye",
           "playerId": "p-aye-20",
           "detail": "Cyril Mahin"
+        },
+        {
+          "id": "rbfa-7565705-89-yellowred-Gerard",
+          "minute": 89,
+          "type": "second_yellow",
+          "teamId": "aye",
+          "playerId": "p-aye-6",
+          "detail": "Denis Gerard"
         }
       ]
     },
@@ -14808,6 +15009,7 @@
           "minute": 62,
           "type": "sub_out",
           "teamId": "assenois",
+          "playerId": "p-assenois-18",
           "detail": "Oaquin Osvaldo Villalba"
         },
         {
@@ -15084,6 +15286,7 @@
           "minute": 93,
           "type": "yellow",
           "teamId": "bercheux",
+          "playerId": "p-bercheux-12",
           "detail": "Raphaël Camille Bozet"
         },
         {
@@ -15535,6 +15738,14 @@
           "detail": "Noah Carlier"
         },
         {
+          "id": "rbfa-7565591-89-yellowred-Nelissen",
+          "minute": 89,
+          "type": "second_yellow",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-21",
+          "detail": "Sacha Nelissen"
+        },
+        {
           "id": "rbfa-7565591-91-in-Goffin",
           "minute": 91,
           "type": "sub_in",
@@ -15647,6 +15858,7 @@
           "minute": 60,
           "type": "sub_in",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-29",
           "detail": "Christian Sicaja"
         },
         {
@@ -15726,6 +15938,7 @@
           "minute": 85,
           "type": "yellow",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-29",
           "detail": "Christian Sicaja"
         },
         {

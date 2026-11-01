@@ -17,7 +17,9 @@ function eventPlayerName(event: MatchEvent) {
   if (event.detail) {
     return {
       player: undefined,
-      label: event.detail.replace(/^penalty\s*[·•-]?\s*/i, "").trim(),
+      label: event.detail
+        .replace(/^(penalty|csc)\s*[·•-]?\s*/i, "")
+        .trim(),
     };
   }
   return { player: undefined, label: eventLabel(event.type) };
