@@ -28,6 +28,7 @@ export function applyLiveResult(base: Match, live?: LiveMatchResult): Match {
     homeScore: live.homeScore ?? undefined,
     awayScore: live.awayScore ?? undefined,
     events: live.events ?? [],
+    officials: live.officials?.length ? live.officials : base.officials,
   };
 }
 

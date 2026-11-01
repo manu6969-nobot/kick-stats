@@ -237,11 +237,19 @@ for (const m of raw.calendar || []) {
   const events = detail
     ? flattenEvents(detail, homeId, awayId, champ.players)
     : [];
+  const officials = (detail?.officials || [])
+    .filter((o) => o && o.personAssigned !== false && (o.firstName || o.lastName))
+    .map((o) => ({
+      firstName: o.firstName || "",
+      lastName: o.lastName || "",
+      role: o.function || "referee",
+    }));
   live.matches[kickMatch.id] = {
     status: "finished",
     homeScore: outcome.homeTeamGoals ?? null,
     awayScore: outcome.awayTeamGoals ?? null,
     events,
+    officials,
   };
   mapped.push({
     kickId: kickMatch.id,

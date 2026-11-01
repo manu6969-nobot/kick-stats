@@ -6,6 +6,7 @@ import { TeamBadge } from "@/components/team-badge";
 import { Badge } from "@/components/ui/badge";
 import { matches } from "@/data/championship";
 import { getMergedMatch, summarizeCards } from "@/lib/live-results";
+import { officialDisplayName, officialId } from "@/lib/referees";
 import { formatLongDate, getTeam } from "@/lib/stats";
 import type { Metadata } from "next";
 
@@ -43,6 +44,7 @@ export default async function MatchPage({
   const away = getTeam(match.awayTeamId)!;
   const played = match.status === "finished";
   const cards = summarizeCards(match.events);
+  const central = match.officials?.find((o) => o.role === "referee");
 
   return (
     <div className="space-y-10">
@@ -103,6 +105,17 @@ export default async function MatchPage({
               <> · {match.attendance.toLocaleString("fr-FR")} spectateurs</>
             )}
           </p>
+          {central && (
+            <p className="mt-2 text-center text-sm text-white/70">
+              Arbitre :{" "}
+              <Link
+                href={`/arbitres/${officialId(central.firstName, central.lastName)}`}
+                className="font-medium text-score hover:underline"
+              >
+                {officialDisplayName(central)}
+              </Link>
+            </p>
+          )}
         </div>
       </section>
 

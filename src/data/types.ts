@@ -54,12 +54,25 @@ export interface MatchEvent {
   detail?: string;
 }
 
+export type OfficialRole =
+  | "referee"
+  | "firstAssistantReferee"
+  | "secondAssistantReferee"
+  | string;
+
+export interface MatchOfficial {
+  firstName: string;
+  lastName: string;
+  role: OfficialRole;
+}
+
 /** Résultat saisi (admin) — superpose le calendrier de base. */
 export interface LiveMatchResult {
   status: MatchStatus;
   homeScore: number | null;
   awayScore: number | null;
   events: MatchEvent[];
+  officials?: MatchOfficial[];
 }
 
 export interface LiveResultsFile {
@@ -94,6 +107,7 @@ export interface Match {
   stadium: string;
   attendance?: number;
   events: MatchEvent[];
+  officials?: MatchOfficial[];
   stats?: MatchStats;
 }
 

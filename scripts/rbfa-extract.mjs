@@ -433,11 +433,20 @@ async function main() {
       ? flattenEvents(detail, homeKick.id, awayKick.id, champ.players)
       : [];
 
+    const officials = (detail?.officials || [])
+      .filter((o) => o && o.personAssigned !== false && (o.firstName || o.lastName))
+      .map((o) => ({
+        firstName: o.firstName || "",
+        lastName: o.lastName || "",
+        role: o.function || "referee",
+      }));
+
     live.matches[kickMatch.id] = {
       status: "finished",
       homeScore: outcome.homeTeamGoals ?? null,
       awayScore: outcome.awayTeamGoals ?? null,
       events,
+      officials,
       rbfaMatchId: m.id,
       rbfaUrl: `https://www.rbfa.be/fr/match/${m.id}`,
     };
@@ -460,6 +469,7 @@ async function main() {
       homeScore: row.homeScore,
       awayScore: row.awayScore,
       events: row.events,
+      officials: row.officials || [],
     };
   }
 

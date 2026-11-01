@@ -25,6 +25,9 @@ export function SiteFooter() {
           <Link href="/joueurs" className="hover:text-white">
             Joueurs
           </Link>
+          <Link href="/arbitres" className="hover:text-white">
+            Arbitres
+          </Link>
           <Link href="/admin" className="hover:text-white">
             Admin
           </Link>

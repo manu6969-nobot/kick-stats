@@ -14,6 +14,7 @@ const links = [
   { href: "/calendrier", label: "Calendrier" },
   { href: "/equipes", label: "Équipes" },
   { href: "/joueurs", label: "Joueurs" },
+  { href: "/arbitres", label: "Arbitres" },
 ];
 
 export function SiteHeader() {
