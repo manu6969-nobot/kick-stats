@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { PageHeader } from "@/components/page-header";
 import { TeamBadge } from "@/components/team-badge";
 import { players } from "@/data/championship";
+import { getMergedMatches } from "@/lib/live-results";
 import {
   getPlayer,
   getPlayerStats,
@@ -11,6 +12,8 @@ import {
   positionLabel,
 } from "@/lib/stats";
 import type { Metadata } from "next";
+
+export const dynamic = "force-dynamic";
 
 export function generateStaticParams() {
   const params = players.map((p) => ({ id: p.id }));
@@ -38,7 +41,8 @@ export default async function JoueurPage({
   if (!player) notFound();
 
   const team = getTeam(player.teamId)!;
-  const stats = getPlayerStats(player.id);
+  const allMatches = await getMergedMatches();
+  const stats = getPlayerStats(player.id, allMatches);
 
   const cards = [
     { label: "Matchs", value: stats?.appearances ?? 0 },

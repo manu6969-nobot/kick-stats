@@ -258,8 +258,13 @@ export function getTeamSeasonStats(
   };
 }
 
-export function getTopScorers(limit = 10, allMatches?: Match[]) {
-  const derived = allMatches ? computePlayerStatsFromMatches(allMatches) : [];
+/** Fusionne stats manuelles (championship) et stats dérivées des événements de match. */
+export function getAllPlayerSeasonStats(
+  allMatches?: Match[]
+): PlayerSeasonStats[] {
+  const derived = allMatches?.length
+    ? computePlayerStatsFromMatches(allMatches)
+    : [];
   const byId = new Map<string, PlayerSeasonStats>();
   for (const s of playerStats) byId.set(s.playerId, { ...s });
   for (const s of derived) {
@@ -277,8 +282,11 @@ export function getTopScorers(limit = 10, allMatches?: Match[]) {
       });
     }
   }
+  return [...byId.values()];
+}
 
-  return [...byId.values()]
+export function getTopScorers(limit = 10, allMatches?: Match[]) {
+  return getAllPlayerSeasonStats(allMatches)
     .map((s) => {
       const player = getPlayer(s.playerId);
       if (!player) return null;

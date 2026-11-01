@@ -11,8 +11,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { players, playerStats, teams } from "@/data/championship";
-import type { Player, Team } from "@/data/types";
+import { players, teams } from "@/data/championship";
+import type { Player, PlayerSeasonStats, Team } from "@/data/types";
 import { playerDisplayName, positionLabel } from "@/lib/stats";
 import { cn } from "@/lib/utils";
 
@@ -35,8 +35,8 @@ const POSITIONS = [
 type PosFilter = (typeof POSITIONS)[number]["id"];
 type MainTab = "effectif" | "buteurs" | "passeurs";
 
-function buildRows(): PlayerRow[] {
-  const statsByPlayer = new Map(playerStats.map((s) => [s.playerId, s]));
+function buildRows(seasonStats: PlayerSeasonStats[]): PlayerRow[] {
+  const statsByPlayer = new Map(seasonStats.map((s) => [s.playerId, s]));
   const teamById = new Map(teams.map((t) => [t.id, t]));
 
   return players
@@ -60,36 +60,41 @@ function buildRows(): PlayerRow[] {
     });
 }
 
-const ALL_ROWS = buildRows();
 const TEAMS_SORTED = [...teams].sort((a, b) => a.name.localeCompare(b.name, "fr"));
 
-export function PlayersFilters() {
-  const [tab, setTab] = useState<MainTab>("effectif");
+export function PlayersFilters({
+  seasonStats,
+}: {
+  seasonStats: PlayerSeasonStats[];
+}) {
+  const [tab, setTab] = useState<MainTab>("buteurs");
   const [position, setPosition] = useState<PosFilter>("all");
   const [teamId, setTeamId] = useState<string>("all");
 
+  const allRows = useMemo(() => buildRows(seasonStats), [seasonStats]);
+
   const filtered = useMemo(() => {
-    return ALL_ROWS.filter(({ player }) => {
+    return allRows.filter(({ player }) => {
       if (position !== "all" && player.position !== position) return false;
       if (teamId !== "all" && player.teamId !== teamId) return false;
       return true;
     });
-  }, [position, teamId]);
+  }, [allRows, position, teamId]);
 
   const scorers = useMemo(
     () =>
-      [...ALL_ROWS]
+      [...allRows]
         .filter((r) => r.goals > 0)
         .sort((a, b) => b.goals - a.goals || b.assists - a.assists),
-    []
+    [allRows]
   );
 
   const assistsLeaders = useMemo(
     () =>
-      [...ALL_ROWS]
+      [...allRows]
         .filter((r) => r.assists > 0)
         .sort((a, b) => b.assists - a.assists || b.goals - a.goals),
-    []
+    [allRows]
   );
 
   const selectedTeam = TEAMS_SORTED.find((t) => t.id === teamId);
@@ -103,9 +108,9 @@ export function PlayersFilters() {
       >
         {(
           [
-            { id: "effectif", label: `Effectif (${ALL_ROWS.length})` },
-            { id: "buteurs", label: "Buteurs" },
-            { id: "passeurs", label: "Passeurs" },
+            { id: "buteurs", label: `Buteurs (${scorers.length})` },
+            { id: "passeurs", label: `Passeurs (${assistsLeaders.length})` },
+            { id: "effectif", label: `Effectif (${allRows.length})` },
           ] as const
         ).map((item) => (
           <button
@@ -136,8 +141,8 @@ export function PlayersFilters() {
               {POSITIONS.map((pos) => {
                 const count =
                   pos.id === "all"
-                    ? ALL_ROWS.length
-                    : ALL_ROWS.filter((r) => r.player.position === pos.id).length;
+                    ? allRows.length
+                    : allRows.filter((r) => r.player.position === pos.id).length;
                 return (
                   <button
                     key={pos.id}

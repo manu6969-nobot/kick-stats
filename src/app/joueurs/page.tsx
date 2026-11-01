@@ -1,19 +1,27 @@
 import { PageHeader } from "@/components/page-header";
 import { PlayersFilters } from "@/components/players-filters";
 import { players } from "@/data/championship";
+import { getMergedMatches } from "@/lib/live-results";
+import { getAllPlayerSeasonStats } from "@/lib/stats";
 import type { Metadata } from "next";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Joueurs",
 };
 
-export default function JoueursPage() {
+export default async function JoueursPage() {
+  const allMatches = await getMergedMatches();
+  const seasonStats = getAllPlayerSeasonStats(allMatches);
+  const scorersCount = seasonStats.filter((s) => s.goals > 0).length;
+
   return (
     <div>
       <PageHeader
         eyebrow="Individuels"
         title="Stats joueurs"
-        description={`${players.length} joueurs · filtrez par poste ou club. Les buteurs/passeurs se rempliront avec les stats saison.`}
+        description={`${players.length} joueurs · ${scorersCount} buteur${scorersCount > 1 ? "s" : ""} issus des temps forts · filtrez par poste ou club.`}
       />
 
       {players.length === 0 ? (
@@ -21,7 +29,7 @@ export default function JoueursPage() {
           Aucun joueur saisi pour l&apos;instant.
         </p>
       ) : (
-        <PlayersFilters />
+        <PlayersFilters seasonStats={seasonStats} />
       )}
     </div>
   );
