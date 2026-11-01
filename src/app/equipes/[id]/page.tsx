@@ -4,9 +4,13 @@ import { FormDots } from "@/components/form-dots";
 import { MatchRow } from "@/components/match-row";
 import { PageHeader } from "@/components/page-header";
 import { TeamBadge } from "@/components/team-badge";
-import { TeamSeasonStats } from "@/components/team-season-stats";
+import { TeamCardsPanel } from "@/components/team-cards-panel";
+import { TeamGoalsByPeriod } from "@/components/team-goals-by-period";
+import { TeamGoalsDistribution } from "@/components/team-goals-distribution";
+import { TeamVictoryHighlights } from "@/components/team-victory-highlights";
 import { teams } from "@/data/championship";
 import { getMergedMatches } from "@/lib/live-results";
+import { getTeamDashboard } from "@/lib/team-dashboard";
 import {
   getPlayer,
   getTeam,
@@ -51,6 +55,7 @@ export default async function EquipePage({
   const squad = getTeamPlayers(id);
   const teamMatches = getTeamMatches(id, allMatches);
   const season = getTeamSeasonStats(id, allMatches, 10);
+  const dashboard = getTeamDashboard(id, allMatches);
   const statsByPlayer = new Map(
     season.playerStats.map((s) => [s.playerId, s])
   );
@@ -110,23 +115,16 @@ export default async function EquipePage({
         </div>
       </div>
 
-      <TeamSeasonStats
-        played={season.played}
-        won={season.won}
-        drawn={season.drawn}
-        lost={season.lost}
-        points={season.points}
-        goalsFor={season.goalsFor}
-        goalsAgainst={season.goalsAgainst}
-        goalDiff={season.goalDiff}
-        cleanSheets={season.cleanSheets}
-        yellowCards={season.yellowCards}
-        redCards={season.redCards}
-        goalsPerGame={season.goalsPerGame}
-        concededPerGame={season.concededPerGame}
-        penalties={season.penalties}
-        form={season.form}
-      />
+      <div className="animate-rise-delay-1 space-y-6">
+        <TeamGoalsDistribution goals={dashboard.goals} />
+        <TeamGoalsByPeriod periods={dashboard.periods} />
+        <TeamCardsPanel
+          yellow={dashboard.cards.yellow}
+          red={dashboard.cards.red}
+          played={dashboard.cards.played}
+        />
+        <TeamVictoryHighlights records={dashboard.records} />
+      </div>
 
       <section className="grid gap-4 sm:grid-cols-2">
         <div className="rounded-xl border border-border/80 bg-card p-5">
