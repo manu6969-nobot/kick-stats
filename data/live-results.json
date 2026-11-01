@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01T11:30:51.664Z",
+  "updatedAt": "2026-11-01T11:35:06.360Z",
   "matches": {
     "m1": {
       "status": "finished",
@@ -131,6 +131,7 @@
           "minute": 57,
           "type": "sub_out",
           "teamId": "bercheux",
+          "playerId": "p-bercheux-29",
           "detail": "Mael Jacob"
         },
         {
@@ -520,6 +521,7 @@
           "minute": 80,
           "type": "sub_in",
           "teamId": "florenville",
+          "playerId": "p-florenville-25",
           "detail": "Nolan Verdun"
         },
         {
@@ -726,6 +728,7 @@
           "minute": 83,
           "type": "yellow",
           "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-26",
           "detail": "Boris Wattiaux"
         },
         {
@@ -916,6 +919,7 @@
           "minute": 83,
           "type": "yellow",
           "teamId": "bastogne",
+          "playerId": "p-bastogne-24",
           "detail": "Frédéric Jacquemart"
         },
         {
@@ -955,6 +959,7 @@
           "minute": 95,
           "type": "red",
           "teamId": "oppagne",
+          "playerId": "p-oppagne-22",
           "detail": "Christophe Benoit"
         }
       ]
@@ -1216,6 +1221,7 @@
           "minute": 71,
           "type": "sub_in",
           "teamId": "aye",
+          "playerId": "p-aye-27",
           "detail": "Nael Fouarge"
         },
         {
@@ -1279,6 +1285,7 @@
           "minute": 84,
           "type": "sub_in",
           "teamId": "aye",
+          "playerId": "p-aye-28",
           "detail": "Bastian Godefroid"
         },
         {
@@ -1318,6 +1325,7 @@
           "minute": 87,
           "type": "yellow",
           "teamId": "aye",
+          "playerId": "p-aye-27",
           "detail": "Nael Fouarge"
         }
       ]
@@ -1770,6 +1778,7 @@
           "minute": 65,
           "type": "sub_in",
           "teamId": "roy",
+          "playerId": "p-roy-26",
           "detail": "Louis Poirrier"
         },
         {
@@ -1833,6 +1842,7 @@
           "minute": 78,
           "type": "sub_in",
           "teamId": "bercheux",
+          "playerId": "p-bercheux-28",
           "detail": "Yoann Clausse"
         },
         {
@@ -1848,6 +1858,7 @@
           "minute": 83,
           "type": "yellow",
           "teamId": "bercheux",
+          "playerId": "p-bercheux-28",
           "detail": "Yoann Clausse"
         },
         {
@@ -1950,6 +1961,7 @@
           "minute": 59,
           "type": "yellow",
           "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-26",
           "detail": "Boris Wattiaux"
         },
         {
@@ -2108,6 +2120,7 @@
           "minute": 58,
           "type": "sub_in",
           "teamId": "marloie",
+          "playerId": "p-marloie-23",
           "detail": "Romain De Bruycker"
         },
         {
@@ -2131,6 +2144,7 @@
           "minute": 68,
           "type": "sub_in",
           "teamId": "aye",
+          "playerId": "p-aye-27",
           "detail": "Nael Fouarge"
         },
         {
@@ -2441,6 +2455,7 @@
           "minute": 93,
           "type": "sub_in",
           "teamId": "arlon",
+          "playerId": "p-arlon-32",
           "detail": "Jean-Baptiste Lhommel"
         },
         {
@@ -2861,6 +2876,7 @@
           "minute": 66,
           "type": "yellow",
           "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-26",
           "detail": "Boris Wattiaux"
         },
         {
@@ -2892,6 +2908,7 @@
           "minute": 69,
           "type": "sub_out",
           "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-26",
           "detail": "Boris Wattiaux"
         },
         {
@@ -2915,6 +2932,7 @@
           "minute": 84,
           "type": "sub_out",
           "teamId": "marloie",
+          "playerId": "p-marloie-21",
           "detail": "Samy Bouterbiat"
         },
         {
@@ -3145,6 +3163,7 @@
           "minute": 89,
           "type": "sub_in",
           "teamId": "ochamps",
+          "playerId": "p-ochamps-23",
           "detail": "Axel Cox"
         },
         {
@@ -3311,6 +3330,7 @@
           "minute": 85,
           "type": "yellow",
           "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-23",
           "detail": "Patrick Fabere"
         },
         {
@@ -3326,6 +3346,7 @@
           "minute": 88,
           "type": "sub_out",
           "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-22",
           "detail": "Ugochukwu Precious Chikatara"
         },
         {
@@ -3818,6 +3839,7 @@
           "minute": 73,
           "type": "goal",
           "teamId": "roy",
+          "playerId": "p-roy-25",
           "detail": "Alessandro Piergentili"
         },
         {
@@ -3825,6 +3847,7 @@
           "minute": 73,
           "type": "sub_in",
           "teamId": "roy",
+          "playerId": "p-roy-25",
           "detail": "Alessandro Piergentili"
         },
         {
@@ -3864,6 +3887,7 @@
           "minute": 80,
           "type": "sub_in",
           "teamId": "roy",
+          "playerId": "p-roy-27",
           "detail": "Gabriel Satin"
         },
         {
@@ -3879,6 +3903,7 @@
           "minute": 81,
           "type": "sub_in",
           "teamId": "roy",
+          "playerId": "p-roy-28",
           "detail": "Canpolat Soysal"
         },
         {
@@ -4092,6 +4117,7 @@
           "minute": 15,
           "type": "goal",
           "teamId": "aye",
+          "playerId": "p-aye-27",
           "detail": "Nael Fouarge"
         },
         {
@@ -4179,6 +4205,7 @@
           "minute": 69,
           "type": "sub_out",
           "teamId": "aye",
+          "playerId": "p-aye-27",
           "detail": "Nael Fouarge"
         },
         {
@@ -4218,6 +4245,7 @@
           "minute": 79,
           "type": "sub_in",
           "teamId": "aye",
+          "playerId": "p-aye-28",
           "detail": "Bastian Godefroid"
         },
         {
@@ -4233,6 +4261,7 @@
           "minute": 83,
           "type": "sub_in",
           "teamId": "florenville",
+          "playerId": "p-florenville-23",
           "detail": "Drissa Coulibaly Cisse"
         },
         {
@@ -4303,6 +4332,7 @@
           "minute": 46,
           "type": "goal",
           "teamId": "aye",
+          "playerId": "p-aye-27",
           "detail": "Nael Fouarge"
         },
         {
@@ -4390,6 +4420,7 @@
           "minute": 74,
           "type": "sub_in",
           "teamId": "houffalize",
+          "playerId": "p-houffalize-37",
           "detail": "Mikail Behrami"
         },
         {
@@ -4421,6 +4452,7 @@
           "minute": 78,
           "type": "goal",
           "teamId": "houffalize",
+          "playerId": "p-houffalize-37",
           "detail": "Mikail Behrami"
         },
         {
@@ -4468,6 +4500,7 @@
           "minute": 88,
           "type": "sub_out",
           "teamId": "aye",
+          "playerId": "p-aye-27",
           "detail": "Nael Fouarge"
         },
         {
@@ -4475,6 +4508,7 @@
           "minute": 92,
           "type": "goal",
           "teamId": "houffalize",
+          "playerId": "p-houffalize-37",
           "detail": "Mikail Behrami"
         },
         {
@@ -4521,6 +4555,7 @@
           "minute": 63,
           "type": "goal",
           "teamId": "florenville",
+          "playerId": "p-florenville-22",
           "detail": "Corentin Serge Corvisy"
         },
         {
@@ -4544,6 +4579,7 @@
           "minute": 64,
           "type": "sub_out",
           "teamId": "florenville",
+          "playerId": "p-florenville-22",
           "detail": "Corentin Serge Corvisy"
         },
         {
@@ -4631,6 +4667,7 @@
           "minute": 81,
           "type": "sub_in",
           "teamId": "florenville",
+          "playerId": "p-florenville-23",
           "detail": "Drissa Coulibaly Cisse"
         },
         {
@@ -4701,6 +4738,7 @@
           "minute": 60,
           "type": "yellow",
           "teamId": "oppagne",
+          "playerId": "p-oppagne-23",
           "detail": "Gilles Collin"
         },
         {
@@ -4708,6 +4746,7 @@
           "minute": 60,
           "type": "yellow",
           "teamId": "oppagne",
+          "playerId": "p-oppagne-24",
           "detail": "Valère Louis Lamy"
         },
         {
@@ -4731,6 +4770,7 @@
           "minute": 67,
           "type": "sub_in",
           "teamId": "arlon",
+          "playerId": "p-arlon-32",
           "detail": "Jean-Baptiste Lhommel"
         },
         {
@@ -4802,6 +4842,7 @@
           "minute": 81,
           "type": "sub_in",
           "teamId": "arlon",
+          "playerId": "p-arlon-29",
           "detail": "Kamil Barzaq"
         },
         {
@@ -5135,6 +5176,7 @@
           "minute": 82,
           "type": "sub_out",
           "teamId": "marloie",
+          "playerId": "p-marloie-25",
           "detail": "Ayoub Hmidet"
         },
         {
@@ -5142,6 +5184,7 @@
           "minute": 82,
           "type": "sub_in",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-30",
           "detail": "Luca Laruccia"
         },
         {
@@ -5157,6 +5200,7 @@
           "minute": 84,
           "type": "yellow",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-33",
           "detail": "Olivier Schmit"
         },
         {
@@ -5299,6 +5343,7 @@
           "minute": 75,
           "type": "yellow",
           "teamId": "bercheux",
+          "playerId": "p-bercheux-29",
           "detail": "Mael Jacob"
         },
         {
@@ -5329,6 +5374,7 @@
           "minute": 11,
           "type": "goal",
           "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-22",
           "detail": "Ugochukwu Precious Chikatara"
         },
         {
@@ -5448,6 +5494,7 @@
           "minute": 58,
           "type": "yellow",
           "teamId": "libin",
+          "playerId": "p-libin-27",
           "detail": "Benjamin Simon"
         },
         {
@@ -5463,6 +5510,7 @@
           "minute": 62,
           "type": "sub_out",
           "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-22",
           "detail": "Ugochukwu Precious Chikatara"
         },
         {
@@ -5589,6 +5637,7 @@
           "minute": 60,
           "type": "sub_out",
           "teamId": "roy",
+          "playerId": "p-roy-25",
           "detail": "Alessandro Piergentili"
         },
         {
@@ -5628,6 +5677,7 @@
           "minute": 70,
           "type": "sub_in",
           "teamId": "roy",
+          "playerId": "p-roy-24",
           "detail": "François Chanly"
         },
         {
@@ -5651,6 +5701,7 @@
           "minute": 72,
           "type": "yellow",
           "teamId": "roy",
+          "playerId": "p-roy-24",
           "detail": "François Chanly"
         },
         {
@@ -5682,6 +5733,7 @@
           "minute": 76,
           "type": "sub_in",
           "teamId": "roy",
+          "playerId": "p-roy-26",
           "detail": "Louis Poirrier"
         },
         {
@@ -5944,6 +5996,7 @@
           "minute": 66,
           "type": "sub_in",
           "teamId": "houffalize",
+          "playerId": "p-houffalize-38",
           "detail": "Aboubacar Keita"
         },
         {
@@ -6118,6 +6171,7 @@
           "minute": 66,
           "type": "yellow",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-33",
           "detail": "Olivier Schmit"
         },
         {
@@ -6165,6 +6219,7 @@
           "minute": 69,
           "type": "sub_out",
           "teamId": "florenville",
+          "playerId": "p-florenville-22",
           "detail": "Corentin Serge Corvisy"
         },
         {
@@ -6172,6 +6227,7 @@
           "minute": 75,
           "type": "yellow",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-30",
           "detail": "Luca Laruccia"
         },
         {
@@ -6203,6 +6259,7 @@
           "minute": 80,
           "type": "sub_in",
           "teamId": "florenville",
+          "playerId": "p-florenville-23",
           "detail": "Drissa Coulibaly Cisse"
         },
         {
@@ -6337,6 +6394,7 @@
           "minute": 72,
           "type": "sub_in",
           "teamId": "arlon",
+          "playerId": "p-arlon-32",
           "detail": "Jean-Baptiste Lhommel"
         },
         {
@@ -6431,6 +6489,7 @@
           "minute": 27,
           "type": "goal",
           "teamId": "marloie",
+          "playerId": "p-marloie-26",
           "detail": "Charlin Ioakimidou"
         },
         {
@@ -6454,6 +6513,7 @@
           "minute": 46,
           "type": "sub_in",
           "teamId": "marloie",
+          "playerId": "p-marloie-24",
           "detail": "Geoffrey Hayon"
         },
         {
@@ -6517,6 +6577,7 @@
           "minute": 60,
           "type": "sub_out",
           "teamId": "marloie",
+          "playerId": "p-marloie-25",
           "detail": "Ayoub Hmidet"
         },
         {
@@ -6556,6 +6617,7 @@
           "minute": 89,
           "type": "yellow",
           "teamId": "marloie",
+          "playerId": "p-marloie-24",
           "detail": "Geoffrey Hayon"
         }
       ]
@@ -6570,6 +6632,7 @@
           "minute": 23,
           "type": "goal",
           "teamId": "aye",
+          "playerId": "p-aye-27",
           "detail": "Nael Fouarge"
         },
         {
@@ -6681,6 +6744,7 @@
           "minute": 78,
           "type": "sub_out",
           "teamId": "aye",
+          "playerId": "p-aye-27",
           "detail": "Nael Fouarge"
         },
         {
@@ -7046,6 +7110,7 @@
           "minute": 66,
           "type": "sub_out",
           "teamId": "roy",
+          "playerId": "p-roy-25",
           "detail": "Alessandro Piergentili"
         },
         {
@@ -7372,6 +7437,7 @@
           "minute": 71,
           "type": "goal",
           "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-22",
           "detail": "Ugochukwu Precious Chikatara"
         },
         {
@@ -7625,6 +7691,7 @@
           "minute": 36,
           "type": "goal",
           "teamId": "roy",
+          "playerId": "p-roy-25",
           "detail": "Alessandro Piergentili"
         },
         {
@@ -7632,6 +7699,7 @@
           "minute": 56,
           "type": "yellow",
           "teamId": "marloie",
+          "playerId": "p-marloie-24",
           "detail": "Geoffrey Hayon"
         },
         {
@@ -7663,6 +7731,7 @@
           "minute": 58,
           "type": "sub_out",
           "teamId": "roy",
+          "playerId": "p-roy-25",
           "detail": "Alessandro Piergentili"
         },
         {
@@ -7702,6 +7771,7 @@
           "minute": 88,
           "type": "sub_in",
           "teamId": "marloie",
+          "playerId": "p-marloie-21",
           "detail": "Samy Bouterbiat"
         },
         {
@@ -7709,6 +7779,7 @@
           "minute": 88,
           "type": "sub_out",
           "teamId": "marloie",
+          "playerId": "p-marloie-25",
           "detail": "Ayoub Hmidet"
         }
       ]
@@ -7819,6 +7890,7 @@
           "minute": 68,
           "type": "sub_in",
           "teamId": "houffalize",
+          "playerId": "p-houffalize-37",
           "detail": "Mikail Behrami"
         },
         {
@@ -7842,6 +7914,7 @@
           "minute": 69,
           "type": "sub_out",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-30",
           "detail": "Luca Laruccia"
         },
         {
@@ -8024,6 +8097,7 @@
           "minute": 67,
           "type": "yellow",
           "teamId": "arlon",
+          "playerId": "p-arlon-30",
           "detail": "Jorge Frunze"
         },
         {
@@ -8055,6 +8129,7 @@
           "minute": 75,
           "type": "sub_in",
           "teamId": "arlon",
+          "playerId": "p-arlon-31",
           "detail": "Henry James Kirkpatrick"
         },
         {
@@ -8078,6 +8153,7 @@
           "minute": 82,
           "type": "sub_out",
           "teamId": "arlon",
+          "playerId": "p-arlon-30",
           "detail": "Jorge Frunze"
         }
       ]
@@ -8252,6 +8328,7 @@
           "minute": 94,
           "type": "yellow",
           "teamId": "oppagne",
+          "playerId": "p-oppagne-23",
           "detail": "Gilles Collin"
         }
       ]
@@ -8330,6 +8407,7 @@
           "minute": 46,
           "type": "sub_in",
           "teamId": "florenville",
+          "playerId": "p-florenville-24",
           "detail": "Jules Mernier"
         },
         {
@@ -8369,6 +8447,7 @@
           "minute": 62,
           "type": "sub_out",
           "teamId": "florenville",
+          "playerId": "p-florenville-22",
           "detail": "Corentin Serge Corvisy"
         },
         {
@@ -8392,6 +8471,7 @@
           "minute": 68,
           "type": "sub_in",
           "teamId": "florenville",
+          "playerId": "p-florenville-23",
           "detail": "Drissa Coulibaly Cisse"
         },
         {
@@ -8486,6 +8566,7 @@
           "minute": 10,
           "type": "goal",
           "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-26",
           "detail": "Boris Wattiaux"
         },
         {
@@ -8517,6 +8598,7 @@
           "minute": 45,
           "type": "sub_in",
           "teamId": "aye",
+          "playerId": "p-aye-26",
           "detail": "Marvin Etienne"
         },
         {
@@ -8548,6 +8630,7 @@
           "minute": 50,
           "type": "goal",
           "teamId": "aye",
+          "playerId": "p-aye-27",
           "detail": "Nael Fouarge"
         },
         {
@@ -8627,6 +8710,7 @@
           "minute": 80,
           "type": "goal",
           "teamId": "aye",
+          "playerId": "p-aye-26",
           "detail": "Marvin Etienne"
         },
         {
@@ -8705,6 +8789,7 @@
           "minute": 38,
           "type": "yellow",
           "teamId": "bastogne",
+          "playerId": "p-bastogne-24",
           "detail": "Frédéric Jacquemart"
         },
         {
@@ -9373,6 +9458,7 @@
           "minute": 88,
           "type": "sub_in",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-30",
           "detail": "Luca Laruccia"
         },
         {
@@ -9451,6 +9537,7 @@
           "minute": 65,
           "type": "sub_in",
           "teamId": "bercheux",
+          "playerId": "p-bercheux-29",
           "detail": "Mael Jacob"
         },
         {
@@ -9641,6 +9728,7 @@
           "minute": 59,
           "type": "sub_out",
           "teamId": "marloie",
+          "playerId": "p-marloie-25",
           "detail": "Ayoub Hmidet"
         },
         {
@@ -9680,6 +9768,7 @@
           "minute": 78,
           "type": "goal",
           "teamId": "marloie",
+          "playerId": "p-marloie-26",
           "detail": "Charlin Ioakimidou"
         },
         {
@@ -9687,6 +9776,7 @@
           "minute": 78,
           "type": "sub_in",
           "teamId": "marloie",
+          "playerId": "p-marloie-22",
           "detail": "Charlie Dave"
         },
         {
@@ -9718,6 +9808,7 @@
           "minute": 82,
           "type": "yellow",
           "teamId": "marloie",
+          "playerId": "p-marloie-26",
           "detail": "Charlin Ioakimidou"
         },
         {
@@ -10107,6 +10198,7 @@
           "minute": 76,
           "type": "sub_out",
           "teamId": "florenville",
+          "playerId": "p-florenville-22",
           "detail": "Corentin Serge Corvisy"
         },
         {
@@ -10169,6 +10261,7 @@
           "minute": 42,
           "type": "sub_in",
           "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-22",
           "detail": "Ugochukwu Precious Chikatara"
         },
         {
@@ -10216,6 +10309,7 @@
           "minute": 57,
           "type": "sub_in",
           "teamId": "gouvy",
+          "playerId": "p-gouvy-23",
           "detail": "Julien Blaise"
         },
         {
@@ -10255,6 +10349,7 @@
           "minute": 62,
           "type": "yellow",
           "teamId": "gouvy",
+          "playerId": "p-gouvy-28",
           "detail": "Grégory Vandormael"
         },
         {
@@ -10262,6 +10357,7 @@
           "minute": 62,
           "type": "second_yellow",
           "teamId": "gouvy",
+          "playerId": "p-gouvy-28",
           "detail": "Grégory Vandormael"
         },
         {
@@ -10317,6 +10413,7 @@
           "minute": 88,
           "type": "sub_in",
           "teamId": "gouvy",
+          "playerId": "p-gouvy-25",
           "detail": "Tao Lembrée"
         },
         {
@@ -10379,6 +10476,7 @@
           "minute": 49,
           "type": "yellow",
           "teamId": "marloie",
+          "playerId": "p-marloie-25",
           "detail": "Ayoub Hmidet"
         },
         {
@@ -10394,6 +10492,7 @@
           "minute": 65,
           "type": "sub_in",
           "teamId": "marloie",
+          "playerId": "p-marloie-24",
           "detail": "Geoffrey Hayon"
         },
         {
@@ -10417,6 +10516,7 @@
           "minute": 65,
           "type": "sub_out",
           "teamId": "marloie",
+          "playerId": "p-marloie-25",
           "detail": "Ayoub Hmidet"
         },
         {
@@ -10512,6 +10612,7 @@
           "minute": 91,
           "type": "yellow",
           "teamId": "marloie",
+          "playerId": "p-marloie-21",
           "detail": "Samy Bouterbiat"
         },
         {
@@ -10550,6 +10651,7 @@
           "minute": 33,
           "type": "yellow",
           "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-26",
           "detail": "Boris Wattiaux"
         },
         {
@@ -10597,6 +10699,7 @@
           "minute": 59,
           "type": "sub_out",
           "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-26",
           "detail": "Boris Wattiaux"
         },
         {
@@ -10739,6 +10842,7 @@
           "minute": 44,
           "type": "goal",
           "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-22",
           "detail": "Ugochukwu Precious Chikatara"
         },
         {
@@ -10818,6 +10922,7 @@
           "minute": 63,
           "type": "yellow",
           "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-24",
           "detail": "Sohail Moufanin"
         },
         {
@@ -10833,6 +10938,7 @@
           "minute": 67,
           "type": "sub_out",
           "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-24",
           "detail": "Sohail Moufanin"
         },
         {
@@ -10872,6 +10978,7 @@
           "minute": 75,
           "type": "sub_out",
           "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-22",
           "detail": "Ugochukwu Precious Chikatara"
         },
         {
@@ -10998,6 +11105,7 @@
           "minute": 71,
           "type": "sub_in",
           "teamId": "houffalize",
+          "playerId": "p-houffalize-37",
           "detail": "Mikail Behrami"
         },
         {
@@ -11076,6 +11184,7 @@
           "minute": 63,
           "type": "sub_in",
           "teamId": "florenville",
+          "playerId": "p-florenville-22",
           "detail": "Corentin Serge Corvisy"
         },
         {
@@ -11139,6 +11248,7 @@
           "minute": 80,
           "type": "sub_in",
           "teamId": "oppagne",
+          "playerId": "p-oppagne-25",
           "detail": "Fabrice Sambi Lokonga"
         },
         {
@@ -11233,6 +11343,7 @@
           "minute": 56,
           "type": "sub_out",
           "teamId": "arlon",
+          "playerId": "p-arlon-30",
           "detail": "Jorge Frunze"
         },
         {
@@ -11423,6 +11534,7 @@
           "minute": 64,
           "type": "goal",
           "teamId": "aye",
+          "playerId": "p-aye-27",
           "detail": "Nael Fouarge"
         },
         {
@@ -11558,6 +11670,7 @@
           "minute": 86,
           "type": "sub_in",
           "teamId": "assenois",
+          "playerId": "p-assenois-26",
           "detail": "Mathis Gonthier"
         },
         {
@@ -11676,6 +11789,7 @@
           "minute": 70,
           "type": "yellow",
           "teamId": "gouvy",
+          "playerId": "p-gouvy-24",
           "detail": "Baptiste Georges"
         },
         {
@@ -11691,6 +11805,7 @@
           "minute": 72,
           "type": "sub_in",
           "teamId": "bercheux",
+          "playerId": "p-bercheux-30",
           "detail": "Jean-Marie Toubon"
         },
         {
@@ -11698,6 +11813,7 @@
           "minute": 72,
           "type": "sub_out",
           "teamId": "bercheux",
+          "playerId": "p-bercheux-27",
           "detail": "Maxime Bossicart"
         },
         {
@@ -11721,6 +11837,7 @@
           "minute": 80,
           "type": "sub_out",
           "teamId": "bercheux",
+          "playerId": "p-bercheux-29",
           "detail": "Mael Jacob"
         },
         {
@@ -11807,6 +11924,7 @@
           "minute": 60,
           "type": "sub_out",
           "teamId": "florenville",
+          "playerId": "p-florenville-22",
           "detail": "Corentin Serge Corvisy"
         },
         {
@@ -11838,6 +11956,7 @@
           "minute": 62,
           "type": "sub_out",
           "teamId": "bastogne",
+          "playerId": "p-bastogne-23",
           "detail": "Tom Chisogne"
         },
         {
@@ -12028,6 +12147,7 @@
           "minute": 64,
           "type": "sub_in",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-32",
           "detail": "Brandon Ries"
         },
         {
@@ -12067,6 +12187,7 @@
           "minute": 68,
           "type": "sub_in",
           "teamId": "arlon",
+          "playerId": "p-arlon-30",
           "detail": "Jorge Frunze"
         },
         {
@@ -12090,6 +12211,7 @@
           "minute": 76,
           "type": "sub_in",
           "teamId": "arlon",
+          "playerId": "p-arlon-32",
           "detail": "Jean-Baptiste Lhommel"
         },
         {
@@ -12121,6 +12243,7 @@
           "minute": 82,
           "type": "sub_in",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-30",
           "detail": "Luca Laruccia"
         },
         {
@@ -12231,6 +12354,7 @@
           "minute": 73,
           "type": "sub_in",
           "teamId": "ochamps",
+          "playerId": "p-ochamps-22",
           "detail": "Maxime Bigonville"
         },
         {
@@ -12349,6 +12473,7 @@
           "minute": 45,
           "type": "goal",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-31",
           "detail": "Alexandre Laurent"
         },
         {
@@ -12499,6 +12624,7 @@
           "minute": 67,
           "type": "sub_in",
           "teamId": "arlon",
+          "playerId": "p-arlon-32",
           "detail": "Jean-Baptiste Lhommel"
         },
         {
@@ -12570,6 +12696,7 @@
           "minute": 84,
           "type": "yellow",
           "teamId": "arlon",
+          "playerId": "p-arlon-30",
           "detail": "Jorge Frunze"
         },
         {
@@ -12601,6 +12728,7 @@
           "minute": 91,
           "type": "yellow",
           "teamId": "gouvy",
+          "playerId": "p-gouvy-26",
           "detail": "Florence Pauline Lentz"
         },
         {
@@ -12703,6 +12831,7 @@
           "minute": 69,
           "type": "sub_out",
           "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-26",
           "detail": "Boris Wattiaux"
         },
         {
@@ -12829,6 +12958,7 @@
           "minute": 56,
           "type": "sub_in",
           "teamId": "oppagne",
+          "playerId": "p-oppagne-25",
           "detail": "Fabrice Sambi Lokonga"
         },
         {
@@ -12852,6 +12982,7 @@
           "minute": 62,
           "type": "sub_in",
           "teamId": "houffalize",
+          "playerId": "p-houffalize-37",
           "detail": "Mikail Behrami"
         },
         {
@@ -12883,6 +13014,7 @@
           "minute": 66,
           "type": "yellow",
           "teamId": "oppagne",
+          "playerId": "p-oppagne-25",
           "detail": "Fabrice Sambi Lokonga"
         },
         {
@@ -12946,6 +13078,7 @@
           "minute": 83,
           "type": "sub_out",
           "teamId": "houffalize",
+          "playerId": "p-houffalize-37",
           "detail": "Mikail Behrami"
         },
         {
@@ -12984,6 +13117,7 @@
           "minute": 34,
           "type": "goal",
           "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-24",
           "detail": "Sohail Moufanin"
         },
         {
@@ -13007,6 +13141,7 @@
           "minute": 44,
           "type": "yellow",
           "teamId": "marloie",
+          "playerId": "p-marloie-24",
           "detail": "Geoffrey Hayon"
         },
         {
@@ -13014,6 +13149,7 @@
           "minute": 45,
           "type": "goal",
           "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-22",
           "detail": "Ugochukwu Precious Chikatara"
         },
         {
@@ -13053,6 +13189,7 @@
           "minute": 62,
           "type": "sub_in",
           "teamId": "marloie",
+          "playerId": "p-marloie-21",
           "detail": "Samy Bouterbiat"
         },
         {
@@ -13060,6 +13197,7 @@
           "minute": 62,
           "type": "sub_out",
           "teamId": "marloie",
+          "playerId": "p-marloie-24",
           "detail": "Geoffrey Hayon"
         },
         {
@@ -13115,6 +13253,7 @@
           "minute": 73,
           "type": "sub_out",
           "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-22",
           "detail": "Ugochukwu Precious Chikatara"
         },
         {
@@ -13138,6 +13277,7 @@
           "minute": 76,
           "type": "sub_in",
           "teamId": "marloie",
+          "playerId": "p-marloie-22",
           "detail": "Charlie Dave"
         },
         {
@@ -13153,6 +13293,7 @@
           "minute": 79,
           "type": "goal",
           "teamId": "marloie",
+          "playerId": "p-marloie-26",
           "detail": "Charlin Ioakimidou"
         },
         {
@@ -13168,6 +13309,7 @@
           "minute": 82,
           "type": "sub_out",
           "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-24",
           "detail": "Sohail Moufanin"
         },
         {
@@ -13286,6 +13428,7 @@
           "minute": 70,
           "type": "sub_in",
           "teamId": "aye",
+          "playerId": "p-aye-28",
           "detail": "Bastian Godefroid"
         },
         {
@@ -13301,6 +13444,7 @@
           "minute": 77,
           "type": "goal",
           "teamId": "aye",
+          "playerId": "p-aye-27",
           "detail": "Nael Fouarge"
         },
         {
@@ -13348,6 +13492,7 @@
           "minute": 83,
           "type": "sub_in",
           "teamId": "roy",
+          "playerId": "p-roy-28",
           "detail": "Canpolat Soysal"
         },
         {
@@ -13371,6 +13516,7 @@
           "minute": 89,
           "type": "sub_out",
           "teamId": "aye",
+          "playerId": "p-aye-27",
           "detail": "Nael Fouarge"
         }
       ]
@@ -13433,6 +13579,7 @@
           "minute": 65,
           "type": "yellow",
           "teamId": "marloie",
+          "playerId": "p-marloie-25",
           "detail": "Ayoub Hmidet"
         },
         {
@@ -13472,6 +13619,7 @@
           "minute": 71,
           "type": "sub_in",
           "teamId": "marloie",
+          "playerId": "p-marloie-21",
           "detail": "Samy Bouterbiat"
         },
         {
@@ -13479,6 +13627,7 @@
           "minute": 71,
           "type": "sub_out",
           "teamId": "marloie",
+          "playerId": "p-marloie-25",
           "detail": "Ayoub Hmidet"
         },
         {
@@ -13486,6 +13635,7 @@
           "minute": 79,
           "type": "sub_in",
           "teamId": "bercheux",
+          "playerId": "p-bercheux-29",
           "detail": "Mael Jacob"
         },
         {
@@ -13525,6 +13675,7 @@
           "minute": 90,
           "type": "sub_in",
           "teamId": "marloie",
+          "playerId": "p-marloie-22",
           "detail": "Charlie Dave"
         },
         {
@@ -13810,6 +13961,7 @@
           "minute": 66,
           "type": "yellow",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-33",
           "detail": "Olivier Schmit"
         },
         {
@@ -13897,6 +14049,7 @@
           "minute": 80,
           "type": "sub_in",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-34",
           "detail": "Tanguy Thiéry"
         },
         {
@@ -14166,6 +14319,7 @@
           "minute": 46,
           "type": "sub_out",
           "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-24",
           "detail": "Sohail Moufanin"
         },
         {
@@ -14364,6 +14518,7 @@
           "minute": 71,
           "type": "sub_in",
           "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-26",
           "detail": "Boris Wattiaux"
         },
         {
@@ -14514,6 +14669,7 @@
           "minute": 64,
           "type": "sub_in",
           "teamId": "aye",
+          "playerId": "p-aye-28",
           "detail": "Bastian Godefroid"
         },
         {
@@ -14776,6 +14932,7 @@
           "minute": 81,
           "type": "sub_out",
           "teamId": "gouvy",
+          "playerId": "p-gouvy-27",
           "detail": "Mathieu Lentz"
         },
         {
@@ -14838,6 +14995,7 @@
           "minute": 23,
           "type": "yellow",
           "teamId": "marloie",
+          "playerId": "p-marloie-25",
           "detail": "Ayoub Hmidet"
         },
         {
@@ -14853,6 +15011,7 @@
           "minute": 52,
           "type": "yellow",
           "teamId": "marloie",
+          "playerId": "p-marloie-26",
           "detail": "Charlin Ioakimidou"
         },
         {
@@ -14868,6 +15027,7 @@
           "minute": 58,
           "type": "sub_in",
           "teamId": "marloie",
+          "playerId": "p-marloie-21",
           "detail": "Samy Bouterbiat"
         },
         {
@@ -14875,6 +15035,7 @@
           "minute": 58,
           "type": "sub_out",
           "teamId": "marloie",
+          "playerId": "p-marloie-25",
           "detail": "Ayoub Hmidet"
         },
         {
@@ -15168,6 +15329,7 @@
           "minute": 63,
           "type": "sub_in",
           "teamId": "bercheux",
+          "playerId": "p-bercheux-29",
           "detail": "Mael Jacob"
         },
         {
@@ -15223,6 +15385,7 @@
           "minute": 68,
           "type": "sub_out",
           "teamId": "florenville",
+          "playerId": "p-florenville-22",
           "detail": "Corentin Serge Corvisy"
         },
         {
@@ -15294,6 +15457,7 @@
           "minute": 93,
           "type": "yellow",
           "teamId": "bercheux",
+          "playerId": "p-bercheux-29",
           "detail": "Mael Jacob"
         },
         {
@@ -15316,6 +15480,7 @@
           "minute": 20,
           "type": "goal",
           "teamId": "aye",
+          "playerId": "p-aye-27",
           "detail": "Nael Fouarge"
         },
         {
@@ -15411,6 +15576,7 @@
           "minute": 71,
           "type": "sub_in",
           "teamId": "bastogne",
+          "playerId": "p-bastogne-23",
           "detail": "Tom Chisogne"
         },
         {
@@ -15498,6 +15664,7 @@
           "minute": 81,
           "type": "yellow",
           "teamId": "bastogne",
+          "playerId": "p-bastogne-24",
           "detail": "Frédéric Jacquemart"
         },
         {
@@ -15648,6 +15815,7 @@
           "minute": 60,
           "type": "sub_out",
           "teamId": "oppagne",
+          "playerId": "p-oppagne-25",
           "detail": "Fabrice Sambi Lokonga"
         },
         {
@@ -15727,6 +15895,7 @@
           "minute": 84,
           "type": "goal",
           "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-26",
           "detail": "penalty · Boris Wattiaux"
         },
         {
@@ -15750,6 +15919,7 @@
           "minute": 91,
           "type": "sub_in",
           "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-25",
           "detail": "Tom Goffin"
         },
         {
@@ -15804,6 +15974,7 @@
           "minute": 28,
           "type": "yellow",
           "teamId": "nothomb",
+          "playerId": "p-nothomb-31",
           "detail": "Alexandre Laurent"
         },
         {
@@ -15819,6 +15990,7 @@
           "minute": 52,
           "type": "sub_in",
           "teamId": "roy",
+          "playerId": "p-roy-25",
           "detail": "Alessandro Piergentili"
         },
         {
