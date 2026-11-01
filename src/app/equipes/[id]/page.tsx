@@ -8,14 +8,14 @@ import { TeamSeasonStats } from "@/components/team-season-stats";
 import { teams } from "@/data/championship";
 import { getMergedMatches } from "@/lib/live-results";
 import {
-  computeStandings,
-  getPlayerStats,
+  getPlayer,
   getTeam,
   getTeamMatches,
   getTeamPlayers,
   getTeamSeasonStats,
   playerDisplayName,
   positionLabel,
+  computeStandings,
 } from "@/lib/stats";
 import type { Metadata } from "next";
 
@@ -51,6 +51,24 @@ export default async function EquipePage({
   const squad = getTeamPlayers(id);
   const teamMatches = getTeamMatches(id, allMatches);
   const season = getTeamSeasonStats(id, allMatches, 10);
+  const statsByPlayer = new Map(
+    season.playerStats.map((s) => [s.playerId, s])
+  );
+
+  const rankedSquad = [...squad].sort((a, b) => {
+    const sa = statsByPlayer.get(a.id);
+    const sb = statsByPlayer.get(b.id);
+    const ga = sa?.goals ?? 0;
+    const gb = sb?.goals ?? 0;
+    if (gb !== ga) return gb - ga;
+    const aa = sa?.appearances ?? 0;
+    const ab = sb?.appearances ?? 0;
+    if (ab !== aa) return ab - aa;
+    return a.number - b.number;
+  });
+
+  const finishedMatches = teamMatches.filter((m) => m.status === "finished");
+  const upcomingMatches = teamMatches.filter((m) => m.status !== "finished");
 
   return (
     <div className="space-y-10">
@@ -65,14 +83,12 @@ export default async function EquipePage({
             <TeamBadge team={team} size="lg" />
             <div>
               <p className="text-xs uppercase tracking-[0.2em] text-white/70">
-                {team.city} · Fondé en {team.founded}
+                {team.city}
               </p>
               <h1 className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl">
                 {team.name}
               </h1>
-              <p className="mt-1 text-sm text-white/80">
-                {team.stadium} · Entraîneur : {team.coach}
-              </p>
+              <p className="mt-1 text-sm text-white/80">{team.stadium}</p>
             </div>
           </div>
           <div className="flex gap-6 rounded-xl bg-black/20 px-5 py-3 backdrop-blur-sm">
@@ -95,11 +111,20 @@ export default async function EquipePage({
       </div>
 
       <TeamSeasonStats
+        played={season.played}
+        won={season.won}
+        drawn={season.drawn}
+        lost={season.lost}
+        points={season.points}
         goalsFor={season.goalsFor}
         goalsAgainst={season.goalsAgainst}
-        played={season.played}
+        goalDiff={season.goalDiff}
+        cleanSheets={season.cleanSheets}
         yellowCards={season.yellowCards}
         redCards={season.redCards}
+        goalsPerGame={season.goalsPerGame}
+        concededPerGame={season.concededPerGame}
+        penalties={season.penalties}
         form={season.form}
       />
 
@@ -148,12 +173,63 @@ export default async function EquipePage({
         </div>
       </section>
 
+      {season.topScorers.length > 0 && (
+        <section className="space-y-4">
+          <PageHeader
+            title="Buteurs du club"
+            description="Buts issus des temps forts des matchs terminés."
+          />
+          <div className="overflow-hidden rounded-xl border border-border/80 bg-card">
+            <ol className="divide-y divide-border/70">
+              {season.topScorers.slice(0, 10).map((scorer, index) => {
+                const player = getPlayer(scorer.playerId);
+                if (!player) return null;
+                return (
+                  <li key={scorer.playerId}>
+                    <Link
+                      href={`/joueurs/${player.id}`}
+                      className="flex items-center gap-4 px-4 py-3 hover:bg-muted/40 sm:px-5"
+                    >
+                      <span className="w-6 text-center font-display text-sm font-bold text-muted-foreground">
+                        {index + 1}
+                      </span>
+                      <span className="flex h-9 w-9 items-center justify-center rounded-md bg-primary font-display text-sm font-bold text-primary-foreground">
+                        {player.number}
+                      </span>
+                      <div className="min-w-0 flex-1">
+                        <p className="font-medium">{playerDisplayName(player)}</p>
+                        <p className="text-xs text-muted-foreground">
+                          {positionLabel(player.position)}
+                          {scorer.appearances > 0
+                            ? ` · vu dans ${scorer.appearances} feuille${scorer.appearances > 1 ? "s" : ""}`
+                            : ""}
+                        </p>
+                      </div>
+                      <p className="font-display text-2xl font-bold tabular-nums text-pitch">
+                        {scorer.goals}
+                      </p>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ol>
+          </div>
+        </section>
+      )}
+
       <section className="animate-rise-delay-2 space-y-4">
-        <PageHeader title="Effectif" description="Joueurs suivis pour cette équipe." />
+        <PageHeader
+          title="Effectif"
+          description="Trié par buts puis apparitions dans les temps forts."
+        />
         <div className="overflow-hidden rounded-xl border border-border/80 bg-card">
           <ul className="divide-y divide-border/70">
-            {squad.map((player) => {
-              const stats = getPlayerStats(player.id, allMatches);
+            {rankedSquad.map((player) => {
+              const stats = statsByPlayer.get(player.id);
+              const goals = stats?.goals ?? 0;
+              const apps = stats?.appearances ?? 0;
+              const yellow = stats?.yellowCards ?? 0;
+              const red = stats?.redCards ?? 0;
               return (
                 <li key={player.id}>
                   <Link
@@ -167,17 +243,33 @@ export default async function EquipePage({
                       <p className="font-medium">{playerDisplayName(player)}</p>
                       <p className="text-xs text-muted-foreground">
                         {positionLabel(player.position)}
-                        {player.nationality ? ` · ${player.nationality}` : ""}
-                        {player.age > 0 ? ` · ${player.age} ans` : ""}
                       </p>
                     </div>
-                    <div className="hidden text-right text-sm sm:block">
-                      <p className="font-display text-lg font-bold tabular-nums">
-                        {stats?.goals ?? 0} B · {stats?.assists ?? 0} P
-                      </p>
-                      <p className="text-xs text-muted-foreground">
-                        {stats?.appearances ?? 0} matchs
-                      </p>
+                    <div className="flex items-center gap-3 text-right text-sm">
+                      <div className="hidden min-w-[4.5rem] sm:block">
+                        <p className="font-display text-lg font-bold tabular-nums">
+                          {goals} B
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                          {apps > 0 ? `${apps} feuille${apps > 1 ? "s" : ""}` : "—"}
+                        </p>
+                      </div>
+                      <div className="flex items-center gap-1.5">
+                        <span className="inline-flex items-center gap-1 tabular-nums text-xs text-muted-foreground">
+                          <span
+                            className="inline-block h-3.5 w-2.5 rounded-[1px] bg-draw"
+                            aria-hidden
+                          />
+                          {yellow}
+                        </span>
+                        <span className="inline-flex items-center gap-1 tabular-nums text-xs text-muted-foreground">
+                          <span
+                            className="inline-block h-3.5 w-2.5 rounded-[1px] bg-loss"
+                            aria-hidden
+                          />
+                          {red}
+                        </span>
+                      </div>
                     </div>
                   </Link>
                 </li>
@@ -188,13 +280,24 @@ export default async function EquipePage({
       </section>
 
       <section className="space-y-4">
-        <h2 className="font-display text-2xl font-bold">Matchs</h2>
+        <h2 className="font-display text-2xl font-bold">Derniers résultats</h2>
         <div className="space-y-2">
-          {teamMatches.map((match) => (
+          {[...finishedMatches].reverse().slice(0, 8).map((match) => (
             <MatchRow key={match.id} match={match} />
           ))}
         </div>
       </section>
+
+      {upcomingMatches.length > 0 && (
+        <section className="space-y-4">
+          <h2 className="font-display text-2xl font-bold">Prochains matchs</h2>
+          <div className="space-y-2">
+            {upcomingMatches.slice(0, 6).map((match) => (
+              <MatchRow key={match.id} match={match} />
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   );
 }

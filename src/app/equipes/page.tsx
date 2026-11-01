@@ -4,11 +4,7 @@ import { PageHeader } from "@/components/page-header";
 import { TeamBadge } from "@/components/team-badge";
 import { teams } from "@/data/championship";
 import { getMergedMatches } from "@/lib/live-results";
-import {
-  computeStandings,
-  getTeamPlayers,
-  getTeamSeasonStats,
-} from "@/lib/stats";
+import { computeStandings, getTeamSeasonStats } from "@/lib/stats";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -22,17 +18,22 @@ export default async function EquipesPage() {
   const standings = computeStandings(allMatches);
   const rankByTeam = new Map(standings.map((r, i) => [r.teamId, i + 1]));
 
+  const ordered = [...teams].sort((a, b) => {
+    const ra = rankByTeam.get(a.id) ?? 99;
+    const rb = rankByTeam.get(b.id) ?? 99;
+    return ra - rb;
+  });
+
   return (
     <div>
       <PageHeader
         eyebrow="Clubs"
         title="Équipes"
-        description="Fiches clubs : buts, cartons, série de résultats et effectifs."
+        description="Bilan réel depuis les résultats RBFA : points, buts, cartons et série."
       />
 
       <div className="animate-rise-delay-1 grid gap-4 sm:grid-cols-2">
-        {teams.map((team) => {
-          const squad = getTeamPlayers(team.id);
+        {ordered.map((team) => {
           const rank = rankByTeam.get(team.id);
           const row = standings.find((s) => s.teamId === team.id);
           const season = getTeamSeasonStats(team.id, allMatches, 5);
@@ -58,6 +59,7 @@ export default async function EquipesPage() {
                   </p>
                 </div>
               </div>
+
               <div className="grid grid-cols-4 gap-2 px-5 py-3 text-center text-sm">
                 <div>
                   <p className="text-muted-foreground">Rang</p>
@@ -68,6 +70,12 @@ export default async function EquipesPage() {
                   <p className="font-display text-xl font-bold">{row?.points ?? 0}</p>
                 </div>
                 <div>
+                  <p className="text-muted-foreground">V/N/D</p>
+                  <p className="font-display text-lg font-bold tabular-nums">
+                    {season.won}/{season.drawn}/{season.lost}
+                  </p>
+                </div>
+                <div>
                   <p className="text-muted-foreground">Buts</p>
                   <p className="font-display text-xl font-bold tabular-nums">
                     <span className="text-win">{season.goalsFor}</span>
@@ -75,13 +83,37 @@ export default async function EquipesPage() {
                     <span className="text-loss">{season.goalsAgainst}</span>
                   </p>
                 </div>
+              </div>
+
+              <div className="grid grid-cols-3 gap-2 border-t border-border/70 px-5 py-3 text-center text-xs">
                 <div>
-                  <p className="text-muted-foreground">Joués</p>
-                  <p className="font-display text-xl font-bold">{season.played}</p>
+                  <p className="text-muted-foreground">Clean sheets</p>
+                  <p className="font-display text-base font-bold tabular-nums">
+                    {season.cleanSheets}
+                  </p>
+                </div>
+                <div>
+                  <p className="text-muted-foreground">Jaunes</p>
+                  <p className="font-display text-base font-bold tabular-nums text-draw">
+                    {season.yellowCards}
+                  </p>
+                </div>
+                <div>
+                  <p className="text-muted-foreground">Rouges</p>
+                  <p className="font-display text-base font-bold tabular-nums text-loss">
+                    {season.redCards}
+                  </p>
                 </div>
               </div>
+
               <div className="flex items-center justify-between border-t border-border/70 px-5 py-3 text-xs text-muted-foreground">
-                <span>{squad.length} joueurs</span>
+                <span>
+                  {season.played} match{season.played > 1 ? "s" : ""} · diff{" "}
+                  <span className="font-medium text-foreground">
+                    {season.goalDiff > 0 ? "+" : ""}
+                    {season.goalDiff}
+                  </span>
+                </span>
                 <FormDots form={season.form} />
               </div>
             </Link>
