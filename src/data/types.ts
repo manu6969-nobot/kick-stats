@@ -158,6 +158,8 @@ export interface PlayerSeasonStats {
   goals: number;
   assists: number;
   yellowCards: number;
+  /** 2e jaunes (expulsion). */
+  secondYellows: number;
   redCards: number;
   minutes: number;
 }

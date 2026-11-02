@@ -51,6 +51,7 @@ export function getPlayerStats(
     goals: Math.max(manual.goals, derived.goals),
     assists: Math.max(manual.assists, derived.assists),
     yellowCards: Math.max(manual.yellowCards, derived.yellowCards),
+    secondYellows: Math.max(manual.secondYellows ?? 0, derived.secondYellows ?? 0),
     redCards: Math.max(manual.redCards, derived.redCards),
     minutes: Math.max(manual.minutes, derived.minutes),
   };
@@ -362,6 +363,7 @@ export function getAllPlayerSeasonStats(
         goals: Math.max(cur.goals, s.goals),
         assists: Math.max(cur.assists, s.assists),
         yellowCards: Math.max(cur.yellowCards, s.yellowCards),
+        secondYellows: Math.max(cur.secondYellows ?? 0, s.secondYellows ?? 0),
         redCards: Math.max(cur.redCards, s.redCards),
         minutes: Math.max(cur.minutes, s.minutes),
       });

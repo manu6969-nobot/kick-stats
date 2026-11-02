@@ -122,6 +122,7 @@ export function computePlayerStatsFromMatches(
         goals: 0,
         assists: 0,
         yellowCards: 0,
+        secondYellows: 0,
         redCards: 0,
         minutes: 0,
       };
@@ -160,8 +161,10 @@ export function computePlayerStatsFromMatches(
       if (ev.assistId) ensure(ev.assistId).assists += 1;
       if (ev.type === "yellow" && ev.playerId) ensure(ev.playerId).yellowCards += 1;
       if (ev.type === "second_yellow" && ev.playerId) {
-        ensure(ev.playerId).yellowCards += 1;
-        ensure(ev.playerId).redCards += 1;
+        const row = ensure(ev.playerId);
+        row.yellowCards += 1;
+        row.secondYellows += 1;
+        row.redCards += 1;
       }
       if (ev.type === "red" && ev.playerId) ensure(ev.playerId).redCards += 1;
     }

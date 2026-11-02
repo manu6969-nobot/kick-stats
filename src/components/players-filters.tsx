@@ -24,6 +24,9 @@ type PlayerRow = {
   appearances: number;
   starts: number;
   minutes: number;
+  yellowCards: number;
+  secondYellows: number;
+  redCards: number;
 };
 
 const POSITIONS = [
@@ -35,7 +38,7 @@ const POSITIONS = [
 ] as const;
 
 type PosFilter = (typeof POSITIONS)[number]["id"];
-type MainTab = "effectif" | "buteurs" | "passeurs" | "temps";
+type MainTab = "effectif" | "buteurs" | "passeurs" | "temps" | "cartons";
 
 function avgMinutes(row: PlayerRow) {
   return row.appearances > 0 ? row.minutes / row.appearances : 0;
@@ -65,6 +68,9 @@ function buildRows(seasonStats: PlayerSeasonStats[]): PlayerRow[] {
         appearances: stats?.appearances ?? 0,
         starts: stats?.starts ?? 0,
         minutes: stats?.minutes ?? 0,
+        yellowCards: stats?.yellowCards ?? 0,
+        secondYellows: stats?.secondYellows ?? 0,
+        redCards: stats?.redCards ?? 0,
       };
     })
     .filter((row): row is PlayerRow => row != null)
@@ -125,6 +131,20 @@ export function PlayersFilters({
     [allRows]
   );
 
+  const cardsLeaders = useMemo(
+    () =>
+      [...allRows]
+        .filter((r) => r.yellowCards > 0 || r.redCards > 0)
+        .sort(
+          (a, b) =>
+            b.yellowCards - a.yellowCards ||
+            b.redCards - a.redCards ||
+            b.secondYellows - a.secondYellows ||
+            a.player.lastName.localeCompare(b.player.lastName, "fr")
+        ),
+    [allRows]
+  );
+
   const selectedTeam = TEAMS_SORTED.find((t) => t.id === teamId);
 
   return (
@@ -139,6 +159,7 @@ export function PlayersFilters({
             { id: "buteurs", label: `Buteurs (${scorers.length})` },
             { id: "passeurs", label: `Passeurs (${assistsLeaders.length})` },
             { id: "temps", label: `Temps de jeu (${minutesLeaders.length})` },
+            { id: "cartons", label: `Cartons (${cardsLeaders.length})` },
             { id: "effectif", label: `Effectif (${allRows.length})` },
           ] as const
         ).map((item) => (
@@ -265,6 +286,13 @@ export function PlayersFilters({
           <EmptyStats message="Aucun temps de jeu calculé pour l’instant." />
         ) : (
           <MinutesTable rows={minutesLeaders} />
+        ))}
+
+      {tab === "cartons" &&
+        (cardsLeaders.length === 0 ? (
+          <EmptyStats message="Aucun carton enregistré pour l’instant." />
+        ) : (
+          <CardsTable rows={cardsLeaders} />
         ))}
     </div>
   );
@@ -457,6 +485,75 @@ function MinutesTable({ rows }: { rows: PlayerRow[] }) {
                 </TableCell>
                 <TableCell className="text-center tabular-nums text-muted-foreground">
                   {fmtAvg(avgMinutes(row))}
+                </TableCell>
+              </TableRow>
+            );
+          })}
+        </TableBody>
+      </Table>
+    </div>
+  );
+}
+
+function CardsTable({ rows }: { rows: PlayerRow[] }) {
+  return (
+    <div className="overflow-x-auto rounded-xl border border-border/80 bg-card shadow-sm">
+      <Table>
+        <TableHeader>
+          <TableRow className="hover:bg-transparent">
+            <TableHead className="w-10 text-center">#</TableHead>
+            <TableHead>Joueur</TableHead>
+            <TableHead>Équipe</TableHead>
+            <TableHead className="text-center">Jaunes</TableHead>
+            <TableHead className="text-center">2e j.</TableHead>
+            <TableHead className="text-center">Rouges</TableHead>
+            <TableHead className="text-center">MJ</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {rows.map((row, index) => {
+            const {
+              player,
+              team,
+              yellowCards,
+              secondYellows,
+              redCards,
+              appearances,
+            } = row;
+            const directReds = Math.max(0, redCards - secondYellows);
+            return (
+              <TableRow key={player.id}>
+                <TableCell className="text-center font-display font-bold text-muted-foreground">
+                  {index + 1}
+                </TableCell>
+                <TableCell>
+                  <Link
+                    href={`/joueurs/${player.id}`}
+                    className="font-medium hover:text-primary"
+                  >
+                    {playerDisplayName(player)}
+                  </Link>
+                  <p className="text-xs text-muted-foreground">
+                    {positionLabel(player.position)}
+                  </p>
+                </TableCell>
+                <TableCell>
+                  <div className="flex items-center gap-2">
+                    <TeamBadge team={team} size="sm" />
+                    <span className="text-sm">{team.shortName}</span>
+                  </div>
+                </TableCell>
+                <TableCell className="text-center font-display text-lg font-bold tabular-nums text-draw">
+                  {yellowCards}
+                </TableCell>
+                <TableCell className="text-center tabular-nums">
+                  {secondYellows}
+                </TableCell>
+                <TableCell className="text-center font-display tabular-nums text-loss">
+                  {directReds}
+                </TableCell>
+                <TableCell className="text-center tabular-nums text-muted-foreground">
+                  {appearances}
                 </TableCell>
               </TableRow>
             );
