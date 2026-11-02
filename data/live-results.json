@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-02T13:57:16.202Z",
+  "updatedAt": "2026-11-02T14:11:36.776Z",
   "matches": {
     "m1": {
       "status": "finished",
@@ -32700,6 +32700,690 @@
           "teamId": "nothomb",
           "started": false,
           "minutes": 30
+        }
+      ]
+    },
+    "m87": {
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565593-41-yellow-Freid",
+          "minute": 41,
+          "type": "yellow",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-24",
+          "detail": "Timothée Freid"
+        },
+        {
+          "id": "rbfa-7565593-46-in-Fautré",
+          "minute": 46,
+          "type": "sub_in",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-30",
+          "detail": "Noa Fautré"
+        },
+        {
+          "id": "rbfa-7565593-46-in-Idmansour",
+          "minute": 46,
+          "type": "sub_in",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-26",
+          "detail": "Ilias Idmansour"
+        },
+        {
+          "id": "rbfa-7565593-46-out-Diouf",
+          "minute": 46,
+          "type": "sub_out",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-22",
+          "detail": "Massamba Diouf"
+        },
+        {
+          "id": "rbfa-7565593-46-out-Freid",
+          "minute": 46,
+          "type": "sub_out",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-24",
+          "detail": "Timothée Freid"
+        },
+        {
+          "id": "rbfa-7565593-51-yellow-Bastin",
+          "minute": 51,
+          "type": "yellow",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-18",
+          "detail": "François Vincent Bastin"
+        },
+        {
+          "id": "rbfa-7565593-57-in-Ovi",
+          "minute": 57,
+          "type": "sub_in",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-16",
+          "detail": "Assoma Josias Ovi"
+        },
+        {
+          "id": "rbfa-7565593-57-out-Chikatara",
+          "minute": 57,
+          "type": "sub_out",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-22",
+          "detail": "Ugochukwu Precious Chikatara"
+        },
+        {
+          "id": "rbfa-7565593-67-in-Apeke",
+          "minute": 67,
+          "type": "sub_in",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-8",
+          "detail": "Prince Mohamed Apeke"
+        },
+        {
+          "id": "rbfa-7565593-67-in-Rasquin",
+          "minute": 67,
+          "type": "sub_in",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-20",
+          "detail": "William Rasquin"
+        },
+        {
+          "id": "rbfa-7565593-67-out-Biondolillo",
+          "minute": 67,
+          "type": "sub_out",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-3",
+          "detail": "Alessio Biondolillo"
+        },
+        {
+          "id": "rbfa-7565593-67-out-Levaux",
+          "minute": 67,
+          "type": "sub_out",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-4",
+          "detail": "Mattéo Jean Levaux"
+        },
+        {
+          "id": "rbfa-7565593-70-goal-Fautré",
+          "minute": 70,
+          "type": "goal",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-30",
+          "detail": "Noa Fautré"
+        },
+        {
+          "id": "rbfa-7565593-75-yellow-Toussaint",
+          "minute": 75,
+          "type": "yellow",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-16",
+          "detail": "Aryl Toussaint"
+        },
+        {
+          "id": "rbfa-7565593-77-yellow-Samray",
+          "minute": 77,
+          "type": "yellow",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-7",
+          "detail": "Florian Samray"
+        },
+        {
+          "id": "rbfa-7565593-83-yellow-Moufanin",
+          "minute": 83,
+          "type": "yellow",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-24",
+          "detail": "Sohail Moufanin"
+        },
+        {
+          "id": "rbfa-7565593-87-in-Gengoux",
+          "minute": 87,
+          "type": "sub_in",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-25",
+          "detail": "Maxence Gengoux"
+        },
+        {
+          "id": "rbfa-7565593-87-out-Horman",
+          "minute": 87,
+          "type": "sub_out",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-32",
+          "detail": "Jules Horman"
+        }
+      ],
+      "officials": [
+        {
+          "firstName": "Mathias",
+          "lastName": "Claude",
+          "role": "referee"
+        },
+        {
+          "firstName": "Sébastien",
+          "lastName": "Henikenne",
+          "role": "firstAssistantReferee"
+        },
+        {
+          "firstName": "Benoît",
+          "lastName": "Castiau",
+          "role": "secondAssistantReferee"
+        }
+      ],
+      "appearances": [
+        {
+          "playerId": "p-harre-manhay-2",
+          "teamId": "harre-manhay",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-houffalize-4",
+          "teamId": "houffalize",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-harre-manhay-3",
+          "teamId": "harre-manhay",
+          "started": true,
+          "minutes": 67
+        },
+        {
+          "playerId": "p-houffalize-15",
+          "teamId": "houffalize",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-harre-manhay-7",
+          "teamId": "harre-manhay",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-houffalize-24",
+          "teamId": "houffalize",
+          "started": true,
+          "minutes": 46
+        },
+        {
+          "playerId": "p-harre-manhay-24",
+          "teamId": "harre-manhay",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-houffalize-18",
+          "teamId": "houffalize",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-harre-manhay-17",
+          "teamId": "harre-manhay",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-houffalize-8",
+          "teamId": "houffalize",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-harre-manhay-9",
+          "teamId": "harre-manhay",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-houffalize-6",
+          "teamId": "houffalize",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-harre-manhay-5",
+          "teamId": "harre-manhay",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-houffalize-29",
+          "teamId": "houffalize",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-harre-manhay-10",
+          "teamId": "harre-manhay",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-houffalize-22",
+          "teamId": "houffalize",
+          "started": true,
+          "minutes": 46
+        },
+        {
+          "playerId": "p-harre-manhay-4",
+          "teamId": "harre-manhay",
+          "started": true,
+          "minutes": 67
+        },
+        {
+          "playerId": "p-houffalize-14",
+          "teamId": "houffalize",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-harre-manhay-22",
+          "teamId": "harre-manhay",
+          "started": true,
+          "minutes": 57
+        },
+        {
+          "playerId": "p-houffalize-32",
+          "teamId": "houffalize",
+          "started": true,
+          "minutes": 87
+        },
+        {
+          "playerId": "p-harre-manhay-18",
+          "teamId": "harre-manhay",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-houffalize-16",
+          "teamId": "houffalize",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-harre-manhay-20",
+          "teamId": "harre-manhay",
+          "started": false,
+          "minutes": 23
+        },
+        {
+          "playerId": "p-houffalize-30",
+          "teamId": "houffalize",
+          "started": false,
+          "minutes": 44
+        },
+        {
+          "playerId": "p-harre-manhay-16",
+          "teamId": "harre-manhay",
+          "started": false,
+          "minutes": 33
+        },
+        {
+          "playerId": "p-houffalize-26",
+          "teamId": "houffalize",
+          "started": false,
+          "minutes": 44
+        },
+        {
+          "playerId": "p-houffalize-25",
+          "teamId": "houffalize",
+          "started": false,
+          "minutes": 3
+        },
+        {
+          "playerId": "p-harre-manhay-8",
+          "teamId": "harre-manhay",
+          "started": false,
+          "minutes": 23
+        }
+      ]
+    },
+    "m88": {
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565596-20-yellow-Andrianne",
+          "minute": 20,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-3",
+          "detail": "Yannis Andrianne"
+        },
+        {
+          "id": "rbfa-7565596-30-yellowred-Andrianne",
+          "minute": 30,
+          "type": "second_yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-3",
+          "detail": "Yannis Andrianne"
+        },
+        {
+          "id": "rbfa-7565596-42-goal-Baudot",
+          "minute": 42,
+          "type": "goal",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-15",
+          "detail": "Thomas Baudot"
+        },
+        {
+          "id": "rbfa-7565596-58-in-Colleaux",
+          "minute": 58,
+          "type": "sub_in",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-16",
+          "detail": "Louis Colleaux"
+        },
+        {
+          "id": "rbfa-7565596-58-out-Oury",
+          "minute": 58,
+          "type": "sub_out",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-19",
+          "detail": "Luka Gregory Oury"
+        },
+        {
+          "id": "rbfa-7565596-65-in-Van Autgaerden",
+          "minute": 65,
+          "type": "sub_in",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-21",
+          "detail": "Thomas Van Autgaerden"
+        },
+        {
+          "id": "rbfa-7565596-65-out-Baudot",
+          "minute": 65,
+          "type": "sub_out",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-15",
+          "detail": "Thomas Baudot"
+        },
+        {
+          "id": "rbfa-7565596-70-in-Prevot",
+          "minute": 70,
+          "type": "sub_in",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-12",
+          "detail": "Nathan Prevot"
+        },
+        {
+          "id": "rbfa-7565596-70-out-Bouillon",
+          "minute": 70,
+          "type": "sub_out",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-4",
+          "detail": "Robin Bouillon"
+        },
+        {
+          "id": "rbfa-7565596-70-yellow-Gillet",
+          "minute": 70,
+          "type": "yellow",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-11",
+          "detail": "Augustin Gillet"
+        },
+        {
+          "id": "rbfa-7565596-75-yellow-Prevot",
+          "minute": 75,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-12",
+          "detail": "Nathan Prevot"
+        },
+        {
+          "id": "rbfa-7565596-75-yellow-Doyen",
+          "minute": 75,
+          "type": "yellow",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-9",
+          "detail": "Henri Doyen"
+        },
+        {
+          "id": "rbfa-7565596-79-in-Amory",
+          "minute": 79,
+          "type": "sub_in",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-17",
+          "detail": "Mathys Amory"
+        },
+        {
+          "id": "rbfa-7565596-79-out-Dewalque",
+          "minute": 79,
+          "type": "sub_out",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-11",
+          "detail": "Florent Dewalque"
+        },
+        {
+          "id": "rbfa-7565596-80-in-Chardome",
+          "minute": 80,
+          "type": "sub_in",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-2",
+          "detail": "Pierre Chardome"
+        },
+        {
+          "id": "rbfa-7565596-80-out-Hutin",
+          "minute": 80,
+          "type": "sub_out",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-12",
+          "detail": "Simon Hutin"
+        },
+        {
+          "id": "rbfa-7565596-86-in-Poncin",
+          "minute": 86,
+          "type": "sub_in",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-22",
+          "detail": "Jordan Poncin"
+        },
+        {
+          "id": "rbfa-7565596-86-out-Cleymans",
+          "minute": 86,
+          "type": "sub_out",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-10",
+          "detail": "Kieran Cleymans"
+        },
+        {
+          "id": "rbfa-7565596-88-yellow-Poncin",
+          "minute": 88,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-22",
+          "detail": "Jordan Poncin"
+        }
+      ],
+      "officials": [
+        {
+          "firstName": "Noah",
+          "lastName": "Forget",
+          "role": "referee"
+        },
+        {
+          "firstName": "Bernard",
+          "lastName": "Lannoy",
+          "role": "firstAssistantReferee"
+        },
+        {
+          "firstName": "Vincent",
+          "lastName": "Mathieu",
+          "role": "secondAssistantReferee"
+        }
+      ],
+      "appearances": [
+        {
+          "playerId": "p-gouvy-2",
+          "teamId": "gouvy",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-ochamps-1",
+          "teamId": "ochamps",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-gouvy-27",
+          "teamId": "gouvy",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-ochamps-8",
+          "teamId": "ochamps",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-gouvy-3",
+          "teamId": "gouvy",
+          "started": true,
+          "minutes": 30
+        },
+        {
+          "playerId": "p-ochamps-15",
+          "teamId": "ochamps",
+          "started": true,
+          "minutes": 65
+        },
+        {
+          "playerId": "p-gouvy-15",
+          "teamId": "gouvy",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-ochamps-7",
+          "teamId": "ochamps",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-gouvy-5",
+          "teamId": "gouvy",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-ochamps-12",
+          "teamId": "ochamps",
+          "started": true,
+          "minutes": 80
+        },
+        {
+          "playerId": "p-gouvy-19",
+          "teamId": "gouvy",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-ochamps-19",
+          "teamId": "ochamps",
+          "started": true,
+          "minutes": 58
+        },
+        {
+          "playerId": "p-gouvy-11",
+          "teamId": "gouvy",
+          "started": true,
+          "minutes": 79
+        },
+        {
+          "playerId": "p-ochamps-11",
+          "teamId": "ochamps",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-gouvy-4",
+          "teamId": "gouvy",
+          "started": true,
+          "minutes": 70
+        },
+        {
+          "playerId": "p-ochamps-9",
+          "teamId": "ochamps",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-gouvy-20",
+          "teamId": "gouvy",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-ochamps-6",
+          "teamId": "ochamps",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-gouvy-10",
+          "teamId": "gouvy",
+          "started": true,
+          "minutes": 86
+        },
+        {
+          "playerId": "p-ochamps-13",
+          "teamId": "ochamps",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-gouvy-24",
+          "teamId": "gouvy",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-ochamps-10",
+          "teamId": "ochamps",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-ochamps-21",
+          "teamId": "ochamps",
+          "started": false,
+          "minutes": 25
+        },
+        {
+          "playerId": "p-gouvy-22",
+          "teamId": "gouvy",
+          "started": false,
+          "minutes": 4
+        },
+        {
+          "playerId": "p-ochamps-16",
+          "teamId": "ochamps",
+          "started": false,
+          "minutes": 32
+        },
+        {
+          "playerId": "p-gouvy-12",
+          "teamId": "gouvy",
+          "started": false,
+          "minutes": 20
+        },
+        {
+          "playerId": "p-gouvy-17",
+          "teamId": "gouvy",
+          "started": false,
+          "minutes": 11
+        },
+        {
+          "playerId": "p-ochamps-2",
+          "teamId": "ochamps",
+          "started": false,
+          "minutes": 10
         }
       ]
     }
