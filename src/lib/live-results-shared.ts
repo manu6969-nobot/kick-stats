@@ -29,6 +29,7 @@ export function applyLiveResult(base: Match, live?: LiveMatchResult): Match {
     awayScore: live.awayScore ?? undefined,
     events: live.events ?? [],
     officials: live.officials?.length ? live.officials : base.officials,
+    appearances: live.appearances?.length ? live.appearances : base.appearances,
   };
 }
 
@@ -117,6 +118,7 @@ export function computePlayerStatsFromMatches(
       row = {
         playerId,
         appearances: 0,
+        starts: 0,
         goals: 0,
         assists: 0,
         yellowCards: 0,
@@ -130,16 +132,29 @@ export function computePlayerStatsFromMatches(
 
   for (const match of allMatches) {
     if (match.status !== "finished" && match.status !== "live") continue;
-    const involved = new Set<string>();
-    for (const ev of match.events) {
-      if (ev.playerId) involved.add(ev.playerId);
-      if (ev.assistId) involved.add(ev.assistId);
+
+    if (match.appearances?.length) {
+      for (const a of match.appearances) {
+        if (!a.playerId) continue;
+        const row = ensure(a.playerId);
+        row.appearances += 1;
+        row.minutes += Math.max(0, a.minutes || 0);
+        if (a.started) row.starts += 1;
+      }
+    } else {
+      // Fallback sans compositions : tout joueur cité dans les temps forts = 90′
+      const involved = new Set<string>();
+      for (const ev of match.events) {
+        if (ev.playerId) involved.add(ev.playerId);
+        if (ev.assistId) involved.add(ev.assistId);
+      }
+      for (const pid of involved) {
+        const row = ensure(pid);
+        row.appearances += 1;
+        row.minutes += 90;
+      }
     }
-    for (const pid of involved) {
-      const row = ensure(pid);
-      row.appearances += 1;
-      row.minutes += 90;
-    }
+
     for (const ev of match.events) {
       if (ev.type === "goal" && ev.playerId) ensure(ev.playerId).goals += 1;
       if (ev.assistId) ensure(ev.assistId).assists += 1;

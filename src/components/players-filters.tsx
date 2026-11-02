@@ -22,6 +22,8 @@ type PlayerRow = {
   goals: number;
   assists: number;
   appearances: number;
+  starts: number;
+  minutes: number;
 };
 
 const POSITIONS = [
@@ -33,7 +35,18 @@ const POSITIONS = [
 ] as const;
 
 type PosFilter = (typeof POSITIONS)[number]["id"];
-type MainTab = "effectif" | "buteurs" | "passeurs";
+type MainTab = "effectif" | "buteurs" | "passeurs" | "temps";
+
+function avgMinutes(row: PlayerRow) {
+  return row.appearances > 0 ? row.minutes / row.appearances : 0;
+}
+
+function fmtAvg(n: number) {
+  return n.toLocaleString("fr-BE", {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 1,
+  });
+}
 
 function buildRows(seasonStats: PlayerSeasonStats[]): PlayerRow[] {
   const statsByPlayer = new Map(seasonStats.map((s) => [s.playerId, s]));
@@ -50,6 +63,8 @@ function buildRows(seasonStats: PlayerSeasonStats[]): PlayerRow[] {
         goals: stats?.goals ?? 0,
         assists: stats?.assists ?? 0,
         appearances: stats?.appearances ?? 0,
+        starts: stats?.starts ?? 0,
+        minutes: stats?.minutes ?? 0,
       };
     })
     .filter((row): row is PlayerRow => row != null)
@@ -97,6 +112,19 @@ export function PlayersFilters({
     [allRows]
   );
 
+  const minutesLeaders = useMemo(
+    () =>
+      [...allRows]
+        .filter((r) => r.minutes > 0)
+        .sort(
+          (a, b) =>
+            b.minutes - a.minutes ||
+            b.appearances - a.appearances ||
+            a.player.lastName.localeCompare(b.player.lastName, "fr")
+        ),
+    [allRows]
+  );
+
   const selectedTeam = TEAMS_SORTED.find((t) => t.id === teamId);
 
   return (
@@ -110,6 +138,7 @@ export function PlayersFilters({
           [
             { id: "buteurs", label: `Buteurs (${scorers.length})` },
             { id: "passeurs", label: `Passeurs (${assistsLeaders.length})` },
+            { id: "temps", label: `Temps de jeu (${minutesLeaders.length})` },
             { id: "effectif", label: `Effectif (${allRows.length})` },
           ] as const
         ).map((item) => (
@@ -230,6 +259,13 @@ export function PlayersFilters({
         ) : (
           <LeaderTable rows={assistsLeaders} mode="assists" />
         ))}
+
+      {tab === "temps" &&
+        (minutesLeaders.length === 0 ? (
+          <EmptyStats message="Aucun temps de jeu calculé pour l’instant." />
+        ) : (
+          <MinutesTable rows={minutesLeaders} />
+        ))}
     </div>
   );
 }
@@ -314,47 +350,117 @@ function LeaderTable({
             <TableHead className="text-center">Buts</TableHead>
             <TableHead className="text-center">Passes</TableHead>
             <TableHead className="text-center">MJ</TableHead>
+            <TableHead className="text-center">Min</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
-          {rows.map(({ player, team, goals, assists, appearances }, index) => (
-            <TableRow key={player.id}>
-              <TableCell className="text-center font-display font-bold text-muted-foreground">
-                {index + 1}
-              </TableCell>
-              <TableCell>
-                <Link
-                  href={`/joueurs/${player.id}`}
-                  className="font-medium hover:text-primary"
+          {rows.map((row, index) => {
+            const { player, team, goals, assists, appearances, minutes } = row;
+            return (
+              <TableRow key={player.id}>
+                <TableCell className="text-center font-display font-bold text-muted-foreground">
+                  {index + 1}
+                </TableCell>
+                <TableCell>
+                  <Link
+                    href={`/joueurs/${player.id}`}
+                    className="font-medium hover:text-primary"
+                  >
+                    {playerDisplayName(player)}
+                  </Link>
+                </TableCell>
+                <TableCell>
+                  <div className="flex items-center gap-2">
+                    <TeamBadge team={team} size="sm" />
+                    <span className="text-sm">{team.shortName}</span>
+                  </div>
+                </TableCell>
+                <TableCell
+                  className={cn(
+                    "text-center font-display tabular-nums",
+                    mode === "goals" && "text-lg font-bold text-pitch"
+                  )}
                 >
-                  {playerDisplayName(player)}
-                </Link>
-              </TableCell>
-              <TableCell>
-                <div className="flex items-center gap-2">
-                  <TeamBadge team={team} size="sm" />
-                  <span className="text-sm">{team.shortName}</span>
-                </div>
-              </TableCell>
-              <TableCell
-                className={cn(
-                  "text-center font-display tabular-nums",
-                  mode === "goals" && "text-lg font-bold text-pitch"
-                )}
-              >
-                {goals}
-              </TableCell>
-              <TableCell
-                className={cn(
-                  "text-center font-display tabular-nums",
-                  mode === "assists" && "text-lg font-bold text-pitch"
-                )}
-              >
-                {assists}
-              </TableCell>
-              <TableCell className="text-center tabular-nums">{appearances}</TableCell>
-            </TableRow>
-          ))}
+                  {goals}
+                </TableCell>
+                <TableCell
+                  className={cn(
+                    "text-center font-display tabular-nums",
+                    mode === "assists" && "text-lg font-bold text-pitch"
+                  )}
+                >
+                  {assists}
+                </TableCell>
+                <TableCell className="text-center tabular-nums">
+                  {appearances}
+                </TableCell>
+                <TableCell className="text-center tabular-nums text-muted-foreground">
+                  {minutes}
+                </TableCell>
+              </TableRow>
+            );
+          })}
+        </TableBody>
+      </Table>
+    </div>
+  );
+}
+
+function MinutesTable({ rows }: { rows: PlayerRow[] }) {
+  return (
+    <div className="overflow-x-auto rounded-xl border border-border/80 bg-card shadow-sm">
+      <Table>
+        <TableHeader>
+          <TableRow className="hover:bg-transparent">
+            <TableHead className="w-10 text-center">#</TableHead>
+            <TableHead>Joueur</TableHead>
+            <TableHead>Équipe</TableHead>
+            <TableHead className="text-center">MJ</TableHead>
+            <TableHead className="text-center">Tit.</TableHead>
+            <TableHead className="text-center">Min</TableHead>
+            <TableHead className="text-center">Moy./match</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {rows.map((row, index) => {
+            const { player, team, appearances, starts, minutes } = row;
+            return (
+              <TableRow key={player.id}>
+                <TableCell className="text-center font-display font-bold text-muted-foreground">
+                  {index + 1}
+                </TableCell>
+                <TableCell>
+                  <Link
+                    href={`/joueurs/${player.id}`}
+                    className="font-medium hover:text-primary"
+                  >
+                    {playerDisplayName(player)}
+                  </Link>
+                  <p className="text-xs text-muted-foreground">
+                    {positionLabel(player.position)}
+                  </p>
+                </TableCell>
+                <TableCell>
+                  <div className="flex items-center gap-2">
+                    <TeamBadge team={team} size="sm" />
+                    <span className="text-sm">{team.shortName}</span>
+                  </div>
+                </TableCell>
+                <TableCell className="text-center tabular-nums">
+                  {appearances}
+                </TableCell>
+                <TableCell className="text-center tabular-nums">
+                  {starts}
+                </TableCell>
+                <TableCell className="text-center font-display text-lg font-bold tabular-nums text-pitch">
+                  {minutes}
+                </TableCell>
+                <TableCell className="text-center tabular-nums text-muted-foreground">
+                  {fmtAvg(avgMinutes(row))}
+                </TableCell>
+              </TableRow>
+            );
+          })}
         </TableBody>
       </Table>
     </div>

@@ -14,6 +14,7 @@
 import { readFileSync, writeFileSync, existsSync } from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { extractAppearances } from "./rbfa-appearances.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
@@ -433,6 +434,16 @@ async function main() {
       ? flattenEvents(detail, homeKick.id, awayKick.id, champ.players)
       : [];
 
+    const appearances = detail
+      ? extractAppearances(
+          detail,
+          homeKick.id,
+          awayKick.id,
+          (teamId, firstName, lastName) =>
+            findPlayerId(champ.players, teamId, firstName, lastName)
+        )
+      : [];
+
     const officials = (detail?.officials || [])
       .filter((o) => o && o.personAssigned !== false && (o.firstName || o.lastName))
       .map((o) => ({
@@ -447,6 +458,7 @@ async function main() {
       awayScore: outcome.awayTeamGoals ?? null,
       events,
       officials,
+      appearances,
       rbfaMatchId: m.id,
       rbfaUrl: `https://www.rbfa.be/fr/match/${m.id}`,
     };
@@ -470,6 +482,7 @@ async function main() {
       awayScore: row.awayScore,
       events: row.events,
       officials: row.officials || [],
+      appearances: row.appearances || [],
     };
   }
 

@@ -15,13 +15,14 @@ export default async function JoueursPage() {
   const allMatches = await getMergedMatches();
   const seasonStats = getAllPlayerSeasonStats(allMatches);
   const scorersCount = seasonStats.filter((s) => s.goals > 0).length;
+  const minutesCount = seasonStats.filter((s) => s.minutes > 0).length;
 
   return (
     <div>
       <PageHeader
         eyebrow="Individuels"
         title="Stats joueurs"
-        description={`${players.length} joueurs · ${scorersCount} buteur${scorersCount > 1 ? "s" : ""} issus des temps forts · filtrez par poste ou club.`}
+        description={`${players.length} joueurs · ${scorersCount} buteur${scorersCount > 1 ? "s" : ""} · ${minutesCount} avec temps de jeu (compositions RBFA).`}
       />
 
       {players.length === 0 ? (

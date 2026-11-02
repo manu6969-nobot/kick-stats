@@ -46,9 +46,10 @@ export default async function JoueurPage({
 
   const cards = [
     { label: "Matchs", value: stats?.appearances ?? 0 },
+    { label: "Titulaire", value: stats?.starts ?? 0 },
+    { label: "Minutes", value: stats?.minutes ?? 0 },
     { label: "Buts", value: stats?.goals ?? 0 },
     { label: "Passes D.", value: stats?.assists ?? 0 },
-    { label: "Minutes", value: stats?.minutes ?? 0 },
     { label: "Jaunes", value: stats?.yellowCards ?? 0 },
     { label: "Rouges", value: stats?.redCards ?? 0 },
   ];
@@ -93,9 +94,9 @@ export default async function JoueurPage({
       <section className="animate-rise-delay-1">
         <PageHeader
           title="Saison en cours"
-          description="Chiffres saisis manuellement — idéals pour coller à vos stats réelles."
+          description="Temps de jeu issu des compositions RBFA (titularisations, entrées/sorties, cartons rouges)."
         />
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7">
           {cards.map((card) => (
             <div
               key={card.label}

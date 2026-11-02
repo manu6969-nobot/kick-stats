@@ -66,6 +66,14 @@ export interface MatchOfficial {
   role: OfficialRole;
 }
 
+/** Temps de jeu d’un joueur sur un match (compositions RBFA). */
+export interface MatchAppearance {
+  playerId: PlayerId;
+  teamId: TeamId;
+  started: boolean;
+  minutes: number;
+}
+
 /** Résultat saisi (admin) — superpose le calendrier de base. */
 export interface LiveMatchResult {
   status: MatchStatus;
@@ -73,6 +81,7 @@ export interface LiveMatchResult {
   awayScore: number | null;
   events: MatchEvent[];
   officials?: MatchOfficial[];
+  appearances?: MatchAppearance[];
 }
 
 export interface LiveResultsFile {
@@ -108,6 +117,7 @@ export interface Match {
   attendance?: number;
   events: MatchEvent[];
   officials?: MatchOfficial[];
+  appearances?: MatchAppearance[];
   stats?: MatchStats;
 }
 
@@ -143,6 +153,8 @@ export interface StandingRow {
 export interface PlayerSeasonStats {
   playerId: PlayerId;
   appearances: number;
+  /** Titularisations (onze de départ). */
+  starts: number;
   goals: number;
   assists: number;
   yellowCards: number;

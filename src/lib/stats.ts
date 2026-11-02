@@ -47,6 +47,7 @@ export function getPlayerStats(
   return {
     playerId,
     appearances: Math.max(manual.appearances, derived.appearances),
+    starts: Math.max(manual.starts ?? 0, derived.starts ?? 0),
     goals: Math.max(manual.goals, derived.goals),
     assists: Math.max(manual.assists, derived.assists),
     yellowCards: Math.max(manual.yellowCards, derived.yellowCards),
@@ -357,6 +358,7 @@ export function getAllPlayerSeasonStats(
       byId.set(s.playerId, {
         playerId: s.playerId,
         appearances: Math.max(cur.appearances, s.appearances),
+        starts: Math.max(cur.starts ?? 0, s.starts ?? 0),
         goals: Math.max(cur.goals, s.goals),
         assists: Math.max(cur.assists, s.assists),
         yellowCards: Math.max(cur.yellowCards, s.yellowCards),

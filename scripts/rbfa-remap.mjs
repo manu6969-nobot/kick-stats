@@ -8,6 +8,7 @@
 import { readFileSync, writeFileSync, existsSync } from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { extractAppearances } from "./rbfa-appearances.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const APPLY = process.argv.includes("--apply");
@@ -237,6 +238,11 @@ for (const m of raw.calendar || []) {
   const events = detail
     ? flattenEvents(detail, homeId, awayId, champ.players)
     : [];
+  const appearances = detail
+    ? extractAppearances(detail, homeId, awayId, (teamId, firstName, lastName) =>
+        findPlayerId(champ.players, teamId, firstName, lastName)
+      )
+    : [];
   const officials = (detail?.officials || [])
     .filter((o) => o && o.personAssigned !== false && (o.firstName || o.lastName))
     .map((o) => ({
@@ -250,6 +256,7 @@ for (const m of raw.calendar || []) {
     awayScore: outcome.awayTeamGoals ?? null,
     events,
     officials,
+    appearances,
   };
   mapped.push({
     kickId: kickMatch.id,
