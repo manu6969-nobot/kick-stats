@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { ArrowRight, CalendarDays, ChartColumn, Trophy, Users } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { MatchRow } from "@/components/match-row";
 import { StandingsTable } from "@/components/standings-table";
 import { TeamBadge } from "@/components/team-badge";
 import { buttonVariants } from "@/components/ui/button";
-import { meta, players, teams } from "@/data/championship";
+import { meta, teams } from "@/data/championship";
 import { getMergedMatches } from "@/lib/live-results";
 import {
   computeStandings,
@@ -18,173 +18,216 @@ import { cn } from "@/lib/utils";
 
 export const dynamic = "force-dynamic";
 
+const DESTINATIONS = [
+  {
+    href: "/classement",
+    label: "Classement",
+    text: "Points, différence et forme",
+  },
+  {
+    href: "/calendrier",
+    label: "Calendrier",
+    text: "Résultats et prochaines journées",
+  },
+  {
+    href: "/equipes",
+    label: "Équipes",
+    text: "Fiches clubs et bilans",
+  },
+  {
+    href: "/joueurs",
+    label: "Joueurs",
+    text: "Buteurs, minutes et cartons",
+  },
+  {
+    href: "/stats",
+    label: "Stats",
+    text: "Vue d’ensemble de la saison",
+  },
+] as const;
+
 export default async function HomePage() {
   const allMatches = await getMergedMatches();
   const standings = computeStandings(allMatches);
   const results = getLatestResults(4, allMatches);
-  const upcoming = getUpcomingFixtures(8, allMatches);
-  const scorers = getTopScorers(5, allMatches);
+  const upcoming = getUpcomingFixtures(6, allMatches);
+  const scorers = getTopScorers(5, allMatches).filter((s) => s.stats.goals > 0);
   const matchdayCount = getMatchdays(allMatches).length;
+  const finishedCount = allMatches.filter((m) => m.status === "finished").length;
 
   return (
-    <div className="space-y-12">
-      <section className="relative -mx-4 overflow-hidden sm:-mx-6">
-        <div className="pitch-stripe relative mx-auto max-w-6xl overflow-hidden bg-pitch-deep px-4 py-14 text-white sm:rounded-2xl sm:px-8 sm:py-16">
+    <div className="space-y-16 sm:space-y-20">
+      {/* Hero — composition unique, marque dominante */}
+      <section className="relative left-1/2 w-screen max-w-[100vw] -translate-x-1/2 -mt-8 sm:-mt-10">
+        <div className="pitch-stripe relative min-h-[min(72vh,36rem)] overflow-hidden bg-pitch-deep text-white">
           <div
-            className="pointer-events-none absolute inset-0 opacity-40"
+            className="pointer-events-none absolute inset-0 opacity-50"
             style={{
               backgroundImage:
-                "radial-gradient(circle at 80% 20%, rgba(212,160,23,0.35), transparent 40%), radial-gradient(circle at 20% 80%, rgba(26,92,69,0.5), transparent 45%)",
+                "radial-gradient(ellipse 70% 80% at 85% 20%, rgba(212,160,23,0.28), transparent 55%), radial-gradient(ellipse 60% 70% at 0% 100%, rgba(26,92,69,0.55), transparent 50%)",
             }}
           />
-          <div className="relative z-10 max-w-xl animate-rise">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-score">
-              Saison {meta.season}
-            </p>
-            <h1 className="mt-3 font-display text-5xl font-extrabold leading-[0.95] tracking-tight sm:text-6xl md:text-7xl">
-              {meta.name}
-            </h1>
-            <p className="mt-4 max-w-md text-base text-white/75 sm:text-lg">
-              {meta.tagline}. {teams.length} équipes · {matchdayCount} journées ·{" "}
-              {allMatches.length} matchs au calendrier.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                href="/classement"
-                className={cn(
-                  buttonVariants({ size: "lg" }),
-                  "bg-score text-pitch-deep hover:bg-score/90"
-                )}
-              >
-                Voir le classement
-                <ArrowRight className="size-4" />
-              </Link>
-              <Link
-                href="/calendrier"
-                className={cn(
-                  buttonVariants({ variant: "outline", size: "lg" }),
-                  "border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white"
-                )}
-              >
-                Calendrier
-              </Link>
+          <div className="relative z-10 mx-auto flex min-h-[min(72vh,36rem)] max-w-6xl flex-col justify-end px-4 pb-12 pt-20 sm:px-6 sm:pb-16 sm:pt-24">
+            <div className="animate-rise max-w-2xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-score">
+                Saison {meta.season}
+              </p>
+              <h1 className="mt-4 font-display text-6xl font-extrabold leading-[0.9] tracking-tight sm:text-7xl md:text-8xl">
+                {meta.name}
+              </h1>
+              <p className="mt-5 max-w-lg text-base text-white/75 sm:text-lg">
+                {meta.tagline}.
+              </p>
+              <div className="mt-9 flex flex-wrap gap-3">
+                <Link
+                  href="/classement"
+                  className={cn(
+                    buttonVariants({ size: "lg" }),
+                    "bg-score text-pitch-deep hover:bg-score/90"
+                  )}
+                >
+                  Classement
+                  <ArrowRight className="size-4" />
+                </Link>
+                <Link
+                  href="/calendrier"
+                  className={cn(
+                    buttonVariants({ variant: "outline", size: "lg" }),
+                    "border-white/35 bg-transparent text-white hover:bg-white/10 hover:text-white"
+                  )}
+                >
+                  Calendrier
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="animate-rise-delay-1 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {[
-          {
-            href: "/classement",
-            icon: Trophy,
-            title: "Classement",
-            text: `${standings.length} clubs · points, forme et stats domicile/extérieur`,
-          },
-          {
-            href: "/calendrier",
-            icon: CalendarDays,
-            title: "Calendrier",
-            text: `${matchdayCount} journées · ${allMatches.length} rencontres officielles`,
-          },
-          {
-            href: "/joueurs",
-            icon: Users,
-            title: "Stats joueurs",
-            text:
-              players.length > 0
-                ? "Buteurs, passeurs et fiches individuelles"
-                : "Ajoutez vos joueurs dans championship.ts",
-          },
-          {
-            href: "/stats",
-            icon: ChartColumn,
-            title: "Stats globales",
-            text: "Buts, cartons, clubs, arbitres — tous les critères saison",
-          },
-        ].map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            className="group rounded-xl border border-border/80 bg-card p-5 transition hover:border-primary/35 hover:shadow-md"
-          >
-            <item.icon className="size-5 text-pitch transition group-hover:scale-110" />
-            <h2 className="mt-3 font-display text-xl font-bold">{item.title}</h2>
-            <p className="mt-1 text-sm text-muted-foreground">{item.text}</p>
-          </Link>
-        ))}
+      {/* Navigation métier — pas une grille de cartes icônes */}
+      <section className="animate-rise-delay-1" aria-label="Parcourir le site">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-pitch">
+              Navigation
+            </p>
+            <h2 className="mt-1 font-display text-2xl font-bold sm:text-3xl">
+              Explorer le championnat
+            </h2>
+          </div>
+          <p className="text-sm text-muted-foreground">
+            {teams.length} clubs · {matchdayCount} journées · {finishedCount}{" "}
+            matchs joués
+          </p>
+        </div>
+        <nav className="mt-8 divide-y divide-border/70 border-y border-border/70">
+          {DESTINATIONS.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="group flex items-center justify-between gap-4 py-4 transition hover:bg-pitch/[0.04]"
+            >
+              <div className="min-w-0">
+                <p className="font-display text-xl font-bold tracking-tight text-foreground transition group-hover:text-pitch sm:text-2xl">
+                  {item.label}
+                </p>
+                <p className="mt-0.5 text-sm text-muted-foreground">{item.text}</p>
+              </div>
+              <ArrowRight className="size-5 shrink-0 text-muted-foreground transition group-hover:translate-x-1 group-hover:text-pitch" />
+            </Link>
+          ))}
+        </nav>
       </section>
 
-      <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr]">
-        <section className="animate-rise-delay-2 space-y-4">
+      {/* Classement + buteurs */}
+      <div className="animate-rise-delay-2 grid gap-12 lg:grid-cols-[1.45fr_1fr] lg:gap-14">
+        <section className="space-y-5">
           <div className="flex items-end justify-between gap-4">
-            <h2 className="font-display text-2xl font-bold">Classement</h2>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-pitch">
+                Tableau
+              </p>
+              <h2 className="mt-1 font-display text-2xl font-bold sm:text-3xl">
+                Classement
+              </h2>
+            </div>
             <Link
               href="/classement"
-              className="text-sm font-medium text-pitch hover:underline"
+              className="inline-flex items-center gap-1 text-sm font-medium text-pitch hover:underline"
             >
-              Tableau complet
+              Complet
+              <ArrowRight className="size-3.5" />
             </Link>
           </div>
-          <StandingsTable rows={standings} compact />
+          <StandingsTable rows={standings.slice(0, 8)} compact />
         </section>
 
-        <section className="animate-rise-delay-3 space-y-4">
+        <section className="space-y-5">
           <div className="flex items-end justify-between gap-4">
-            <h2 className="font-display text-2xl font-bold">Meilleurs buteurs</h2>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-pitch">
+                Individuel
+              </p>
+              <h2 className="mt-1 font-display text-2xl font-bold sm:text-3xl">
+                Buteurs
+              </h2>
+            </div>
             <Link
               href="/joueurs"
-              className="text-sm font-medium text-pitch hover:underline"
+              className="inline-flex items-center gap-1 text-sm font-medium text-pitch hover:underline"
             >
-              Tous les joueurs
+              Joueurs
+              <ArrowRight className="size-3.5" />
             </Link>
           </div>
-          {scorers.length === 0 || scorers.every((s) => s.stats.goals === 0) ? (
-            <p className="rounded-xl border border-dashed border-border bg-card px-4 py-8 text-center text-sm text-muted-foreground">
-              Les buteurs apparaîtront dès l&apos;encodage des buts dans{" "}
-              <Link href="/admin" className="underline">
-                l&apos;admin
-              </Link>
-              .
+          {scorers.length === 0 ? (
+            <p className="border-y border-dashed border-border py-10 text-center text-sm text-muted-foreground">
+              Les buteurs apparaîtront dès les premiers résultats encodés.
             </p>
           ) : (
-            <ol className="overflow-hidden rounded-xl border border-border/80 bg-card shadow-sm">
-              {scorers
-                .filter((s) => s.stats.goals > 0)
-                .map(({ player, team, stats }, index) => (
-                  <li key={player.id}>
-                    <Link
-                      href={`/joueurs/${player.id}`}
-                      className="flex items-center gap-3 border-b border-border/60 px-4 py-3 last:border-0 hover:bg-muted/50"
-                    >
-                      <span className="w-5 font-display text-lg font-bold text-muted-foreground">
-                        {index + 1}
-                      </span>
-                      <TeamBadge team={team} size="sm" />
-                      <div className="min-w-0 flex-1">
-                        <p className="truncate font-medium">
-                          {playerDisplayName(player)}
-                        </p>
-                        <p className="truncate text-xs text-muted-foreground">
-                          {team.name}
-                        </p>
-                      </div>
-                      <span className="font-display text-xl font-bold tabular-nums text-pitch">
-                        {stats.goals}
-                      </span>
-                    </Link>
-                  </li>
-                ))}
+            <ol className="divide-y divide-border/70 border-y border-border/70">
+              {scorers.map(({ player, team, stats }, index) => (
+                <li key={player.id}>
+                  <Link
+                    href={`/joueurs/${player.id}`}
+                    className="flex items-center gap-3 py-3.5 transition hover:bg-pitch/[0.04]"
+                  >
+                    <span className="w-6 font-display text-lg font-bold tabular-nums text-muted-foreground">
+                      {index + 1}
+                    </span>
+                    <TeamBadge team={team} size="sm" />
+                    <div className="min-w-0 flex-1">
+                      <p className="truncate font-medium">
+                        {playerDisplayName(player)}
+                      </p>
+                      <p className="truncate text-xs text-muted-foreground">
+                        {team.shortName}
+                      </p>
+                    </div>
+                    <span className="font-display text-2xl font-bold tabular-nums text-pitch">
+                      {stats.goals}
+                    </span>
+                  </Link>
+                </li>
+              ))}
             </ol>
           )}
         </section>
       </div>
 
-      <div className="grid gap-10 lg:grid-cols-2">
-        <section className="space-y-4">
-          <h2 className="font-display text-2xl font-bold">Derniers résultats</h2>
+      {/* Résultats & prochaines rencontres */}
+      <div className="animate-rise-delay-3 grid gap-12 lg:grid-cols-2 lg:gap-14">
+        <section className="space-y-5">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-pitch">
+              Récents
+            </p>
+            <h2 className="mt-1 font-display text-2xl font-bold sm:text-3xl">
+              Derniers résultats
+            </h2>
+          </div>
           {results.length === 0 ? (
-            <p className="rounded-xl border border-dashed border-border bg-card px-4 py-8 text-center text-sm text-muted-foreground">
+            <p className="border-y border-dashed border-border py-10 text-center text-sm text-muted-foreground">
               Saison pas encore commencée — les scores apparaîtront ici.
             </p>
           ) : (
@@ -195,21 +238,36 @@ export default async function HomePage() {
             </div>
           )}
         </section>
-        <section className="space-y-4">
+
+        <section className="space-y-5">
           <div className="flex items-end justify-between gap-4">
-            <h2 className="font-display text-2xl font-bold">Prochains matchs</h2>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-pitch">
+                À venir
+              </p>
+              <h2 className="mt-1 font-display text-2xl font-bold sm:text-3xl">
+                Prochains matchs
+              </h2>
+            </div>
             <Link
               href="/calendrier"
-              className="text-sm font-medium text-pitch hover:underline"
+              className="inline-flex items-center gap-1 text-sm font-medium text-pitch hover:underline"
             >
-              Calendrier complet
+              Calendrier
+              <ArrowRight className="size-3.5" />
             </Link>
           </div>
-          <div className="space-y-2">
-            {upcoming.map((match) => (
-              <MatchRow key={match.id} match={match} />
-            ))}
-          </div>
+          {upcoming.length === 0 ? (
+            <p className="border-y border-dashed border-border py-10 text-center text-sm text-muted-foreground">
+              Aucun match programmé pour le moment.
+            </p>
+          ) : (
+            <div className="space-y-2">
+              {upcoming.map((match) => (
+                <MatchRow key={match.id} match={match} />
+              ))}
+            </div>
+          )}
         </section>
       </div>
     </div>
