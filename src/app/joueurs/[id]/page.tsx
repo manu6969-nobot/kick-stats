@@ -47,12 +47,17 @@ export default async function JoueurPage({
   const secondYellows = stats?.secondYellows ?? 0;
   const redDirect = Math.max(0, (stats?.redCards ?? 0) - secondYellows);
   const assists = stats?.assists ?? 0;
+  const appearances = stats?.appearances ?? 0;
+  const minutes = stats?.minutes ?? 0;
+  const avgMinutes =
+    appearances > 0 ? Math.round(minutes / appearances) : 0;
   const cards = [
-    { label: "Matchs", value: stats?.appearances ?? 0 },
+    { label: "Matchs", value: appearances },
     { label: "Titulaire", value: stats?.starts ?? 0 },
     { label: "Entrées", value: stats?.subsIn ?? 0 },
     { label: "Sorties", value: stats?.subsOut ?? 0 },
-    { label: "Minutes", value: stats?.minutes ?? 0 },
+    { label: "Minutes", value: minutes },
+    { label: "Moy./match", value: avgMinutes },
     { label: "Buts", value: stats?.goals ?? 0 },
     ...(assists > 0 ? [{ label: "Passes D.", value: assists }] : []),
     { label: "Jaunes", value: stats?.yellowCards ?? 0 },

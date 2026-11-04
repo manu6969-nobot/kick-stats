@@ -45,15 +45,10 @@ type MainTab = "effectif" | "buteurs" | "passeurs" | "temps" | "cartons";
 /** Limite initiale du DOM sur mobile / listes longues. */
 const PAGE_SIZE = 40;
 
-function avgMinutes(row: PlayerRow) {
-  return row.appearances > 0 ? row.minutes / row.appearances : 0;
-}
-
-function fmtAvg(n: number) {
-  return n.toLocaleString("fr-BE", {
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 1,
-  });
+/** Moyenne de minutes / match, arrondie à l’entier. */
+function avgMinutesRounded(row: PlayerRow) {
+  if (row.appearances <= 0) return 0;
+  return Math.round(row.minutes / row.appearances);
 }
 
 function buildRows(seasonStats: PlayerSeasonStats[]): PlayerRow[] {
@@ -512,12 +507,14 @@ function MinutesTable({ rows }: { rows: PlayerRow[] }) {
               <TableHead className="hidden sm:table-cell">Équipe</TableHead>
               <TableHead className="hidden text-center md:table-cell">MJ</TableHead>
               <TableHead className="hidden text-center md:table-cell">Tit.</TableHead>
-              <TableHead className="text-center">Entrées</TableHead>
-              <TableHead className="text-center">Sorties</TableHead>
-              <TableHead className="text-center">Min</TableHead>
-              <TableHead className="hidden text-center lg:table-cell">
-                Moy./match
+              <TableHead className="hidden text-center sm:table-cell">
+                Entrées
               </TableHead>
+              <TableHead className="hidden text-center sm:table-cell">
+                Sorties
+              </TableHead>
+              <TableHead className="text-center">Min</TableHead>
+              <TableHead className="text-center">Moy.</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -531,6 +528,7 @@ function MinutesTable({ rows }: { rows: PlayerRow[] }) {
                 subsOut,
                 minutes,
               } = row;
+              const avg = avgMinutesRounded(row);
               return (
                 <TableRow key={player.id} className="content-auto">
                   <TableCell className="text-center font-display font-bold text-muted-foreground">
@@ -546,6 +544,9 @@ function MinutesTable({ rows }: { rows: PlayerRow[] }) {
                     <p className="mt-0.5 flex items-center gap-1.5 text-xs text-muted-foreground sm:hidden">
                       <TeamBadge team={team} size="sm" />
                       {team.shortName} · {appearances} MJ
+                      {subsIn > 0 || subsOut > 0
+                        ? ` · +${subsIn}/−${subsOut}`
+                        : ""}
                     </p>
                   </TableCell>
                   <TableCell className="hidden sm:table-cell">
@@ -560,17 +561,17 @@ function MinutesTable({ rows }: { rows: PlayerRow[] }) {
                   <TableCell className="hidden text-center tabular-nums md:table-cell">
                     {starts}
                   </TableCell>
-                  <TableCell className="text-center tabular-nums text-[#1a9e3f]">
+                  <TableCell className="hidden text-center tabular-nums text-[#1a9e3f] sm:table-cell">
                     {subsIn}
                   </TableCell>
-                  <TableCell className="text-center tabular-nums text-loss">
+                  <TableCell className="hidden text-center tabular-nums text-loss sm:table-cell">
                     {subsOut}
                   </TableCell>
                   <TableCell className="text-center font-display text-lg font-bold tabular-nums text-pitch">
                     {minutes}
                   </TableCell>
-                  <TableCell className="hidden text-center tabular-nums text-muted-foreground lg:table-cell">
-                    {fmtAvg(avgMinutes(row))}
+                  <TableCell className="text-center font-display tabular-nums text-muted-foreground">
+                    {avg}
                   </TableCell>
                 </TableRow>
               );
