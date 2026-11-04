@@ -73,7 +73,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="animate-rise-delay-1 grid gap-4 sm:grid-cols-3">
+      <section className="animate-rise-delay-1 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {[
           {
             href: "/classement",
@@ -95,6 +95,12 @@ export default async function HomePage() {
               players.length > 0
                 ? "Buteurs, passeurs et fiches individuelles"
                 : "Ajoutez vos joueurs dans championship.ts",
+          },
+          {
+            href: "/stats",
+            icon: ChartColumn,
+            title: "Stats globales",
+            text: "Buts, cartons, clubs, arbitres — tous les critères saison",
           },
         ].map((item) => (
           <Link

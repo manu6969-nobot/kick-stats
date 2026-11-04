@@ -8,8 +8,7 @@ export function SiteFooter() {
         <div>
           <p className="font-display text-2xl font-bold tracking-wide">{meta.name}</p>
           <p className="mt-1 max-w-md text-sm text-white/60">
-            Statistiques, calendrier et classement — {meta.season}. Modifiez les
-            données dans <code className="text-score">src/data/championship.ts</code>.
+            Statistiques, calendrier et classement — saison {meta.season}.
           </p>
         </div>
         <div className="flex flex-wrap gap-4 text-sm text-white/70">

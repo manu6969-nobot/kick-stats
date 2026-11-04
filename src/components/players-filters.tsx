@@ -146,6 +146,26 @@ export function PlayersFilters({
   );
 
   const selectedTeam = TEAMS_SORTED.find((t) => t.id === teamId);
+  const showAssists = assistsLeaders.length > 0;
+  const activeTab =
+    tab === "passeurs" && !showAssists ? "buteurs" : tab;
+
+  const tabs = (
+    [
+      { id: "buteurs" as const, label: `Buteurs (${scorers.length})` },
+      ...(showAssists
+        ? [
+            {
+              id: "passeurs" as const,
+              label: `Passeurs (${assistsLeaders.length})`,
+            },
+          ]
+        : []),
+      { id: "temps" as const, label: `Temps de jeu (${minutesLeaders.length})` },
+      { id: "cartons" as const, label: `Cartons (${cardsLeaders.length})` },
+      { id: "effectif" as const, label: `Effectif (${allRows.length})` },
+    ] as const
+  );
 
   return (
     <div className="space-y-6">
@@ -154,24 +174,16 @@ export function PlayersFilters({
         aria-label="Vues joueurs"
         className="inline-flex h-auto flex-wrap gap-1 rounded-lg bg-muted/80 p-1"
       >
-        {(
-          [
-            { id: "buteurs", label: `Buteurs (${scorers.length})` },
-            { id: "passeurs", label: `Passeurs (${assistsLeaders.length})` },
-            { id: "temps", label: `Temps de jeu (${minutesLeaders.length})` },
-            { id: "cartons", label: `Cartons (${cardsLeaders.length})` },
-            { id: "effectif", label: `Effectif (${allRows.length})` },
-          ] as const
-        ).map((item) => (
+        {tabs.map((item) => (
           <button
             key={item.id}
             type="button"
             role="tab"
-            aria-selected={tab === item.id}
+            aria-selected={activeTab === item.id}
             onClick={() => setTab(item.id)}
             className={cn(
               "rounded-md px-3 py-1.5 text-sm font-medium transition",
-              tab === item.id
+              activeTab === item.id
                 ? "bg-background text-foreground shadow-sm"
                 : "text-muted-foreground hover:text-foreground"
             )}
@@ -181,7 +193,7 @@ export function PlayersFilters({
         ))}
       </div>
 
-      {tab === "effectif" && (
+      {activeTab === "effectif" && (
         <div className="space-y-4">
           <div className="space-y-3">
             <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
@@ -267,28 +279,29 @@ export function PlayersFilters({
         </div>
       )}
 
-      {tab === "buteurs" &&
+      {activeTab === "buteurs" &&
         (scorers.length === 0 ? (
           <EmptyStats message="Aucun buteur enregistré pour l’instant. Les buts apparaîtront ici dès que les stats joueurs seront saisies." />
         ) : (
-          <LeaderTable rows={scorers} mode="goals" />
+          <LeaderTable rows={scorers} mode="goals" showAssists={showAssists} />
         ))}
 
-      {tab === "passeurs" &&
-        (assistsLeaders.length === 0 ? (
-          <EmptyStats message="Aucune passe décisive enregistrée pour l’instant." />
-        ) : (
-          <LeaderTable rows={assistsLeaders} mode="assists" />
-        ))}
+      {activeTab === "passeurs" && showAssists && (
+        <LeaderTable
+          rows={assistsLeaders}
+          mode="assists"
+          showAssists={showAssists}
+        />
+      )}
 
-      {tab === "temps" &&
+      {activeTab === "temps" &&
         (minutesLeaders.length === 0 ? (
           <EmptyStats message="Aucun temps de jeu calculé pour l’instant." />
         ) : (
           <MinutesTable rows={minutesLeaders} />
         ))}
 
-      {tab === "cartons" &&
+      {activeTab === "cartons" &&
         (cardsLeaders.length === 0 ? (
           <EmptyStats message="Aucun carton enregistré pour l’instant." />
         ) : (
@@ -363,9 +376,11 @@ function PlayersTable({ rows }: { rows: PlayerRow[] }) {
 function LeaderTable({
   rows,
   mode,
+  showAssists,
 }: {
   rows: PlayerRow[];
   mode: "goals" | "assists";
+  showAssists: boolean;
 }) {
   return (
     <div className="overflow-x-auto rounded-xl border border-border/80 bg-card shadow-sm">
@@ -376,7 +391,9 @@ function LeaderTable({
             <TableHead>Joueur</TableHead>
             <TableHead>Équipe</TableHead>
             <TableHead className="text-center">Buts</TableHead>
-            <TableHead className="text-center">Passes</TableHead>
+            {showAssists && (
+              <TableHead className="text-center">Passes</TableHead>
+            )}
             <TableHead className="text-center">MJ</TableHead>
             <TableHead className="text-center">Min</TableHead>
           </TableRow>
@@ -411,14 +428,16 @@ function LeaderTable({
                 >
                   {goals}
                 </TableCell>
-                <TableCell
-                  className={cn(
-                    "text-center font-display tabular-nums",
-                    mode === "assists" && "text-lg font-bold text-pitch"
-                  )}
-                >
-                  {assists}
-                </TableCell>
+                {showAssists && (
+                  <TableCell
+                    className={cn(
+                      "text-center font-display tabular-nums",
+                      mode === "assists" && "text-lg font-bold text-pitch"
+                    )}
+                  >
+                    {assists}
+                  </TableCell>
+                )}
                 <TableCell className="text-center tabular-nums">
                   {appearances}
                 </TableCell>

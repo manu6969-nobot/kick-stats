@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { PageHeader } from "@/components/page-header";
+import { StatsOverviewKpis } from "@/components/stats-overview-kpis";
 import { TeamBadge } from "@/components/team-badge";
 import {
   Table,
@@ -18,7 +19,6 @@ import {
   type LeaderRow,
 } from "@/lib/global-stats";
 import { getTeam } from "@/lib/stats";
-import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 
 export const dynamic = "force-dynamic";
@@ -26,37 +26,6 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "Stats globales",
 };
-
-function Kpi({
-  label,
-  value,
-  hint,
-  accent,
-}: {
-  label: string;
-  value: string | number;
-  hint?: string;
-  accent?: string;
-}) {
-  return (
-    <div className="rounded-xl border border-border/80 bg-card px-4 py-4 text-center shadow-sm">
-      <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-        {label}
-      </p>
-      <p
-        className={cn(
-          "mt-1 font-display text-3xl font-extrabold tabular-nums",
-          accent
-        )}
-      >
-        {value}
-      </p>
-      {hint && (
-        <p className="mt-1 text-xs text-muted-foreground">{hint}</p>
-      )}
-    </div>
-  );
-}
 
 function Section({
   title,
@@ -170,33 +139,53 @@ export default async function StatsGlobalesPage() {
         title="Vue d’ensemble"
         description="Volumes et moyennes de la saison en cours."
       >
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
-          <Kpi label="Matchs joués" value={o.finished} hint={`${o.scheduled} à venir`} />
-          <Kpi label="Buts" value={o.goals} hint={`${fmt1(o.goalsPerMatch)} / match`} accent="text-pitch" />
-          <Kpi label="Buts domicile" value={o.homeGoals} />
-          <Kpi label="Buts extérieur" value={o.awayGoals} />
-          <Kpi label="Jaunes" value={o.yellowCards} hint={`${fmt1(o.yellowPerMatch)} / match`} accent="text-draw" />
-          <Kpi
-            label="Rouges"
-            value={o.redTotal}
-            hint={`${o.redDirect} directs · ${o.secondYellows} 2e j.`}
-            accent="text-loss"
-          />
-          <Kpi label="Pénaltys" value={o.penalties} />
-          <Kpi label="CSC" value={o.ownGoals} />
-          <Kpi label="Clean sheets" value={o.cleanSheets} hint="par équipe-match" />
-          <Kpi label="0-0" value={o.goallessDraws} />
-          <Kpi
-            label="Victoires dom."
-            value={o.homeWins}
-            hint={fmtPct(o.homeWins, o.finished)}
-          />
-          <Kpi
-            label="Nuls / Ext."
-            value={`${o.draws} / ${o.awayWins}`}
-            hint={`${fmtPct(o.draws, o.finished)} nuls · ${fmtPct(o.awayWins, o.finished)} ext.`}
-          />
-        </div>
+        <StatsOverviewKpis
+          items={[
+            {
+              label: "Matchs joués",
+              value: o.finished,
+              hint: `${o.scheduled} à venir`,
+            },
+            {
+              label: "Buts",
+              value: o.goals,
+              hint: `${fmt1(o.goalsPerMatch)} / match`,
+              accent: "text-pitch",
+            },
+            {
+              label: "Jaunes",
+              value: o.yellowCards,
+              hint: `${fmt1(o.yellowPerMatch)} / match`,
+              accent: "text-draw",
+            },
+            {
+              label: "Rouges",
+              value: o.redTotal,
+              hint: `${o.redDirect} directs · ${o.secondYellows} 2e j.`,
+              accent: "text-loss",
+            },
+            {
+              label: "Victoires dom.",
+              value: o.homeWins,
+              hint: fmtPct(o.homeWins, o.finished),
+            },
+            {
+              label: "Nuls / Ext.",
+              value: `${o.draws} / ${o.awayWins}`,
+              hint: `${fmtPct(o.draws, o.finished)} nuls · ${fmtPct(o.awayWins, o.finished)} ext.`,
+            },
+            { label: "Buts domicile", value: o.homeGoals },
+            { label: "Buts extérieur", value: o.awayGoals },
+            { label: "Pénaltys", value: o.penalties },
+            { label: "CSC", value: o.ownGoals },
+            {
+              label: "Clean sheets",
+              value: o.cleanSheets,
+              hint: "par équipe-match",
+            },
+            { label: "0-0", value: o.goallessDraws },
+          ]}
+        />
       </Section>
 
       <Section title="Extrêmes" description="Matchs les plus marquants.">
@@ -288,14 +277,18 @@ export default async function StatsGlobalesPage() {
             title="Buteurs"
             rows={stats.players.scorers}
             primaryLabel="Buts"
-            secondaryLabel="Passes"
+            secondaryLabel={
+              stats.players.assists.length > 0 ? "Passes" : undefined
+            }
           />
-          <LeaderBoard
-            title="Passeurs"
-            rows={stats.players.assists}
-            primaryLabel="Passes"
-            secondaryLabel="Buts"
-          />
+          {stats.players.assists.length > 0 && (
+            <LeaderBoard
+              title="Passeurs"
+              rows={stats.players.assists}
+              primaryLabel="Passes"
+              secondaryLabel="Buts"
+            />
+          )}
           <LeaderBoard
             title="Temps de jeu"
             rows={stats.players.minutes}
@@ -318,6 +311,10 @@ export default async function StatsGlobalesPage() {
         <p className="text-sm text-muted-foreground">
           <Link href="/joueurs" className="hover:text-primary">
             Classements joueurs complets →
+          </Link>
+          {" · "}
+          <Link href="/arbitres" className="hover:text-primary">
+            Arbitres →
           </Link>
         </p>
       </Section>

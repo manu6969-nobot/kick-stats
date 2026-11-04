@@ -8,13 +8,12 @@ import { meta } from "@/data/championship";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
+/** Primary nav (5 max) — Accueil = logo ; Arbitres via /stats + footer. */
 const links = [
-  { href: "/", label: "Accueil" },
   { href: "/classement", label: "Classement" },
   { href: "/calendrier", label: "Calendrier" },
   { href: "/equipes", label: "Équipes" },
   { href: "/joueurs", label: "Joueurs" },
-  { href: "/arbitres", label: "Arbitres" },
   { href: "/stats", label: "Stats" },
 ];
 
