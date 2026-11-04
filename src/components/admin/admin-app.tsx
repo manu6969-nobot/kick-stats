@@ -195,14 +195,14 @@ export function AdminApp() {
       >
         <h1 className="font-display text-2xl font-bold">Admin P1 Luxembourg</h1>
         <p className="text-sm text-muted-foreground">
-          Mot de passe par défaut : <code>p1admin</code> (variable{" "}
-          <code>ADMIN_PASSWORD</code> sur Vercel).
+          Accès réservé — mot de passe défini via la configuration serveur.
         </p>
         <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Mot de passe"
+          autoComplete="current-password"
           className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
           autoFocus
         />
