@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, CalendarDays, Trophy, Users } from "lucide-react";
+import { ArrowRight, CalendarDays, ChartColumn, Trophy, Users } from "lucide-react";
 import { MatchRow } from "@/components/match-row";
 import { StandingsTable } from "@/components/standings-table";
 import { TeamBadge } from "@/components/team-badge";
