@@ -23,6 +23,8 @@ type PlayerRow = {
   assists: number;
   appearances: number;
   starts: number;
+  subsIn: number;
+  subsOut: number;
   minutes: number;
   yellowCards: number;
   secondYellows: number;
@@ -67,6 +69,8 @@ function buildRows(seasonStats: PlayerSeasonStats[]): PlayerRow[] {
         assists: stats?.assists ?? 0,
         appearances: stats?.appearances ?? 0,
         starts: stats?.starts ?? 0,
+        subsIn: stats?.subsIn ?? 0,
+        subsOut: stats?.subsOut ?? 0,
         minutes: stats?.minutes ?? 0,
         yellowCards: stats?.yellowCards ?? 0,
         secondYellows: stats?.secondYellows ?? 0,
@@ -464,13 +468,23 @@ function MinutesTable({ rows }: { rows: PlayerRow[] }) {
             <TableHead>Équipe</TableHead>
             <TableHead className="text-center">MJ</TableHead>
             <TableHead className="text-center">Tit.</TableHead>
+            <TableHead className="text-center">Entrées</TableHead>
+            <TableHead className="text-center">Sorties</TableHead>
             <TableHead className="text-center">Min</TableHead>
             <TableHead className="text-center">Moy./match</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {rows.map((row, index) => {
-            const { player, team, appearances, starts, minutes } = row;
+            const {
+              player,
+              team,
+              appearances,
+              starts,
+              subsIn,
+              subsOut,
+              minutes,
+            } = row;
             return (
               <TableRow key={player.id}>
                 <TableCell className="text-center font-display font-bold text-muted-foreground">
@@ -498,6 +512,12 @@ function MinutesTable({ rows }: { rows: PlayerRow[] }) {
                 </TableCell>
                 <TableCell className="text-center tabular-nums">
                   {starts}
+                </TableCell>
+                <TableCell className="text-center tabular-nums text-[#1a9e3f]">
+                  {subsIn}
+                </TableCell>
+                <TableCell className="text-center tabular-nums text-loss">
+                  {subsOut}
                 </TableCell>
                 <TableCell className="text-center font-display text-lg font-bold tabular-nums text-pitch">
                   {minutes}

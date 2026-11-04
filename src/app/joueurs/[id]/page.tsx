@@ -50,6 +50,8 @@ export default async function JoueurPage({
   const cards = [
     { label: "Matchs", value: stats?.appearances ?? 0 },
     { label: "Titulaire", value: stats?.starts ?? 0 },
+    { label: "Entrées", value: stats?.subsIn ?? 0 },
+    { label: "Sorties", value: stats?.subsOut ?? 0 },
     { label: "Minutes", value: stats?.minutes ?? 0 },
     { label: "Buts", value: stats?.goals ?? 0 },
     ...(assists > 0 ? [{ label: "Passes D.", value: assists }] : []),
@@ -81,26 +83,20 @@ export default async function JoueurPage({
             </Link>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-3 text-sm sm:text-right">
-          <div>
-            <p className="text-muted-foreground">Nationalité</p>
-            <p className="font-semibold">{player.nationality}</p>
+        {player.age > 0 && (
+          <div className="text-sm sm:text-right">
+            <p className="text-muted-foreground">Âge</p>
+            <p className="font-semibold">{player.age} ans</p>
           </div>
-          {player.age > 0 && (
-            <div>
-              <p className="text-muted-foreground">Âge</p>
-              <p className="font-semibold">{player.age} ans</p>
-            </div>
-          )}
-        </div>
+        )}
       </div>
 
       <section className="animate-rise-delay-1">
         <PageHeader
           title="Saison en cours"
-          description="Temps de jeu issu des compositions RBFA (titularisations, entrées/sorties, cartons rouges)."
+          description="Temps de jeu issu des compositions RBFA (titularisations, entrées/sorties, cartons)."
         />
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-8">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
           {cards.map((card) => (
             <div
               key={card.label}

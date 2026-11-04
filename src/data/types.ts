@@ -155,6 +155,10 @@ export interface PlayerSeasonStats {
   appearances: number;
   /** Titularisations (onze de départ). */
   starts: number;
+  /** Entrées en cours de match (remplaçant). */
+  subsIn: number;
+  /** Sorties en cours de match. */
+  subsOut: number;
   goals: number;
   assists: number;
   yellowCards: number;

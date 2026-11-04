@@ -119,6 +119,8 @@ export function computePlayerStatsFromMatches(
         playerId,
         appearances: 0,
         starts: 0,
+        subsIn: 0,
+        subsOut: 0,
         goals: 0,
         assists: 0,
         yellowCards: 0,
@@ -159,6 +161,8 @@ export function computePlayerStatsFromMatches(
     for (const ev of match.events) {
       if (ev.type === "goal" && ev.playerId) ensure(ev.playerId).goals += 1;
       if (ev.assistId) ensure(ev.assistId).assists += 1;
+      if (ev.type === "sub_in" && ev.playerId) ensure(ev.playerId).subsIn += 1;
+      if (ev.type === "sub_out" && ev.playerId) ensure(ev.playerId).subsOut += 1;
       if (ev.type === "yellow" && ev.playerId) ensure(ev.playerId).yellowCards += 1;
       if (ev.type === "second_yellow" && ev.playerId) {
         const row = ensure(ev.playerId);
