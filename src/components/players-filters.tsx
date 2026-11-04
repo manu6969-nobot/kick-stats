@@ -42,6 +42,9 @@ const POSITIONS = [
 type PosFilter = (typeof POSITIONS)[number]["id"];
 type MainTab = "effectif" | "buteurs" | "passeurs" | "temps" | "cartons";
 
+/** Limite initiale du DOM sur mobile / listes longues. */
+const PAGE_SIZE = 40;
+
 function avgMinutes(row: PlayerRow) {
   return row.appearances > 0 ? row.minutes / row.appearances : 0;
 }
@@ -86,6 +89,25 @@ function buildRows(seasonStats: PlayerSeasonStats[]): PlayerRow[] {
 }
 
 const TEAMS_SORTED = [...teams].sort((a, b) => a.name.localeCompare(b.name, "fr"));
+
+function usePagedRows<T>(rows: T[]) {
+  const [limit, setLimit] = useState(PAGE_SIZE);
+  const visible = rows.slice(0, limit);
+  const remaining = rows.length - visible.length;
+  const showMore =
+    remaining > 0 ? (
+      <div className="flex justify-center pt-3">
+        <button
+          type="button"
+          onClick={() => setLimit((n) => n + PAGE_SIZE)}
+          className="min-h-11 rounded-md border border-border/80 bg-card px-4 text-sm font-medium text-foreground transition hover:border-primary/40"
+        >
+          Voir plus ({remaining} restant{remaining > 1 ? "s" : ""})
+        </button>
+      </div>
+    ) : null;
+  return { visible, showMore };
+}
 
 export function PlayersFilters({
   seasonStats,
@@ -176,7 +198,7 @@ export function PlayersFilters({
       <div
         role="tablist"
         aria-label="Vues joueurs"
-        className="inline-flex h-auto flex-wrap gap-1 rounded-lg bg-muted/80 p-1"
+        className="scroll-fade-x scrollbar-none -mx-4 flex gap-1 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:rounded-lg sm:bg-muted/80 sm:p-1 sm:px-1"
       >
         {tabs.map((item) => (
           <button
@@ -186,10 +208,10 @@ export function PlayersFilters({
             aria-selected={activeTab === item.id}
             onClick={() => setTab(item.id)}
             className={cn(
-              "rounded-md px-3 py-1.5 text-sm font-medium transition",
+              "min-h-11 shrink-0 rounded-md px-3 py-2 text-sm font-medium whitespace-nowrap transition sm:min-h-0 sm:py-1.5",
               activeTab === item.id
-                ? "bg-background text-foreground shadow-sm"
-                : "text-muted-foreground hover:text-foreground"
+                ? "bg-primary text-primary-foreground shadow-sm sm:bg-background sm:text-foreground"
+                : "bg-muted/80 text-muted-foreground hover:text-foreground sm:bg-transparent"
             )}
           >
             {item.label}
@@ -203,7 +225,7 @@ export function PlayersFilters({
             <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               Poste
             </p>
-            <div className="flex flex-wrap gap-1.5">
+            <div className="scroll-fade-x scrollbar-none -mx-4 flex gap-1.5 overflow-x-auto px-4 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0">
               {POSITIONS.map((pos) => {
                 const count =
                   pos.id === "all"
@@ -215,7 +237,7 @@ export function PlayersFilters({
                     type="button"
                     onClick={() => setPosition(pos.id)}
                     className={cn(
-                      "rounded-md border px-3 py-1.5 text-sm font-medium transition",
+                      "min-h-11 shrink-0 rounded-md border px-3 py-1.5 text-sm font-medium whitespace-nowrap transition sm:min-h-0",
                       position === pos.id
                         ? "border-primary bg-primary text-primary-foreground"
                         : "border-border/80 bg-card text-muted-foreground hover:border-primary/40 hover:text-foreground"
@@ -233,12 +255,12 @@ export function PlayersFilters({
             <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               Équipe
             </p>
-            <div className="flex flex-wrap gap-1.5">
+            <div className="scroll-fade-x scrollbar-none -mx-4 flex gap-1.5 overflow-x-auto px-4 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0">
               <button
                 type="button"
                 onClick={() => setTeamId("all")}
                 className={cn(
-                  "rounded-md border px-3 py-1.5 text-sm font-medium transition",
+                  "min-h-11 shrink-0 rounded-md border px-3 py-1.5 text-sm font-medium transition sm:min-h-0",
                   teamId === "all"
                     ? "border-primary bg-primary text-primary-foreground"
                     : "border-border/80 bg-card text-muted-foreground hover:border-primary/40 hover:text-foreground"
@@ -252,7 +274,7 @@ export function PlayersFilters({
                   type="button"
                   onClick={() => setTeamId(team.id)}
                   className={cn(
-                    "inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1.5 text-sm font-medium transition",
+                    "inline-flex min-h-11 shrink-0 items-center gap-1.5 rounded-md border px-2.5 py-1.5 text-sm font-medium transition sm:min-h-0",
                     teamId === team.id
                       ? "border-primary bg-primary text-primary-foreground"
                       : "border-border/80 bg-card text-muted-foreground hover:border-primary/40 hover:text-foreground"
@@ -324,6 +346,8 @@ function EmptyStats({ message }: { message: string }) {
 }
 
 function PlayersTable({ rows }: { rows: PlayerRow[] }) {
+  const { visible, showMore } = usePagedRows(rows);
+
   if (rows.length === 0) {
     return (
       <p className="rounded-xl border border-dashed border-border bg-card px-4 py-10 text-center text-sm text-muted-foreground">
@@ -333,46 +357,52 @@ function PlayersTable({ rows }: { rows: PlayerRow[] }) {
   }
 
   return (
-    <div className="overflow-x-auto rounded-xl border border-border/80 bg-card shadow-sm">
-      <Table>
-        <TableHeader>
-          <TableRow className="hover:bg-transparent">
-            <TableHead className="w-12 text-center">N°</TableHead>
-            <TableHead>Joueur</TableHead>
-            <TableHead>Équipe</TableHead>
-            <TableHead>Poste</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {rows.map(({ player, team }) => (
-            <TableRow key={player.id}>
-              <TableCell className="text-center font-display font-bold tabular-nums text-muted-foreground">
-                {player.number}
-              </TableCell>
-              <TableCell>
-                <Link
-                  href={`/joueurs/${player.id}`}
-                  className="font-medium hover:text-primary"
-                >
-                  {playerDisplayName(player)}
-                </Link>
-              </TableCell>
-              <TableCell>
-                <Link
-                  href={`/equipes/${team.id}`}
-                  className="flex items-center gap-2 hover:text-primary"
-                >
-                  <TeamBadge team={team} size="sm" />
-                  <span className="text-sm">{team.shortName}</span>
-                </Link>
-              </TableCell>
-              <TableCell className="text-muted-foreground">
-                {positionLabel(player.position)}
-              </TableCell>
+    <div>
+      <div className="overflow-x-auto rounded-xl border border-border/80 bg-card shadow-sm">
+        <Table>
+          <TableHeader>
+            <TableRow className="hover:bg-transparent">
+              <TableHead className="w-12 text-center">N°</TableHead>
+              <TableHead>Joueur</TableHead>
+              <TableHead>Équipe</TableHead>
+              <TableHead className="hidden sm:table-cell">Poste</TableHead>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+          </TableHeader>
+          <TableBody>
+            {visible.map(({ player, team }) => (
+              <TableRow key={player.id} className="content-auto">
+                <TableCell className="text-center font-display font-bold tabular-nums text-muted-foreground">
+                  {player.number}
+                </TableCell>
+                <TableCell>
+                  <Link
+                    href={`/joueurs/${player.id}`}
+                    className="font-medium hover:text-primary"
+                  >
+                    {playerDisplayName(player)}
+                  </Link>
+                  <p className="text-xs text-muted-foreground sm:hidden">
+                    {positionLabel(player.position)}
+                  </p>
+                </TableCell>
+                <TableCell>
+                  <Link
+                    href={`/equipes/${team.id}`}
+                    className="flex items-center gap-2 hover:text-primary"
+                  >
+                    <TeamBadge team={team} size="sm" />
+                    <span className="text-sm">{team.shortName}</span>
+                  </Link>
+                </TableCell>
+                <TableCell className="hidden text-muted-foreground sm:table-cell">
+                  {positionLabel(player.position)}
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
+      {showMore}
     </div>
   );
 }
@@ -386,219 +416,245 @@ function LeaderTable({
   mode: "goals" | "assists";
   showAssists: boolean;
 }) {
+  const { visible, showMore } = usePagedRows(rows);
+
   return (
-    <div className="overflow-x-auto rounded-xl border border-border/80 bg-card shadow-sm">
-      <Table>
-        <TableHeader>
-          <TableRow className="hover:bg-transparent">
-            <TableHead className="w-10 text-center">#</TableHead>
-            <TableHead>Joueur</TableHead>
-            <TableHead>Équipe</TableHead>
-            <TableHead className="text-center">Buts</TableHead>
-            {showAssists && (
-              <TableHead className="text-center">Passes</TableHead>
-            )}
-            <TableHead className="text-center">MJ</TableHead>
-            <TableHead className="text-center">Min</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {rows.map((row, index) => {
-            const { player, team, goals, assists, appearances, minutes } = row;
-            return (
-              <TableRow key={player.id}>
-                <TableCell className="text-center font-display font-bold text-muted-foreground">
-                  {index + 1}
-                </TableCell>
-                <TableCell>
-                  <Link
-                    href={`/joueurs/${player.id}`}
-                    className="font-medium hover:text-primary"
-                  >
-                    {playerDisplayName(player)}
-                  </Link>
-                </TableCell>
-                <TableCell>
-                  <div className="flex items-center gap-2">
-                    <TeamBadge team={team} size="sm" />
-                    <span className="text-sm">{team.shortName}</span>
-                  </div>
-                </TableCell>
-                <TableCell
-                  className={cn(
-                    "text-center font-display tabular-nums",
-                    mode === "goals" && "text-lg font-bold text-pitch"
-                  )}
-                >
-                  {goals}
-                </TableCell>
-                {showAssists && (
+    <div>
+      <div className="overflow-x-auto rounded-xl border border-border/80 bg-card shadow-sm">
+        <Table>
+          <TableHeader>
+            <TableRow className="hover:bg-transparent">
+              <TableHead className="w-10 text-center">#</TableHead>
+              <TableHead>Joueur</TableHead>
+              <TableHead className="hidden sm:table-cell">Équipe</TableHead>
+              <TableHead className="text-center">Buts</TableHead>
+              {showAssists && (
+                <TableHead className="hidden text-center sm:table-cell">
+                  Passes
+                </TableHead>
+              )}
+              <TableHead className="hidden text-center md:table-cell">MJ</TableHead>
+              <TableHead className="hidden text-center md:table-cell">Min</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {visible.map((row, index) => {
+              const { player, team, goals, assists, appearances, minutes } = row;
+              return (
+                <TableRow key={player.id} className="content-auto">
+                  <TableCell className="text-center font-display font-bold text-muted-foreground">
+                    {index + 1}
+                  </TableCell>
+                  <TableCell>
+                    <Link
+                      href={`/joueurs/${player.id}`}
+                      className="font-medium hover:text-primary"
+                    >
+                      {playerDisplayName(player)}
+                    </Link>
+                    <p className="mt-0.5 flex items-center gap-1.5 text-xs text-muted-foreground sm:hidden">
+                      <TeamBadge team={team} size="sm" />
+                      {team.shortName}
+                    </p>
+                  </TableCell>
+                  <TableCell className="hidden sm:table-cell">
+                    <div className="flex items-center gap-2">
+                      <TeamBadge team={team} size="sm" />
+                      <span className="text-sm">{team.shortName}</span>
+                    </div>
+                  </TableCell>
                   <TableCell
                     className={cn(
                       "text-center font-display tabular-nums",
-                      mode === "assists" && "text-lg font-bold text-pitch"
+                      mode === "goals" && "text-lg font-bold text-pitch"
                     )}
                   >
-                    {assists}
+                    {goals}
                   </TableCell>
-                )}
-                <TableCell className="text-center tabular-nums">
-                  {appearances}
-                </TableCell>
-                <TableCell className="text-center tabular-nums text-muted-foreground">
-                  {minutes}
-                </TableCell>
-              </TableRow>
-            );
-          })}
-        </TableBody>
-      </Table>
+                  {showAssists && (
+                    <TableCell
+                      className={cn(
+                        "hidden text-center font-display tabular-nums sm:table-cell",
+                        mode === "assists" && "text-lg font-bold text-pitch"
+                      )}
+                    >
+                      {assists}
+                    </TableCell>
+                  )}
+                  <TableCell className="hidden text-center tabular-nums md:table-cell">
+                    {appearances}
+                  </TableCell>
+                  <TableCell className="hidden text-center tabular-nums text-muted-foreground md:table-cell">
+                    {minutes}
+                  </TableCell>
+                </TableRow>
+              );
+            })}
+          </TableBody>
+        </Table>
+      </div>
+      {showMore}
     </div>
   );
 }
 
 function MinutesTable({ rows }: { rows: PlayerRow[] }) {
+  const { visible, showMore } = usePagedRows(rows);
+
   return (
-    <div className="overflow-x-auto rounded-xl border border-border/80 bg-card shadow-sm">
-      <Table>
-        <TableHeader>
-          <TableRow className="hover:bg-transparent">
-            <TableHead className="w-10 text-center">#</TableHead>
-            <TableHead>Joueur</TableHead>
-            <TableHead>Équipe</TableHead>
-            <TableHead className="text-center">MJ</TableHead>
-            <TableHead className="text-center">Tit.</TableHead>
-            <TableHead className="text-center">Entrées</TableHead>
-            <TableHead className="text-center">Sorties</TableHead>
-            <TableHead className="text-center">Min</TableHead>
-            <TableHead className="text-center">Moy./match</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {rows.map((row, index) => {
-            const {
-              player,
-              team,
-              appearances,
-              starts,
-              subsIn,
-              subsOut,
-              minutes,
-            } = row;
-            return (
-              <TableRow key={player.id}>
-                <TableCell className="text-center font-display font-bold text-muted-foreground">
-                  {index + 1}
-                </TableCell>
-                <TableCell>
-                  <Link
-                    href={`/joueurs/${player.id}`}
-                    className="font-medium hover:text-primary"
-                  >
-                    {playerDisplayName(player)}
-                  </Link>
-                  <p className="text-xs text-muted-foreground">
-                    {positionLabel(player.position)}
-                  </p>
-                </TableCell>
-                <TableCell>
-                  <div className="flex items-center gap-2">
-                    <TeamBadge team={team} size="sm" />
-                    <span className="text-sm">{team.shortName}</span>
-                  </div>
-                </TableCell>
-                <TableCell className="text-center tabular-nums">
-                  {appearances}
-                </TableCell>
-                <TableCell className="text-center tabular-nums">
-                  {starts}
-                </TableCell>
-                <TableCell className="text-center tabular-nums text-[#1a9e3f]">
-                  {subsIn}
-                </TableCell>
-                <TableCell className="text-center tabular-nums text-loss">
-                  {subsOut}
-                </TableCell>
-                <TableCell className="text-center font-display text-lg font-bold tabular-nums text-pitch">
-                  {minutes}
-                </TableCell>
-                <TableCell className="text-center tabular-nums text-muted-foreground">
-                  {fmtAvg(avgMinutes(row))}
-                </TableCell>
-              </TableRow>
-            );
-          })}
-        </TableBody>
-      </Table>
+    <div>
+      <div className="overflow-x-auto rounded-xl border border-border/80 bg-card shadow-sm">
+        <Table>
+          <TableHeader>
+            <TableRow className="hover:bg-transparent">
+              <TableHead className="w-10 text-center">#</TableHead>
+              <TableHead>Joueur</TableHead>
+              <TableHead className="hidden sm:table-cell">Équipe</TableHead>
+              <TableHead className="hidden text-center md:table-cell">MJ</TableHead>
+              <TableHead className="hidden text-center md:table-cell">Tit.</TableHead>
+              <TableHead className="text-center">Entrées</TableHead>
+              <TableHead className="text-center">Sorties</TableHead>
+              <TableHead className="text-center">Min</TableHead>
+              <TableHead className="hidden text-center lg:table-cell">
+                Moy./match
+              </TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {visible.map((row, index) => {
+              const {
+                player,
+                team,
+                appearances,
+                starts,
+                subsIn,
+                subsOut,
+                minutes,
+              } = row;
+              return (
+                <TableRow key={player.id} className="content-auto">
+                  <TableCell className="text-center font-display font-bold text-muted-foreground">
+                    {index + 1}
+                  </TableCell>
+                  <TableCell>
+                    <Link
+                      href={`/joueurs/${player.id}`}
+                      className="font-medium hover:text-primary"
+                    >
+                      {playerDisplayName(player)}
+                    </Link>
+                    <p className="mt-0.5 flex items-center gap-1.5 text-xs text-muted-foreground sm:hidden">
+                      <TeamBadge team={team} size="sm" />
+                      {team.shortName} · {appearances} MJ
+                    </p>
+                  </TableCell>
+                  <TableCell className="hidden sm:table-cell">
+                    <div className="flex items-center gap-2">
+                      <TeamBadge team={team} size="sm" />
+                      <span className="text-sm">{team.shortName}</span>
+                    </div>
+                  </TableCell>
+                  <TableCell className="hidden text-center tabular-nums md:table-cell">
+                    {appearances}
+                  </TableCell>
+                  <TableCell className="hidden text-center tabular-nums md:table-cell">
+                    {starts}
+                  </TableCell>
+                  <TableCell className="text-center tabular-nums text-[#1a9e3f]">
+                    {subsIn}
+                  </TableCell>
+                  <TableCell className="text-center tabular-nums text-loss">
+                    {subsOut}
+                  </TableCell>
+                  <TableCell className="text-center font-display text-lg font-bold tabular-nums text-pitch">
+                    {minutes}
+                  </TableCell>
+                  <TableCell className="hidden text-center tabular-nums text-muted-foreground lg:table-cell">
+                    {fmtAvg(avgMinutes(row))}
+                  </TableCell>
+                </TableRow>
+              );
+            })}
+          </TableBody>
+        </Table>
+      </div>
+      {showMore}
     </div>
   );
 }
 
 function CardsTable({ rows }: { rows: PlayerRow[] }) {
+  const { visible, showMore } = usePagedRows(rows);
+
   return (
-    <div className="overflow-x-auto rounded-xl border border-border/80 bg-card shadow-sm">
-      <Table>
-        <TableHeader>
-          <TableRow className="hover:bg-transparent">
-            <TableHead className="w-10 text-center">#</TableHead>
-            <TableHead>Joueur</TableHead>
-            <TableHead>Équipe</TableHead>
-            <TableHead className="text-center">Jaunes</TableHead>
-            <TableHead className="text-center">2e j.</TableHead>
-            <TableHead className="text-center">Rouges</TableHead>
-            <TableHead className="text-center">MJ</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {rows.map((row, index) => {
-            const {
-              player,
-              team,
-              yellowCards,
-              secondYellows,
-              redCards,
-              appearances,
-            } = row;
-            const directReds = Math.max(0, redCards - secondYellows);
-            return (
-              <TableRow key={player.id}>
-                <TableCell className="text-center font-display font-bold text-muted-foreground">
-                  {index + 1}
-                </TableCell>
-                <TableCell>
-                  <Link
-                    href={`/joueurs/${player.id}`}
-                    className="font-medium hover:text-primary"
-                  >
-                    {playerDisplayName(player)}
-                  </Link>
-                  <p className="text-xs text-muted-foreground">
-                    {positionLabel(player.position)}
-                  </p>
-                </TableCell>
-                <TableCell>
-                  <div className="flex items-center gap-2">
-                    <TeamBadge team={team} size="sm" />
-                    <span className="text-sm">{team.shortName}</span>
-                  </div>
-                </TableCell>
-                <TableCell className="text-center font-display text-lg font-bold tabular-nums text-draw">
-                  {yellowCards}
-                </TableCell>
-                <TableCell className="text-center tabular-nums">
-                  {secondYellows}
-                </TableCell>
-                <TableCell className="text-center font-display tabular-nums text-loss">
-                  {directReds}
-                </TableCell>
-                <TableCell className="text-center tabular-nums text-muted-foreground">
-                  {appearances}
-                </TableCell>
-              </TableRow>
-            );
-          })}
-        </TableBody>
-      </Table>
+    <div>
+      <div className="overflow-x-auto rounded-xl border border-border/80 bg-card shadow-sm">
+        <Table>
+          <TableHeader>
+            <TableRow className="hover:bg-transparent">
+              <TableHead className="w-10 text-center">#</TableHead>
+              <TableHead>Joueur</TableHead>
+              <TableHead className="hidden sm:table-cell">Équipe</TableHead>
+              <TableHead className="text-center">Jaunes</TableHead>
+              <TableHead className="hidden text-center sm:table-cell">2e j.</TableHead>
+              <TableHead className="text-center">Rouges</TableHead>
+              <TableHead className="hidden text-center md:table-cell">MJ</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {visible.map((row, index) => {
+              const {
+                player,
+                team,
+                yellowCards,
+                secondYellows,
+                redCards,
+                appearances,
+              } = row;
+              const directReds = Math.max(0, redCards - secondYellows);
+              return (
+                <TableRow key={player.id} className="content-auto">
+                  <TableCell className="text-center font-display font-bold text-muted-foreground">
+                    {index + 1}
+                  </TableCell>
+                  <TableCell>
+                    <Link
+                      href={`/joueurs/${player.id}`}
+                      className="font-medium hover:text-primary"
+                    >
+                      {playerDisplayName(player)}
+                    </Link>
+                    <p className="mt-0.5 flex items-center gap-1.5 text-xs text-muted-foreground sm:hidden">
+                      <TeamBadge team={team} size="sm" />
+                      {team.shortName}
+                      {secondYellows > 0 ? ` · ${secondYellows} 2e j.` : ""}
+                    </p>
+                  </TableCell>
+                  <TableCell className="hidden sm:table-cell">
+                    <div className="flex items-center gap-2">
+                      <TeamBadge team={team} size="sm" />
+                      <span className="text-sm">{team.shortName}</span>
+                    </div>
+                  </TableCell>
+                  <TableCell className="text-center font-display text-lg font-bold tabular-nums text-draw">
+                    {yellowCards}
+                  </TableCell>
+                  <TableCell className="hidden text-center tabular-nums sm:table-cell">
+                    {secondYellows}
+                  </TableCell>
+                  <TableCell className="text-center font-display tabular-nums text-loss">
+                    {directReds}
+                  </TableCell>
+                  <TableCell className="hidden text-center tabular-nums text-muted-foreground md:table-cell">
+                    {appearances}
+                  </TableCell>
+                </TableRow>
+              );
+            })}
+          </TableBody>
+        </Table>
+      </div>
+      {showMore}
     </div>
   );
 }

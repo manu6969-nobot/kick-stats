@@ -23,8 +23,8 @@ import {
 } from "@/lib/stats";
 import type { Metadata } from "next";
 
-export const dynamic = "force-dynamic";
 
+export const revalidate = 60;
 export function generateStaticParams() {
   return teams.map((t) => ({ id: t.id }));
 }

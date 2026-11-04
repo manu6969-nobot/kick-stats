@@ -10,8 +10,8 @@ import { officialDisplayName, officialId } from "@/lib/referees";
 import { formatLongDate, getTeam } from "@/lib/stats";
 import type { Metadata } from "next";
 
-export const dynamic = "force-dynamic";
 
+export const revalidate = 60;
 export function generateStaticParams() {
   return matches.map((m) => ({ id: m.id }));
 }

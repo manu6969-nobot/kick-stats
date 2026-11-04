@@ -5,11 +5,12 @@ import { getMergedMatches } from "@/lib/live-results";
 import { getMatchdays, getMatchesByMatchday } from "@/lib/stats";
 import type { Metadata } from "next";
 
+
+export const revalidate = 60;
 export const metadata: Metadata = {
   title: "Calendrier",
 };
 
-export const dynamic = "force-dynamic";
 
 export default async function CalendrierPage() {
   const allMatches = await getMergedMatches();
@@ -25,13 +26,13 @@ export default async function CalendrierPage() {
 
       <nav
         aria-label="Aller à une journée"
-        className="animate-rise-delay-1 mb-8 flex flex-wrap gap-1.5"
+        className="scroll-fade-x scrollbar-none sticky top-[4.25rem] z-30 -mx-4 mb-8 flex gap-1.5 overflow-x-auto bg-background/95 px-4 py-2 backdrop-blur-md sm:mx-0 sm:flex-wrap sm:overflow-visible sm:rounded-lg sm:border sm:border-border/70 sm:px-3"
       >
         {matchdays.map((day) => (
           <a
             key={day}
             href={`#j${day}`}
-            className="flex h-8 min-w-8 items-center justify-center rounded-md border border-border/80 bg-card px-2 text-xs font-semibold tabular-nums text-muted-foreground transition hover:border-primary/40 hover:text-foreground"
+            className="flex h-10 min-w-10 shrink-0 items-center justify-center rounded-md border border-border/80 bg-card px-2.5 text-sm font-semibold tabular-nums text-muted-foreground transition hover:border-primary/40 hover:text-foreground sm:h-8 sm:min-w-8 sm:text-xs"
           >
             {day}
           </a>
@@ -44,7 +45,11 @@ export default async function CalendrierPage() {
           const allDone = dayMatches.every((m) => m.status === "finished");
           const anyDone = dayMatches.some((m) => m.status === "finished");
           return (
-            <section key={day} id={`j${day}`} className="scroll-mt-24">
+            <section
+              key={day}
+              id={`j${day}`}
+              className="content-auto scroll-mt-36 sm:scroll-mt-28"
+            >
               <div className="mb-4 flex flex-wrap items-center gap-3">
                 <h2 className="font-display text-2xl font-bold">Journée {day}</h2>
                 <Badge variant={allDone ? "secondary" : "default"}>

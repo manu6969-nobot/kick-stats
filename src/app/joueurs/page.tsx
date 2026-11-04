@@ -5,8 +5,8 @@ import { getMergedMatches } from "@/lib/live-results";
 import { getAllPlayerSeasonStats } from "@/lib/stats";
 import type { Metadata } from "next";
 
-export const dynamic = "force-dynamic";
 
+export const revalidate = 60;
 export const metadata: Metadata = {
   title: "Joueurs",
 };

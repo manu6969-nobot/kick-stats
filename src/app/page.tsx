@@ -16,8 +16,8 @@ import {
 } from "@/lib/stats";
 import { cn } from "@/lib/utils";
 
-export const dynamic = "force-dynamic";
 
+export const revalidate = 60;
 const DESTINATIONS = [
   {
     href: "/classement",
@@ -58,7 +58,7 @@ export default async function HomePage() {
   return (
     <div className="space-y-16 sm:space-y-20">
       {/* Hero — composition unique, marque dominante */}
-      <section className="relative left-1/2 w-screen max-w-[100vw] -translate-x-1/2 -mt-8 sm:-mt-10">
+      <section className="relative left-1/2 w-[100vw] max-w-[100vw] -translate-x-1/2 -mt-8 sm:-mt-10">
         <div className="pitch-stripe relative min-h-[min(72vh,36rem)] overflow-hidden bg-pitch-deep text-white">
           <div
             className="pointer-events-none absolute inset-0 opacity-50"
@@ -72,7 +72,7 @@ export default async function HomePage() {
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-score">
                 Saison {meta.season}
               </p>
-              <h1 className="mt-4 font-display text-6xl font-extrabold leading-[0.9] tracking-tight sm:text-7xl md:text-8xl">
+              <h1 className="mt-4 font-display text-[3.25rem] font-extrabold leading-[0.9] tracking-tight sm:text-7xl md:text-8xl">
                 {meta.name}
               </h1>
               <p className="mt-5 max-w-lg text-base text-white/75 sm:text-lg">

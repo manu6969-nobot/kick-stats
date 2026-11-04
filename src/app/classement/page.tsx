@@ -4,11 +4,12 @@ import { getMergedMatches } from "@/lib/live-results";
 import { computeStandings } from "@/lib/stats";
 import type { Metadata } from "next";
 
+
+export const revalidate = 60;
 export const metadata: Metadata = {
   title: "Classement",
 };
 
-export const dynamic = "force-dynamic";
 
 export default async function ClassementPage() {
   const standings = computeStandings(await getMergedMatches());

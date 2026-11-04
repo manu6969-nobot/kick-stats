@@ -29,7 +29,8 @@ export async function fetchLiveResultsFromGitHub(): Promise<LiveResultsFile | nu
           "X-GitHub-Api-Version": "2022-11-28",
           "User-Agent": "p1-luxembourg-admin",
         },
-        cache: "no-store",
+        // Cache court : évite un fetch GitHub à chaque hit Vercel
+        next: { revalidate: 60 },
       });
       if (res.ok) {
         const text = await res.text();
@@ -43,9 +44,9 @@ export async function fetchLiveResultsFromGitHub(): Promise<LiveResultsFile | nu
 
   // 2) raw.githubusercontent.com (dépôt public, sans token)
   try {
-    const rawUrl = `https://raw.githubusercontent.com/${repo}/${branch}/${path}?t=${Date.now()}`;
+    const rawUrl = `https://raw.githubusercontent.com/${repo}/${branch}/${path}`;
     const res = await fetch(rawUrl, {
-      cache: "no-store",
+      next: { revalidate: 60 },
       headers: { "User-Agent": "p1-luxembourg-admin", Accept: "application/json" },
     });
     if (!res.ok) return null;

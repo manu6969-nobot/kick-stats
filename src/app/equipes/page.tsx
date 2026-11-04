@@ -7,11 +7,12 @@ import { getMergedMatches } from "@/lib/live-results";
 import { computeStandings, getTeamSeasonStats } from "@/lib/stats";
 import type { Metadata } from "next";
 
+
+export const revalidate = 60;
 export const metadata: Metadata = {
   title: "Équipes",
 };
 
-export const dynamic = "force-dynamic";
 
 export default async function EquipesPage() {
   const allMatches = await getMergedMatches();
@@ -60,7 +61,7 @@ export default async function EquipesPage() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-4 gap-2 px-5 py-3 text-center text-sm">
+              <div className="grid grid-cols-3 gap-2 px-4 py-3 text-center text-sm sm:grid-cols-4 sm:px-5">
                 <div>
                   <p className="text-muted-foreground">Rang</p>
                   <p className="font-display text-xl font-bold">{rank}</p>
@@ -69,7 +70,7 @@ export default async function EquipesPage() {
                   <p className="text-muted-foreground">Points</p>
                   <p className="font-display text-xl font-bold">{row?.points ?? 0}</p>
                 </div>
-                <div>
+                <div className="hidden sm:block">
                   <p className="text-muted-foreground">V/N/D</p>
                   <p className="font-display text-lg font-bold tabular-nums">
                     {season.won}/{season.drawn}/{season.lost}
@@ -85,7 +86,7 @@ export default async function EquipesPage() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-3 gap-2 border-t border-border/70 px-5 py-3 text-center text-xs">
+              <div className="hidden grid-cols-3 gap-2 border-t border-border/70 px-5 py-3 text-center text-xs sm:grid">
                 <div>
                   <p className="text-muted-foreground">Clean sheets</p>
                   <p className="font-display text-base font-bold tabular-nums">
@@ -106,12 +107,20 @@ export default async function EquipesPage() {
                 </div>
               </div>
 
-              <div className="flex items-center justify-between border-t border-border/70 px-5 py-3 text-xs text-muted-foreground">
+              <div className="flex items-center justify-between border-t border-border/70 px-4 py-3 text-xs text-muted-foreground sm:px-5">
                 <span>
-                  {season.played} match{season.played > 1 ? "s" : ""} · diff{" "}
-                  <span className="font-medium text-foreground">
-                    {season.goalDiff > 0 ? "+" : ""}
-                    {season.goalDiff}
+                  {season.played} match{season.played > 1 ? "s" : ""}
+                  <span className="sm:hidden">
+                    {" "}
+                    · {season.won}/{season.drawn}/{season.lost}
+                  </span>
+                  <span className="hidden sm:inline">
+                    {" "}
+                    · diff{" "}
+                    <span className="font-medium text-foreground">
+                      {season.goalDiff > 0 ? "+" : ""}
+                      {season.goalDiff}
+                    </span>
                   </span>
                 </span>
                 <FormDots form={season.form} />

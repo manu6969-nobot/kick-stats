@@ -13,8 +13,8 @@ import {
 } from "@/lib/stats";
 import type { Metadata } from "next";
 
-export const dynamic = "force-dynamic";
 
+export const revalidate = 60;
 export function generateStaticParams() {
   const params = players.map((p) => ({ id: p.id }));
   // Cache Components exige au moins un résultat même sans joueurs encore saisis.
@@ -96,16 +96,16 @@ export default async function JoueurPage({
           title="Saison en cours"
           description="Temps de jeu issu des compositions RBFA (titularisations, entrées/sorties, cartons)."
         />
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 lg:grid-cols-5">
           {cards.map((card) => (
             <div
               key={card.label}
-              className="rounded-xl border border-border/80 bg-card px-4 py-5 text-center shadow-sm"
+              className="rounded-xl border border-border/80 bg-card px-3 py-4 text-center shadow-sm sm:px-4 sm:py-5"
             >
-              <p className="text-xs uppercase tracking-wider text-muted-foreground">
+              <p className="text-[11px] uppercase tracking-wider text-muted-foreground sm:text-xs">
                 {card.label}
               </p>
-              <p className="mt-1 font-display text-3xl font-bold tabular-nums text-pitch">
+              <p className="mt-1 font-display text-2xl font-bold tabular-nums text-pitch sm:text-3xl">
                 {card.value}
               </p>
             </div>

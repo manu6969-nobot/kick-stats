@@ -91,13 +91,13 @@ export function SiteHeader() {
           className="border-t border-white/10 px-4 py-3 md:hidden"
           aria-label="Navigation mobile"
         >
-          <div className="flex flex-col gap-0.5">
+          <div className="flex flex-col gap-1">
             <Link
               href="/"
               onClick={() => setOpen(false)}
               aria-current={onHome ? "page" : undefined}
               className={cn(
-                "rounded-md px-3 py-2.5 text-sm font-medium",
+                "rounded-md px-3 py-3 text-base font-medium",
                 onHome ? "bg-white/12 text-white" : "text-white/75"
               )}
             >
@@ -112,7 +112,7 @@ export function SiteHeader() {
                   onClick={() => setOpen(false)}
                   aria-current={active ? "page" : undefined}
                   className={cn(
-                    "rounded-md px-3 py-2.5 text-sm font-medium",
+                    "rounded-md px-3 py-3 text-base font-medium",
                     active ? "bg-white/12 text-white" : "text-white/75"
                   )}
                 >
