@@ -1,0 +1,76 @@
+# Actualisation automatique des scores / compositions RBFA.
+# Créneaux Europe/Brussels (gate) :
+#   - vendredi 22:15
+#   - samedi 22:15
+#   - dimanche 17:00
+#
+# Les cron GitHub sont en UTC → on déclenche aux deux décalages CET/CEST,
+# puis scripts/rbfa-cron-gate.mjs filtre l’heure de Bruxelles.
+name: RBFA refresh
+
+on:
+  schedule:
+    # Ven / sam 22:15 Brussels = 20:15 UTC (CEST) ou 21:15 UTC (CET)
+    - cron: "15 20 * * 5,6"
+    - cron: "15 21 * * 5,6"
+    # Dim 17:00 Brussels = 15:00 UTC (CEST) ou 16:00 UTC (CET)
+    - cron: "0 15 * * 0"
+    - cron: "0 16 * * 0"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Ignorer le créneau horaire (forcer le refresh)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rbfa-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install
+        run: npm ci --ignore-scripts
+
+      - name: Gate Europe/Brussels
+        id: gate
+        env:
+          # Lancement manuel : force par défaut (sauf si force=false)
+          FORCE: ${{ github.event_name == 'workflow_dispatch' && inputs.force != false && '1' || '' }}
+        run: node scripts/rbfa-cron-gate.mjs
+
+      - name: Extract + apply RBFA
+        if: steps.gate.outputs.run == 'true'
+        env:
+          # Week-end : seulement les matchs récents (scores + compositions)
+          RBFA_RECENT_DAYS: "5"
+          RBFA_DELAY_MS: "900"
+        run: npm run rbfa:apply
+
+      - name: Commit results
+        if: steps.gate.outputs.run == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(rbfa): actualisation scores et compositions"
+          file_pattern: >
+            data/live-results.json
+            data/live-results.from-rbfa.json
+            data/rbfa-raw.json
+            data/rbfa-team-map.json
+          commit_user_name: rbfa-cron
+          commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
