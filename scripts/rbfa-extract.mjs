@@ -490,21 +490,43 @@ async function main() {
 
     if (!finishedMatch) continue;
 
-    const events = detail
-      ? flattenEvents(detail, homeKick.id, awayKick.id, champ.players)
-      : [];
+    // Sans détail match : maj score seule — ne pas écraser temps forts / compos
+    // (ex. cron RBFA_RECENT_DAYS qui ne recharge que les matchs récents).
+    if (!detail) {
+      live.matches[kickMatch.id] = {
+        status: "finished",
+        homeScore: outcome.homeTeamGoals ?? null,
+        awayScore: outcome.awayTeamGoals ?? null,
+        scoreOnly: true,
+        rbfaMatchId: m.id,
+        rbfaUrl: `https://www.rbfa.be/fr/match/${m.id}`,
+      };
+      mapped.push({
+        kickId: kickMatch.id,
+        rbfaId: m.id,
+        score: `${outcome.homeTeamGoals}-${outcome.awayTeamGoals}`,
+        events: 0,
+        scoreOnly: true,
+      });
+      continue;
+    }
 
-    const appearances = detail
-      ? extractAppearances(
-          detail,
-          homeKick.id,
-          awayKick.id,
-          (teamId, firstName, lastName) =>
-            findPlayerId(champ.players, teamId, firstName, lastName)
-        )
-      : [];
+    const events = flattenEvents(
+      detail,
+      homeKick.id,
+      awayKick.id,
+      champ.players
+    );
 
-    const officials = (detail?.officials || [])
+    const appearances = extractAppearances(
+      detail,
+      homeKick.id,
+      awayKick.id,
+      (teamId, firstName, lastName) =>
+        findPlayerId(champ.players, teamId, firstName, lastName)
+    );
+
+    const officials = (detail.officials || [])
       .filter((o) => o && o.personAssigned !== false && (o.firstName || o.lastName))
       .map((o) => ({
         firstName: o.firstName || "",
@@ -536,6 +558,14 @@ async function main() {
     matches: {},
   };
   for (const [id, row] of Object.entries(live.matches)) {
+    if (row.scoreOnly) {
+      injectable.matches[id] = {
+        status: row.status,
+        homeScore: row.homeScore,
+        awayScore: row.awayScore,
+      };
+      continue;
+    }
     injectable.matches[id] = {
       status: row.status,
       homeScore: row.homeScore,
@@ -582,7 +612,24 @@ async function main() {
       existing = JSON.parse(readFileSync(dest, "utf8"));
     }
     existing.updatedAt = live.updatedAt;
-    existing.matches = { ...existing.matches, ...injectable.matches };
+    for (const [id, incoming] of Object.entries(injectable.matches)) {
+      const prev = existing.matches[id] || {};
+      // Fusion profonde : une maj « score only » ne doit jamais vider events/apps.
+      existing.matches[id] = {
+        ...prev,
+        ...incoming,
+        events:
+          incoming.events !== undefined ? incoming.events : prev.events || [],
+        appearances:
+          incoming.appearances !== undefined
+            ? incoming.appearances
+            : prev.appearances || [],
+        officials:
+          incoming.officials !== undefined
+            ? incoming.officials
+            : prev.officials || [],
+      };
+    }
     writeFileSync(dest, JSON.stringify(existing, null, 2) + "\n");
     console.log(`Appliqué dans ${dest} (${Object.keys(existing.matches).length} clés)`);
   } else {
