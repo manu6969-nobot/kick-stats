@@ -40,7 +40,12 @@ const TEAM_ALIASES = {
 };
 
 const SERIES_ID = process.env.RBFA_SERIES_ID || "CHP_131416";
-const API_URL = "https://datalake-prod2018.rbfa.be/graphql";
+/** Endpoint public (hashes APQ à jour). Fallback datalake si besoin. */
+const API_URLS = [
+  process.env.RBFA_GRAPHQL_URL,
+  "https://www.rbfa.be/graphql",
+  "https://datalake-prod2018.rbfa.be/graphql",
+].filter(Boolean);
 const DELAY_MS = Number(process.env.RBFA_DELAY_MS || 1100);
 const APPLY = process.argv.includes("--apply");
 const DETAILS_ONLY_FINISHED = !process.argv.includes("--all-details");
@@ -48,19 +53,22 @@ const DETAILS_ONLY_FINISHED = !process.argv.includes("--all-details");
 const RECENT_DAYS = process.env.RBFA_RECENT_DAYS
   ? Number(process.env.RBFA_RECENT_DAYS)
   : null;
+/** Club d’ancrage pour récupérer le classement de série (API team-centric). */
+const ANCHOR_TEAM_ID = process.env.RBFA_ANCHOR_TEAM_ID || "371455";
 
+/** Hashes persisted queries RBFA (nov. 2026) — alignés sur le client web. */
 const HASHES = {
   GetTeamCalendar:
-    "3f0441e6723b9852b4f0cff2c872f4aa674c5de2d23589efc70c7a4ffb7f6383",
+    "5cc5fac5f4819eb5aba7e1961e46bb61105a99f234141f0f862a344bdc17b164",
   GetMatchDetail:
-    "cd8867b845c206fe7aa75c1ebf7b53cbda0ff030253a45e2e2b4bcc13ee46c9a",
-  GetSeriesRankings:
-    "0a53124a9bc8872b686f22d80fd545622dbaf4b27a7596e1207b097b92c87953",
+    "e4194e20528d04a046bd71ea20a044dbd445144b1104f5e6f5992cfdcf43a793",
+  getSeriesAndRankingsQuery:
+    "18a00fb0be3d9ac68294cba3c1542b0f48e52a1de5e792a158557f4ce78b9cf1",
 };
 const VAR_KEY = {
   GetTeamCalendar: "teamId",
   GetMatchDetail: "matchId",
-  GetSeriesRankings: "seriesId",
+  getSeriesAndRankingsQuery: "teamId",
 };
 
 const HEADERS = {
@@ -108,30 +116,55 @@ function scoreName(a, b) {
 }
 
 async function graphql(operation, value) {
+  const hash = HASHES[operation];
+  if (!hash) throw new Error(`Hash GraphQL inconnu pour ${operation}`);
   const payload = {
     operationName: operation,
     variables: { [VAR_KEY[operation]]: value, language: "fr" },
     extensions: {
-      persistedQuery: { version: 1, sha256Hash: HASHES[operation] },
+      persistedQuery: { version: 1, sha256Hash: hash },
     },
   };
-  const res = await fetch(API_URL, {
-    method: "POST",
-    headers: HEADERS,
-    body: JSON.stringify(payload),
-  });
-  const text = await res.text();
-  if (text.includes("Access Denied")) {
-    throw new Error(
-      `RBFA firewall (Access Denied) sur ${operation}. Réessayez plus tard ou depuis une autre IP.`
-    );
+
+  let lastErr = null;
+  for (const url of API_URLS) {
+    try {
+      const res = await fetch(url, {
+        method: "POST",
+        headers: HEADERS,
+        body: JSON.stringify(payload),
+      });
+      const text = await res.text();
+      if (text.includes("Access Denied")) {
+        lastErr = new Error(`Access Denied sur ${url}`);
+        continue;
+      }
+      if (!res.ok) {
+        lastErr = new Error(`${operation} HTTP ${res.status}: ${text.slice(0, 200)}`);
+        continue;
+      }
+      if (text.trimStart().startsWith("<")) {
+        lastErr = new Error(`${operation}: réponse HTML (bloquée?) sur ${url}`);
+        continue;
+      }
+      let body;
+      try {
+        body = JSON.parse(text);
+      } catch {
+        lastErr = new Error(`${operation}: JSON invalide sur ${url}: ${text.slice(0, 120)}`);
+        continue;
+      }
+      if (body.errors?.length) {
+        lastErr = new Error(`${operation}: ${body.errors[0].message}`);
+        // PersistedQueryNotFound → essayer l’URL suivante / hashes à jour
+        continue;
+      }
+      return body.data;
+    } catch (e) {
+      lastErr = e instanceof Error ? e : new Error(String(e));
+    }
   }
-  if (!res.ok) throw new Error(`${operation} HTTP ${res.status}: ${text.slice(0, 200)}`);
-  const body = JSON.parse(text);
-  if (body.errors?.length) {
-    throw new Error(`${operation}: ${body.errors[0].message}`);
-  }
-  return body.data;
+  throw lastErr || new Error(`${operation}: échec GraphQL RBFA`);
 }
 
 function loadChampionship() {
@@ -311,15 +344,26 @@ async function main() {
     `kick-stats: ${champ.teams.length} équipes, ${champ.matches.length} matchs, ${champ.players.length} joueurs`
   );
 
-  const rankingsData = await graphql("GetSeriesRankings", SERIES_ID);
+  console.log(`Ancre classement: teamId=${ANCHOR_TEAM_ID}`);
+  const rankingsData = await graphql(
+    "getSeriesAndRankingsQuery",
+    ANCHOR_TEAM_ID
+  );
   await sleep(DELAY_MS);
-  const seriesName = rankingsData.seriesRankings?.name || SERIES_ID;
+  const seriesBlock =
+    rankingsData.teamSeriesAndRankings?.rankings?.find(
+      (r) => r.id === SERIES_ID
+    ) || null;
+  const seriesName = seriesBlock?.name || SERIES_ID;
   const rankingBlock =
-    rankingsData.seriesRankings?.rankings?.find(
-      (r) => r.type === "generalRanking"
-    ) || rankingsData.seriesRankings?.rankings?.[0];
+    seriesBlock?.rankings?.find((r) => r.type === "generalRanking") ||
+    seriesBlock?.rankings?.[0];
   const rbfaTeams = rankingBlock?.teams || [];
-  if (!rbfaTeams.length) throw new Error("Aucun club dans le classement RBFA");
+  if (!rbfaTeams.length) {
+    throw new Error(
+      `Aucun club dans le classement RBFA (${SERIES_ID}) via ancre ${ANCHOR_TEAM_ID}`
+    );
+  }
 
   const teamMap = {};
   for (const rt of rbfaTeams) {
