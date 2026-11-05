@@ -9,6 +9,9 @@ import type { Metadata } from "next";
 export const revalidate = 60;
 export const metadata: Metadata = {
   title: "Calendrier",
+  description:
+    "Calendrier et résultats du championnat P1 Luxembourg : toutes les journées, scores et prochaines rencontres.",
+  alternates: { canonical: "/calendrier" },
 };
 
 

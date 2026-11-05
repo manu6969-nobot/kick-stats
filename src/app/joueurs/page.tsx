@@ -9,6 +9,9 @@ import type { Metadata } from "next";
 export const revalidate = 60;
 export const metadata: Metadata = {
   title: "Joueurs",
+  description:
+    "Stats joueurs P1 Luxembourg : buteurs, temps de jeu, cartons et effectifs du championnat provincial.",
+  alternates: { canonical: "/joueurs" },
 };
 
 export default async function JoueursPage() {

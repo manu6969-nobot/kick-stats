@@ -8,6 +8,9 @@ import type { Metadata } from "next";
 export const revalidate = 60;
 export const metadata: Metadata = {
   title: "Classement",
+  description:
+    "Classement officiel P1 Luxembourg : points, différence de buts, forme récente, domicile et extérieur.",
+  alternates: { canonical: "/classement" },
 };
 
 

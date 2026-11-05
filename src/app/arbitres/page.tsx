@@ -20,6 +20,9 @@ import type { Metadata } from "next";
 export const revalidate = 60;
 export const metadata: Metadata = {
   title: "Arbitres",
+  description:
+    "Statistiques des arbitres P1 Luxembourg : matchs dirigés, cartons et moyennes par rencontre.",
+  alternates: { canonical: "/arbitres" },
 };
 
 function fmtAvg(n: number) {

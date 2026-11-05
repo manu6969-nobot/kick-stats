@@ -11,6 +11,9 @@ import type { Metadata } from "next";
 export const revalidate = 60;
 export const metadata: Metadata = {
   title: "Équipes",
+  description:
+    "Fiches clubs P1 Luxembourg : classement, buts, cartons, clean sheets et forme de chaque équipe.",
+  alternates: { canonical: "/equipes" },
 };
 
 

@@ -25,6 +25,9 @@ import type { Metadata } from "next";
 export const revalidate = 60;
 export const metadata: Metadata = {
   title: "Stats globales",
+  description:
+    "Vue d’ensemble de la saison P1 Luxembourg : leaders buteurs, minutes, cartons et stats d’équipes.",
+  alternates: { canonical: "/stats" },
 };
 
 function Section({
