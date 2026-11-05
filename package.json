@@ -8,7 +8,7 @@
     "start": "next start --port 43123",
     "lint": "eslint",
     "rbfa:extract": "node scripts/rbfa-extract.mjs",
-    "rbfa:apply": "node scripts/rbfa-extract.mjs --apply",
+    "rbfa:apply": "node scripts/rbfa-extract.mjs --apply && node scripts/rbfa-git-push.mjs",
     "rbfa:remap": "node scripts/rbfa-remap.mjs --apply",
     "rbfa:logos": "node scripts/rbfa-logos.mjs",
     "rbfa:cron-gate": "node scripts/rbfa-cron-gate.mjs"
