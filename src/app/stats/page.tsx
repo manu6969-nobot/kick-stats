@@ -1,8 +1,9 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { PageHeader } from "@/components/page-header";
+import { PitchPageBanner } from "@/components/pitch-page-banner";
 import { StatsOverviewKpis } from "@/components/stats-overview-kpis";
 import { TeamBadge } from "@/components/team-badge";
+import { meta } from "@/data/championship";
 import {
   Table,
   TableBody,
@@ -132,8 +133,8 @@ export default async function StatsGlobalesPage() {
 
   return (
     <div className="space-y-12">
-      <PageHeader
-        eyebrow="Saison"
+      <PitchPageBanner
+        eyebrow={`Saison ${meta.season}`}
         title="Stats globales"
         description={`Tous les critères issus des feuilles RBFA — ${o.finished} matchs terminés sur ${o.totalMatches}, ${o.teams} clubs, ${o.players} joueurs.`}
       />

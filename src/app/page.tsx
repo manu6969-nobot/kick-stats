@@ -5,19 +5,24 @@ import { StandingsTable } from "@/components/standings-table";
 import { TeamBadge } from "@/components/team-badge";
 import { buttonVariants } from "@/components/ui/button";
 import { meta, teams } from "@/data/championship";
+import {
+  getLiveMatchday,
+  getMatchdayTopScorer,
+  getWeekendResults,
+} from "@/lib/home-pulse";
 import { getMergedMatches } from "@/lib/live-results";
 import {
   computeStandings,
-  getLatestResults,
   getMatchdays,
+  getTeam,
   getTopScorers,
   getUpcomingFixtures,
   playerDisplayName,
 } from "@/lib/stats";
 import { cn } from "@/lib/utils";
 
-
 export const revalidate = 60;
+
 const DESTINATIONS = [
   {
     href: "/classement",
@@ -49,11 +54,17 @@ const DESTINATIONS = [
 export default async function HomePage() {
   const allMatches = await getMergedMatches();
   const standings = computeStandings(allMatches);
-  const results = getLatestResults(4, allMatches);
   const upcoming = getUpcomingFixtures(6, allMatches);
   const scorers = getTopScorers(5, allMatches).filter((s) => s.stats.goals > 0);
   const matchdayCount = getMatchdays(allMatches).length;
   const finishedCount = allMatches.filter((m) => m.status === "finished").length;
+
+  const live = getLiveMatchday(allMatches);
+  const weekend = getWeekendResults(allMatches, live);
+  const dayScorer = live
+    ? getMatchdayTopScorer(live.day, allMatches)
+    : null;
+  const scorerTeam = dayScorer ? getTeam(dayScorer.teamId) : null;
 
   return (
     <div className="space-y-16 sm:space-y-20">
@@ -104,7 +115,88 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Navigation métier — pas une grille de cartes icônes */}
+      {/* Pulsation du championnat */}
+      {live && (
+        <section className="animate-rise-delay-1 space-y-8" aria-label="Actualité">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-pitch">
+                En ce moment
+              </p>
+              <h2 className="mt-1 font-display text-2xl font-bold sm:text-3xl">
+                {live.label}
+              </h2>
+              <p className="mt-1 text-sm text-muted-foreground">
+                {live.finishedCount}/{live.totalCount} match
+                {live.totalCount > 1 ? "s" : ""} joué
+                {live.finishedCount !== 1 ? "s" : ""}
+              </p>
+            </div>
+            <Link
+              href={`/calendrier#j${live.day}`}
+              className="inline-flex items-center gap-1 text-sm font-medium text-pitch hover:underline"
+            >
+              Voir la journée
+              <ArrowRight className="size-3.5" />
+            </Link>
+          </div>
+
+          <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr]">
+            <div className="space-y-3">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                Résultats du week-end
+              </p>
+              {weekend.length === 0 ? (
+                <p className="rounded-xl border border-dashed border-border px-4 py-8 text-center text-sm text-muted-foreground">
+                  Pas encore de score pour cette journée.
+                </p>
+              ) : (
+                <div className="space-y-2">
+                  {weekend.map((match) => (
+                    <MatchRow key={match.id} match={match} />
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <div className="space-y-3">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                Buteur de la journée
+              </p>
+              {dayScorer && scorerTeam ? (
+                <Link
+                  href={`/joueurs/${dayScorer.playerId}`}
+                  className="flex flex-col justify-between gap-6 rounded-xl border border-border/80 bg-card p-5 shadow-sm transition hover:border-primary/30 hover:shadow-md"
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="min-w-0">
+                      <p className="font-display text-2xl font-bold tracking-tight">
+                        {dayScorer.name}
+                      </p>
+                      <p className="mt-1 flex items-center gap-2 text-sm text-muted-foreground">
+                        <TeamBadge team={scorerTeam} size="sm" />
+                        {scorerTeam.name}
+                      </p>
+                    </div>
+                    <span className="font-display text-5xl font-extrabold tabular-nums text-pitch">
+                      {dayScorer.goals}
+                    </span>
+                  </div>
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground">
+                    But{dayScorer.goals > 1 ? "s" : ""} · J{live.day}
+                  </p>
+                </Link>
+              ) : (
+                <p className="rounded-xl border border-dashed border-border px-4 py-8 text-center text-sm text-muted-foreground">
+                  Aucun buteur encore sur cette journée.
+                </p>
+              )}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Navigation métier */}
       <section className="animate-rise-delay-1" aria-label="Parcourir le site">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
           <div>
@@ -139,7 +231,7 @@ export default async function HomePage() {
         </nav>
       </section>
 
-      {/* Classement + buteurs */}
+      {/* Classement + buteurs saison */}
       <div className="animate-rise-delay-2 grid gap-12 lg:grid-cols-[1.45fr_1fr] lg:gap-14">
         <section className="space-y-5">
           <div className="flex items-end justify-between gap-4">
@@ -215,61 +307,37 @@ export default async function HomePage() {
         </section>
       </div>
 
-      {/* Résultats & prochaines rencontres */}
-      <div className="animate-rise-delay-3 grid gap-12 lg:grid-cols-2 lg:gap-14">
-        <section className="space-y-5">
+      {/* Prochains matchs */}
+      <section className="animate-rise-delay-3 space-y-5">
+        <div className="flex items-end justify-between gap-4">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-pitch">
-              Récents
+              À venir
             </p>
             <h2 className="mt-1 font-display text-2xl font-bold sm:text-3xl">
-              Derniers résultats
+              Prochains matchs
             </h2>
           </div>
-          {results.length === 0 ? (
-            <p className="border-y border-dashed border-border py-10 text-center text-sm text-muted-foreground">
-              Saison pas encore commencée — les scores apparaîtront ici.
-            </p>
-          ) : (
-            <div className="space-y-2">
-              {results.map((match) => (
-                <MatchRow key={match.id} match={match} />
-              ))}
-            </div>
-          )}
-        </section>
-
-        <section className="space-y-5">
-          <div className="flex items-end justify-between gap-4">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-pitch">
-                À venir
-              </p>
-              <h2 className="mt-1 font-display text-2xl font-bold sm:text-3xl">
-                Prochains matchs
-              </h2>
-            </div>
-            <Link
-              href="/calendrier"
-              className="inline-flex items-center gap-1 text-sm font-medium text-pitch hover:underline"
-            >
-              Calendrier
-              <ArrowRight className="size-3.5" />
-            </Link>
+          <Link
+            href="/calendrier"
+            className="inline-flex items-center gap-1 text-sm font-medium text-pitch hover:underline"
+          >
+            Calendrier
+            <ArrowRight className="size-3.5" />
+          </Link>
+        </div>
+        {upcoming.length === 0 ? (
+          <p className="border-y border-dashed border-border py-10 text-center text-sm text-muted-foreground">
+            Aucun match programmé pour le moment.
+          </p>
+        ) : (
+          <div className="grid gap-2 sm:grid-cols-2">
+            {upcoming.map((match) => (
+              <MatchRow key={match.id} match={match} />
+            ))}
           </div>
-          {upcoming.length === 0 ? (
-            <p className="border-y border-dashed border-border py-10 text-center text-sm text-muted-foreground">
-              Aucun match programmé pour le moment.
-            </p>
-          ) : (
-            <div className="space-y-2">
-              {upcoming.map((match) => (
-                <MatchRow key={match.id} match={match} />
-              ))}
-            </div>
-          )}
-        </section>
-      </div>
+        )}
+      </section>
     </div>
   );
 }
