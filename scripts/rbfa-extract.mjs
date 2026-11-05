@@ -44,6 +44,10 @@ const API_URL = "https://datalake-prod2018.rbfa.be/graphql";
 const DELAY_MS = Number(process.env.RBFA_DELAY_MS || 1100);
 const APPLY = process.argv.includes("--apply");
 const DETAILS_ONLY_FINISHED = !process.argv.includes("--all-details");
+/** Limite les détails aux matchs récents (cron week-end). Ex. RBFA_RECENT_DAYS=5 */
+const RECENT_DAYS = process.env.RBFA_RECENT_DAYS
+  ? Number(process.env.RBFA_RECENT_DAYS)
+  : null;
 
 const HASHES = {
   GetTeamCalendar:
@@ -355,7 +359,19 @@ async function main() {
       m.outcome?.status === "finished" ||
       (m.outcome?.homeTeamGoals != null && m.outcome?.awayTeamGoals != null)
   );
-  const toFetch = DETAILS_ONLY_FINISHED ? finished : calendar;
+  let toFetch = DETAILS_ONLY_FINISHED ? finished : calendar;
+  if (RECENT_DAYS != null && Number.isFinite(RECENT_DAYS) && RECENT_DAYS >= 0) {
+    const cutoff = Date.now() - RECENT_DAYS * 86400000;
+    const before = toFetch.length;
+    toFetch = toFetch.filter((m) => {
+      const start = Date.parse(String(m.startTime || "").slice(0, 10));
+      if (!Number.isFinite(start)) return true;
+      return start >= cutoff;
+    });
+    console.log(
+      `Filtre RBFA_RECENT_DAYS=${RECENT_DAYS}: ${toFetch.length}/${before} détails`
+    );
+  }
   console.log(`Détails à charger: ${toFetch.length}`);
 
   let i = 0;

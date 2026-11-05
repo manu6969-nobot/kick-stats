@@ -10,7 +10,8 @@
     "rbfa:extract": "node scripts/rbfa-extract.mjs",
     "rbfa:apply": "node scripts/rbfa-extract.mjs --apply",
     "rbfa:remap": "node scripts/rbfa-remap.mjs --apply",
-    "rbfa:logos": "node scripts/rbfa-logos.mjs"
+    "rbfa:logos": "node scripts/rbfa-logos.mjs",
+    "rbfa:cron-gate": "node scripts/rbfa-cron-gate.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",
