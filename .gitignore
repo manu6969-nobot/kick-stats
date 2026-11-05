@@ -41,7 +41,7 @@ yarn-error.log*
 next-env.d.ts
 
 # RBFA scrape dump (régénérable, volumineux)
-/data/rbfa-raw.json
+# rbfa-raw.json is committed by the RBFA Actions cron (debug dump ~0.5MB)
 
 # Fichiers temporaires de sync
 /kick-stats-a-jour.zip
