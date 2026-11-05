@@ -1,0 +1,82 @@
+{
+  "libin": {
+    "rbfaId": "365876",
+    "source": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02506.jpg",
+    "path": "/logos/libin.jpg"
+  },
+  "gouvy": {
+    "rbfaId": "367074",
+    "source": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03227.jpg",
+    "path": "/logos/gouvy.jpg"
+  },
+  "nothomb": {
+    "rbfaId": "367508",
+    "source": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/06125.jpg",
+    "path": "/logos/nothomb.jpg"
+  },
+  "oppagne": {
+    "rbfaId": "367661",
+    "source": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/01962.jpg",
+    "path": "/logos/oppagne.jpg"
+  },
+  "ochamps": {
+    "rbfaId": "368402",
+    "source": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05614.jpg",
+    "path": "/logos/ochamps.jpg"
+  },
+  "roy": {
+    "rbfaId": "369885",
+    "source": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/06120.jpg",
+    "path": "/logos/roy.jpg"
+  },
+  "arlon": {
+    "rbfaId": "370867",
+    "source": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/07763.jpg",
+    "path": "/logos/arlon.jpg"
+  },
+  "marloie": {
+    "rbfaId": "371403",
+    "source": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/04260.jpg",
+    "path": "/logos/marloie.jpg"
+  },
+  "houffalize": {
+    "rbfaId": "371455",
+    "source": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02731.jpg",
+    "path": "/logos/houffalize.jpg"
+  },
+  "aye": {
+    "rbfaId": "371977",
+    "source": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02401.jpg",
+    "path": "/logos/aye.jpg"
+  },
+  "bastogne": {
+    "rbfaId": "371992",
+    "source": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02263.jpg",
+    "path": "/logos/bastogne.jpg"
+  },
+  "assenois": {
+    "rbfaId": "372322",
+    "source": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/06895.jpg",
+    "path": "/logos/assenois.jpg"
+  },
+  "vaux-sur-sure": {
+    "rbfaId": "372427",
+    "source": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/06532.jpg",
+    "path": "/logos/vaux-sur-sure.jpg"
+  },
+  "bercheux": {
+    "rbfaId": "372464",
+    "source": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/09510.jpg",
+    "path": "/logos/bercheux.jpg"
+  },
+  "florenville": {
+    "rbfaId": "373136",
+    "source": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03134.jpg",
+    "path": "/logos/florenville.jpg"
+  },
+  "harre-manhay": {
+    "rbfaId": "375146",
+    "source": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03296.jpg",
+    "path": "/logos/harre-manhay.jpg"
+  }
+}
