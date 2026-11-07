@@ -111,6 +111,7 @@ export function computePlayerStatsFromMatches(
   allMatches: Match[]
 ): PlayerSeasonStats[] {
   const map = new Map<string, PlayerSeasonStats>();
+  const goalMinuteSum = new Map<string, number>();
 
   const ensure = (playerId: string) => {
     let row = map.get(playerId);
@@ -159,7 +160,13 @@ export function computePlayerStatsFromMatches(
     }
 
     for (const ev of match.events) {
-      if (ev.type === "goal" && ev.playerId) ensure(ev.playerId).goals += 1;
+      if (ev.type === "goal" && ev.playerId) {
+        ensure(ev.playerId).goals += 1;
+        goalMinuteSum.set(
+          ev.playerId,
+          (goalMinuteSum.get(ev.playerId) || 0) + (Number(ev.minute) || 0)
+        );
+      }
       if (ev.assistId) ensure(ev.assistId).assists += 1;
       if (ev.type === "sub_in" && ev.playerId) ensure(ev.playerId).subsIn += 1;
       if (ev.type === "sub_out" && ev.playerId) ensure(ev.playerId).subsOut += 1;
@@ -174,7 +181,40 @@ export function computePlayerStatsFromMatches(
     }
   }
 
+  for (const row of map.values()) {
+    if (row.goals > 0) {
+      const sum = goalMinuteSum.get(row.playerId) || 0;
+      row.avgGoalMinute = Math.round(sum / row.goals);
+    }
+  }
+
   return [...map.values()];
+}
+
+/** Buts d’un joueur avec minute + match (pour fiche / timing). */
+export function listPlayerGoals(playerId: string, allMatches: Match[]) {
+  const out: {
+    matchId: string;
+    date: string;
+    minute: number;
+    detail?: string;
+  }[] = [];
+  for (const match of allMatches) {
+    if (match.status !== "finished" && match.status !== "live") continue;
+    for (const ev of match.events) {
+      if (ev.type === "goal" && ev.playerId === playerId) {
+        out.push({
+          matchId: match.id,
+          date: match.date,
+          minute: Number(ev.minute) || 0,
+          detail: ev.detail,
+        });
+      }
+    }
+  }
+  return out.sort(
+    (a, b) => a.date.localeCompare(b.date) || a.minute - b.minute
+  );
 }
 
 export function eventLabel(type: MatchEvent["type"]): string {

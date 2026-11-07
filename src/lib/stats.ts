@@ -44,19 +44,33 @@ export function getPlayerStats(
   if (!manual && !derived) return undefined;
   if (!manual) return derived;
   if (!derived) return manual;
+  const goals = Math.max(manual.goals, derived.goals);
   return {
     playerId,
     appearances: Math.max(manual.appearances, derived.appearances),
     starts: Math.max(manual.starts ?? 0, derived.starts ?? 0),
     subsIn: Math.max(manual.subsIn ?? 0, derived.subsIn ?? 0),
     subsOut: Math.max(manual.subsOut ?? 0, derived.subsOut ?? 0),
-    goals: Math.max(manual.goals, derived.goals),
+    goals,
     assists: Math.max(manual.assists, derived.assists),
     yellowCards: Math.max(manual.yellowCards, derived.yellowCards),
     secondYellows: Math.max(manual.secondYellows ?? 0, derived.secondYellows ?? 0),
     redCards: Math.max(manual.redCards, derived.redCards),
     minutes: Math.max(manual.minutes, derived.minutes),
+    avgGoalMinute:
+      goals > 0
+        ? (derived.avgGoalMinute ?? manual.avgGoalMinute)
+        : undefined,
   };
+}
+
+/** Buts / match joué, 1 décimale (ex. 0,5). */
+export function formatGoalsPerMatch(goals: number, appearances: number): string {
+  if (appearances <= 0 || goals <= 0) return "—";
+  return (goals / appearances).toLocaleString("fr-BE", {
+    minimumFractionDigits: 1,
+    maximumFractionDigits: 1,
+  });
 }
 
 export function formatDate(iso: string): string {
@@ -358,18 +372,21 @@ export function getAllPlayerSeasonStats(
     const cur = byId.get(s.playerId);
     if (!cur) byId.set(s.playerId, { ...s });
     else {
+      const goals = Math.max(cur.goals, s.goals);
       byId.set(s.playerId, {
         playerId: s.playerId,
         appearances: Math.max(cur.appearances, s.appearances),
         starts: Math.max(cur.starts ?? 0, s.starts ?? 0),
         subsIn: Math.max(cur.subsIn ?? 0, s.subsIn ?? 0),
         subsOut: Math.max(cur.subsOut ?? 0, s.subsOut ?? 0),
-        goals: Math.max(cur.goals, s.goals),
+        goals,
         assists: Math.max(cur.assists, s.assists),
         yellowCards: Math.max(cur.yellowCards, s.yellowCards),
         secondYellows: Math.max(cur.secondYellows ?? 0, s.secondYellows ?? 0),
         redCards: Math.max(cur.redCards, s.redCards),
         minutes: Math.max(cur.minutes, s.minutes),
+        avgGoalMinute:
+          goals > 0 ? (s.avgGoalMinute ?? cur.avgGoalMinute) : undefined,
       });
     }
   }

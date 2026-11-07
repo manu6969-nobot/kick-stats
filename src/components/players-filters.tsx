@@ -13,7 +13,11 @@ import {
 } from "@/components/ui/table";
 import { players, teams } from "@/data/championship";
 import type { Player, PlayerSeasonStats, Team } from "@/data/types";
-import { playerDisplayName, positionLabel } from "@/lib/stats";
+import {
+  formatGoalsPerMatch,
+  playerDisplayName,
+  positionLabel,
+} from "@/lib/stats";
 import { cn } from "@/lib/utils";
 
 type PlayerRow = {
@@ -29,6 +33,7 @@ type PlayerRow = {
   yellowCards: number;
   secondYellows: number;
   redCards: number;
+  avgGoalMinute?: number;
 };
 
 const POSITIONS = [
@@ -55,32 +60,33 @@ function buildRows(seasonStats: PlayerSeasonStats[]): PlayerRow[] {
   const statsByPlayer = new Map(seasonStats.map((s) => [s.playerId, s]));
   const teamById = new Map(teams.map((t) => [t.id, t]));
 
-  return players
-    .map((player) => {
-      const team = teamById.get(player.teamId);
-      if (!team) return null;
-      const stats = statsByPlayer.get(player.id);
-      return {
-        player,
-        team,
-        goals: stats?.goals ?? 0,
-        assists: stats?.assists ?? 0,
-        appearances: stats?.appearances ?? 0,
-        starts: stats?.starts ?? 0,
-        subsIn: stats?.subsIn ?? 0,
-        subsOut: stats?.subsOut ?? 0,
-        minutes: stats?.minutes ?? 0,
-        yellowCards: stats?.yellowCards ?? 0,
-        secondYellows: stats?.secondYellows ?? 0,
-        redCards: stats?.redCards ?? 0,
-      };
-    })
-    .filter((row): row is PlayerRow => row != null)
-    .sort((a, b) => {
-      const byTeam = a.team.name.localeCompare(b.team.name, "fr");
-      if (byTeam !== 0) return byTeam;
-      return a.player.lastName.localeCompare(b.player.lastName, "fr");
-    });
+  const rows: PlayerRow[] = [];
+  for (const player of players) {
+    const team = teamById.get(player.teamId);
+    if (!team) continue;
+    const stats = statsByPlayer.get(player.id);
+    const row: PlayerRow = {
+      player,
+      team,
+      goals: stats?.goals ?? 0,
+      assists: stats?.assists ?? 0,
+      appearances: stats?.appearances ?? 0,
+      starts: stats?.starts ?? 0,
+      subsIn: stats?.subsIn ?? 0,
+      subsOut: stats?.subsOut ?? 0,
+      minutes: stats?.minutes ?? 0,
+      yellowCards: stats?.yellowCards ?? 0,
+      secondYellows: stats?.secondYellows ?? 0,
+      redCards: stats?.redCards ?? 0,
+    };
+    if (stats?.avgGoalMinute != null) row.avgGoalMinute = stats.avgGoalMinute;
+    rows.push(row);
+  }
+  return rows.sort((a, b) => {
+    const byTeam = a.team.name.localeCompare(b.team.name, "fr");
+    if (byTeam !== 0) return byTeam;
+    return a.player.lastName.localeCompare(b.player.lastName, "fr");
+  });
 }
 
 const TEAMS_SORTED = [...teams].sort((a, b) => a.name.localeCompare(b.name, "fr"));
@@ -423,6 +429,22 @@ function LeaderTable({
               <TableHead>Joueur</TableHead>
               <TableHead className="hidden sm:table-cell">Équipe</TableHead>
               <TableHead className="text-center">Buts</TableHead>
+              {mode === "goals" && (
+                <>
+                  <TableHead
+                    className="text-center"
+                    title="Buts par match joué"
+                  >
+                    Moy.
+                  </TableHead>
+                  <TableHead
+                    className="hidden text-center sm:table-cell"
+                    title="Minute moyenne à laquelle le joueur marque"
+                  >
+                    Quand
+                  </TableHead>
+                </>
+              )}
               {showAssists && (
                 <TableHead className="hidden text-center sm:table-cell">
                   Passes
@@ -434,7 +456,16 @@ function LeaderTable({
           </TableHeader>
           <TableBody>
             {visible.map((row, index) => {
-              const { player, team, goals, assists, appearances, minutes } = row;
+              const {
+                player,
+                team,
+                goals,
+                assists,
+                appearances,
+                minutes,
+                avgGoalMinute,
+              } = row;
+              const goalsAvg = formatGoalsPerMatch(goals, appearances);
               return (
                 <TableRow key={player.id} className="content-auto">
                   <TableCell className="text-center font-display font-bold text-muted-foreground">
@@ -450,6 +481,11 @@ function LeaderTable({
                     <p className="mt-0.5 flex items-center gap-1.5 text-xs text-muted-foreground sm:hidden">
                       <TeamBadge team={team} size="sm" />
                       {team.shortName}
+                      {mode === "goals" && goals > 0
+                        ? ` · moy. ${goalsAvg}${
+                            avgGoalMinute != null ? ` · ~${avgGoalMinute}′` : ""
+                          }`
+                        : ""}
                     </p>
                   </TableCell>
                   <TableCell className="hidden sm:table-cell">
@@ -466,6 +502,16 @@ function LeaderTable({
                   >
                     {goals}
                   </TableCell>
+                  {mode === "goals" && (
+                    <>
+                      <TableCell className="text-center font-display tabular-nums text-muted-foreground">
+                        {goalsAvg}
+                      </TableCell>
+                      <TableCell className="hidden text-center font-display tabular-nums text-muted-foreground sm:table-cell">
+                        {avgGoalMinute != null ? `${avgGoalMinute}′` : "—"}
+                      </TableCell>
+                    </>
+                  )}
                   {showAssists && (
                     <TableCell
                       className={cn(

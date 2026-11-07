@@ -4,7 +4,11 @@ import { PageHeader } from "@/components/page-header";
 import { TeamBadge } from "@/components/team-badge";
 import { players } from "@/data/championship";
 import { getMergedMatches } from "@/lib/live-results";
+import { listPlayerGoals } from "@/lib/live-results-shared";
 import {
+  formatDate,
+  formatGoalsPerMatch,
+  getBaseMatch,
   getPlayer,
   getPlayerStats,
   getTeam,
@@ -49,16 +53,24 @@ export default async function JoueurPage({
   const assists = stats?.assists ?? 0;
   const appearances = stats?.appearances ?? 0;
   const minutes = stats?.minutes ?? 0;
+  const goals = stats?.goals ?? 0;
   const avgMinutes =
     appearances > 0 ? Math.round(minutes / appearances) : 0;
-  const cards = [
+  const goalsPerMatch = formatGoalsPerMatch(goals, appearances);
+  const avgGoalMinute = stats?.avgGoalMinute;
+  const goalLog = listPlayerGoals(player.id, allMatches);
+  const cards: { label: string; value: string | number }[] = [
     { label: "Matchs", value: appearances },
     { label: "Titulaire", value: stats?.starts ?? 0 },
     { label: "Entrées", value: stats?.subsIn ?? 0 },
     { label: "Sorties", value: stats?.subsOut ?? 0 },
     { label: "Minutes", value: minutes },
-    { label: "Moy./match", value: avgMinutes },
-    { label: "Buts", value: stats?.goals ?? 0 },
+    { label: "Moy. min", value: avgMinutes },
+    { label: "Buts", value: goals },
+    { label: "Buts/match", value: goalsPerMatch },
+    ...(avgGoalMinute != null
+      ? [{ label: "Minute moy.", value: `${avgGoalMinute}′` }]
+      : []),
     ...(assists > 0 ? [{ label: "Passes D.", value: assists }] : []),
     { label: "Jaunes", value: stats?.yellowCards ?? 0 },
     { label: "2e jaunes", value: secondYellows },
@@ -99,7 +111,7 @@ export default async function JoueurPage({
       <section className="animate-rise-delay-1">
         <PageHeader
           title="Saison en cours"
-          description="Temps de jeu issu des compositions RBFA (titularisations, entrées/sorties, cartons)."
+          description="Temps de jeu et buts issus des feuilles RBFA (compositions + temps forts)."
         />
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 lg:grid-cols-5">
           {cards.map((card) => (
@@ -117,6 +129,54 @@ export default async function JoueurPage({
           ))}
         </div>
       </section>
+
+      {goalLog.length > 0 && (
+        <section className="animate-rise-delay-2">
+          <PageHeader
+            title="Quand il marque"
+            description={
+              avgGoalMinute != null
+                ? `Minute moyenne ${avgGoalMinute}′ · ${goalsPerMatch} but${goals > 1 ? "s" : ""} / match`
+                : "Minutes des buts issus des temps forts."
+            }
+          />
+          <ul className="divide-y divide-border/70 overflow-hidden rounded-xl border border-border/80 bg-card shadow-sm">
+            {goalLog.map((g, i) => {
+              const match = getBaseMatch(g.matchId);
+              const home = match ? getTeam(match.homeTeamId) : null;
+              const away = match ? getTeam(match.awayTeamId) : null;
+              const label =
+                home && away
+                  ? `${home.shortName} – ${away.shortName}`
+                  : g.matchId;
+              return (
+                <li
+                  key={`${g.matchId}-${g.minute}-${i}`}
+                  className="flex items-center justify-between gap-3 px-4 py-3 text-sm"
+                >
+                  <div className="min-w-0">
+                    <Link
+                      href={`/matchs/${g.matchId}`}
+                      className="font-medium hover:text-primary"
+                    >
+                      {label}
+                    </Link>
+                    {match && (
+                      <p className="text-xs text-muted-foreground">
+                        {formatDate(match.date)}
+                        {g.detail ? ` · ${g.detail}` : ""}
+                      </p>
+                    )}
+                  </div>
+                  <span className="shrink-0 font-display text-lg font-bold tabular-nums text-pitch">
+                    {g.minute}′
+                  </span>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      )}
     </div>
   );
 }
