@@ -5663,8 +5663,8 @@ export const matches: Match[] = [
   {
     id: "m95",
     matchday: 12,
-    date: "2026-11-07",
-    kickoff: "20:00",
+    date: "2026-11-06",
+    kickoff: "20:30",
     status: "scheduled",
     homeTeamId: "ochamps",
     awayTeamId: "libin",

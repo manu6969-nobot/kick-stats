@@ -329,12 +329,18 @@ function flattenEvents(detail, homeKickId, awayKickId, players) {
 }
 
 function findKickMatch(baseMatches, dateIso, homeId, awayId) {
-  return baseMatches.find(
-    (m) =>
-      m.date === dateIso &&
-      m.homeTeamId === homeId &&
-      m.awayTeamId === awayId
-  );
+  const sameFixture = (m) =>
+    m.homeTeamId === homeId && m.awayTeamId === awayId;
+  const exact = baseMatches.find((m) => m.date === dateIso && sameFixture(m));
+  if (exact) return exact;
+  // RBFA décale parfois d’un jour (vendredi avancé, report…)
+  const t = Date.parse(dateIso);
+  if (!Number.isFinite(t)) return null;
+  const near = [-1, 1, -2, 2]
+    .map((d) => new Date(t + d * 86400000).toISOString().slice(0, 10))
+    .map((d) => baseMatches.find((m) => m.date === d && sameFixture(m)))
+    .find(Boolean);
+  return near || null;
 }
 
 async function main() {
