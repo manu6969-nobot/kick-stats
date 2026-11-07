@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { TeamBadge } from "@/components/team-badge";
 import {
   Table,
@@ -19,6 +19,109 @@ import {
   positionLabel,
 } from "@/lib/stats";
 import { cn } from "@/lib/utils";
+
+type SortDir = "asc" | "desc";
+type SortValue = string | number | null | undefined;
+
+function compareSortValues(a: SortValue, b: SortValue, dir: SortDir) {
+  const emptyA = a == null || a === "";
+  const emptyB = b == null || b === "";
+  if (emptyA && emptyB) return 0;
+  if (emptyA) return 1;
+  if (emptyB) return -1;
+  let cmp = 0;
+  if (typeof a === "number" && typeof b === "number") cmp = a - b;
+  else cmp = String(a).localeCompare(String(b), "fr", { numeric: true });
+  return dir === "asc" ? cmp : -cmp;
+}
+
+function useSortableRows<T>(
+  rows: T[],
+  defaultKey: string,
+  defaultDir: SortDir,
+  getValue: (row: T, key: string) => SortValue
+) {
+  const [sortKey, setSortKey] = useState(defaultKey);
+  const [sortDir, setSortDir] = useState<SortDir>(defaultDir);
+
+  const sorted = useMemo(() => {
+    const copy = [...rows];
+    copy.sort((a, b) => {
+      const primary = compareSortValues(
+        getValue(a, sortKey),
+        getValue(b, sortKey),
+        sortDir
+      );
+      if (primary !== 0) return primary;
+      return compareSortValues(
+        getValue(a, "player"),
+        getValue(b, "player"),
+        "asc"
+      );
+    });
+    return copy;
+  }, [rows, sortKey, sortDir, getValue]);
+
+  function requestSort(key: string, preferDesc = false) {
+    if (key === sortKey) {
+      setSortDir((d) => (d === "asc" ? "desc" : "asc"));
+      return;
+    }
+    setSortKey(key);
+    setSortDir(preferDesc ? "desc" : "asc");
+  }
+
+  return { sorted, sortKey, sortDir, requestSort };
+}
+
+function SortableTh({
+  label,
+  column,
+  sortKey,
+  sortDir,
+  onSort,
+  preferDesc = false,
+  className,
+  title,
+}: {
+  label: string;
+  column: string;
+  sortKey: string;
+  sortDir: SortDir;
+  onSort: (key: string, preferDesc?: boolean) => void;
+  preferDesc?: boolean;
+  className?: string;
+  title?: string;
+}) {
+  const active = sortKey === column;
+  return (
+    <TableHead className={className} title={title}>
+      <button
+        type="button"
+        onClick={() => onSort(column, preferDesc)}
+        className={cn(
+          "inline-flex min-h-9 w-full items-center gap-1 rounded-md px-0.5 text-inherit transition hover:text-foreground",
+          className?.includes("text-center") && "justify-center",
+          active ? "font-semibold text-foreground" : "font-medium"
+        )}
+        aria-sort={
+          active ? (sortDir === "asc" ? "ascending" : "descending") : "none"
+        }
+      >
+        <span>{label}</span>
+        <span
+          className={cn(
+            "font-mono text-[10px] leading-none",
+            active ? "text-pitch" : "text-muted-foreground/70"
+          )}
+          aria-hidden
+        >
+          {active ? (sortDir === "asc" ? "▲" : "▼") : "◇"}
+        </span>
+      </button>
+    </TableHead>
+  );
+}
 
 type PlayerRow = {
   player: Player;
@@ -54,6 +157,47 @@ const PAGE_SIZE = 40;
 function avgMinutesRounded(row: PlayerRow) {
   if (row.appearances <= 0) return 0;
   return Math.round(row.minutes / row.appearances);
+}
+
+function rowSortValue(row: PlayerRow, key: string): SortValue {
+  switch (key) {
+    case "number":
+      return row.player.number;
+    case "player":
+      return `${row.player.lastName} ${row.player.firstName}`;
+    case "team":
+      return row.team.name;
+    case "position":
+      return positionLabel(row.player.position);
+    case "goals":
+      return row.goals;
+    case "goalsAvg":
+      return row.appearances > 0 ? row.goals / row.appearances : null;
+    case "avgGoalMinute":
+      return row.avgGoalMinute ?? null;
+    case "assists":
+      return row.assists;
+    case "appearances":
+      return row.appearances;
+    case "starts":
+      return row.starts;
+    case "subsIn":
+      return row.subsIn;
+    case "subsOut":
+      return row.subsOut;
+    case "minutes":
+      return row.minutes;
+    case "avgMinutes":
+      return avgMinutesRounded(row);
+    case "yellowCards":
+      return row.yellowCards;
+    case "secondYellows":
+      return row.secondYellows;
+    case "redCards":
+      return Math.max(0, row.redCards - row.secondYellows);
+    default:
+      return null;
+  }
 }
 
 function buildRows(seasonStats: PlayerSeasonStats[]): PlayerRow[] {
@@ -93,6 +237,9 @@ const TEAMS_SORTED = [...teams].sort((a, b) => a.name.localeCompare(b.name, "fr"
 
 function usePagedRows<T>(rows: T[]) {
   const [limit, setLimit] = useState(PAGE_SIZE);
+  useEffect(() => {
+    setLimit(PAGE_SIZE);
+  }, [rows]);
   const visible = rows.slice(0, limit);
   const remaining = rows.length - visible.length;
   const showMore =
@@ -347,7 +494,13 @@ function EmptyStats({ message }: { message: string }) {
 }
 
 function PlayersTable({ rows }: { rows: PlayerRow[] }) {
-  const { visible, showMore } = usePagedRows(rows);
+  const { sorted, sortKey, sortDir, requestSort } = useSortableRows(
+    rows,
+    "team",
+    "asc",
+    rowSortValue
+  );
+  const { visible, showMore } = usePagedRows(sorted);
 
   if (rows.length === 0) {
     return (
@@ -363,10 +516,37 @@ function PlayersTable({ rows }: { rows: PlayerRow[] }) {
         <Table>
           <TableHeader>
             <TableRow className="hover:bg-transparent">
-              <TableHead className="w-12 text-center">N°</TableHead>
-              <TableHead>Joueur</TableHead>
-              <TableHead>Équipe</TableHead>
-              <TableHead className="hidden sm:table-cell">Poste</TableHead>
+              <SortableTh
+                label="N°"
+                column="number"
+                sortKey={sortKey}
+                sortDir={sortDir}
+                onSort={requestSort}
+                preferDesc
+                className="w-12 text-center"
+              />
+              <SortableTh
+                label="Joueur"
+                column="player"
+                sortKey={sortKey}
+                sortDir={sortDir}
+                onSort={requestSort}
+              />
+              <SortableTh
+                label="Équipe"
+                column="team"
+                sortKey={sortKey}
+                sortDir={sortDir}
+                onSort={requestSort}
+              />
+              <SortableTh
+                label="Poste"
+                column="position"
+                sortKey={sortKey}
+                sortDir={sortDir}
+                onSort={requestSort}
+                className="hidden sm:table-cell"
+              />
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -417,7 +597,13 @@ function LeaderTable({
   mode: "goals" | "assists";
   showAssists: boolean;
 }) {
-  const { visible, showMore } = usePagedRows(rows);
+  const { sorted, sortKey, sortDir, requestSort } = useSortableRows(
+    rows,
+    mode === "goals" ? "goals" : "assists",
+    "desc",
+    rowSortValue
+  );
+  const { visible, showMore } = usePagedRows(sorted);
 
   return (
     <div>
@@ -426,32 +612,83 @@ function LeaderTable({
           <TableHeader>
             <TableRow className="hover:bg-transparent">
               <TableHead className="w-10 text-center">#</TableHead>
-              <TableHead>Joueur</TableHead>
-              <TableHead className="hidden sm:table-cell">Équipe</TableHead>
-              <TableHead className="text-center">Buts</TableHead>
+              <SortableTh
+                label="Joueur"
+                column="player"
+                sortKey={sortKey}
+                sortDir={sortDir}
+                onSort={requestSort}
+              />
+              <SortableTh
+                label="Équipe"
+                column="team"
+                sortKey={sortKey}
+                sortDir={sortDir}
+                onSort={requestSort}
+                className="hidden sm:table-cell"
+              />
+              <SortableTh
+                label="Buts"
+                column="goals"
+                sortKey={sortKey}
+                sortDir={sortDir}
+                onSort={requestSort}
+                preferDesc
+                className="text-center"
+              />
               {mode === "goals" && (
                 <>
-                  <TableHead
+                  <SortableTh
+                    label="Moy."
+                    column="goalsAvg"
+                    sortKey={sortKey}
+                    sortDir={sortDir}
+                    onSort={requestSort}
+                    preferDesc
                     className="text-center"
                     title="Buts par match joué"
-                  >
-                    Moy.
-                  </TableHead>
-                  <TableHead
+                  />
+                  <SortableTh
+                    label="Quand"
+                    column="avgGoalMinute"
+                    sortKey={sortKey}
+                    sortDir={sortDir}
+                    onSort={requestSort}
+                    preferDesc
                     className="hidden text-center sm:table-cell"
                     title="Minute moyenne à laquelle le joueur marque"
-                  >
-                    Quand
-                  </TableHead>
+                  />
                 </>
               )}
               {showAssists && (
-                <TableHead className="hidden text-center sm:table-cell">
-                  Passes
-                </TableHead>
+                <SortableTh
+                  label="Passes"
+                  column="assists"
+                  sortKey={sortKey}
+                  sortDir={sortDir}
+                  onSort={requestSort}
+                  preferDesc
+                  className="hidden text-center sm:table-cell"
+                />
               )}
-              <TableHead className="hidden text-center md:table-cell">MJ</TableHead>
-              <TableHead className="hidden text-center md:table-cell">Min</TableHead>
+              <SortableTh
+                label="MJ"
+                column="appearances"
+                sortKey={sortKey}
+                sortDir={sortDir}
+                onSort={requestSort}
+                preferDesc
+                className="hidden text-center md:table-cell"
+              />
+              <SortableTh
+                label="Min"
+                column="minutes"
+                sortKey={sortKey}
+                sortDir={sortDir}
+                onSort={requestSort}
+                preferDesc
+                className="hidden text-center md:table-cell"
+              />
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -540,7 +777,13 @@ function LeaderTable({
 }
 
 function MinutesTable({ rows }: { rows: PlayerRow[] }) {
-  const { visible, showMore } = usePagedRows(rows);
+  const { sorted, sortKey, sortDir, requestSort } = useSortableRows(
+    rows,
+    "minutes",
+    "desc",
+    rowSortValue
+  );
+  const { visible, showMore } = usePagedRows(sorted);
 
   return (
     <div>
@@ -549,18 +792,75 @@ function MinutesTable({ rows }: { rows: PlayerRow[] }) {
           <TableHeader>
             <TableRow className="hover:bg-transparent">
               <TableHead className="w-10 text-center">#</TableHead>
-              <TableHead>Joueur</TableHead>
-              <TableHead className="hidden sm:table-cell">Équipe</TableHead>
-              <TableHead className="hidden text-center md:table-cell">MJ</TableHead>
-              <TableHead className="hidden text-center md:table-cell">Tit.</TableHead>
-              <TableHead className="hidden text-center sm:table-cell">
-                Entrées
-              </TableHead>
-              <TableHead className="hidden text-center sm:table-cell">
-                Sorties
-              </TableHead>
-              <TableHead className="text-center">Min</TableHead>
-              <TableHead className="text-center">Moy.</TableHead>
+              <SortableTh
+                label="Joueur"
+                column="player"
+                sortKey={sortKey}
+                sortDir={sortDir}
+                onSort={requestSort}
+              />
+              <SortableTh
+                label="Équipe"
+                column="team"
+                sortKey={sortKey}
+                sortDir={sortDir}
+                onSort={requestSort}
+                className="hidden sm:table-cell"
+              />
+              <SortableTh
+                label="MJ"
+                column="appearances"
+                sortKey={sortKey}
+                sortDir={sortDir}
+                onSort={requestSort}
+                preferDesc
+                className="hidden text-center md:table-cell"
+              />
+              <SortableTh
+                label="Tit."
+                column="starts"
+                sortKey={sortKey}
+                sortDir={sortDir}
+                onSort={requestSort}
+                preferDesc
+                className="hidden text-center md:table-cell"
+              />
+              <SortableTh
+                label="Entrées"
+                column="subsIn"
+                sortKey={sortKey}
+                sortDir={sortDir}
+                onSort={requestSort}
+                preferDesc
+                className="hidden text-center sm:table-cell"
+              />
+              <SortableTh
+                label="Sorties"
+                column="subsOut"
+                sortKey={sortKey}
+                sortDir={sortDir}
+                onSort={requestSort}
+                preferDesc
+                className="hidden text-center sm:table-cell"
+              />
+              <SortableTh
+                label="Min"
+                column="minutes"
+                sortKey={sortKey}
+                sortDir={sortDir}
+                onSort={requestSort}
+                preferDesc
+                className="text-center"
+              />
+              <SortableTh
+                label="Moy."
+                column="avgMinutes"
+                sortKey={sortKey}
+                sortDir={sortDir}
+                onSort={requestSort}
+                preferDesc
+                className="text-center"
+              />
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -631,7 +931,13 @@ function MinutesTable({ rows }: { rows: PlayerRow[] }) {
 }
 
 function CardsTable({ rows }: { rows: PlayerRow[] }) {
-  const { visible, showMore } = usePagedRows(rows);
+  const { sorted, sortKey, sortDir, requestSort } = useSortableRows(
+    rows,
+    "yellowCards",
+    "desc",
+    rowSortValue
+  );
+  const { visible, showMore } = usePagedRows(sorted);
 
   return (
     <div>
@@ -640,12 +946,57 @@ function CardsTable({ rows }: { rows: PlayerRow[] }) {
           <TableHeader>
             <TableRow className="hover:bg-transparent">
               <TableHead className="w-10 text-center">#</TableHead>
-              <TableHead>Joueur</TableHead>
-              <TableHead className="hidden sm:table-cell">Équipe</TableHead>
-              <TableHead className="text-center">Jaunes</TableHead>
-              <TableHead className="hidden text-center sm:table-cell">2e j.</TableHead>
-              <TableHead className="text-center">Rouges</TableHead>
-              <TableHead className="hidden text-center md:table-cell">MJ</TableHead>
+              <SortableTh
+                label="Joueur"
+                column="player"
+                sortKey={sortKey}
+                sortDir={sortDir}
+                onSort={requestSort}
+              />
+              <SortableTh
+                label="Équipe"
+                column="team"
+                sortKey={sortKey}
+                sortDir={sortDir}
+                onSort={requestSort}
+                className="hidden sm:table-cell"
+              />
+              <SortableTh
+                label="Jaunes"
+                column="yellowCards"
+                sortKey={sortKey}
+                sortDir={sortDir}
+                onSort={requestSort}
+                preferDesc
+                className="text-center"
+              />
+              <SortableTh
+                label="2e j."
+                column="secondYellows"
+                sortKey={sortKey}
+                sortDir={sortDir}
+                onSort={requestSort}
+                preferDesc
+                className="hidden text-center sm:table-cell"
+              />
+              <SortableTh
+                label="Rouges"
+                column="redCards"
+                sortKey={sortKey}
+                sortDir={sortDir}
+                onSort={requestSort}
+                preferDesc
+                className="text-center"
+              />
+              <SortableTh
+                label="MJ"
+                column="appearances"
+                sortKey={sortKey}
+                sortDir={sortDir}
+                onSort={requestSort}
+                preferDesc
+                className="hidden text-center md:table-cell"
+              />
             </TableRow>
           </TableHeader>
           <TableBody>
