@@ -4,7 +4,7 @@
  *   - vendredi 22:15
  *   - samedi 22:15
  *   - dimanche 17:00
- * Fenêtre ±8 minutes (les cron GitHub Actions sont en UTC / peu précis).
+ * Fenêtre : −15 min → +180 min (les cron GitHub Actions sont souvent en retard).
  *
  * FORCE=1 ou argument --force → toujours autoriser (manuel).
  *
@@ -18,7 +18,13 @@ const FORCE =
   process.env.FORCE === "true" ||
   process.argv.includes("--force");
 
-const WINDOW_MIN = 8;
+/**
+ * Fenêtre après le créneau (minutes). GitHub Actions retarde souvent les
+ * cron UTC de 30–120+ min : ±8 min était trop serré → skip silencieux.
+ */
+const WINDOW_AFTER_MIN = 180;
+/** Petite marge avant le créneau (démarrage un peu tôt). */
+const WINDOW_BEFORE_MIN = 15;
 
 /** Créneaux cibles (jour JS : 0=dim … 5=ven 6=sam) → heures:minutes Brussels */
 const SLOTS = [
@@ -59,7 +65,8 @@ function inWindow(now, slot) {
   if (now.weekday !== slot.weekday) return false;
   const a = minutesOfDay(now.hour, now.minute);
   const b = minutesOfDay(slot.hour, slot.minute);
-  return Math.abs(a - b) <= WINDOW_MIN;
+  const delta = a - b;
+  return delta >= -WINDOW_BEFORE_MIN && delta <= WINDOW_AFTER_MIN;
 }
 
 const now = brusselsNow();
