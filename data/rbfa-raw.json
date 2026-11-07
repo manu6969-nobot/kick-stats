@@ -1,7 +1,7 @@
 {
   "seriesId": "CHP_131416",
   "seriesName": "CHP_131416",
-  "extractedAt": "2026-11-07T00:08:30.188Z",
+  "extractedAt": "2026-11-07T00:11:24.870Z",
   "teamMap": {
     "365876": {
       "rbfaId": "365876",
@@ -15867,15 +15867,13 @@
       "score": "0-1",
       "events": 0,
       "scoreOnly": true
+    },
+    {
+      "kickId": "m95",
+      "rbfaId": "7565605",
+      "score": "0-0",
+      "events": 17
     }
   ],
-  "unmatched": [
-    {
-      "rbfaId": "7565605",
-      "date": "2026-11-06",
-      "home": "UN.St.André Ochamps A",
-      "away": "R.Wallonia Libin A",
-      "reason": "pas de match kick-stats à cette date"
-    }
-  ]
+  "unmatched": []
 }
