@@ -1,7 +1,7 @@
 {
   "seriesId": "CHP_131416",
   "seriesName": "CHP_131416",
-  "extractedAt": "2026-11-05T14:35:40.254Z",
+  "extractedAt": "2026-11-07T00:08:30.188Z",
   "teamMap": {
     "365876": {
       "rbfaId": "365876",
@@ -5399,10 +5399,10 @@
         "__typename": "MatchDetailTeam"
       },
       "outcome": {
-        "status": "planned",
-        "homeTeamGoals": null,
+        "status": "finished",
+        "homeTeamGoals": 0,
         "homeTeamPenaltiesScored": null,
-        "awayTeamGoals": null,
+        "awayTeamGoals": 0,
         "awayTeamPenaltiesScored": null,
         "subscript": null,
         "__typename": "MatchDetailOutcome"
@@ -5436,8 +5436,8 @@
         }
       ],
       "showScore": true,
-      "state": "planned",
-      "startDateTimeInThePassed": false,
+      "state": "finished",
+      "startDateTimeInThePassed": true,
       "ageGroup": "Equipe Première",
       "__typename": "MatchDetail"
     },
@@ -5668,8 +5668,8 @@
           "__typename": "MatchDetailOfficial"
         },
         {
-          "lastName": "Lambert",
-          "firstName": "Jerome",
+          "lastName": "Deckers",
+          "firstName": "Sylvie",
           "status": null,
           "personAssigned": true,
           "__typename": "MatchDetailOfficial"
@@ -5728,8 +5728,8 @@
           "__typename": "MatchDetailOfficial"
         },
         {
-          "lastName": "Deckers",
-          "firstName": "Sylvie",
+          "lastName": "Tarte",
+          "firstName": "Louis",
           "status": null,
           "personAssigned": true,
           "__typename": "MatchDetailOfficial"
@@ -14503,10 +14503,10 @@
     }
   ],
   "details": {
-    "7565593": {
-      "id": "7565593",
+    "7565605": {
+      "id": "7565605",
       "title": "1 PROV.",
-      "startTime": "2026-11-01T14:30:00",
+      "startTime": "2026-11-06T20:30:00",
       "channel": "acff",
       "series": {
         "id": "CHP_131416",
@@ -14515,806 +14515,34 @@
       },
       "state": "finished",
       "location": {
-        "name": "Manhay",
-        "city": "Manhay",
-        "postalCode": "6960",
-        "address": "Rue Des Armées Américaines",
+        "name": "Ochamps",
+        "city": "Ochamps",
+        "postalCode": "6890",
+        "address": "Route De Bertrix",
         "pitchCode": "1",
         "synthetic": false,
         "__typename": "MatchLocation"
       },
       "officials": [
         {
-          "lastName": "Claude",
-          "firstName": "Mathias",
+          "lastName": "Paul",
+          "firstName": "Jean-Philippe",
           "function": "referee",
           "status": null,
           "personAssigned": true,
           "__typename": "MatchDetailOfficial"
         },
         {
-          "lastName": "Henikenne",
-          "firstName": "Sébastien",
+          "lastName": "Colignon",
+          "firstName": "Gaëtan Serge",
           "function": "firstAssistantReferee",
           "status": null,
           "personAssigned": true,
           "__typename": "MatchDetailOfficial"
         },
         {
-          "lastName": "Castiau",
-          "firstName": "Benoît",
-          "function": "secondAssistantReferee",
-          "status": null,
-          "personAssigned": true,
-          "__typename": "MatchDetailOfficial"
-        }
-      ],
-      "events": [
-        {
-          "minute": 87,
-          "home": [],
-          "away": [
-            {
-              "lastName": "Gengoux",
-              "firstName": "Maxence",
-              "kind": "in",
-              "__typename": "MatchDetailEvent"
-            },
-            {
-              "lastName": "Horman",
-              "firstName": "Jules",
-              "kind": "out",
-              "__typename": "MatchDetailEvent"
-            }
-          ],
-          "__typename": "GroupedEvents"
-        },
-        {
-          "minute": 83,
-          "home": [
-            {
-              "lastName": "Moufanin",
-              "firstName": "Sohail",
-              "kind": "yellow",
-              "__typename": "MatchDetailEvent"
-            }
-          ],
-          "away": [],
-          "__typename": "GroupedEvents"
-        },
-        {
-          "minute": 77,
-          "home": [
-            {
-              "lastName": "Samray",
-              "firstName": "Florian",
-              "kind": "yellow",
-              "__typename": "MatchDetailEvent"
-            }
-          ],
-          "away": [],
-          "__typename": "GroupedEvents"
-        },
-        {
-          "minute": 75,
-          "home": [],
-          "away": [
-            {
-              "lastName": "Toussaint",
-              "firstName": "Aryl",
-              "kind": "yellow",
-              "__typename": "MatchDetailEvent"
-            }
-          ],
-          "__typename": "GroupedEvents"
-        },
-        {
-          "minute": 70,
-          "home": [],
-          "away": [
-            {
-              "lastName": "Fautré",
-              "firstName": "Noa",
-              "kind": "goal",
-              "__typename": "MatchDetailEvent"
-            }
-          ],
-          "__typename": "GroupedEvents"
-        },
-        {
-          "minute": 67,
-          "home": [
-            {
-              "lastName": "Apeke",
-              "firstName": "Prince Mohamed",
-              "kind": "in",
-              "__typename": "MatchDetailEvent"
-            },
-            {
-              "lastName": "Rasquin",
-              "firstName": "William",
-              "kind": "in",
-              "__typename": "MatchDetailEvent"
-            },
-            {
-              "lastName": "Biondolillo",
-              "firstName": "Alessio",
-              "kind": "out",
-              "__typename": "MatchDetailEvent"
-            },
-            {
-              "lastName": "Levaux",
-              "firstName": "Mattéo Jean",
-              "kind": "out",
-              "__typename": "MatchDetailEvent"
-            }
-          ],
-          "away": [],
-          "__typename": "GroupedEvents"
-        },
-        {
-          "minute": 57,
-          "home": [
-            {
-              "lastName": "Ovi",
-              "firstName": "Assoma Josias",
-              "kind": "in",
-              "__typename": "MatchDetailEvent"
-            },
-            {
-              "lastName": "Chikatara",
-              "firstName": "Ugochukwu Precious",
-              "kind": "out",
-              "__typename": "MatchDetailEvent"
-            }
-          ],
-          "away": [],
-          "__typename": "GroupedEvents"
-        },
-        {
-          "minute": 51,
-          "home": [],
-          "away": [
-            {
-              "lastName": "Bastin",
-              "firstName": "François Vincent",
-              "kind": "yellow",
-              "__typename": "MatchDetailEvent"
-            }
-          ],
-          "__typename": "GroupedEvents"
-        },
-        {
-          "minute": 46,
-          "home": [],
-          "away": [
-            {
-              "lastName": "Fautré",
-              "firstName": "Noa",
-              "kind": "in",
-              "__typename": "MatchDetailEvent"
-            },
-            {
-              "lastName": "Idmansour",
-              "firstName": "Ilias",
-              "kind": "in",
-              "__typename": "MatchDetailEvent"
-            },
-            {
-              "lastName": "Diouf",
-              "firstName": "Massamba",
-              "kind": "out",
-              "__typename": "MatchDetailEvent"
-            },
-            {
-              "lastName": "Freid",
-              "firstName": "Timothée",
-              "kind": "out",
-              "__typename": "MatchDetailEvent"
-            }
-          ],
-          "__typename": "GroupedEvents"
-        },
-        {
-          "minute": 41,
-          "home": [],
-          "away": [
-            {
-              "lastName": "Freid",
-              "firstName": "Timothée",
-              "kind": "yellow",
-              "__typename": "MatchDetailEvent"
-            }
-          ],
-          "__typename": "GroupedEvents"
-        }
-      ],
-      "shootout": [],
-      "homeTeam": {
-        "id": "375146",
-        "name": "ES.Harre-Manhay A",
-        "clubId": "1566",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03296.jpg",
-        "__typename": "MatchDetailTeam"
-      },
-      "awayTeam": {
-        "id": "371455",
-        "name": "RESC.Houffaloise A",
-        "clubId": "1436",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02731.jpg",
-        "__typename": "MatchDetailTeam"
-      },
-      "outcome": {
-        "homeTeamGoals": 0,
-        "homeTeamPenaltiesScored": null,
-        "awayTeamGoals": 1,
-        "awayTeamPenaltiesScored": null,
-        "subscript": null,
-        "isFinished": true,
-        "hasPenalties": false,
-        "hasSubscript": false,
-        "__typename": "MatchDetailOutcome"
-      },
-      "showScore": true,
-      "startDateTimeInThePassed": true,
-      "ageGroup": "Equipe Première",
-      "lineup": [
-        {
-          "home": {
-            "lastName": "Rosala",
-            "firstName": "Thomas",
-            "shirtNumber": "21",
-            "badges": "(GK)",
-            "events": [],
-            "__typename": "MatchDetailPlayer"
-          },
-          "away": {
-            "lastName": "Vandeloise",
-            "firstName": "Lucas",
-            "shirtNumber": "1",
-            "badges": "(GK)",
-            "events": [],
-            "__typename": "MatchDetailPlayer"
-          },
-          "__typename": "GroupedPlayer2"
-        },
-        {
-          "home": {
-            "lastName": "Biondolillo",
-            "firstName": "Alessio",
-            "shirtNumber": "3",
-            "badges": "",
-            "events": [
-              {
-                "type": "out",
-                "minute": 67,
-                "__typename": "PlayerEvent"
-              }
-            ],
-            "__typename": "MatchDetailPlayer"
-          },
-          "away": {
-            "lastName": "Tombal",
-            "firstName": "Xavier",
-            "shirtNumber": "3",
-            "badges": "",
-            "events": [],
-            "__typename": "MatchDetailPlayer"
-          },
-          "__typename": "GroupedPlayer2"
-        },
-        {
-          "home": {
-            "lastName": "Samray",
-            "firstName": "Florian",
-            "shirtNumber": "5",
-            "badges": "(C)",
-            "events": [
-              {
-                "type": "yellow",
-                "minute": 77,
-                "__typename": "PlayerEvent"
-              }
-            ],
-            "__typename": "MatchDetailPlayer"
-          },
-          "away": {
-            "lastName": "Freid",
-            "firstName": "Timothée",
-            "shirtNumber": "7",
-            "badges": "",
-            "events": [
-              {
-                "type": "yellow",
-                "minute": 41,
-                "__typename": "PlayerEvent"
-              },
-              {
-                "type": "out",
-                "minute": 46,
-                "__typename": "PlayerEvent"
-              }
-            ],
-            "__typename": "MatchDetailPlayer"
-          },
-          "__typename": "GroupedPlayer2"
-        },
-        {
-          "home": {
-            "lastName": "Moufanin",
-            "firstName": "Sohail",
-            "shirtNumber": "6",
-            "badges": "",
-            "events": [
-              {
-                "type": "yellow",
-                "minute": 83,
-                "__typename": "PlayerEvent"
-              }
-            ],
-            "__typename": "MatchDetailPlayer"
-          },
-          "away": {
-            "lastName": "Bastin",
-            "firstName": "François Vincent",
-            "shirtNumber": "8",
-            "badges": "",
-            "events": [
-              {
-                "type": "yellow",
-                "minute": 51,
-                "__typename": "PlayerEvent"
-              }
-            ],
-            "__typename": "MatchDetailPlayer"
-          },
-          "__typename": "GroupedPlayer2"
-        },
-        {
-          "home": {
-            "lastName": "Roberty",
-            "firstName": "Jérôme Jean-Marie",
-            "shirtNumber": "10",
-            "badges": "",
-            "events": [],
-            "__typename": "MatchDetailPlayer"
-          },
-          "away": {
-            "lastName": "Fautre",
-            "firstName": "Corentin",
-            "shirtNumber": "20",
-            "badges": "",
-            "events": [],
-            "__typename": "MatchDetailPlayer"
-          },
-          "__typename": "GroupedPlayer2"
-        },
-        {
-          "home": {
-            "lastName": "Beaujean",
-            "firstName": "Dorian",
-            "shirtNumber": "11",
-            "badges": "",
-            "events": [],
-            "__typename": "MatchDetailPlayer"
-          },
-          "away": {
-            "lastName": "Clotuche",
-            "firstName": "Sébastien",
-            "shirtNumber": "21",
-            "badges": "(C)",
-            "events": [],
-            "__typename": "MatchDetailPlayer"
-          },
-          "__typename": "GroupedPlayer2"
-        },
-        {
-          "home": {
-            "lastName": "Marechal",
-            "firstName": "Romain",
-            "shirtNumber": "16",
-            "badges": "",
-            "events": [],
-            "__typename": "MatchDetailPlayer"
-          },
-          "away": {
-            "lastName": "Diallo",
-            "firstName": "Saidou",
-            "shirtNumber": "25",
-            "badges": "",
-            "events": [],
-            "__typename": "MatchDetailPlayer"
-          },
-          "__typename": "GroupedPlayer2"
-        },
-        {
-          "home": {
-            "lastName": "Courail",
-            "firstName": "Elias",
-            "shirtNumber": "22",
-            "badges": "",
-            "events": [],
-            "__typename": "MatchDetailPlayer"
-          },
-          "away": {
-            "lastName": "Diouf",
-            "firstName": "Massamba",
-            "shirtNumber": "28",
-            "badges": "",
-            "events": [
-              {
-                "type": "out",
-                "minute": 46,
-                "__typename": "PlayerEvent"
-              }
-            ],
-            "__typename": "MatchDetailPlayer"
-          },
-          "__typename": "GroupedPlayer2"
-        },
-        {
-          "home": {
-            "lastName": "Levaux",
-            "firstName": "Mattéo Jean",
-            "shirtNumber": "23",
-            "badges": "",
-            "events": [
-              {
-                "type": "out",
-                "minute": 67,
-                "__typename": "PlayerEvent"
-              }
-            ],
-            "__typename": "MatchDetailPlayer"
-          },
-          "away": {
-            "lastName": "Renquin",
-            "firstName": "Xavier",
-            "shirtNumber": "30",
-            "badges": "",
-            "events": [],
-            "__typename": "MatchDetailPlayer"
-          },
-          "__typename": "GroupedPlayer2"
-        },
-        {
-          "home": {
-            "lastName": "Chikatara",
-            "firstName": "Ugochukwu Precious",
-            "shirtNumber": "70",
-            "badges": "",
-            "events": [
-              {
-                "type": "out",
-                "minute": 57,
-                "__typename": "PlayerEvent"
-              }
-            ],
-            "__typename": "MatchDetailPlayer"
-          },
-          "away": {
-            "lastName": "Horman",
-            "firstName": "Jules",
-            "shirtNumber": "81",
-            "badges": "",
-            "events": [
-              {
-                "type": "out",
-                "minute": 87,
-                "__typename": "PlayerEvent"
-              }
-            ],
-            "__typename": "MatchDetailPlayer"
-          },
-          "__typename": "GroupedPlayer2"
-        },
-        {
-          "home": {
-            "lastName": "Ella Ella",
-            "firstName": "Johan Ngo'O",
-            "shirtNumber": "96",
-            "badges": "",
-            "events": [],
-            "__typename": "MatchDetailPlayer"
-          },
-          "away": {
-            "lastName": "Toussaint",
-            "firstName": "Aryl",
-            "shirtNumber": "88",
-            "badges": "",
-            "events": [
-              {
-                "type": "yellow",
-                "minute": 75,
-                "__typename": "PlayerEvent"
-              }
-            ],
-            "__typename": "MatchDetailPlayer"
-          },
-          "__typename": "GroupedPlayer2"
-        }
-      ],
-      "substitutes": [
-        {
-          "home": {
-            "lastName": "Rasquin",
-            "firstName": "William",
-            "shirtNumber": "17",
-            "badges": "",
-            "events": [
-              {
-                "type": "in",
-                "minute": 67,
-                "__typename": "PlayerEvent"
-              }
-            ],
-            "__typename": "MatchDetailPlayer"
-          },
-          "away": {
-            "lastName": "Fautré",
-            "firstName": "Noa",
-            "shirtNumber": "10",
-            "badges": "",
-            "events": [
-              {
-                "type": "in",
-                "minute": 46,
-                "__typename": "PlayerEvent"
-              },
-              {
-                "type": "goal",
-                "minute": 70,
-                "__typename": "PlayerEvent"
-              }
-            ],
-            "__typename": "MatchDetailPlayer"
-          },
-          "__typename": "GroupedPlayer2"
-        },
-        {
-          "home": {
-            "lastName": "Ovi",
-            "firstName": "Assoma Josias",
-            "shirtNumber": "20",
-            "badges": "",
-            "events": [
-              {
-                "type": "in",
-                "minute": 57,
-                "__typename": "PlayerEvent"
-              }
-            ],
-            "__typename": "MatchDetailPlayer"
-          },
-          "away": {
-            "lastName": "Idmansour",
-            "firstName": "Ilias",
-            "shirtNumber": "34",
-            "badges": "",
-            "events": [
-              {
-                "type": "in",
-                "minute": 46,
-                "__typename": "PlayerEvent"
-              }
-            ],
-            "__typename": "MatchDetailPlayer"
-          },
-          "__typename": "GroupedPlayer2"
-        },
-        {
-          "home": {
-            "lastName": "Guarino",
-            "firstName": "Diego",
-            "shirtNumber": "35",
-            "badges": "",
-            "events": [],
-            "__typename": "MatchDetailPlayer"
-          },
-          "away": {
-            "lastName": "Gengoux",
-            "firstName": "Maxence",
-            "shirtNumber": "47",
-            "badges": "",
-            "events": [
-              {
-                "type": "in",
-                "minute": 87,
-                "__typename": "PlayerEvent"
-              }
-            ],
-            "__typename": "MatchDetailPlayer"
-          },
-          "__typename": "GroupedPlayer2"
-        },
-        {
-          "home": {
-            "lastName": "Apeke",
-            "firstName": "Prince Mohamed",
-            "shirtNumber": "55",
-            "badges": "",
-            "events": [
-              {
-                "type": "in",
-                "minute": 67,
-                "__typename": "PlayerEvent"
-              }
-            ],
-            "__typename": "MatchDetailPlayer"
-          },
-          "away": {
-            "lastName": "Fautré",
-            "firstName": "Jul",
-            "shirtNumber": "93",
-            "badges": "",
-            "events": [],
-            "__typename": "MatchDetailPlayer"
-          },
-          "__typename": "GroupedPlayer2"
-        }
-      ],
-      "staffLineup": [
-        {
-          "home": {
-            "lastName": "Fabere",
-            "firstName": "Patrick",
-            "function": "T1",
-            "minuteRed": null,
-            "minuteYellow": null,
-            "minuteYellowRed": null,
-            "__typename": "MatchDetailStaff"
-          },
-          "away": {
-            "lastName": "Gomez",
-            "firstName": "Aurélien Philippe",
-            "function": "T1",
-            "minuteRed": null,
-            "minuteYellow": null,
-            "minuteYellowRed": null,
-            "__typename": "MatchDetailStaff"
-          },
-          "__typename": "GroupedStaff"
-        },
-        {
-          "home": {
-            "lastName": "Leruth",
-            "firstName": "Michael",
-            "function": "T2",
-            "minuteRed": null,
-            "minuteYellow": null,
-            "minuteYellowRed": null,
-            "__typename": "MatchDetailStaff"
-          },
-          "away": {
-            "lastName": "Deville",
-            "firstName": "Laurent Louis",
-            "function": "T2",
-            "minuteRed": null,
-            "minuteYellow": null,
-            "minuteYellowRed": null,
-            "__typename": "MatchDetailStaff"
-          },
-          "__typename": "GroupedStaff"
-        },
-        {
-          "home": {
-            "lastName": "Generet",
-            "firstName": "Marc",
-            "function": "Entraineur De Gardien",
-            "minuteRed": null,
-            "minuteYellow": null,
-            "minuteYellowRed": null,
-            "__typename": "MatchDetailStaff"
-          },
-          "away": {
-            "lastName": "Martin",
-            "firstName": "Daniel",
-            "function": "T3",
-            "minuteRed": null,
-            "minuteYellow": null,
-            "minuteYellowRed": null,
-            "__typename": "MatchDetailStaff"
-          },
-          "__typename": "GroupedStaff"
-        },
-        {
-          "home": {
-            "lastName": "Marechal",
-            "firstName": "Raphael",
-            "function": "Délégué Officiel De L'Équipe",
-            "minuteRed": null,
-            "minuteYellow": null,
-            "minuteYellowRed": null,
-            "__typename": "MatchDetailStaff"
-          },
-          "away": {
-            "lastName": "Frere",
-            "firstName": "Steven",
-            "function": "Entraineur De Gardien",
-            "minuteRed": null,
-            "minuteYellow": null,
-            "minuteYellowRed": null,
-            "__typename": "MatchDetailStaff"
-          },
-          "__typename": "GroupedStaff"
-        },
-        {
-          "home": {
-            "lastName": "Gater",
-            "firstName": "Simon",
-            "function": "Soigneur",
-            "minuteRed": null,
-            "minuteYellow": null,
-            "minuteYellowRed": null,
-            "__typename": "MatchDetailStaff"
-          },
-          "away": {
-            "lastName": "Mathieu",
-            "firstName": "Alain",
-            "function": "Délégué Officiel De L'Équipe",
-            "minuteRed": null,
-            "minuteYellow": null,
-            "minuteYellowRed": null,
-            "__typename": "MatchDetailStaff"
-          },
-          "__typename": "GroupedStaff"
-        },
-        {
-          "home": null,
-          "away": {
-            "lastName": "China",
-            "firstName": "Raphael",
-            "function": "Soigneur",
-            "minuteRed": null,
-            "minuteYellow": null,
-            "minuteYellowRed": null,
-            "__typename": "MatchDetailStaff"
-          },
-          "__typename": "GroupedStaff"
-        }
-      ],
-      "__typename": "MatchDetail"
-    },
-    "7565596": {
-      "id": "7565596",
-      "title": "1 PROV.",
-      "startTime": "2026-11-01T14:30:00",
-      "channel": "acff",
-      "series": {
-        "id": "CHP_131416",
-        "name": "1 PROV.",
-        "__typename": "MatchSeries"
-      },
-      "state": "finished",
-      "location": {
-        "name": "Cmp. Rus.Gouvy",
-        "city": "Gouvy",
-        "postalCode": "6670",
-        "address": "rue des Sports 34",
-        "pitchCode": "1",
-        "synthetic": false,
-        "__typename": "MatchLocation"
-      },
-      "officials": [
-        {
-          "lastName": "Forget",
-          "firstName": "Noah",
-          "function": "referee",
-          "status": null,
-          "personAssigned": true,
-          "__typename": "MatchDetailOfficial"
-        },
-        {
-          "lastName": "Lannoy",
-          "firstName": "Bernard",
-          "function": "firstAssistantReferee",
-          "status": null,
-          "personAssigned": true,
-          "__typename": "MatchDetailOfficial"
-        },
-        {
-          "lastName": "Mathieu",
-          "firstName": "Vincent",
+          "lastName": "Tarte",
+          "firstName": "Louis",
           "function": "secondAssistantReferee",
           "status": null,
           "personAssigned": true,
@@ -15324,49 +14552,17 @@
       "events": [
         {
           "minute": 88,
-          "home": [
-            {
-              "lastName": "Poncin",
-              "firstName": "Jordan",
-              "kind": "yellow",
-              "__typename": "MatchDetailEvent"
-            }
-          ],
-          "away": [],
-          "__typename": "GroupedEvents"
-        },
-        {
-          "minute": 86,
-          "home": [
-            {
-              "lastName": "Poncin",
-              "firstName": "Jordan",
-              "kind": "in",
-              "__typename": "MatchDetailEvent"
-            },
-            {
-              "lastName": "Cleymans",
-              "firstName": "Kieran",
-              "kind": "out",
-              "__typename": "MatchDetailEvent"
-            }
-          ],
-          "away": [],
-          "__typename": "GroupedEvents"
-        },
-        {
-          "minute": 80,
           "home": [],
           "away": [
             {
-              "lastName": "Chardome",
-              "firstName": "Pierre",
+              "lastName": "Robert",
+              "firstName": "Louis",
               "kind": "in",
               "__typename": "MatchDetailEvent"
             },
             {
-              "lastName": "Hutin",
-              "firstName": "Simon",
+              "lastName": "Lefort",
+              "firstName": "Thomas",
               "kind": "out",
               "__typename": "MatchDetailEvent"
             }
@@ -15374,17 +14570,17 @@
           "__typename": "GroupedEvents"
         },
         {
-          "minute": 79,
+          "minute": 85,
           "home": [
             {
-              "lastName": "Amory",
-              "firstName": "Mathys",
+              "lastName": "Gillet",
+              "firstName": "Augustin",
               "kind": "in",
               "__typename": "MatchDetailEvent"
             },
             {
-              "lastName": "Dewalque",
-              "firstName": "Florent",
+              "lastName": "Doyen",
+              "firstName": "Henri",
               "kind": "out",
               "__typename": "MatchDetailEvent"
             }
@@ -15396,43 +14592,29 @@
           "minute": 75,
           "home": [
             {
-              "lastName": "Prevot",
-              "firstName": "Nathan",
-              "kind": "yellow",
-              "__typename": "MatchDetailEvent"
-            }
-          ],
-          "away": [
-            {
-              "lastName": "Doyen",
-              "firstName": "Henri",
-              "kind": "yellow",
-              "__typename": "MatchDetailEvent"
-            }
-          ],
-          "__typename": "GroupedEvents"
-        },
-        {
-          "minute": 70,
-          "home": [
-            {
-              "lastName": "Prevot",
-              "firstName": "Nathan",
+              "lastName": "Chardome",
+              "firstName": "Pierre",
               "kind": "in",
               "__typename": "MatchDetailEvent"
             },
             {
-              "lastName": "Bouillon",
-              "firstName": "Robin",
+              "lastName": "Oury",
+              "firstName": "Luka Gregory",
               "kind": "out",
               "__typename": "MatchDetailEvent"
             }
           ],
           "away": [
             {
-              "lastName": "Gillet",
-              "firstName": "Augustin",
-              "kind": "yellow",
+              "lastName": "Zeghdane",
+              "firstName": "Naël",
+              "kind": "in",
+              "__typename": "MatchDetailEvent"
+            },
+            {
+              "lastName": "Nicolas",
+              "firstName": "Hugo",
+              "kind": "out",
               "__typename": "MatchDetailEvent"
             }
           ],
@@ -15440,8 +14622,13 @@
         },
         {
           "minute": 65,
-          "home": [],
-          "away": [
+          "home": [
+            {
+              "lastName": "Colleaux",
+              "firstName": "Louis",
+              "kind": "in",
+              "__typename": "MatchDetailEvent"
+            },
             {
               "lastName": "Van Autgaerden",
               "firstName": "Thomas",
@@ -15453,23 +14640,24 @@
               "firstName": "Thomas",
               "kind": "out",
               "__typename": "MatchDetailEvent"
+            },
+            {
+              "lastName": "Hutin",
+              "firstName": "Simon",
+              "kind": "out",
+              "__typename": "MatchDetailEvent"
             }
           ],
-          "__typename": "GroupedEvents"
-        },
-        {
-          "minute": 58,
-          "home": [],
           "away": [
             {
-              "lastName": "Colleaux",
-              "firstName": "Louis",
+              "lastName": "Molitor",
+              "firstName": "Hugo",
               "kind": "in",
               "__typename": "MatchDetailEvent"
             },
             {
-              "lastName": "Oury",
-              "firstName": "Luka Gregory",
+              "lastName": "Cavelier",
+              "firstName": "Geoffrey",
               "kind": "out",
               "__typename": "MatchDetailEvent"
             }
@@ -15477,37 +14665,37 @@
           "__typename": "GroupedEvents"
         },
         {
-          "minute": 42,
+          "minute": 46,
           "home": [],
           "away": [
             {
-              "lastName": "Baudot",
-              "firstName": "Thomas",
-              "kind": "goal",
+              "lastName": "Mays",
+              "firstName": "Alexis Harry",
+              "kind": "yellow",
               "__typename": "MatchDetailEvent"
             }
           ],
           "__typename": "GroupedEvents"
         },
         {
-          "minute": 30,
-          "home": [
+          "minute": 31,
+          "home": [],
+          "away": [
             {
-              "lastName": "Andrianne",
-              "firstName": "Yannis",
-              "kind": "yellowred",
+              "lastName": "Bourgeois",
+              "firstName": "Mattéo André",
+              "kind": "yellow",
               "__typename": "MatchDetailEvent"
             }
           ],
-          "away": [],
           "__typename": "GroupedEvents"
         },
         {
-          "minute": 20,
+          "minute": 11,
           "home": [
             {
-              "lastName": "Andrianne",
-              "firstName": "Yannis",
+              "lastName": "Oury",
+              "firstName": "Luka Gregory",
               "kind": "yellow",
               "__typename": "MatchDetailEvent"
             }
@@ -15518,23 +14706,23 @@
       ],
       "shootout": [],
       "homeTeam": {
-        "id": "367074",
-        "name": "RUS.Gouvy",
-        "clubId": "1551",
-        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03227.jpg",
-        "__typename": "MatchDetailTeam"
-      },
-      "awayTeam": {
         "id": "368402",
         "name": "UN.St.André Ochamps A",
         "clubId": "1968",
         "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05614.jpg",
         "__typename": "MatchDetailTeam"
       },
+      "awayTeam": {
+        "id": "365876",
+        "name": "R.Wallonia Libin A",
+        "clubId": "1381",
+        "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02506.jpg",
+        "__typename": "MatchDetailTeam"
+      },
       "outcome": {
         "homeTeamGoals": 0,
         "homeTeamPenaltiesScored": null,
-        "awayTeamGoals": 1,
+        "awayTeamGoals": 0,
         "awayTeamPenaltiesScored": null,
         "subscript": null,
         "isFinished": true,
@@ -15548,17 +14736,17 @@
       "lineup": [
         {
           "home": {
-            "lastName": "Scheid",
-            "firstName": "Théo",
-            "shirtNumber": "74",
-            "badges": "(C) (GK)",
+            "lastName": "Lempereur",
+            "firstName": "Theo",
+            "shirtNumber": "18",
+            "badges": "(GK)",
             "events": [],
             "__typename": "MatchDetailPlayer"
           },
           "away": {
-            "lastName": "Lempereur",
-            "firstName": "Theo",
-            "shirtNumber": "18",
+            "lastName": "Istace",
+            "firstName": "Axel",
+            "shirtNumber": "1",
             "badges": "(GK)",
             "events": [],
             "__typename": "MatchDetailPlayer"
@@ -15567,14 +14755,6 @@
         },
         {
           "home": {
-            "lastName": "Lentz",
-            "firstName": "Mathieu",
-            "shirtNumber": "2",
-            "badges": "",
-            "events": [],
-            "__typename": "MatchDetailPlayer"
-          },
-          "away": {
             "lastName": "Schroeder",
             "firstName": "Gilles",
             "shirtNumber": "5",
@@ -15582,39 +14762,62 @@
             "events": [],
             "__typename": "MatchDetailPlayer"
           },
+          "away": {
+            "lastName": "Rodrigues Da Silva",
+            "firstName": "Hugo",
+            "shirtNumber": "3",
+            "badges": "",
+            "events": [],
+            "__typename": "MatchDetailPlayer"
+          },
           "__typename": "GroupedPlayer2"
         },
         {
           "home": {
-            "lastName": "Andrianne",
-            "firstName": "Yannis",
-            "shirtNumber": "3",
-            "badges": "",
-            "events": [
-              {
-                "type": "yellow",
-                "minute": 20,
-                "__typename": "PlayerEvent"
-              },
-              {
-                "type": "yellowred",
-                "minute": 30,
-                "__typename": "PlayerEvent"
-              }
-            ],
-            "__typename": "MatchDetailPlayer"
-          },
-          "away": {
             "lastName": "Baudot",
             "firstName": "Thomas",
             "shirtNumber": "7",
             "badges": "",
             "events": [
               {
-                "type": "goal",
-                "minute": 42,
+                "type": "out",
+                "minute": 65,
                 "__typename": "PlayerEvent"
-              },
+              }
+            ],
+            "__typename": "MatchDetailPlayer"
+          },
+          "away": {
+            "lastName": "Bourgeois",
+            "firstName": "Mattéo André",
+            "shirtNumber": "6",
+            "badges": "",
+            "events": [
+              {
+                "type": "yellow",
+                "minute": 31,
+                "__typename": "PlayerEvent"
+              }
+            ],
+            "__typename": "MatchDetailPlayer"
+          },
+          "__typename": "GroupedPlayer2"
+        },
+        {
+          "home": {
+            "lastName": "Robinet",
+            "firstName": "Julien",
+            "shirtNumber": "9",
+            "badges": "",
+            "events": [],
+            "__typename": "MatchDetailPlayer"
+          },
+          "away": {
+            "lastName": "Cavelier",
+            "firstName": "Geoffrey",
+            "shirtNumber": "10",
+            "badges": "(C)",
+            "events": [
               {
                 "type": "out",
                 "minute": 65,
@@ -15627,33 +14830,6 @@
         },
         {
           "home": {
-            "lastName": "Zitella",
-            "firstName": "Yanis",
-            "shirtNumber": "6",
-            "badges": "",
-            "events": [],
-            "__typename": "MatchDetailPlayer"
-          },
-          "away": {
-            "lastName": "Robinet",
-            "firstName": "Julien",
-            "shirtNumber": "9",
-            "badges": "",
-            "events": [],
-            "__typename": "MatchDetailPlayer"
-          },
-          "__typename": "GroupedPlayer2"
-        },
-        {
-          "home": {
-            "lastName": "Demeuse",
-            "firstName": "Nathan",
-            "shirtNumber": "7",
-            "badges": "",
-            "events": [],
-            "__typename": "MatchDetailPlayer"
-          },
-          "away": {
             "lastName": "Hutin",
             "firstName": "Simon",
             "shirtNumber": "10",
@@ -15661,93 +14837,94 @@
             "events": [
               {
                 "type": "out",
-                "minute": 80,
+                "minute": 65,
                 "__typename": "PlayerEvent"
               }
             ],
+            "__typename": "MatchDetailPlayer"
+          },
+          "away": {
+            "lastName": "Poncelet",
+            "firstName": "Nathan",
+            "shirtNumber": "12",
+            "badges": "",
+            "events": [],
             "__typename": "MatchDetailPlayer"
           },
           "__typename": "GroupedPlayer2"
         },
         {
           "home": {
-            "lastName": "Guillaume",
-            "firstName": "Lilian",
-            "shirtNumber": "10",
-            "badges": "",
-            "events": [],
-            "__typename": "MatchDetailPlayer"
-          },
-          "away": {
             "lastName": "Oury",
             "firstName": "Luka Gregory",
             "shirtNumber": "11",
             "badges": "",
             "events": [
               {
+                "type": "yellow",
+                "minute": 11,
+                "__typename": "PlayerEvent"
+              },
+              {
                 "type": "out",
-                "minute": 58,
+                "minute": 75,
                 "__typename": "PlayerEvent"
               }
             ],
             "__typename": "MatchDetailPlayer"
           },
-          "__typename": "GroupedPlayer2"
-        },
-        {
-          "home": {
-            "lastName": "Dewalque",
-            "firstName": "Florent",
+          "away": {
+            "lastName": "Soyer",
+            "firstName": "Anthony",
             "shirtNumber": "13",
             "badges": "",
-            "events": [
-              {
-                "type": "out",
-                "minute": 79,
-                "__typename": "PlayerEvent"
-              }
-            ],
-            "__typename": "MatchDetailPlayer"
-          },
-          "away": {
-            "lastName": "Gillet",
-            "firstName": "Augustin",
-            "shirtNumber": "14",
-            "badges": "",
-            "events": [
-              {
-                "type": "yellow",
-                "minute": 70,
-                "__typename": "PlayerEvent"
-              }
-            ],
+            "events": [],
             "__typename": "MatchDetailPlayer"
           },
           "__typename": "GroupedPlayer2"
         },
         {
           "home": {
-            "lastName": "Bouillon",
-            "firstName": "Robin",
-            "shirtNumber": "16",
+            "lastName": "Perreaux",
+            "firstName": "Mathieu",
+            "shirtNumber": "13",
             "badges": "",
-            "events": [
-              {
-                "type": "out",
-                "minute": 70,
-                "__typename": "PlayerEvent"
-              }
-            ],
+            "events": [],
             "__typename": "MatchDetailPlayer"
           },
           "away": {
+            "lastName": "Poncelet",
+            "firstName": "Corentin",
+            "shirtNumber": "14",
+            "badges": "",
+            "events": [],
+            "__typename": "MatchDetailPlayer"
+          },
+          "__typename": "GroupedPlayer2"
+        },
+        {
+          "home": {
             "lastName": "Doyen",
             "firstName": "Henri",
             "shirtNumber": "15",
             "badges": "",
             "events": [
               {
-                "type": "yellow",
+                "type": "out",
+                "minute": 85,
+                "__typename": "PlayerEvent"
+              }
+            ],
+            "__typename": "MatchDetailPlayer"
+          },
+          "away": {
+            "lastName": "Nicolas",
+            "firstName": "Hugo",
+            "shirtNumber": "15",
+            "badges": "",
+            "events": [
+              {
+                "type": "out",
                 "minute": 75,
                 "__typename": "PlayerEvent"
               }
@@ -15758,14 +14935,6 @@
         },
         {
           "home": {
-            "lastName": "Hougardy",
-            "firstName": "Goran Nicolas",
-            "shirtNumber": "17",
-            "badges": "",
-            "events": [],
-            "__typename": "MatchDetailPlayer"
-          },
-          "away": {
             "lastName": "Maury",
             "firstName": "Noah",
             "shirtNumber": "16",
@@ -15773,26 +14942,9 @@
             "events": [],
             "__typename": "MatchDetailPlayer"
           },
-          "__typename": "GroupedPlayer2"
-        },
-        {
-          "home": {
-            "lastName": "Cleymans",
-            "firstName": "Kieran",
-            "shirtNumber": "21",
-            "badges": "",
-            "events": [
-              {
-                "type": "out",
-                "minute": 86,
-                "__typename": "PlayerEvent"
-              }
-            ],
-            "__typename": "MatchDetailPlayer"
-          },
           "away": {
-            "lastName": "Jourdan",
-            "firstName": "Baptiste",
+            "lastName": "Lefort",
+            "firstName": "Romain",
             "shirtNumber": "17",
             "badges": "",
             "events": [],
@@ -15802,19 +14954,50 @@
         },
         {
           "home": {
-            "lastName": "Georges",
+            "lastName": "Jourdan",
             "firstName": "Baptiste",
-            "shirtNumber": "22",
+            "shirtNumber": "17",
             "badges": "",
             "events": [],
             "__typename": "MatchDetailPlayer"
           },
           "away": {
+            "lastName": "Lefort",
+            "firstName": "Thomas",
+            "shirtNumber": "19",
+            "badges": "",
+            "events": [
+              {
+                "type": "out",
+                "minute": 88,
+                "__typename": "PlayerEvent"
+              }
+            ],
+            "__typename": "MatchDetailPlayer"
+          },
+          "__typename": "GroupedPlayer2"
+        },
+        {
+          "home": {
             "lastName": "Giboux",
             "firstName": "Mathéo",
             "shirtNumber": "30",
             "badges": "",
             "events": [],
+            "__typename": "MatchDetailPlayer"
+          },
+          "away": {
+            "lastName": "Mays",
+            "firstName": "Alexis Harry",
+            "shirtNumber": "47",
+            "badges": "",
+            "events": [
+              {
+                "type": "yellow",
+                "minute": 46,
+                "__typename": "PlayerEvent"
+              }
+            ],
             "__typename": "MatchDetailPlayer"
           },
           "__typename": "GroupedPlayer2"
@@ -15823,14 +15006,6 @@
       "substitutes": [
         {
           "home": {
-            "lastName": "Scheid",
-            "firstName": "Lucas",
-            "shirtNumber": "4",
-            "badges": "",
-            "events": [],
-            "__typename": "MatchDetailPlayer"
-          },
-          "away": {
             "lastName": "Van Autgaerden",
             "firstName": "Thomas",
             "shirtNumber": "4",
@@ -15844,68 +15019,10 @@
             ],
             "__typename": "MatchDetailPlayer"
           },
-          "__typename": "GroupedPlayer2"
-        },
-        {
-          "home": {
-            "lastName": "Poncin",
-            "firstName": "Jordan",
-            "shirtNumber": "11",
-            "badges": "",
-            "events": [
-              {
-                "type": "in",
-                "minute": 86,
-                "__typename": "PlayerEvent"
-              },
-              {
-                "type": "yellow",
-                "minute": 88,
-                "__typename": "PlayerEvent"
-              }
-            ],
-            "__typename": "MatchDetailPlayer"
-          },
           "away": {
-            "lastName": "Colleaux",
-            "firstName": "Louis",
-            "shirtNumber": "19",
-            "badges": "",
-            "events": [
-              {
-                "type": "in",
-                "minute": 58,
-                "__typename": "PlayerEvent"
-              }
-            ],
-            "__typename": "MatchDetailPlayer"
-          },
-          "__typename": "GroupedPlayer2"
-        },
-        {
-          "home": {
-            "lastName": "Prevot",
-            "firstName": "Nathan",
-            "shirtNumber": "14",
-            "badges": "",
-            "events": [
-              {
-                "type": "in",
-                "minute": 70,
-                "__typename": "PlayerEvent"
-              },
-              {
-                "type": "yellow",
-                "minute": 75,
-                "__typename": "PlayerEvent"
-              }
-            ],
-            "__typename": "MatchDetailPlayer"
-          },
-          "away": {
-            "lastName": "Chisogne",
-            "firstName": "Martin",
-            "shirtNumber": "22",
+            "lastName": "Clarinval",
+            "firstName": "Mano",
+            "shirtNumber": "2",
             "badges": "",
             "events": [],
             "__typename": "MatchDetailPlayer"
@@ -15914,20 +15031,37 @@
         },
         {
           "home": {
-            "lastName": "Amory",
-            "firstName": "Mathys",
-            "shirtNumber": "23",
+            "lastName": "Gillet",
+            "firstName": "Augustin",
+            "shirtNumber": "14",
             "badges": "",
             "events": [
               {
                 "type": "in",
-                "minute": 79,
+                "minute": 85,
                 "__typename": "PlayerEvent"
               }
             ],
             "__typename": "MatchDetailPlayer"
           },
           "away": {
+            "lastName": "Molitor",
+            "firstName": "Hugo",
+            "shirtNumber": "7",
+            "badges": "",
+            "events": [
+              {
+                "type": "in",
+                "minute": 65,
+                "__typename": "PlayerEvent"
+              }
+            ],
+            "__typename": "MatchDetailPlayer"
+          },
+          "__typename": "GroupedPlayer2"
+        },
+        {
+          "home": {
             "lastName": "Chardome",
             "firstName": "Pierre",
             "shirtNumber": "24",
@@ -15935,7 +15069,52 @@
             "events": [
               {
                 "type": "in",
-                "minute": 80,
+                "minute": 75,
+                "__typename": "PlayerEvent"
+              }
+            ],
+            "__typename": "MatchDetailPlayer"
+          },
+          "away": {
+            "lastName": "Robert",
+            "firstName": "Louis",
+            "shirtNumber": "8",
+            "badges": "",
+            "events": [
+              {
+                "type": "in",
+                "minute": 88,
+                "__typename": "PlayerEvent"
+              }
+            ],
+            "__typename": "MatchDetailPlayer"
+          },
+          "__typename": "GroupedPlayer2"
+        },
+        {
+          "home": {
+            "lastName": "Colleaux",
+            "firstName": "Louis",
+            "shirtNumber": "26",
+            "badges": "",
+            "events": [
+              {
+                "type": "in",
+                "minute": 65,
+                "__typename": "PlayerEvent"
+              }
+            ],
+            "__typename": "MatchDetailPlayer"
+          },
+          "away": {
+            "lastName": "Zeghdane",
+            "firstName": "Naël",
+            "shirtNumber": "16",
+            "badges": "",
+            "events": [
+              {
+                "type": "in",
+                "minute": 75,
                 "__typename": "PlayerEvent"
               }
             ],
@@ -15947,15 +15126,6 @@
       "staffLineup": [
         {
           "home": {
-            "lastName": "Vandormael",
-            "firstName": "Grégory",
-            "function": "T1",
-            "minuteRed": null,
-            "minuteYellow": null,
-            "minuteYellowRed": null,
-            "__typename": "MatchDetailStaff"
-          },
-          "away": {
             "lastName": "Robinet",
             "firstName": "Julien",
             "function": "T1",
@@ -15964,19 +15134,19 @@
             "minuteYellowRed": null,
             "__typename": "MatchDetailStaff"
           },
-          "__typename": "GroupedStaff"
-        },
-        {
-          "home": {
-            "lastName": "Cornet",
-            "firstName": "Johann",
-            "function": "T2",
+          "away": {
+            "lastName": "Simon",
+            "firstName": "Benjamin",
+            "function": "T1",
             "minuteRed": null,
             "minuteYellow": null,
             "minuteYellowRed": null,
             "__typename": "MatchDetailStaff"
           },
-          "away": {
+          "__typename": "GroupedStaff"
+        },
+        {
+          "home": {
             "lastName": "Plennevaux",
             "firstName": "Christophe",
             "function": "T2",
@@ -15985,19 +15155,19 @@
             "minuteYellowRed": null,
             "__typename": "MatchDetailStaff"
           },
-          "__typename": "GroupedStaff"
-        },
-        {
-          "home": {
-            "lastName": "Wilmotte",
-            "firstName": "Gilles",
-            "function": "Entraineur De Gardien",
+          "away": {
+            "lastName": "Philippe",
+            "firstName": "Damien",
+            "function": "T2",
             "minuteRed": null,
             "minuteYellow": null,
             "minuteYellowRed": null,
             "__typename": "MatchDetailStaff"
           },
-          "away": {
+          "__typename": "GroupedStaff"
+        },
+        {
+          "home": {
             "lastName": "Arnould",
             "firstName": "Didier",
             "function": "Délégué Officiel De L'Équipe",
@@ -16006,45 +15176,75 @@
             "minuteYellowRed": null,
             "__typename": "MatchDetailStaff"
           },
-          "__typename": "GroupedStaff"
-        },
-        {
-          "home": {
-            "lastName": "Amory",
-            "firstName": "Laurent",
-            "function": "Délégué Officiel De L'Équipe",
+          "away": {
+            "lastName": "Brasseur",
+            "firstName": "Killian",
+            "function": "Entraineur De Gardien",
             "minuteRed": null,
             "minuteYellow": null,
             "minuteYellowRed": null,
             "__typename": "MatchDetailStaff"
           },
-          "away": null,
           "__typename": "GroupedStaff"
         },
         {
           "home": {
-            "lastName": "Lentz",
-            "firstName": "Florence Pauline",
+            "lastName": "Grandjean",
+            "firstName": "Baptiste",
             "function": "Soigneur",
             "minuteRed": null,
             "minuteYellow": null,
             "minuteYellowRed": null,
             "__typename": "MatchDetailStaff"
           },
-          "away": null,
+          "away": {
+            "lastName": "Schoentgen",
+            "firstName": "Thierry",
+            "function": "Délégué Officiel De L'Équipe",
+            "minuteRed": null,
+            "minuteYellow": null,
+            "minuteYellowRed": null,
+            "__typename": "MatchDetailStaff"
+          },
           "__typename": "GroupedStaff"
         },
         {
-          "home": {
-            "lastName": "Maraga",
-            "firstName": "Zaïg",
+          "home": null,
+          "away": {
+            "lastName": "Volvert",
+            "firstName": "Gilles",
+            "function": "Soigneur",
+            "minuteRed": null,
+            "minuteYellow": null,
+            "minuteYellowRed": null,
+            "__typename": "MatchDetailStaff"
+          },
+          "__typename": "GroupedStaff"
+        },
+        {
+          "home": null,
+          "away": {
+            "lastName": "Delhez",
+            "firstName": "Benoît Christian",
+            "function": "Soigneur",
+            "minuteRed": null,
+            "minuteYellow": null,
+            "minuteYellowRed": null,
+            "__typename": "MatchDetailStaff"
+          },
+          "__typename": "GroupedStaff"
+        },
+        {
+          "home": null,
+          "away": {
+            "lastName": "Hotua",
+            "firstName": "Matys",
             "function": "Responsable Du Matériel",
             "minuteRed": null,
             "minuteYellow": null,
             "minuteYellowRed": null,
             "__typename": "MatchDetailStaff"
           },
-          "away": null,
           "__typename": "GroupedStaff"
         }
       ],
@@ -16056,529 +15256,617 @@
       "kickId": "m1",
       "rbfaId": "7565516",
       "score": "8-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m2",
       "rbfaId": "7565512",
       "score": "2-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m3",
       "rbfaId": "7565518",
       "score": "2-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m5",
       "rbfaId": "7565515",
       "score": "1-0",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m4",
       "rbfaId": "7565514",
       "score": "1-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m7",
       "rbfaId": "7565517",
       "score": "1-2",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m6",
       "rbfaId": "7565511",
       "score": "0-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m8",
       "rbfaId": "7565513",
       "score": "0-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m9",
       "rbfaId": "7565520",
       "score": "3-0",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m10",
       "rbfaId": "7565521",
       "score": "0-4",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m12",
       "rbfaId": "7565524",
       "score": "3-0",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m13",
       "rbfaId": "7565523",
       "score": "4-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m14",
       "rbfaId": "7565526",
       "score": "2-2",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m11",
       "rbfaId": "7565522",
       "score": "2-2",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m16",
       "rbfaId": "7565519",
       "score": "2-2",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m15",
       "rbfaId": "7565525",
       "score": "1-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m20",
       "rbfaId": "7565534",
       "score": "3-3",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m18",
       "rbfaId": "7565531",
       "score": "1-3",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m17",
       "rbfaId": "7565530",
       "score": "2-3",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m21",
       "rbfaId": "7565532",
       "score": "6-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m19",
       "rbfaId": "7565528",
       "score": "0-0",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m23",
       "rbfaId": "7565527",
       "score": "0-0",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m22",
       "rbfaId": "7565533",
       "score": "3-0",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m24",
       "rbfaId": "7565529",
       "score": "1-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m25",
       "rbfaId": "7565536",
       "score": "3-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m28",
       "rbfaId": "7565541",
       "score": "1-0",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m29",
       "rbfaId": "7565542",
       "score": "1-0",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m26",
       "rbfaId": "7565535",
       "score": "3-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m27",
       "rbfaId": "7565539",
       "score": "1-2",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m30",
       "rbfaId": "7565538",
       "score": "0-0",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m31",
       "rbfaId": "7565537",
       "score": "5-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m32",
       "rbfaId": "7565540",
       "score": "4-2",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m33",
       "rbfaId": "7565546",
       "score": "1-3",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m36",
       "rbfaId": "7565548",
       "score": "2-3",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m34",
       "rbfaId": "7565547",
       "score": "3-4",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m37",
       "rbfaId": "7565550",
       "score": "3-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m35",
       "rbfaId": "7565544",
       "score": "0-0",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m39",
       "rbfaId": "7565549",
       "score": "3-3",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m38",
       "rbfaId": "7565543",
       "score": "3-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m40",
       "rbfaId": "7565545",
       "score": "8-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m41",
       "rbfaId": "7565554",
       "score": "2-3",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m43",
       "rbfaId": "7565552",
       "score": "1-0",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m45",
       "rbfaId": "7565557",
       "score": "2-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m42",
       "rbfaId": "7565558",
       "score": "2-2",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m46",
       "rbfaId": "7565551",
       "score": "2-5",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m44",
       "rbfaId": "7565555",
       "score": "5-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m48",
       "rbfaId": "7565556",
       "score": "2-3",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m47",
       "rbfaId": "7565553",
       "score": "3-3",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m49",
       "rbfaId": "7565560",
       "score": "1-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m50",
       "rbfaId": "7565566",
       "score": "4-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m51",
       "rbfaId": "7565563",
       "score": "4-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m52",
       "rbfaId": "7565562",
       "score": "1-3",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m54",
       "rbfaId": "7565564",
       "score": "2-2",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m53",
       "rbfaId": "7565559",
       "score": "1-3",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m55",
       "rbfaId": "7565565",
       "score": "1-4",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m56",
       "rbfaId": "7565561",
       "score": "1-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m60",
       "rbfaId": "7565568",
       "score": "2-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m59",
       "rbfaId": "7565573",
       "score": "0-2",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m57",
       "rbfaId": "7565574",
       "score": "2-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m61",
       "rbfaId": "7565567",
       "score": "0-2",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m62",
       "rbfaId": "7565571",
       "score": "3-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m58",
       "rbfaId": "7565570",
       "score": "0-3",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m63",
       "rbfaId": "7565569",
       "score": "2-5",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m64",
       "rbfaId": "7565572",
       "score": "3-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m66",
       "rbfaId": "7565578",
       "score": "3-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m67",
       "rbfaId": "7565580",
       "score": "2-0",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m65",
       "rbfaId": "7565576",
       "score": "1-2",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m68",
       "rbfaId": "7565582",
       "score": "1-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m69",
       "rbfaId": "7565579",
       "score": "0-0",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m70",
       "rbfaId": "7565575",
       "score": "0-0",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m71",
       "rbfaId": "7565577",
       "score": "4-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m72",
       "rbfaId": "7565701",
       "score": "2-0",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m75",
       "rbfaId": "7565584",
       "score": "1-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m74",
       "rbfaId": "7565589",
       "score": "3-0",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m78",
       "rbfaId": "7565590",
       "score": "2-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m77",
       "rbfaId": "7565587",
       "score": "1-3",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m76",
       "rbfaId": "7565583",
       "score": "2-0",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m73",
       "rbfaId": "7565586",
       "score": "2-2",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m79",
       "rbfaId": "7565705",
       "score": "1-0",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m80",
       "rbfaId": "7565588",
       "score": "1-5",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m84",
       "rbfaId": "7565595",
       "score": "2-2",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m83",
       "rbfaId": "7565598",
       "score": "1-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m82",
       "rbfaId": "7565594",
       "score": "1-2",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m81",
       "rbfaId": "7565592",
       "score": "1-1",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m86",
       "rbfaId": "7565591",
       "score": "3-4",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m85",
       "rbfaId": "7565597",
       "score": "1-3",
-      "events": 0
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m87",
       "rbfaId": "7565593",
       "score": "0-1",
-      "events": 18
+      "events": 0,
+      "scoreOnly": true
     },
     {
       "kickId": "m88",
       "rbfaId": "7565596",
       "score": "0-1",
-      "events": 19
+      "events": 0,
+      "scoreOnly": true
     }
   ],
   "unmatched": [
