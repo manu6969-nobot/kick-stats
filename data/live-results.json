@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T00:11:24.870Z",
+  "updatedAt": "2026-11-07T23:49:08.123Z",
   "matches": {
     "m1": {
       "status": "finished",
@@ -33720,6 +33720,1920 @@
           "teamId": "libin",
           "started": false,
           "minutes": 15
+        }
+      ]
+    },
+    "m91": {
+      "status": "finished",
+      "homeScore": 4,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565600-undefined-goal-Fautré",
+          "minute": 0,
+          "type": "goal",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-23",
+          "detail": "Jul Fautré"
+        },
+        {
+          "id": "rbfa-7565600-undefined-yellow-Lockman",
+          "minute": 0,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-8",
+          "detail": "Mathis Lockman"
+        },
+        {
+          "id": "rbfa-7565600-undefined-in-Goosse",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-5",
+          "detail": "Cyprien Goosse"
+        },
+        {
+          "id": "rbfa-7565600-undefined-out-Poncelet",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-10",
+          "detail": "Esteban Poncelet"
+        },
+        {
+          "id": "rbfa-7565600-undefined-in-Toubon",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-30",
+          "detail": "Jean-Marie Toubon"
+        },
+        {
+          "id": "rbfa-7565600-undefined-out-Dumont",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-16",
+          "detail": "Tim Dumont"
+        },
+        {
+          "id": "rbfa-7565600-undefined-in-Vaguet",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-36",
+          "detail": "Diego Vaguet"
+        },
+        {
+          "id": "rbfa-7565600-undefined-out-Horman",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-32",
+          "detail": "Jules Horman"
+        },
+        {
+          "id": "rbfa-7565600-undefined-in-Gravé",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-6",
+          "detail": "Benjamin Gravé"
+        },
+        {
+          "id": "rbfa-7565600-undefined-out-Copine",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-14",
+          "detail": "Charles Copine"
+        },
+        {
+          "id": "rbfa-7565600-undefined-in-Fautré",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-23",
+          "detail": "Jul Fautré"
+        },
+        {
+          "id": "rbfa-7565600-undefined-out-Gengoux",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-25",
+          "detail": "Maxence Gengoux"
+        },
+        {
+          "id": "rbfa-7565600-undefined-in-Pirotte",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-12",
+          "detail": "Noan Pirotte"
+        },
+        {
+          "id": "rbfa-7565600-undefined-out-Clotuche",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-6",
+          "detail": "Sébastien Clotuche"
+        },
+        {
+          "id": "rbfa-7565600-undefined-yellow-Poncelet",
+          "minute": 0,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-11",
+          "detail": "Gilles Poncelet"
+        },
+        {
+          "id": "rbfa-7565600-undefined-in-Pierret",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-9",
+          "detail": "Antoine Pierret"
+        },
+        {
+          "id": "rbfa-7565600-undefined-out-Bozet",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-12",
+          "detail": "Clément Bozet"
+        },
+        {
+          "id": "rbfa-7565600-undefined-goal-Diallo",
+          "minute": 0,
+          "type": "goal",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-29",
+          "detail": "Saidou Diallo"
+        },
+        {
+          "id": "rbfa-7565600-undefined-goal-Diallo",
+          "minute": 0,
+          "type": "goal",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-29",
+          "detail": "Saidou Diallo"
+        },
+        {
+          "id": "rbfa-7565600-undefined-yellow-Dumont",
+          "minute": 0,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-16",
+          "detail": "Tim Dumont"
+        },
+        {
+          "id": "rbfa-7565600-undefined-goal-Diallo",
+          "minute": 0,
+          "type": "goal",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-29",
+          "detail": "Saidou Diallo"
+        },
+        {
+          "id": "rbfa-7565600-undefined-goal-Vermierdt",
+          "minute": 0,
+          "type": "goal",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-26",
+          "detail": "Lenny Vermierdt"
+        },
+        {
+          "id": "rbfa-7565600-undefined-yellow-Gengoux",
+          "minute": 0,
+          "type": "yellow",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-25",
+          "detail": "Maxence Gengoux"
+        }
+      ],
+      "officials": [
+        {
+          "firstName": "Michel",
+          "lastName": "Etienne",
+          "role": "referee"
+        },
+        {
+          "firstName": "Freddy",
+          "lastName": "Solheid",
+          "role": "firstAssistantReferee"
+        },
+        {
+          "firstName": "Julien",
+          "lastName": "Marnette",
+          "role": "secondAssistantReferee"
+        }
+      ],
+      "appearances": [
+        {
+          "playerId": "p-houffalize-4",
+          "teamId": "houffalize",
+          "started": true,
+          "minutes": 91
+        },
+        {
+          "playerId": "p-bercheux-1",
+          "teamId": "bercheux",
+          "started": true,
+          "minutes": 91
+        },
+        {
+          "playerId": "p-houffalize-15",
+          "teamId": "houffalize",
+          "started": true,
+          "minutes": 91
+        },
+        {
+          "playerId": "p-bercheux-8",
+          "teamId": "bercheux",
+          "started": true,
+          "minutes": 91
+        },
+        {
+          "playerId": "p-houffalize-30",
+          "teamId": "houffalize",
+          "started": true,
+          "minutes": 91
+        },
+        {
+          "playerId": "p-bercheux-10",
+          "teamId": "bercheux",
+          "started": true,
+          "minutes": 81
+        },
+        {
+          "playerId": "p-houffalize-32",
+          "teamId": "houffalize",
+          "started": true,
+          "minutes": 77
+        },
+        {
+          "playerId": "p-bercheux-22",
+          "teamId": "bercheux",
+          "started": true,
+          "minutes": 91
+        },
+        {
+          "playerId": "p-houffalize-8",
+          "teamId": "houffalize",
+          "started": true,
+          "minutes": 91
+        },
+        {
+          "playerId": "p-bercheux-26",
+          "teamId": "bercheux",
+          "started": true,
+          "minutes": 91
+        },
+        {
+          "playerId": "p-houffalize-6",
+          "teamId": "houffalize",
+          "started": true,
+          "minutes": 64
+        },
+        {
+          "playerId": "p-bercheux-16",
+          "teamId": "bercheux",
+          "started": true,
+          "minutes": 80
+        },
+        {
+          "playerId": "p-houffalize-29",
+          "teamId": "houffalize",
+          "started": true,
+          "minutes": 91
+        },
+        {
+          "playerId": "p-bercheux-12",
+          "teamId": "bercheux",
+          "started": true,
+          "minutes": 60
+        },
+        {
+          "playerId": "p-houffalize-14",
+          "teamId": "houffalize",
+          "started": true,
+          "minutes": 91
+        },
+        {
+          "playerId": "p-bercheux-14",
+          "teamId": "bercheux",
+          "started": true,
+          "minutes": 72
+        },
+        {
+          "playerId": "p-houffalize-26",
+          "teamId": "houffalize",
+          "started": true,
+          "minutes": 91
+        },
+        {
+          "playerId": "p-bercheux-11",
+          "teamId": "bercheux",
+          "started": true,
+          "minutes": 91
+        },
+        {
+          "playerId": "p-houffalize-25",
+          "teamId": "houffalize",
+          "started": true,
+          "minutes": 66
+        },
+        {
+          "playerId": "p-bercheux-3",
+          "teamId": "bercheux",
+          "started": true,
+          "minutes": 91
+        },
+        {
+          "playerId": "p-houffalize-16",
+          "teamId": "houffalize",
+          "started": true,
+          "minutes": 91
+        },
+        {
+          "playerId": "p-bercheux-20",
+          "teamId": "bercheux",
+          "started": true,
+          "minutes": 91
+        },
+        {
+          "playerId": "p-houffalize-12",
+          "teamId": "houffalize",
+          "started": false,
+          "minutes": 27
+        },
+        {
+          "playerId": "p-bercheux-9",
+          "teamId": "bercheux",
+          "started": false,
+          "minutes": 31
+        },
+        {
+          "playerId": "p-houffalize-23",
+          "teamId": "houffalize",
+          "started": false,
+          "minutes": 25
+        },
+        {
+          "playerId": "p-bercheux-6",
+          "teamId": "bercheux",
+          "started": false,
+          "minutes": 19
+        },
+        {
+          "playerId": "p-houffalize-36",
+          "teamId": "houffalize",
+          "started": false,
+          "minutes": 14
+        },
+        {
+          "playerId": "p-bercheux-30",
+          "teamId": "bercheux",
+          "started": false,
+          "minutes": 11
+        },
+        {
+          "playerId": "p-bercheux-5",
+          "teamId": "bercheux",
+          "started": false,
+          "minutes": 10
+        }
+      ]
+    },
+    "m89": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 2,
+      "events": [
+        {
+          "id": "rbfa-7565606-undefined-goal-Lentz",
+          "minute": 0,
+          "type": "goal",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-27",
+          "detail": "Mathieu Lentz"
+        },
+        {
+          "id": "rbfa-7565606-undefined-in-Arifi",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "marloie",
+          "playerId": "p-marloie-14",
+          "detail": "Besfort Arifi"
+        },
+        {
+          "id": "rbfa-7565606-undefined-out-Mosquera Acosta",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "marloie",
+          "playerId": "p-marloie-13",
+          "detail": "Santiago Mosquera Acosta"
+        },
+        {
+          "id": "rbfa-7565606-undefined-goal-Poncin",
+          "minute": 0,
+          "type": "goal",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-22",
+          "detail": "Jordan Poncin"
+        },
+        {
+          "id": "rbfa-7565606-undefined-in-Amory",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-17",
+          "detail": "Mathys Amory"
+        },
+        {
+          "id": "rbfa-7565606-undefined-out-Piette",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-6",
+          "detail": "Justin Piette"
+        },
+        {
+          "id": "rbfa-7565606-undefined-goal-Mbazoa",
+          "minute": 0,
+          "type": "goal",
+          "teamId": "marloie",
+          "playerId": "p-marloie-20",
+          "detail": "Edgar Mbazoa"
+        },
+        {
+          "id": "rbfa-7565606-undefined-in-Asigani",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "marloie",
+          "detail": "Tiago Asigani"
+        },
+        {
+          "id": "rbfa-7565606-undefined-in-Lambert",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "marloie",
+          "playerId": "p-marloie-12",
+          "detail": "Maxime Lambert"
+        },
+        {
+          "id": "rbfa-7565606-undefined-out-Djim",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "marloie",
+          "playerId": "p-marloie-17",
+          "detail": "Tony Djim"
+        },
+        {
+          "id": "rbfa-7565606-undefined-out-Leleu",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "marloie",
+          "playerId": "p-marloie-19",
+          "detail": "Benoit Leleu"
+        },
+        {
+          "id": "rbfa-7565606-undefined-yellow-Lentz",
+          "minute": 0,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-27",
+          "detail": "Mathieu Lentz"
+        },
+        {
+          "id": "rbfa-7565606-undefined-yellow-Mosquera Acosta",
+          "minute": 0,
+          "type": "yellow",
+          "teamId": "marloie",
+          "playerId": "p-marloie-13",
+          "detail": "Santiago Mosquera Acosta"
+        },
+        {
+          "id": "rbfa-7565606-undefined-in-Poncin",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-22",
+          "detail": "Jordan Poncin"
+        },
+        {
+          "id": "rbfa-7565606-undefined-out-Dewalque",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-11",
+          "detail": "Florent Dewalque"
+        },
+        {
+          "id": "rbfa-7565606-undefined-in-Mbazoa",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "marloie",
+          "playerId": "p-marloie-20",
+          "detail": "Edgar Mbazoa"
+        },
+        {
+          "id": "rbfa-7565606-undefined-out-Dia",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "marloie",
+          "playerId": "p-marloie-16",
+          "detail": "Meïssa Ibrahima Dia"
+        },
+        {
+          "id": "rbfa-7565606-undefined-in-Amory",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-16",
+          "detail": "Hugo Amory"
+        },
+        {
+          "id": "rbfa-7565606-undefined-out-Bouillon",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-4",
+          "detail": "Robin Bouillon"
+        },
+        {
+          "id": "rbfa-7565606-undefined-yellow-Bouterbiat",
+          "minute": 0,
+          "type": "yellow",
+          "teamId": "marloie",
+          "playerId": "p-marloie-21",
+          "detail": "Samy Bouterbiat"
+        },
+        {
+          "id": "rbfa-7565606-undefined-goal-Ioakimidou",
+          "minute": 0,
+          "type": "goal",
+          "teamId": "marloie",
+          "playerId": "p-marloie-26",
+          "detail": "Charlin Ioakimidou"
+        },
+        {
+          "id": "rbfa-7565606-undefined-goal-Djim",
+          "minute": 0,
+          "type": "goal",
+          "teamId": "marloie",
+          "playerId": "p-marloie-17",
+          "detail": "Tony Djim"
+        }
+      ],
+      "officials": [
+        {
+          "firstName": "Frédéric",
+          "lastName": "Marangon",
+          "role": "referee"
+        },
+        {
+          "firstName": "Damien",
+          "lastName": "Bonanno",
+          "role": "firstAssistantReferee"
+        },
+        {
+          "firstName": "Gaetan",
+          "lastName": "Lannoy",
+          "role": "secondAssistantReferee"
+        }
+      ],
+      "appearances": [
+        {
+          "playerId": "p-marloie-1",
+          "teamId": "marloie",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-gouvy-2",
+          "teamId": "gouvy",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-marloie-6",
+          "teamId": "marloie",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-gouvy-27",
+          "teamId": "gouvy",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-marloie-13",
+          "teamId": "marloie",
+          "started": true,
+          "minutes": 75
+        },
+        {
+          "playerId": "p-gouvy-8",
+          "teamId": "gouvy",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-marloie-4",
+          "teamId": "marloie",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-gouvy-9",
+          "teamId": "gouvy",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-marloie-17",
+          "teamId": "marloie",
+          "started": true,
+          "minutes": 70
+        },
+        {
+          "playerId": "p-gouvy-15",
+          "teamId": "gouvy",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-marloie-5",
+          "teamId": "marloie",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-gouvy-19",
+          "teamId": "gouvy",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-marloie-26",
+          "teamId": "marloie",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-gouvy-6",
+          "teamId": "gouvy",
+          "started": true,
+          "minutes": 75
+        },
+        {
+          "playerId": "p-marloie-16",
+          "teamId": "marloie",
+          "started": true,
+          "minutes": 60
+        },
+        {
+          "playerId": "p-gouvy-11",
+          "teamId": "gouvy",
+          "started": true,
+          "minutes": 65
+        },
+        {
+          "playerId": "p-marloie-21",
+          "teamId": "marloie",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-gouvy-4",
+          "teamId": "gouvy",
+          "started": true,
+          "minutes": 60
+        },
+        {
+          "playerId": "p-marloie-7",
+          "teamId": "marloie",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-gouvy-20",
+          "teamId": "gouvy",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-marloie-19",
+          "teamId": "marloie",
+          "started": true,
+          "minutes": 70
+        },
+        {
+          "playerId": "p-gouvy-10",
+          "teamId": "gouvy",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-marloie-20",
+          "teamId": "marloie",
+          "started": false,
+          "minutes": 30
+        },
+        {
+          "playerId": "p-gouvy-22",
+          "teamId": "gouvy",
+          "started": false,
+          "minutes": 25
+        },
+        {
+          "playerId": "p-marloie-12",
+          "teamId": "marloie",
+          "started": false,
+          "minutes": 20
+        },
+        {
+          "playerId": "p-gouvy-16",
+          "teamId": "gouvy",
+          "started": false,
+          "minutes": 30
+        },
+        {
+          "playerId": "p-marloie-14",
+          "teamId": "marloie",
+          "started": false,
+          "minutes": 15
+        },
+        {
+          "playerId": "p-gouvy-17",
+          "teamId": "gouvy",
+          "started": false,
+          "minutes": 15
+        }
+      ]
+    },
+    "m94": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 3,
+      "events": [
+        {
+          "id": "rbfa-7565604-undefined-goal-Nkokolo",
+          "minute": 0,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-14",
+          "detail": "Arnold Nkokolo"
+        },
+        {
+          "id": "rbfa-7565604-undefined-goal-Raskin",
+          "minute": 0,
+          "type": "goal",
+          "teamId": "roy",
+          "playerId": "p-roy-19",
+          "detail": "Valentin Raskin"
+        },
+        {
+          "id": "rbfa-7565604-undefined-yellow-Fiévet",
+          "minute": 0,
+          "type": "yellow",
+          "teamId": "roy",
+          "playerId": "p-roy-22",
+          "detail": "Julien Fiévet"
+        },
+        {
+          "id": "rbfa-7565604-undefined-yellow-Cravatte",
+          "minute": 0,
+          "type": "yellow",
+          "teamId": "assenois",
+          "playerId": "p-assenois-4",
+          "detail": "Quentin Cravatte"
+        },
+        {
+          "id": "rbfa-7565604-undefined-in-Alie",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "roy",
+          "playerId": "p-roy-13",
+          "detail": "Maxim Alie"
+        },
+        {
+          "id": "rbfa-7565604-undefined-out-Raskin",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "roy",
+          "playerId": "p-roy-23",
+          "detail": "Mathys Raskin"
+        },
+        {
+          "id": "rbfa-7565604-undefined-goal-Macalli",
+          "minute": 0,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-23",
+          "detail": "Thomas Macalli"
+        },
+        {
+          "id": "rbfa-7565604-undefined-yellow-Bihina",
+          "minute": 0,
+          "type": "yellow",
+          "teamId": "assenois",
+          "playerId": "p-assenois-12",
+          "detail": "Antoine Willy Bihina"
+        },
+        {
+          "id": "rbfa-7565604-undefined-in-Gauthier",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "roy",
+          "playerId": "p-roy-5",
+          "detail": "Damien Gauthier"
+        },
+        {
+          "id": "rbfa-7565604-undefined-out-Wallens",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "roy",
+          "playerId": "p-roy-12",
+          "detail": "Tom Wallens"
+        },
+        {
+          "id": "rbfa-7565604-undefined-in-Piergentili",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "roy",
+          "playerId": "p-roy-25",
+          "detail": "Alessandro Piergentili"
+        },
+        {
+          "id": "rbfa-7565604-undefined-out-Borrey",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "roy",
+          "playerId": "p-roy-14",
+          "detail": "Antoine Borrey"
+        },
+        {
+          "id": "rbfa-7565604-undefined-yellow-Wallens",
+          "minute": 0,
+          "type": "yellow",
+          "teamId": "roy",
+          "playerId": "p-roy-12",
+          "detail": "Tom Wallens"
+        },
+        {
+          "id": "rbfa-7565604-undefined-in-Ndikumana",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "assenois",
+          "playerId": "p-assenois-13",
+          "detail": "Trésor Ndikumana"
+        },
+        {
+          "id": "rbfa-7565604-undefined-out-Thiry",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "assenois",
+          "playerId": "p-assenois-16",
+          "detail": "Lucas Thiry"
+        },
+        {
+          "id": "rbfa-7565604-undefined-yellow-Dechamps",
+          "minute": 0,
+          "type": "yellow",
+          "teamId": "assenois",
+          "playerId": "p-assenois-5",
+          "detail": "Theo Dechamps"
+        },
+        {
+          "id": "rbfa-7565604-undefined-yellow-Raskin",
+          "minute": 0,
+          "type": "yellow",
+          "teamId": "roy",
+          "playerId": "p-roy-19",
+          "detail": "Valentin Raskin"
+        },
+        {
+          "id": "rbfa-7565604-undefined-in-Wauthy",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "assenois",
+          "playerId": "p-assenois-19",
+          "detail": "Jeremy Wauthy"
+        },
+        {
+          "id": "rbfa-7565604-undefined-out-Debra",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "assenois",
+          "playerId": "p-assenois-21",
+          "detail": "Julien Debra"
+        },
+        {
+          "id": "rbfa-7565604-undefined-yellow-Guillaume",
+          "minute": 0,
+          "type": "yellow",
+          "teamId": "roy",
+          "playerId": "p-roy-15",
+          "detail": "William Guillaume"
+        },
+        {
+          "id": "rbfa-7565604-undefined-yellow-Dubois",
+          "minute": 0,
+          "type": "yellow",
+          "teamId": "assenois",
+          "detail": "Stéphane Dubois"
+        },
+        {
+          "id": "rbfa-7565604-undefined-yellow-Debra",
+          "minute": 0,
+          "type": "yellow",
+          "teamId": "assenois",
+          "playerId": "p-assenois-21",
+          "detail": "Julien Debra"
+        },
+        {
+          "id": "rbfa-7565604-undefined-goal-Fiévet",
+          "minute": 0,
+          "type": "goal",
+          "teamId": "roy",
+          "playerId": "p-roy-22",
+          "detail": "Julien Fiévet"
+        },
+        {
+          "id": "rbfa-7565604-undefined-penalty-Nkokolo",
+          "minute": 0,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-14",
+          "detail": "penalty · Arnold Nkokolo"
+        },
+        {
+          "id": "rbfa-7565604-undefined-goal-Fiévet",
+          "minute": 0,
+          "type": "goal",
+          "teamId": "roy",
+          "playerId": "p-roy-22",
+          "detail": "Julien Fiévet"
+        }
+      ],
+      "officials": [
+        {
+          "firstName": "Gaëtan Serge",
+          "lastName": "Colignon",
+          "role": "referee"
+        },
+        {
+          "firstName": "Ryan",
+          "lastName": "Duponcheel",
+          "role": "firstAssistantReferee"
+        },
+        {
+          "firstName": "Didier",
+          "lastName": "De Heyn",
+          "role": "secondAssistantReferee"
+        }
+      ],
+      "appearances": [
+        {
+          "playerId": "p-assenois-1",
+          "teamId": "assenois",
+          "started": true,
+          "minutes": 94
+        },
+        {
+          "playerId": "p-roy-1",
+          "teamId": "roy",
+          "started": true,
+          "minutes": 94
+        },
+        {
+          "playerId": "p-assenois-4",
+          "teamId": "assenois",
+          "started": true,
+          "minutes": 94
+        },
+        {
+          "playerId": "p-roy-12",
+          "teamId": "roy",
+          "started": true,
+          "minutes": 68
+        },
+        {
+          "playerId": "p-assenois-23",
+          "teamId": "assenois",
+          "started": true,
+          "minutes": 94
+        },
+        {
+          "playerId": "p-roy-22",
+          "teamId": "roy",
+          "started": true,
+          "minutes": 94
+        },
+        {
+          "playerId": "p-assenois-5",
+          "teamId": "assenois",
+          "started": true,
+          "minutes": 94
+        },
+        {
+          "playerId": "p-roy-21",
+          "teamId": "roy",
+          "started": true,
+          "minutes": 94
+        },
+        {
+          "playerId": "p-assenois-16",
+          "teamId": "assenois",
+          "started": true,
+          "minutes": 63
+        },
+        {
+          "playerId": "p-roy-14",
+          "teamId": "roy",
+          "started": true,
+          "minutes": 66
+        },
+        {
+          "playerId": "p-assenois-20",
+          "teamId": "assenois",
+          "started": true,
+          "minutes": 94
+        },
+        {
+          "playerId": "p-roy-8",
+          "teamId": "roy",
+          "started": true,
+          "minutes": 94
+        },
+        {
+          "playerId": "p-assenois-12",
+          "teamId": "assenois",
+          "started": true,
+          "minutes": 94
+        },
+        {
+          "playerId": "p-roy-4",
+          "teamId": "roy",
+          "started": true,
+          "minutes": 94
+        },
+        {
+          "playerId": "p-assenois-9",
+          "teamId": "assenois",
+          "started": true,
+          "minutes": 94
+        },
+        {
+          "playerId": "p-roy-19",
+          "teamId": "roy",
+          "started": true,
+          "minutes": 94
+        },
+        {
+          "playerId": "p-assenois-14",
+          "teamId": "assenois",
+          "started": true,
+          "minutes": 94
+        },
+        {
+          "playerId": "p-roy-7",
+          "teamId": "roy",
+          "started": true,
+          "minutes": 94
+        },
+        {
+          "playerId": "p-assenois-8",
+          "teamId": "assenois",
+          "started": true,
+          "minutes": 94
+        },
+        {
+          "playerId": "p-roy-23",
+          "teamId": "roy",
+          "started": true,
+          "minutes": 85
+        },
+        {
+          "playerId": "p-assenois-21",
+          "teamId": "assenois",
+          "started": true,
+          "minutes": 29
+        },
+        {
+          "playerId": "p-roy-15",
+          "teamId": "roy",
+          "started": true,
+          "minutes": 94
+        },
+        {
+          "playerId": "p-assenois-19",
+          "teamId": "assenois",
+          "started": false,
+          "minutes": 65
+        },
+        {
+          "playerId": "p-roy-5",
+          "teamId": "roy",
+          "started": false,
+          "minutes": 26
+        },
+        {
+          "playerId": "p-assenois-13",
+          "teamId": "assenois",
+          "started": false,
+          "minutes": 31
+        },
+        {
+          "playerId": "p-roy-13",
+          "teamId": "roy",
+          "started": false,
+          "minutes": 9
+        },
+        {
+          "playerId": "p-roy-25",
+          "teamId": "roy",
+          "started": false,
+          "minutes": 28
+        }
+      ]
+    },
+    "m90": {
+      "status": "finished",
+      "homeScore": 5,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565603-undefined-in-Richard",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-10",
+          "detail": "Christophe Richard"
+        },
+        {
+          "id": "rbfa-7565603-undefined-out-Thiéry",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-34",
+          "detail": "Tanguy Thiéry"
+        },
+        {
+          "id": "rbfa-7565603-undefined-in-Lejeune",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-2",
+          "detail": "Nathan Lejeune"
+        },
+        {
+          "id": "rbfa-7565603-undefined-out-Gerarts",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-18",
+          "detail": "Matheo Jaime Gerarts"
+        },
+        {
+          "id": "rbfa-7565603-undefined-in-Xhignesse",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "oppagne",
+          "detail": "Romain Xhignesse"
+        },
+        {
+          "id": "rbfa-7565603-undefined-out-Thiry",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-9",
+          "detail": "Noah Thiry"
+        },
+        {
+          "id": "rbfa-7565603-undefined-goal-Huberty",
+          "minute": 0,
+          "type": "goal",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-15",
+          "detail": "Kevin Huberty"
+        },
+        {
+          "id": "rbfa-7565603-undefined-in-Parrot",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-21",
+          "detail": "Florian Jean-Marie Parrot"
+        },
+        {
+          "id": "rbfa-7565603-undefined-out-Kobs",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-16",
+          "detail": "Baptiste Kobs"
+        },
+        {
+          "id": "rbfa-7565603-undefined-goal-Laurent",
+          "minute": 0,
+          "type": "goal",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-31",
+          "detail": "Alexandre Laurent"
+        },
+        {
+          "id": "rbfa-7565603-undefined-in-Hannard",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-25",
+          "detail": "Mattéo Hannard"
+        },
+        {
+          "id": "rbfa-7565603-undefined-out-Mairlot",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-27",
+          "detail": "Martin Mairlot"
+        },
+        {
+          "id": "rbfa-7565603-undefined-goal-Englebert",
+          "minute": 0,
+          "type": "goal",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-5",
+          "detail": "Erwin Englebert"
+        },
+        {
+          "id": "rbfa-7565603-undefined-in-Petitjean",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-15",
+          "detail": "Wannes Petitjean"
+        },
+        {
+          "id": "rbfa-7565603-undefined-in-Sambi Lokonga",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-25",
+          "detail": "Fabrice Sambi Lokonga"
+        },
+        {
+          "id": "rbfa-7565603-undefined-out-Lizen",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-14",
+          "detail": "Mattéo Lizen"
+        },
+        {
+          "id": "rbfa-7565603-undefined-out-Théodore",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-10",
+          "detail": "Aubrey Théodore"
+        },
+        {
+          "id": "rbfa-7565603-undefined-yellow-Lizen",
+          "minute": 0,
+          "type": "yellow",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-14",
+          "detail": "Mattéo Lizen"
+        },
+        {
+          "id": "rbfa-7565603-undefined-goal-Huberty",
+          "minute": 0,
+          "type": "goal",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-15",
+          "detail": "Kevin Huberty"
+        },
+        {
+          "id": "rbfa-7565603-undefined-yellow-Laffargue",
+          "minute": 0,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-6",
+          "detail": "Matthieu Laffargue"
+        },
+        {
+          "id": "rbfa-7565603-undefined-yellow-Bechet",
+          "minute": 0,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-4",
+          "detail": "Sylvain Bechet"
+        },
+        {
+          "id": "rbfa-7565603-undefined-yellow-Hugot",
+          "minute": 0,
+          "type": "yellow",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-6",
+          "detail": "Louis Hugot"
+        },
+        {
+          "id": "rbfa-7565603-undefined-goal-Mairlot",
+          "minute": 0,
+          "type": "goal",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-27",
+          "detail": "Martin Mairlot"
+        },
+        {
+          "id": "rbfa-7565603-undefined-yellow-Gilot",
+          "minute": 0,
+          "type": "yellow",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-1",
+          "detail": "Harold Gilot"
+        },
+        {
+          "id": "rbfa-7565603-undefined-goal-Schmit",
+          "minute": 0,
+          "type": "goal",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-33",
+          "detail": "Olivier Schmit"
+        }
+      ],
+      "officials": [
+        {
+          "firstName": "Bila",
+          "lastName": "Kizedioko",
+          "role": "referee"
+        },
+        {
+          "firstName": "Thomas",
+          "lastName": "Alexandre",
+          "role": "firstAssistantReferee"
+        },
+        {
+          "firstName": "Louis",
+          "lastName": "Tarte",
+          "role": "secondAssistantReferee"
+        }
+      ],
+      "appearances": [
+        {
+          "playerId": "p-nothomb-1",
+          "teamId": "nothomb",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-oppagne-1",
+          "teamId": "oppagne",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-nothomb-33",
+          "teamId": "nothomb",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-oppagne-8",
+          "teamId": "oppagne",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-nothomb-17",
+          "teamId": "nothomb",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-oppagne-7",
+          "teamId": "oppagne",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-nothomb-9",
+          "teamId": "nothomb",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-oppagne-9",
+          "teamId": "oppagne",
+          "started": true,
+          "minutes": 73
+        },
+        {
+          "playerId": "p-nothomb-27",
+          "teamId": "nothomb",
+          "started": true,
+          "minutes": 60
+        },
+        {
+          "playerId": "p-oppagne-5",
+          "teamId": "oppagne",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-nothomb-34",
+          "teamId": "nothomb",
+          "started": true,
+          "minutes": 75
+        },
+        {
+          "playerId": "p-oppagne-14",
+          "teamId": "oppagne",
+          "started": true,
+          "minutes": 60
+        },
+        {
+          "playerId": "p-nothomb-6",
+          "teamId": "nothomb",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-oppagne-10",
+          "teamId": "oppagne",
+          "started": true,
+          "minutes": 60
+        },
+        {
+          "playerId": "p-nothomb-4",
+          "teamId": "nothomb",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-oppagne-16",
+          "teamId": "oppagne",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-nothomb-31",
+          "teamId": "nothomb",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-oppagne-6",
+          "teamId": "oppagne",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-nothomb-16",
+          "teamId": "nothomb",
+          "started": true,
+          "minutes": 70
+        },
+        {
+          "playerId": "p-oppagne-18",
+          "teamId": "oppagne",
+          "started": true,
+          "minutes": 75
+        },
+        {
+          "playerId": "p-nothomb-15",
+          "teamId": "nothomb",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-oppagne-12",
+          "teamId": "oppagne",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-nothomb-10",
+          "teamId": "nothomb",
+          "started": false,
+          "minutes": 15
+        },
+        {
+          "playerId": "p-oppagne-2",
+          "teamId": "oppagne",
+          "started": false,
+          "minutes": 15
+        },
+        {
+          "playerId": "p-nothomb-21",
+          "teamId": "nothomb",
+          "started": false,
+          "minutes": 20
+        },
+        {
+          "playerId": "p-oppagne-15",
+          "teamId": "oppagne",
+          "started": false,
+          "minutes": 30
+        },
+        {
+          "playerId": "p-nothomb-25",
+          "teamId": "nothomb",
+          "started": false,
+          "minutes": 30
+        },
+        {
+          "playerId": "p-oppagne-25",
+          "teamId": "oppagne",
+          "started": false,
+          "minutes": 30
+        }
+      ]
+    },
+    "m92": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 1,
+      "events": [
+        {
+          "id": "rbfa-7565602-undefined-in-Amel",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-18",
+          "detail": "Cyril Amel"
+        },
+        {
+          "id": "rbfa-7565602-undefined-out-Dewalque",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-19",
+          "detail": "Sylvain Dewalque"
+        },
+        {
+          "id": "rbfa-7565602-undefined-yellow-Weyders",
+          "minute": 0,
+          "type": "yellow",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-9",
+          "detail": "Romain Weyders"
+        },
+        {
+          "id": "rbfa-7565602-undefined-in-Brisy",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-10",
+          "detail": "Tristan Brisy"
+        },
+        {
+          "id": "rbfa-7565602-undefined-out-Sikpe Gabiam",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-21",
+          "detail": "Ayité Hervé Sikpe Gabiam"
+        },
+        {
+          "id": "rbfa-7565602-undefined-yellow-Marechal",
+          "minute": 0,
+          "type": "yellow",
+          "teamId": "vaux-sur-sure",
+          "detail": "Albert Marechal"
+        },
+        {
+          "id": "rbfa-7565602-undefined-in-Sensique",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-16",
+          "detail": "Alan Sensique"
+        },
+        {
+          "id": "rbfa-7565602-undefined-out-Vankerkhoven",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-24",
+          "detail": "Diego Vankerkhoven"
+        },
+        {
+          "id": "rbfa-7565602-undefined-goal-Sikpe Gabiam",
+          "minute": 0,
+          "type": "goal",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-21",
+          "detail": "Ayité Hervé Sikpe Gabiam"
+        },
+        {
+          "id": "rbfa-7565602-undefined-in-Manand",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-12",
+          "detail": "Allan Manand"
+        },
+        {
+          "id": "rbfa-7565602-undefined-in-Noppe",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-22",
+          "detail": "Gustin Noppe"
+        },
+        {
+          "id": "rbfa-7565602-undefined-out-Mahy",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-11",
+          "detail": "Christophe Mahy"
+        },
+        {
+          "id": "rbfa-7565602-undefined-out-Pantusa",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-13",
+          "detail": "Hugo Pantusa"
+        },
+        {
+          "id": "rbfa-7565602-undefined-in-Pelenga",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-19",
+          "detail": "Berly Pelenga"
+        },
+        {
+          "id": "rbfa-7565602-undefined-in-Pierre",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-16",
+          "detail": "Romeo Pierre"
+        },
+        {
+          "id": "rbfa-7565602-undefined-out-Chisogne",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-23",
+          "detail": "Tom Chisogne"
+        },
+        {
+          "id": "rbfa-7565602-undefined-out-Louvins",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-6",
+          "detail": "Yohan Louvins"
+        },
+        {
+          "id": "rbfa-7565602-undefined-yellow-Mahy",
+          "minute": 0,
+          "type": "yellow",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-11",
+          "detail": "Christophe Mahy"
+        },
+        {
+          "id": "rbfa-7565602-undefined-goal-Wattiaux",
+          "minute": 0,
+          "type": "goal",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-26",
+          "detail": "Boris Wattiaux"
+        },
+        {
+          "id": "rbfa-7565602-undefined-in-Macoir",
+          "minute": 0,
+          "type": "sub_in",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-7",
+          "detail": "Pascal Macoir"
+        },
+        {
+          "id": "rbfa-7565602-undefined-out-Gruslin",
+          "minute": 0,
+          "type": "sub_out",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-5",
+          "detail": "Guillaume Gruslin"
+        },
+        {
+          "id": "rbfa-7565602-undefined-yellow-Gillard",
+          "minute": 0,
+          "type": "yellow",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-4",
+          "detail": "Robin Gillard"
+        }
+      ],
+      "officials": [
+        {
+          "firstName": "Karrel",
+          "lastName": "Koke Miezi",
+          "role": "referee"
+        },
+        {
+          "firstName": "Patrick",
+          "lastName": "Lejeune",
+          "role": "firstAssistantReferee"
+        },
+        {
+          "firstName": "Michel",
+          "lastName": "Gerits",
+          "role": "secondAssistantReferee"
+        }
+      ],
+      "appearances": [
+        {
+          "playerId": "p-vaux-sur-sure-1",
+          "teamId": "vaux-sur-sure",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-bastogne-2",
+          "teamId": "bastogne",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-vaux-sur-sure-3",
+          "teamId": "vaux-sur-sure",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-bastogne-9",
+          "teamId": "bastogne",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-vaux-sur-sure-4",
+          "teamId": "vaux-sur-sure",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-bastogne-8",
+          "teamId": "bastogne",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-vaux-sur-sure-9",
+          "teamId": "vaux-sur-sure",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-bastogne-17",
+          "teamId": "bastogne",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-vaux-sur-sure-23",
+          "teamId": "vaux-sur-sure",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-bastogne-3",
+          "teamId": "bastogne",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-vaux-sur-sure-24",
+          "teamId": "vaux-sur-sure",
+          "started": true,
+          "minutes": 65
+        },
+        {
+          "playerId": "p-bastogne-15",
+          "teamId": "bastogne",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-vaux-sur-sure-13",
+          "teamId": "vaux-sur-sure",
+          "started": true,
+          "minutes": 46
+        },
+        {
+          "playerId": "p-bastogne-12",
+          "teamId": "bastogne",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-vaux-sur-sure-19",
+          "teamId": "vaux-sur-sure",
+          "started": true,
+          "minutes": 88
+        },
+        {
+          "playerId": "p-bastogne-5",
+          "teamId": "bastogne",
+          "started": true,
+          "minutes": 25
+        },
+        {
+          "playerId": "p-vaux-sur-sure-11",
+          "teamId": "vaux-sur-sure",
+          "started": true,
+          "minutes": 46
+        },
+        {
+          "playerId": "p-bastogne-23",
+          "teamId": "bastogne",
+          "started": true,
+          "minutes": 46
+        },
+        {
+          "playerId": "p-vaux-sur-sure-26",
+          "teamId": "vaux-sur-sure",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-bastogne-6",
+          "teamId": "bastogne",
+          "started": true,
+          "minutes": 46
+        },
+        {
+          "playerId": "p-vaux-sur-sure-5",
+          "teamId": "vaux-sur-sure",
+          "started": true,
+          "minutes": 90
+        },
+        {
+          "playerId": "p-bastogne-21",
+          "teamId": "bastogne",
+          "started": true,
+          "minutes": 80
+        },
+        {
+          "playerId": "p-vaux-sur-sure-22",
+          "teamId": "vaux-sur-sure",
+          "started": false,
+          "minutes": 44
+        },
+        {
+          "playerId": "p-bastogne-10",
+          "teamId": "bastogne",
+          "started": false,
+          "minutes": 10
+        },
+        {
+          "playerId": "p-vaux-sur-sure-16",
+          "teamId": "vaux-sur-sure",
+          "started": false,
+          "minutes": 25
+        },
+        {
+          "playerId": "p-bastogne-16",
+          "teamId": "bastogne",
+          "started": false,
+          "minutes": 44
+        },
+        {
+          "playerId": "p-vaux-sur-sure-12",
+          "teamId": "vaux-sur-sure",
+          "started": false,
+          "minutes": 44
+        },
+        {
+          "playerId": "p-bastogne-7",
+          "teamId": "bastogne",
+          "started": false,
+          "minutes": 65
+        },
+        {
+          "playerId": "p-vaux-sur-sure-18",
+          "teamId": "vaux-sur-sure",
+          "started": false,
+          "minutes": 2
+        },
+        {
+          "playerId": "p-bastogne-19",
+          "teamId": "bastogne",
+          "started": false,
+          "minutes": 44
         }
       ]
     }
