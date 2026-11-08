@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T23:49:08.123Z",
+  "updatedAt": "2026-11-08T10:05:15.327Z",
   "matches": {
     "m1": {
       "status": "finished",
@@ -32709,148 +32709,148 @@
       "awayScore": 1,
       "events": [
         {
-          "id": "rbfa-7565593-undefined-in-Gengoux",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "houffalize",
-          "playerId": "p-houffalize-25",
-          "detail": "Maxence Gengoux"
-        },
-        {
-          "id": "rbfa-7565593-undefined-out-Horman",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "houffalize",
-          "playerId": "p-houffalize-32",
-          "detail": "Jules Horman"
-        },
-        {
-          "id": "rbfa-7565593-undefined-yellow-Moufanin",
-          "minute": 0,
-          "type": "yellow",
-          "teamId": "harre-manhay",
-          "playerId": "p-harre-manhay-24",
-          "detail": "Sohail Moufanin"
-        },
-        {
-          "id": "rbfa-7565593-undefined-yellow-Samray",
-          "minute": 0,
-          "type": "yellow",
-          "teamId": "harre-manhay",
-          "playerId": "p-harre-manhay-7",
-          "detail": "Florian Samray"
-        },
-        {
-          "id": "rbfa-7565593-undefined-yellow-Toussaint",
-          "minute": 0,
+          "id": "rbfa-7565593-41-yellow-Freid",
+          "minute": 41,
           "type": "yellow",
           "teamId": "houffalize",
-          "playerId": "p-houffalize-16",
-          "detail": "Aryl Toussaint"
+          "playerId": "p-houffalize-24",
+          "detail": "Timothée Freid"
         },
         {
-          "id": "rbfa-7565593-undefined-goal-Fautré",
-          "minute": 0,
-          "type": "goal",
-          "teamId": "houffalize",
-          "playerId": "p-houffalize-30",
-          "detail": "Noa Fautré"
-        },
-        {
-          "id": "rbfa-7565593-undefined-in-Apeke",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "harre-manhay",
-          "playerId": "p-harre-manhay-8",
-          "detail": "Prince Mohamed Apeke"
-        },
-        {
-          "id": "rbfa-7565593-undefined-in-Rasquin",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "harre-manhay",
-          "playerId": "p-harre-manhay-20",
-          "detail": "William Rasquin"
-        },
-        {
-          "id": "rbfa-7565593-undefined-out-Biondolillo",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "harre-manhay",
-          "playerId": "p-harre-manhay-3",
-          "detail": "Alessio Biondolillo"
-        },
-        {
-          "id": "rbfa-7565593-undefined-out-Levaux",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "harre-manhay",
-          "playerId": "p-harre-manhay-4",
-          "detail": "Mattéo Jean Levaux"
-        },
-        {
-          "id": "rbfa-7565593-undefined-in-Ovi",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "harre-manhay",
-          "playerId": "p-harre-manhay-16",
-          "detail": "Assoma Josias Ovi"
-        },
-        {
-          "id": "rbfa-7565593-undefined-out-Chikatara",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "harre-manhay",
-          "playerId": "p-harre-manhay-22",
-          "detail": "Ugochukwu Precious Chikatara"
-        },
-        {
-          "id": "rbfa-7565593-undefined-yellow-Bastin",
-          "minute": 0,
-          "type": "yellow",
-          "teamId": "houffalize",
-          "playerId": "p-houffalize-18",
-          "detail": "François Vincent Bastin"
-        },
-        {
-          "id": "rbfa-7565593-undefined-in-Fautré",
-          "minute": 0,
+          "id": "rbfa-7565593-46-in-Fautré",
+          "minute": 46,
           "type": "sub_in",
           "teamId": "houffalize",
           "playerId": "p-houffalize-30",
           "detail": "Noa Fautré"
         },
         {
-          "id": "rbfa-7565593-undefined-in-Idmansour",
-          "minute": 0,
+          "id": "rbfa-7565593-46-in-Idmansour",
+          "minute": 46,
           "type": "sub_in",
           "teamId": "houffalize",
           "playerId": "p-houffalize-26",
           "detail": "Ilias Idmansour"
         },
         {
-          "id": "rbfa-7565593-undefined-out-Diouf",
-          "minute": 0,
+          "id": "rbfa-7565593-46-out-Diouf",
+          "minute": 46,
           "type": "sub_out",
           "teamId": "houffalize",
           "playerId": "p-houffalize-22",
           "detail": "Massamba Diouf"
         },
         {
-          "id": "rbfa-7565593-undefined-out-Freid",
-          "minute": 0,
+          "id": "rbfa-7565593-46-out-Freid",
+          "minute": 46,
           "type": "sub_out",
           "teamId": "houffalize",
           "playerId": "p-houffalize-24",
           "detail": "Timothée Freid"
         },
         {
-          "id": "rbfa-7565593-undefined-yellow-Freid",
-          "minute": 0,
+          "id": "rbfa-7565593-51-yellow-Bastin",
+          "minute": 51,
           "type": "yellow",
           "teamId": "houffalize",
-          "playerId": "p-houffalize-24",
-          "detail": "Timothée Freid"
+          "playerId": "p-houffalize-18",
+          "detail": "François Vincent Bastin"
+        },
+        {
+          "id": "rbfa-7565593-57-in-Ovi",
+          "minute": 57,
+          "type": "sub_in",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-16",
+          "detail": "Assoma Josias Ovi"
+        },
+        {
+          "id": "rbfa-7565593-57-out-Chikatara",
+          "minute": 57,
+          "type": "sub_out",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-22",
+          "detail": "Ugochukwu Precious Chikatara"
+        },
+        {
+          "id": "rbfa-7565593-67-in-Apeke",
+          "minute": 67,
+          "type": "sub_in",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-8",
+          "detail": "Prince Mohamed Apeke"
+        },
+        {
+          "id": "rbfa-7565593-67-in-Rasquin",
+          "minute": 67,
+          "type": "sub_in",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-20",
+          "detail": "William Rasquin"
+        },
+        {
+          "id": "rbfa-7565593-67-out-Biondolillo",
+          "minute": 67,
+          "type": "sub_out",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-3",
+          "detail": "Alessio Biondolillo"
+        },
+        {
+          "id": "rbfa-7565593-67-out-Levaux",
+          "minute": 67,
+          "type": "sub_out",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-4",
+          "detail": "Mattéo Jean Levaux"
+        },
+        {
+          "id": "rbfa-7565593-70-goal-Fautré",
+          "minute": 70,
+          "type": "goal",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-30",
+          "detail": "Noa Fautré"
+        },
+        {
+          "id": "rbfa-7565593-75-yellow-Toussaint",
+          "minute": 75,
+          "type": "yellow",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-16",
+          "detail": "Aryl Toussaint"
+        },
+        {
+          "id": "rbfa-7565593-77-yellow-Samray",
+          "minute": 77,
+          "type": "yellow",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-7",
+          "detail": "Florian Samray"
+        },
+        {
+          "id": "rbfa-7565593-83-yellow-Moufanin",
+          "minute": 83,
+          "type": "yellow",
+          "teamId": "harre-manhay",
+          "playerId": "p-harre-manhay-24",
+          "detail": "Sohail Moufanin"
+        },
+        {
+          "id": "rbfa-7565593-87-in-Gengoux",
+          "minute": 87,
+          "type": "sub_in",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-25",
+          "detail": "Maxence Gengoux"
+        },
+        {
+          "id": "rbfa-7565593-87-out-Horman",
+          "minute": 87,
+          "type": "sub_out",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-32",
+          "detail": "Jules Horman"
         }
       ],
       "officials": [
@@ -33047,156 +33047,156 @@
       "awayScore": 1,
       "events": [
         {
-          "id": "rbfa-7565596-undefined-yellow-Poncin",
-          "minute": 0,
+          "id": "rbfa-7565596-20-yellow-Andrianne",
+          "minute": 20,
           "type": "yellow",
           "teamId": "gouvy",
-          "playerId": "p-gouvy-22",
-          "detail": "Jordan Poncin"
+          "playerId": "p-gouvy-3",
+          "detail": "Yannis Andrianne"
         },
         {
-          "id": "rbfa-7565596-undefined-in-Poncin",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "gouvy",
-          "playerId": "p-gouvy-22",
-          "detail": "Jordan Poncin"
-        },
-        {
-          "id": "rbfa-7565596-undefined-out-Cleymans",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "gouvy",
-          "playerId": "p-gouvy-10",
-          "detail": "Kieran Cleymans"
-        },
-        {
-          "id": "rbfa-7565596-undefined-in-Chardome",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "ochamps",
-          "playerId": "p-ochamps-2",
-          "detail": "Pierre Chardome"
-        },
-        {
-          "id": "rbfa-7565596-undefined-out-Hutin",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "ochamps",
-          "playerId": "p-ochamps-12",
-          "detail": "Simon Hutin"
-        },
-        {
-          "id": "rbfa-7565596-undefined-in-Amory",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "gouvy",
-          "playerId": "p-gouvy-17",
-          "detail": "Mathys Amory"
-        },
-        {
-          "id": "rbfa-7565596-undefined-out-Dewalque",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "gouvy",
-          "playerId": "p-gouvy-11",
-          "detail": "Florent Dewalque"
-        },
-        {
-          "id": "rbfa-7565596-undefined-yellow-Prevot",
-          "minute": 0,
-          "type": "yellow",
-          "teamId": "gouvy",
-          "playerId": "p-gouvy-12",
-          "detail": "Nathan Prevot"
-        },
-        {
-          "id": "rbfa-7565596-undefined-yellow-Doyen",
-          "minute": 0,
-          "type": "yellow",
-          "teamId": "ochamps",
-          "playerId": "p-ochamps-9",
-          "detail": "Henri Doyen"
-        },
-        {
-          "id": "rbfa-7565596-undefined-in-Prevot",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "gouvy",
-          "playerId": "p-gouvy-12",
-          "detail": "Nathan Prevot"
-        },
-        {
-          "id": "rbfa-7565596-undefined-out-Bouillon",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "gouvy",
-          "playerId": "p-gouvy-4",
-          "detail": "Robin Bouillon"
-        },
-        {
-          "id": "rbfa-7565596-undefined-yellow-Gillet",
-          "minute": 0,
-          "type": "yellow",
-          "teamId": "ochamps",
-          "playerId": "p-ochamps-11",
-          "detail": "Augustin Gillet"
-        },
-        {
-          "id": "rbfa-7565596-undefined-in-Van Autgaerden",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "ochamps",
-          "playerId": "p-ochamps-21",
-          "detail": "Thomas Van Autgaerden"
-        },
-        {
-          "id": "rbfa-7565596-undefined-out-Baudot",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "ochamps",
-          "playerId": "p-ochamps-15",
-          "detail": "Thomas Baudot"
-        },
-        {
-          "id": "rbfa-7565596-undefined-in-Colleaux",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "ochamps",
-          "playerId": "p-ochamps-16",
-          "detail": "Louis Colleaux"
-        },
-        {
-          "id": "rbfa-7565596-undefined-out-Oury",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "ochamps",
-          "playerId": "p-ochamps-19",
-          "detail": "Luka Gregory Oury"
-        },
-        {
-          "id": "rbfa-7565596-undefined-goal-Baudot",
-          "minute": 0,
-          "type": "goal",
-          "teamId": "ochamps",
-          "playerId": "p-ochamps-15",
-          "detail": "Thomas Baudot"
-        },
-        {
-          "id": "rbfa-7565596-undefined-yellowred-Andrianne",
-          "minute": 0,
+          "id": "rbfa-7565596-30-yellowred-Andrianne",
+          "minute": 30,
           "type": "second_yellow",
           "teamId": "gouvy",
           "playerId": "p-gouvy-3",
           "detail": "Yannis Andrianne"
         },
         {
-          "id": "rbfa-7565596-undefined-yellow-Andrianne",
-          "minute": 0,
+          "id": "rbfa-7565596-42-goal-Baudot",
+          "minute": 42,
+          "type": "goal",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-15",
+          "detail": "Thomas Baudot"
+        },
+        {
+          "id": "rbfa-7565596-58-in-Colleaux",
+          "minute": 58,
+          "type": "sub_in",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-16",
+          "detail": "Louis Colleaux"
+        },
+        {
+          "id": "rbfa-7565596-58-out-Oury",
+          "minute": 58,
+          "type": "sub_out",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-19",
+          "detail": "Luka Gregory Oury"
+        },
+        {
+          "id": "rbfa-7565596-65-in-Van Autgaerden",
+          "minute": 65,
+          "type": "sub_in",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-21",
+          "detail": "Thomas Van Autgaerden"
+        },
+        {
+          "id": "rbfa-7565596-65-out-Baudot",
+          "minute": 65,
+          "type": "sub_out",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-15",
+          "detail": "Thomas Baudot"
+        },
+        {
+          "id": "rbfa-7565596-70-in-Prevot",
+          "minute": 70,
+          "type": "sub_in",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-12",
+          "detail": "Nathan Prevot"
+        },
+        {
+          "id": "rbfa-7565596-70-out-Bouillon",
+          "minute": 70,
+          "type": "sub_out",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-4",
+          "detail": "Robin Bouillon"
+        },
+        {
+          "id": "rbfa-7565596-70-yellow-Gillet",
+          "minute": 70,
+          "type": "yellow",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-11",
+          "detail": "Augustin Gillet"
+        },
+        {
+          "id": "rbfa-7565596-75-yellow-Prevot",
+          "minute": 75,
           "type": "yellow",
           "teamId": "gouvy",
-          "playerId": "p-gouvy-3",
-          "detail": "Yannis Andrianne"
+          "playerId": "p-gouvy-12",
+          "detail": "Nathan Prevot"
+        },
+        {
+          "id": "rbfa-7565596-75-yellow-Doyen",
+          "minute": 75,
+          "type": "yellow",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-9",
+          "detail": "Henri Doyen"
+        },
+        {
+          "id": "rbfa-7565596-79-in-Amory",
+          "minute": 79,
+          "type": "sub_in",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-17",
+          "detail": "Mathys Amory"
+        },
+        {
+          "id": "rbfa-7565596-79-out-Dewalque",
+          "minute": 79,
+          "type": "sub_out",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-11",
+          "detail": "Florent Dewalque"
+        },
+        {
+          "id": "rbfa-7565596-80-in-Chardome",
+          "minute": 80,
+          "type": "sub_in",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-2",
+          "detail": "Pierre Chardome"
+        },
+        {
+          "id": "rbfa-7565596-80-out-Hutin",
+          "minute": 80,
+          "type": "sub_out",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-12",
+          "detail": "Simon Hutin"
+        },
+        {
+          "id": "rbfa-7565596-86-in-Poncin",
+          "minute": 86,
+          "type": "sub_in",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-22",
+          "detail": "Jordan Poncin"
+        },
+        {
+          "id": "rbfa-7565596-86-out-Cleymans",
+          "minute": 86,
+          "type": "sub_out",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-10",
+          "detail": "Kieran Cleymans"
+        },
+        {
+          "id": "rbfa-7565596-88-yellow-Poncin",
+          "minute": 88,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-22",
+          "detail": "Jordan Poncin"
         }
       ],
       "officials": [
@@ -33393,140 +33393,140 @@
       "awayScore": 0,
       "events": [
         {
-          "id": "rbfa-7565605-undefined-in-Robert",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "libin",
-          "playerId": "p-libin-17",
-          "detail": "Louis Robert"
-        },
-        {
-          "id": "rbfa-7565605-undefined-out-Lefort",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "libin",
-          "playerId": "p-libin-22",
-          "detail": "Thomas Lefort"
-        },
-        {
-          "id": "rbfa-7565605-undefined-in-Gillet",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "ochamps",
-          "playerId": "p-ochamps-11",
-          "detail": "Augustin Gillet"
-        },
-        {
-          "id": "rbfa-7565605-undefined-out-Doyen",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "ochamps",
-          "playerId": "p-ochamps-9",
-          "detail": "Henri Doyen"
-        },
-        {
-          "id": "rbfa-7565605-undefined-in-Chardome",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "ochamps",
-          "playerId": "p-ochamps-2",
-          "detail": "Pierre Chardome"
-        },
-        {
-          "id": "rbfa-7565605-undefined-out-Oury",
-          "minute": 0,
-          "type": "sub_out",
+          "id": "rbfa-7565605-11-yellow-Oury",
+          "minute": 11,
+          "type": "yellow",
           "teamId": "ochamps",
           "playerId": "p-ochamps-19",
           "detail": "Luka Gregory Oury"
         },
         {
-          "id": "rbfa-7565605-undefined-in-Zeghdane",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "libin",
-          "playerId": "p-libin-19",
-          "detail": "Naël Zeghdane"
-        },
-        {
-          "id": "rbfa-7565605-undefined-out-Nicolas",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "libin",
-          "playerId": "p-libin-25",
-          "detail": "Hugo Nicolas"
-        },
-        {
-          "id": "rbfa-7565605-undefined-in-Colleaux",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "ochamps",
-          "playerId": "p-ochamps-16",
-          "detail": "Louis Colleaux"
-        },
-        {
-          "id": "rbfa-7565605-undefined-in-Van Autgaerden",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "ochamps",
-          "playerId": "p-ochamps-21",
-          "detail": "Thomas Van Autgaerden"
-        },
-        {
-          "id": "rbfa-7565605-undefined-out-Baudot",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "ochamps",
-          "playerId": "p-ochamps-15",
-          "detail": "Thomas Baudot"
-        },
-        {
-          "id": "rbfa-7565605-undefined-out-Hutin",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "ochamps",
-          "playerId": "p-ochamps-12",
-          "detail": "Simon Hutin"
-        },
-        {
-          "id": "rbfa-7565605-undefined-in-Molitor",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "libin",
-          "playerId": "p-libin-23",
-          "detail": "Hugo Molitor"
-        },
-        {
-          "id": "rbfa-7565605-undefined-out-Cavelier",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "libin",
-          "playerId": "p-libin-4",
-          "detail": "Geoffrey Cavelier"
-        },
-        {
-          "id": "rbfa-7565605-undefined-yellow-Mays",
-          "minute": 0,
-          "type": "yellow",
-          "teamId": "libin",
-          "playerId": "p-libin-8",
-          "detail": "Alexis Harry Mays"
-        },
-        {
-          "id": "rbfa-7565605-undefined-yellow-Bourgeois",
-          "minute": 0,
+          "id": "rbfa-7565605-31-yellow-Bourgeois",
+          "minute": 31,
           "type": "yellow",
           "teamId": "libin",
           "playerId": "p-libin-12",
           "detail": "Mattéo André Bourgeois"
         },
         {
-          "id": "rbfa-7565605-undefined-yellow-Oury",
-          "minute": 0,
+          "id": "rbfa-7565605-46-yellow-Mays",
+          "minute": 46,
           "type": "yellow",
+          "teamId": "libin",
+          "playerId": "p-libin-8",
+          "detail": "Alexis Harry Mays"
+        },
+        {
+          "id": "rbfa-7565605-65-in-Colleaux",
+          "minute": 65,
+          "type": "sub_in",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-16",
+          "detail": "Louis Colleaux"
+        },
+        {
+          "id": "rbfa-7565605-65-in-Van Autgaerden",
+          "minute": 65,
+          "type": "sub_in",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-21",
+          "detail": "Thomas Van Autgaerden"
+        },
+        {
+          "id": "rbfa-7565605-65-out-Baudot",
+          "minute": 65,
+          "type": "sub_out",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-15",
+          "detail": "Thomas Baudot"
+        },
+        {
+          "id": "rbfa-7565605-65-out-Hutin",
+          "minute": 65,
+          "type": "sub_out",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-12",
+          "detail": "Simon Hutin"
+        },
+        {
+          "id": "rbfa-7565605-65-in-Molitor",
+          "minute": 65,
+          "type": "sub_in",
+          "teamId": "libin",
+          "playerId": "p-libin-23",
+          "detail": "Hugo Molitor"
+        },
+        {
+          "id": "rbfa-7565605-65-out-Cavelier",
+          "minute": 65,
+          "type": "sub_out",
+          "teamId": "libin",
+          "playerId": "p-libin-4",
+          "detail": "Geoffrey Cavelier"
+        },
+        {
+          "id": "rbfa-7565605-75-in-Chardome",
+          "minute": 75,
+          "type": "sub_in",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-2",
+          "detail": "Pierre Chardome"
+        },
+        {
+          "id": "rbfa-7565605-75-out-Oury",
+          "minute": 75,
+          "type": "sub_out",
           "teamId": "ochamps",
           "playerId": "p-ochamps-19",
           "detail": "Luka Gregory Oury"
+        },
+        {
+          "id": "rbfa-7565605-75-in-Zeghdane",
+          "minute": 75,
+          "type": "sub_in",
+          "teamId": "libin",
+          "playerId": "p-libin-19",
+          "detail": "Naël Zeghdane"
+        },
+        {
+          "id": "rbfa-7565605-75-out-Nicolas",
+          "minute": 75,
+          "type": "sub_out",
+          "teamId": "libin",
+          "playerId": "p-libin-25",
+          "detail": "Hugo Nicolas"
+        },
+        {
+          "id": "rbfa-7565605-85-in-Gillet",
+          "minute": 85,
+          "type": "sub_in",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-11",
+          "detail": "Augustin Gillet"
+        },
+        {
+          "id": "rbfa-7565605-85-out-Doyen",
+          "minute": 85,
+          "type": "sub_out",
+          "teamId": "ochamps",
+          "playerId": "p-ochamps-9",
+          "detail": "Henri Doyen"
+        },
+        {
+          "id": "rbfa-7565605-88-in-Robert",
+          "minute": 88,
+          "type": "sub_in",
+          "teamId": "libin",
+          "playerId": "p-libin-17",
+          "detail": "Louis Robert"
+        },
+        {
+          "id": "rbfa-7565605-88-out-Lefort",
+          "minute": 88,
+          "type": "sub_out",
+          "teamId": "libin",
+          "playerId": "p-libin-22",
+          "detail": "Thomas Lefort"
         }
       ],
       "officials": [
@@ -33729,188 +33729,188 @@
       "awayScore": 1,
       "events": [
         {
-          "id": "rbfa-7565600-undefined-goal-Fautré",
-          "minute": 0,
-          "type": "goal",
-          "teamId": "houffalize",
-          "playerId": "p-houffalize-23",
-          "detail": "Jul Fautré"
-        },
-        {
-          "id": "rbfa-7565600-undefined-yellow-Lockman",
-          "minute": 0,
+          "id": "rbfa-7565600-22-yellow-Gengoux",
+          "minute": 22,
           "type": "yellow",
-          "teamId": "bercheux",
-          "playerId": "p-bercheux-8",
-          "detail": "Mathis Lockman"
-        },
-        {
-          "id": "rbfa-7565600-undefined-in-Goosse",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "bercheux",
-          "playerId": "p-bercheux-5",
-          "detail": "Cyprien Goosse"
-        },
-        {
-          "id": "rbfa-7565600-undefined-out-Poncelet",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "bercheux",
-          "playerId": "p-bercheux-10",
-          "detail": "Esteban Poncelet"
-        },
-        {
-          "id": "rbfa-7565600-undefined-in-Toubon",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "bercheux",
-          "playerId": "p-bercheux-30",
-          "detail": "Jean-Marie Toubon"
-        },
-        {
-          "id": "rbfa-7565600-undefined-out-Dumont",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "bercheux",
-          "playerId": "p-bercheux-16",
-          "detail": "Tim Dumont"
-        },
-        {
-          "id": "rbfa-7565600-undefined-in-Vaguet",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "houffalize",
-          "playerId": "p-houffalize-36",
-          "detail": "Diego Vaguet"
-        },
-        {
-          "id": "rbfa-7565600-undefined-out-Horman",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "houffalize",
-          "playerId": "p-houffalize-32",
-          "detail": "Jules Horman"
-        },
-        {
-          "id": "rbfa-7565600-undefined-in-Gravé",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "bercheux",
-          "playerId": "p-bercheux-6",
-          "detail": "Benjamin Gravé"
-        },
-        {
-          "id": "rbfa-7565600-undefined-out-Copine",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "bercheux",
-          "playerId": "p-bercheux-14",
-          "detail": "Charles Copine"
-        },
-        {
-          "id": "rbfa-7565600-undefined-in-Fautré",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "houffalize",
-          "playerId": "p-houffalize-23",
-          "detail": "Jul Fautré"
-        },
-        {
-          "id": "rbfa-7565600-undefined-out-Gengoux",
-          "minute": 0,
-          "type": "sub_out",
           "teamId": "houffalize",
           "playerId": "p-houffalize-25",
           "detail": "Maxence Gengoux"
         },
         {
-          "id": "rbfa-7565600-undefined-in-Pirotte",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "houffalize",
-          "playerId": "p-houffalize-12",
-          "detail": "Noan Pirotte"
-        },
-        {
-          "id": "rbfa-7565600-undefined-out-Clotuche",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "houffalize",
-          "playerId": "p-houffalize-6",
-          "detail": "Sébastien Clotuche"
-        },
-        {
-          "id": "rbfa-7565600-undefined-yellow-Poncelet",
-          "minute": 0,
-          "type": "yellow",
-          "teamId": "bercheux",
-          "playerId": "p-bercheux-11",
-          "detail": "Gilles Poncelet"
-        },
-        {
-          "id": "rbfa-7565600-undefined-in-Pierret",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "bercheux",
-          "playerId": "p-bercheux-9",
-          "detail": "Antoine Pierret"
-        },
-        {
-          "id": "rbfa-7565600-undefined-out-Bozet",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "bercheux",
-          "playerId": "p-bercheux-12",
-          "detail": "Clément Bozet"
-        },
-        {
-          "id": "rbfa-7565600-undefined-goal-Diallo",
-          "minute": 0,
-          "type": "goal",
-          "teamId": "houffalize",
-          "playerId": "p-houffalize-29",
-          "detail": "Saidou Diallo"
-        },
-        {
-          "id": "rbfa-7565600-undefined-goal-Diallo",
-          "minute": 0,
-          "type": "goal",
-          "teamId": "houffalize",
-          "playerId": "p-houffalize-29",
-          "detail": "Saidou Diallo"
-        },
-        {
-          "id": "rbfa-7565600-undefined-yellow-Dumont",
-          "minute": 0,
-          "type": "yellow",
-          "teamId": "bercheux",
-          "playerId": "p-bercheux-16",
-          "detail": "Tim Dumont"
-        },
-        {
-          "id": "rbfa-7565600-undefined-goal-Diallo",
-          "minute": 0,
-          "type": "goal",
-          "teamId": "houffalize",
-          "playerId": "p-houffalize-29",
-          "detail": "Saidou Diallo"
-        },
-        {
-          "id": "rbfa-7565600-undefined-goal-Vermierdt",
-          "minute": 0,
+          "id": "rbfa-7565600-23-goal-Vermierdt",
+          "minute": 23,
           "type": "goal",
           "teamId": "bercheux",
           "playerId": "p-bercheux-26",
           "detail": "Lenny Vermierdt"
         },
         {
-          "id": "rbfa-7565600-undefined-yellow-Gengoux",
-          "minute": 0,
+          "id": "rbfa-7565600-26-goal-Diallo",
+          "minute": 26,
+          "type": "goal",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-29",
+          "detail": "Saidou Diallo"
+        },
+        {
+          "id": "rbfa-7565600-31-yellow-Dumont",
+          "minute": 31,
           "type": "yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-16",
+          "detail": "Tim Dumont"
+        },
+        {
+          "id": "rbfa-7565600-39-goal-Diallo",
+          "minute": 39,
+          "type": "goal",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-29",
+          "detail": "Saidou Diallo"
+        },
+        {
+          "id": "rbfa-7565600-50-goal-Diallo",
+          "minute": 50,
+          "type": "goal",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-29",
+          "detail": "Saidou Diallo"
+        },
+        {
+          "id": "rbfa-7565600-60-in-Pierret",
+          "minute": 60,
+          "type": "sub_in",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-9",
+          "detail": "Antoine Pierret"
+        },
+        {
+          "id": "rbfa-7565600-60-out-Bozet",
+          "minute": 60,
+          "type": "sub_out",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-12",
+          "detail": "Clément Bozet"
+        },
+        {
+          "id": "rbfa-7565600-61-yellow-Poncelet",
+          "minute": 61,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-11",
+          "detail": "Gilles Poncelet"
+        },
+        {
+          "id": "rbfa-7565600-64-in-Pirotte",
+          "minute": 64,
+          "type": "sub_in",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-12",
+          "detail": "Noan Pirotte"
+        },
+        {
+          "id": "rbfa-7565600-64-out-Clotuche",
+          "minute": 64,
+          "type": "sub_out",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-6",
+          "detail": "Sébastien Clotuche"
+        },
+        {
+          "id": "rbfa-7565600-66-in-Fautré",
+          "minute": 66,
+          "type": "sub_in",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-23",
+          "detail": "Jul Fautré"
+        },
+        {
+          "id": "rbfa-7565600-66-out-Gengoux",
+          "minute": 66,
+          "type": "sub_out",
           "teamId": "houffalize",
           "playerId": "p-houffalize-25",
           "detail": "Maxence Gengoux"
+        },
+        {
+          "id": "rbfa-7565600-72-in-Gravé",
+          "minute": 72,
+          "type": "sub_in",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-6",
+          "detail": "Benjamin Gravé"
+        },
+        {
+          "id": "rbfa-7565600-72-out-Copine",
+          "minute": 72,
+          "type": "sub_out",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-14",
+          "detail": "Charles Copine"
+        },
+        {
+          "id": "rbfa-7565600-77-in-Vaguet",
+          "minute": 77,
+          "type": "sub_in",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-36",
+          "detail": "Diego Vaguet"
+        },
+        {
+          "id": "rbfa-7565600-77-out-Horman",
+          "minute": 77,
+          "type": "sub_out",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-32",
+          "detail": "Jules Horman"
+        },
+        {
+          "id": "rbfa-7565600-80-in-Toubon",
+          "minute": 80,
+          "type": "sub_in",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-30",
+          "detail": "Jean-Marie Toubon"
+        },
+        {
+          "id": "rbfa-7565600-80-out-Dumont",
+          "minute": 80,
+          "type": "sub_out",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-16",
+          "detail": "Tim Dumont"
+        },
+        {
+          "id": "rbfa-7565600-81-in-Goosse",
+          "minute": 81,
+          "type": "sub_in",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-5",
+          "detail": "Cyprien Goosse"
+        },
+        {
+          "id": "rbfa-7565600-81-out-Poncelet",
+          "minute": 81,
+          "type": "sub_out",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-10",
+          "detail": "Esteban Poncelet"
+        },
+        {
+          "id": "rbfa-7565600-84-yellow-Lockman",
+          "minute": 84,
+          "type": "yellow",
+          "teamId": "bercheux",
+          "playerId": "p-bercheux-8",
+          "detail": "Mathis Lockman"
+        },
+        {
+          "id": "rbfa-7565600-91-goal-Fautré",
+          "minute": 91,
+          "type": "goal",
+          "teamId": "houffalize",
+          "playerId": "p-houffalize-23",
+          "detail": "Jul Fautré"
         }
       ],
       "officials": [
@@ -34113,179 +34113,179 @@
       "awayScore": 2,
       "events": [
         {
-          "id": "rbfa-7565606-undefined-goal-Lentz",
-          "minute": 0,
+          "id": "rbfa-7565606-19-goal-Djim",
+          "minute": 19,
           "type": "goal",
-          "teamId": "gouvy",
-          "playerId": "p-gouvy-27",
-          "detail": "Mathieu Lentz"
-        },
-        {
-          "id": "rbfa-7565606-undefined-in-Arifi",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "marloie",
-          "playerId": "p-marloie-14",
-          "detail": "Besfort Arifi"
-        },
-        {
-          "id": "rbfa-7565606-undefined-out-Mosquera Acosta",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "marloie",
-          "playerId": "p-marloie-13",
-          "detail": "Santiago Mosquera Acosta"
-        },
-        {
-          "id": "rbfa-7565606-undefined-goal-Poncin",
-          "minute": 0,
-          "type": "goal",
-          "teamId": "gouvy",
-          "playerId": "p-gouvy-22",
-          "detail": "Jordan Poncin"
-        },
-        {
-          "id": "rbfa-7565606-undefined-in-Amory",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "gouvy",
-          "playerId": "p-gouvy-17",
-          "detail": "Mathys Amory"
-        },
-        {
-          "id": "rbfa-7565606-undefined-out-Piette",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "gouvy",
-          "playerId": "p-gouvy-6",
-          "detail": "Justin Piette"
-        },
-        {
-          "id": "rbfa-7565606-undefined-goal-Mbazoa",
-          "minute": 0,
-          "type": "goal",
-          "teamId": "marloie",
-          "playerId": "p-marloie-20",
-          "detail": "Edgar Mbazoa"
-        },
-        {
-          "id": "rbfa-7565606-undefined-in-Asigani",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "marloie",
-          "detail": "Tiago Asigani"
-        },
-        {
-          "id": "rbfa-7565606-undefined-in-Lambert",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "marloie",
-          "playerId": "p-marloie-12",
-          "detail": "Maxime Lambert"
-        },
-        {
-          "id": "rbfa-7565606-undefined-out-Djim",
-          "minute": 0,
-          "type": "sub_out",
           "teamId": "marloie",
           "playerId": "p-marloie-17",
           "detail": "Tony Djim"
         },
         {
-          "id": "rbfa-7565606-undefined-out-Leleu",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "marloie",
-          "playerId": "p-marloie-19",
-          "detail": "Benoit Leleu"
-        },
-        {
-          "id": "rbfa-7565606-undefined-yellow-Lentz",
-          "minute": 0,
-          "type": "yellow",
-          "teamId": "gouvy",
-          "playerId": "p-gouvy-27",
-          "detail": "Mathieu Lentz"
-        },
-        {
-          "id": "rbfa-7565606-undefined-yellow-Mosquera Acosta",
-          "minute": 0,
-          "type": "yellow",
-          "teamId": "marloie",
-          "playerId": "p-marloie-13",
-          "detail": "Santiago Mosquera Acosta"
-        },
-        {
-          "id": "rbfa-7565606-undefined-in-Poncin",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "gouvy",
-          "playerId": "p-gouvy-22",
-          "detail": "Jordan Poncin"
-        },
-        {
-          "id": "rbfa-7565606-undefined-out-Dewalque",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "gouvy",
-          "playerId": "p-gouvy-11",
-          "detail": "Florent Dewalque"
-        },
-        {
-          "id": "rbfa-7565606-undefined-in-Mbazoa",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "marloie",
-          "playerId": "p-marloie-20",
-          "detail": "Edgar Mbazoa"
-        },
-        {
-          "id": "rbfa-7565606-undefined-out-Dia",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "marloie",
-          "playerId": "p-marloie-16",
-          "detail": "Meïssa Ibrahima Dia"
-        },
-        {
-          "id": "rbfa-7565606-undefined-in-Amory",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "gouvy",
-          "playerId": "p-gouvy-16",
-          "detail": "Hugo Amory"
-        },
-        {
-          "id": "rbfa-7565606-undefined-out-Bouillon",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "gouvy",
-          "playerId": "p-gouvy-4",
-          "detail": "Robin Bouillon"
-        },
-        {
-          "id": "rbfa-7565606-undefined-yellow-Bouterbiat",
-          "minute": 0,
-          "type": "yellow",
-          "teamId": "marloie",
-          "playerId": "p-marloie-21",
-          "detail": "Samy Bouterbiat"
-        },
-        {
-          "id": "rbfa-7565606-undefined-goal-Ioakimidou",
-          "minute": 0,
+          "id": "rbfa-7565606-30-goal-Ioakimidou",
+          "minute": 30,
           "type": "goal",
           "teamId": "marloie",
           "playerId": "p-marloie-26",
           "detail": "Charlin Ioakimidou"
         },
         {
-          "id": "rbfa-7565606-undefined-goal-Djim",
-          "minute": 0,
+          "id": "rbfa-7565606-50-yellow-Bouterbiat",
+          "minute": 50,
+          "type": "yellow",
+          "teamId": "marloie",
+          "playerId": "p-marloie-21",
+          "detail": "Samy Bouterbiat"
+        },
+        {
+          "id": "rbfa-7565606-60-in-Mbazoa",
+          "minute": 60,
+          "type": "sub_in",
+          "teamId": "marloie",
+          "playerId": "p-marloie-20",
+          "detail": "Edgar Mbazoa"
+        },
+        {
+          "id": "rbfa-7565606-60-out-Dia",
+          "minute": 60,
+          "type": "sub_out",
+          "teamId": "marloie",
+          "playerId": "p-marloie-16",
+          "detail": "Meïssa Ibrahima Dia"
+        },
+        {
+          "id": "rbfa-7565606-60-in-Amory",
+          "minute": 60,
+          "type": "sub_in",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-16",
+          "detail": "Hugo Amory"
+        },
+        {
+          "id": "rbfa-7565606-60-out-Bouillon",
+          "minute": 60,
+          "type": "sub_out",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-4",
+          "detail": "Robin Bouillon"
+        },
+        {
+          "id": "rbfa-7565606-65-yellow-Mosquera Acosta",
+          "minute": 65,
+          "type": "yellow",
+          "teamId": "marloie",
+          "playerId": "p-marloie-13",
+          "detail": "Santiago Mosquera Acosta"
+        },
+        {
+          "id": "rbfa-7565606-65-in-Poncin",
+          "minute": 65,
+          "type": "sub_in",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-22",
+          "detail": "Jordan Poncin"
+        },
+        {
+          "id": "rbfa-7565606-65-out-Dewalque",
+          "minute": 65,
+          "type": "sub_out",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-11",
+          "detail": "Florent Dewalque"
+        },
+        {
+          "id": "rbfa-7565606-67-yellow-Lentz",
+          "minute": 67,
+          "type": "yellow",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-27",
+          "detail": "Mathieu Lentz"
+        },
+        {
+          "id": "rbfa-7565606-70-goal-Mbazoa",
+          "minute": 70,
           "type": "goal",
+          "teamId": "marloie",
+          "playerId": "p-marloie-20",
+          "detail": "Edgar Mbazoa"
+        },
+        {
+          "id": "rbfa-7565606-70-in-Asigani",
+          "minute": 70,
+          "type": "sub_in",
+          "teamId": "marloie",
+          "detail": "Tiago Asigani"
+        },
+        {
+          "id": "rbfa-7565606-70-in-Lambert",
+          "minute": 70,
+          "type": "sub_in",
+          "teamId": "marloie",
+          "playerId": "p-marloie-12",
+          "detail": "Maxime Lambert"
+        },
+        {
+          "id": "rbfa-7565606-70-out-Djim",
+          "minute": 70,
+          "type": "sub_out",
           "teamId": "marloie",
           "playerId": "p-marloie-17",
           "detail": "Tony Djim"
+        },
+        {
+          "id": "rbfa-7565606-70-out-Leleu",
+          "minute": 70,
+          "type": "sub_out",
+          "teamId": "marloie",
+          "playerId": "p-marloie-19",
+          "detail": "Benoit Leleu"
+        },
+        {
+          "id": "rbfa-7565606-75-in-Arifi",
+          "minute": 75,
+          "type": "sub_in",
+          "teamId": "marloie",
+          "playerId": "p-marloie-14",
+          "detail": "Besfort Arifi"
+        },
+        {
+          "id": "rbfa-7565606-75-out-Mosquera Acosta",
+          "minute": 75,
+          "type": "sub_out",
+          "teamId": "marloie",
+          "playerId": "p-marloie-13",
+          "detail": "Santiago Mosquera Acosta"
+        },
+        {
+          "id": "rbfa-7565606-75-goal-Poncin",
+          "minute": 75,
+          "type": "goal",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-22",
+          "detail": "Jordan Poncin"
+        },
+        {
+          "id": "rbfa-7565606-75-in-Amory",
+          "minute": 75,
+          "type": "sub_in",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-17",
+          "detail": "Mathys Amory"
+        },
+        {
+          "id": "rbfa-7565606-75-out-Piette",
+          "minute": 75,
+          "type": "sub_out",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-6",
+          "detail": "Justin Piette"
+        },
+        {
+          "id": "rbfa-7565606-88-goal-Lentz",
+          "minute": 88,
+          "type": "goal",
+          "teamId": "gouvy",
+          "playerId": "p-gouvy-27",
+          "detail": "Mathieu Lentz"
         }
       ],
       "officials": [
@@ -34482,203 +34482,203 @@
       "awayScore": 3,
       "events": [
         {
-          "id": "rbfa-7565604-undefined-goal-Nkokolo",
-          "minute": 0,
-          "type": "goal",
-          "teamId": "assenois",
-          "playerId": "p-assenois-14",
-          "detail": "Arnold Nkokolo"
-        },
-        {
-          "id": "rbfa-7565604-undefined-goal-Raskin",
-          "minute": 0,
-          "type": "goal",
-          "teamId": "roy",
-          "playerId": "p-roy-19",
-          "detail": "Valentin Raskin"
-        },
-        {
-          "id": "rbfa-7565604-undefined-yellow-Fiévet",
-          "minute": 0,
-          "type": "yellow",
-          "teamId": "roy",
-          "playerId": "p-roy-22",
-          "detail": "Julien Fiévet"
-        },
-        {
-          "id": "rbfa-7565604-undefined-yellow-Cravatte",
-          "minute": 0,
-          "type": "yellow",
-          "teamId": "assenois",
-          "playerId": "p-assenois-4",
-          "detail": "Quentin Cravatte"
-        },
-        {
-          "id": "rbfa-7565604-undefined-in-Alie",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "roy",
-          "playerId": "p-roy-13",
-          "detail": "Maxim Alie"
-        },
-        {
-          "id": "rbfa-7565604-undefined-out-Raskin",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "roy",
-          "playerId": "p-roy-23",
-          "detail": "Mathys Raskin"
-        },
-        {
-          "id": "rbfa-7565604-undefined-goal-Macalli",
-          "minute": 0,
-          "type": "goal",
-          "teamId": "assenois",
-          "playerId": "p-assenois-23",
-          "detail": "Thomas Macalli"
-        },
-        {
-          "id": "rbfa-7565604-undefined-yellow-Bihina",
-          "minute": 0,
-          "type": "yellow",
-          "teamId": "assenois",
-          "playerId": "p-assenois-12",
-          "detail": "Antoine Willy Bihina"
-        },
-        {
-          "id": "rbfa-7565604-undefined-in-Gauthier",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "roy",
-          "playerId": "p-roy-5",
-          "detail": "Damien Gauthier"
-        },
-        {
-          "id": "rbfa-7565604-undefined-out-Wallens",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "roy",
-          "playerId": "p-roy-12",
-          "detail": "Tom Wallens"
-        },
-        {
-          "id": "rbfa-7565604-undefined-in-Piergentili",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "roy",
-          "playerId": "p-roy-25",
-          "detail": "Alessandro Piergentili"
-        },
-        {
-          "id": "rbfa-7565604-undefined-out-Borrey",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "roy",
-          "playerId": "p-roy-14",
-          "detail": "Antoine Borrey"
-        },
-        {
-          "id": "rbfa-7565604-undefined-yellow-Wallens",
-          "minute": 0,
-          "type": "yellow",
-          "teamId": "roy",
-          "playerId": "p-roy-12",
-          "detail": "Tom Wallens"
-        },
-        {
-          "id": "rbfa-7565604-undefined-in-Ndikumana",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "assenois",
-          "playerId": "p-assenois-13",
-          "detail": "Trésor Ndikumana"
-        },
-        {
-          "id": "rbfa-7565604-undefined-out-Thiry",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "assenois",
-          "playerId": "p-assenois-16",
-          "detail": "Lucas Thiry"
-        },
-        {
-          "id": "rbfa-7565604-undefined-yellow-Dechamps",
-          "minute": 0,
-          "type": "yellow",
-          "teamId": "assenois",
-          "playerId": "p-assenois-5",
-          "detail": "Theo Dechamps"
-        },
-        {
-          "id": "rbfa-7565604-undefined-yellow-Raskin",
-          "minute": 0,
-          "type": "yellow",
-          "teamId": "roy",
-          "playerId": "p-roy-19",
-          "detail": "Valentin Raskin"
-        },
-        {
-          "id": "rbfa-7565604-undefined-in-Wauthy",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "assenois",
-          "playerId": "p-assenois-19",
-          "detail": "Jeremy Wauthy"
-        },
-        {
-          "id": "rbfa-7565604-undefined-out-Debra",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "assenois",
-          "playerId": "p-assenois-21",
-          "detail": "Julien Debra"
-        },
-        {
-          "id": "rbfa-7565604-undefined-yellow-Guillaume",
-          "minute": 0,
-          "type": "yellow",
-          "teamId": "roy",
-          "playerId": "p-roy-15",
-          "detail": "William Guillaume"
-        },
-        {
-          "id": "rbfa-7565604-undefined-yellow-Dubois",
-          "minute": 0,
-          "type": "yellow",
-          "teamId": "assenois",
-          "detail": "Stéphane Dubois"
-        },
-        {
-          "id": "rbfa-7565604-undefined-yellow-Debra",
-          "minute": 0,
-          "type": "yellow",
-          "teamId": "assenois",
-          "playerId": "p-assenois-21",
-          "detail": "Julien Debra"
-        },
-        {
-          "id": "rbfa-7565604-undefined-goal-Fiévet",
-          "minute": 0,
+          "id": "rbfa-7565604-3-goal-Fiévet",
+          "minute": 3,
           "type": "goal",
           "teamId": "roy",
           "playerId": "p-roy-22",
           "detail": "Julien Fiévet"
         },
         {
-          "id": "rbfa-7565604-undefined-penalty-Nkokolo",
-          "minute": 0,
+          "id": "rbfa-7565604-15-penalty-Nkokolo",
+          "minute": 15,
           "type": "goal",
           "teamId": "assenois",
           "playerId": "p-assenois-14",
           "detail": "penalty · Arnold Nkokolo"
         },
         {
-          "id": "rbfa-7565604-undefined-goal-Fiévet",
-          "minute": 0,
+          "id": "rbfa-7565604-18-goal-Fiévet",
+          "minute": 18,
           "type": "goal",
           "teamId": "roy",
           "playerId": "p-roy-22",
           "detail": "Julien Fiévet"
+        },
+        {
+          "id": "rbfa-7565604-23-yellow-Debra",
+          "minute": 23,
+          "type": "yellow",
+          "teamId": "assenois",
+          "playerId": "p-assenois-21",
+          "detail": "Julien Debra"
+        },
+        {
+          "id": "rbfa-7565604-24-yellow-Dubois",
+          "minute": 24,
+          "type": "yellow",
+          "teamId": "assenois",
+          "detail": "Stéphane Dubois"
+        },
+        {
+          "id": "rbfa-7565604-26-yellow-Guillaume",
+          "minute": 26,
+          "type": "yellow",
+          "teamId": "roy",
+          "playerId": "p-roy-15",
+          "detail": "William Guillaume"
+        },
+        {
+          "id": "rbfa-7565604-29-in-Wauthy",
+          "minute": 29,
+          "type": "sub_in",
+          "teamId": "assenois",
+          "playerId": "p-assenois-19",
+          "detail": "Jeremy Wauthy"
+        },
+        {
+          "id": "rbfa-7565604-29-out-Debra",
+          "minute": 29,
+          "type": "sub_out",
+          "teamId": "assenois",
+          "playerId": "p-assenois-21",
+          "detail": "Julien Debra"
+        },
+        {
+          "id": "rbfa-7565604-42-yellow-Raskin",
+          "minute": 42,
+          "type": "yellow",
+          "teamId": "roy",
+          "playerId": "p-roy-19",
+          "detail": "Valentin Raskin"
+        },
+        {
+          "id": "rbfa-7565604-60-yellow-Dechamps",
+          "minute": 60,
+          "type": "yellow",
+          "teamId": "assenois",
+          "playerId": "p-assenois-5",
+          "detail": "Theo Dechamps"
+        },
+        {
+          "id": "rbfa-7565604-63-in-Ndikumana",
+          "minute": 63,
+          "type": "sub_in",
+          "teamId": "assenois",
+          "playerId": "p-assenois-13",
+          "detail": "Trésor Ndikumana"
+        },
+        {
+          "id": "rbfa-7565604-63-out-Thiry",
+          "minute": 63,
+          "type": "sub_out",
+          "teamId": "assenois",
+          "playerId": "p-assenois-16",
+          "detail": "Lucas Thiry"
+        },
+        {
+          "id": "rbfa-7565604-65-yellow-Wallens",
+          "minute": 65,
+          "type": "yellow",
+          "teamId": "roy",
+          "playerId": "p-roy-12",
+          "detail": "Tom Wallens"
+        },
+        {
+          "id": "rbfa-7565604-66-in-Piergentili",
+          "minute": 66,
+          "type": "sub_in",
+          "teamId": "roy",
+          "playerId": "p-roy-25",
+          "detail": "Alessandro Piergentili"
+        },
+        {
+          "id": "rbfa-7565604-66-out-Borrey",
+          "minute": 66,
+          "type": "sub_out",
+          "teamId": "roy",
+          "playerId": "p-roy-14",
+          "detail": "Antoine Borrey"
+        },
+        {
+          "id": "rbfa-7565604-68-in-Gauthier",
+          "minute": 68,
+          "type": "sub_in",
+          "teamId": "roy",
+          "playerId": "p-roy-5",
+          "detail": "Damien Gauthier"
+        },
+        {
+          "id": "rbfa-7565604-68-out-Wallens",
+          "minute": 68,
+          "type": "sub_out",
+          "teamId": "roy",
+          "playerId": "p-roy-12",
+          "detail": "Tom Wallens"
+        },
+        {
+          "id": "rbfa-7565604-70-yellow-Bihina",
+          "minute": 70,
+          "type": "yellow",
+          "teamId": "assenois",
+          "playerId": "p-assenois-12",
+          "detail": "Antoine Willy Bihina"
+        },
+        {
+          "id": "rbfa-7565604-77-goal-Macalli",
+          "minute": 77,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-23",
+          "detail": "Thomas Macalli"
+        },
+        {
+          "id": "rbfa-7565604-85-in-Alie",
+          "minute": 85,
+          "type": "sub_in",
+          "teamId": "roy",
+          "playerId": "p-roy-13",
+          "detail": "Maxim Alie"
+        },
+        {
+          "id": "rbfa-7565604-85-out-Raskin",
+          "minute": 85,
+          "type": "sub_out",
+          "teamId": "roy",
+          "playerId": "p-roy-23",
+          "detail": "Mathys Raskin"
+        },
+        {
+          "id": "rbfa-7565604-89-yellow-Cravatte",
+          "minute": 89,
+          "type": "yellow",
+          "teamId": "assenois",
+          "playerId": "p-assenois-4",
+          "detail": "Quentin Cravatte"
+        },
+        {
+          "id": "rbfa-7565604-93-goal-Raskin",
+          "minute": 93,
+          "type": "goal",
+          "teamId": "roy",
+          "playerId": "p-roy-19",
+          "detail": "Valentin Raskin"
+        },
+        {
+          "id": "rbfa-7565604-93-yellow-Fiévet",
+          "minute": 93,
+          "type": "yellow",
+          "teamId": "roy",
+          "playerId": "p-roy-22",
+          "detail": "Julien Fiévet"
+        },
+        {
+          "id": "rbfa-7565604-94-goal-Nkokolo",
+          "minute": 94,
+          "type": "goal",
+          "teamId": "assenois",
+          "playerId": "p-assenois-14",
+          "detail": "Arnold Nkokolo"
         }
       ],
       "officials": [
@@ -34869,203 +34869,203 @@
       "awayScore": 1,
       "events": [
         {
-          "id": "rbfa-7565603-undefined-in-Richard",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "nothomb",
-          "playerId": "p-nothomb-10",
-          "detail": "Christophe Richard"
-        },
-        {
-          "id": "rbfa-7565603-undefined-out-Thiéry",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "nothomb",
-          "playerId": "p-nothomb-34",
-          "detail": "Tanguy Thiéry"
-        },
-        {
-          "id": "rbfa-7565603-undefined-in-Lejeune",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "oppagne",
-          "playerId": "p-oppagne-2",
-          "detail": "Nathan Lejeune"
-        },
-        {
-          "id": "rbfa-7565603-undefined-out-Gerarts",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "oppagne",
-          "playerId": "p-oppagne-18",
-          "detail": "Matheo Jaime Gerarts"
-        },
-        {
-          "id": "rbfa-7565603-undefined-in-Xhignesse",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "oppagne",
-          "detail": "Romain Xhignesse"
-        },
-        {
-          "id": "rbfa-7565603-undefined-out-Thiry",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "oppagne",
-          "playerId": "p-oppagne-9",
-          "detail": "Noah Thiry"
-        },
-        {
-          "id": "rbfa-7565603-undefined-goal-Huberty",
-          "minute": 0,
+          "id": "rbfa-7565603-4-goal-Schmit",
+          "minute": 4,
           "type": "goal",
           "teamId": "nothomb",
-          "playerId": "p-nothomb-15",
-          "detail": "Kevin Huberty"
+          "playerId": "p-nothomb-33",
+          "detail": "Olivier Schmit"
         },
         {
-          "id": "rbfa-7565603-undefined-in-Parrot",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "nothomb",
-          "playerId": "p-nothomb-21",
-          "detail": "Florian Jean-Marie Parrot"
-        },
-        {
-          "id": "rbfa-7565603-undefined-out-Kobs",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "nothomb",
-          "playerId": "p-nothomb-16",
-          "detail": "Baptiste Kobs"
-        },
-        {
-          "id": "rbfa-7565603-undefined-goal-Laurent",
-          "minute": 0,
-          "type": "goal",
-          "teamId": "nothomb",
-          "playerId": "p-nothomb-31",
-          "detail": "Alexandre Laurent"
-        },
-        {
-          "id": "rbfa-7565603-undefined-in-Hannard",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "nothomb",
-          "playerId": "p-nothomb-25",
-          "detail": "Mattéo Hannard"
-        },
-        {
-          "id": "rbfa-7565603-undefined-out-Mairlot",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "nothomb",
-          "playerId": "p-nothomb-27",
-          "detail": "Martin Mairlot"
-        },
-        {
-          "id": "rbfa-7565603-undefined-goal-Englebert",
-          "minute": 0,
-          "type": "goal",
-          "teamId": "oppagne",
-          "playerId": "p-oppagne-5",
-          "detail": "Erwin Englebert"
-        },
-        {
-          "id": "rbfa-7565603-undefined-in-Petitjean",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "oppagne",
-          "playerId": "p-oppagne-15",
-          "detail": "Wannes Petitjean"
-        },
-        {
-          "id": "rbfa-7565603-undefined-in-Sambi Lokonga",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "oppagne",
-          "playerId": "p-oppagne-25",
-          "detail": "Fabrice Sambi Lokonga"
-        },
-        {
-          "id": "rbfa-7565603-undefined-out-Lizen",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "oppagne",
-          "playerId": "p-oppagne-14",
-          "detail": "Mattéo Lizen"
-        },
-        {
-          "id": "rbfa-7565603-undefined-out-Théodore",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "oppagne",
-          "playerId": "p-oppagne-10",
-          "detail": "Aubrey Théodore"
-        },
-        {
-          "id": "rbfa-7565603-undefined-yellow-Lizen",
-          "minute": 0,
-          "type": "yellow",
-          "teamId": "oppagne",
-          "playerId": "p-oppagne-14",
-          "detail": "Mattéo Lizen"
-        },
-        {
-          "id": "rbfa-7565603-undefined-goal-Huberty",
-          "minute": 0,
-          "type": "goal",
-          "teamId": "nothomb",
-          "playerId": "p-nothomb-15",
-          "detail": "Kevin Huberty"
-        },
-        {
-          "id": "rbfa-7565603-undefined-yellow-Laffargue",
-          "minute": 0,
-          "type": "yellow",
-          "teamId": "nothomb",
-          "playerId": "p-nothomb-6",
-          "detail": "Matthieu Laffargue"
-        },
-        {
-          "id": "rbfa-7565603-undefined-yellow-Bechet",
-          "minute": 0,
-          "type": "yellow",
-          "teamId": "nothomb",
-          "playerId": "p-nothomb-4",
-          "detail": "Sylvain Bechet"
-        },
-        {
-          "id": "rbfa-7565603-undefined-yellow-Hugot",
-          "minute": 0,
-          "type": "yellow",
-          "teamId": "oppagne",
-          "playerId": "p-oppagne-6",
-          "detail": "Louis Hugot"
-        },
-        {
-          "id": "rbfa-7565603-undefined-goal-Mairlot",
-          "minute": 0,
+          "id": "rbfa-7565603-15-goal-Mairlot",
+          "minute": 15,
           "type": "goal",
           "teamId": "nothomb",
           "playerId": "p-nothomb-27",
           "detail": "Martin Mairlot"
         },
         {
-          "id": "rbfa-7565603-undefined-yellow-Gilot",
-          "minute": 0,
+          "id": "rbfa-7565603-15-yellow-Gilot",
+          "minute": 15,
           "type": "yellow",
           "teamId": "oppagne",
           "playerId": "p-oppagne-1",
           "detail": "Harold Gilot"
         },
         {
-          "id": "rbfa-7565603-undefined-goal-Schmit",
-          "minute": 0,
+          "id": "rbfa-7565603-18-yellow-Hugot",
+          "minute": 18,
+          "type": "yellow",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-6",
+          "detail": "Louis Hugot"
+        },
+        {
+          "id": "rbfa-7565603-25-yellow-Bechet",
+          "minute": 25,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-4",
+          "detail": "Sylvain Bechet"
+        },
+        {
+          "id": "rbfa-7565603-44-yellow-Laffargue",
+          "minute": 44,
+          "type": "yellow",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-6",
+          "detail": "Matthieu Laffargue"
+        },
+        {
+          "id": "rbfa-7565603-47-goal-Huberty",
+          "minute": 47,
           "type": "goal",
           "teamId": "nothomb",
-          "playerId": "p-nothomb-33",
-          "detail": "Olivier Schmit"
+          "playerId": "p-nothomb-15",
+          "detail": "Kevin Huberty"
+        },
+        {
+          "id": "rbfa-7565603-50-yellow-Lizen",
+          "minute": 50,
+          "type": "yellow",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-14",
+          "detail": "Mattéo Lizen"
+        },
+        {
+          "id": "rbfa-7565603-60-in-Hannard",
+          "minute": 60,
+          "type": "sub_in",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-25",
+          "detail": "Mattéo Hannard"
+        },
+        {
+          "id": "rbfa-7565603-60-out-Mairlot",
+          "minute": 60,
+          "type": "sub_out",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-27",
+          "detail": "Martin Mairlot"
+        },
+        {
+          "id": "rbfa-7565603-60-goal-Englebert",
+          "minute": 60,
+          "type": "goal",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-5",
+          "detail": "Erwin Englebert"
+        },
+        {
+          "id": "rbfa-7565603-60-in-Petitjean",
+          "minute": 60,
+          "type": "sub_in",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-15",
+          "detail": "Wannes Petitjean"
+        },
+        {
+          "id": "rbfa-7565603-60-in-Sambi Lokonga",
+          "minute": 60,
+          "type": "sub_in",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-25",
+          "detail": "Fabrice Sambi Lokonga"
+        },
+        {
+          "id": "rbfa-7565603-60-out-Lizen",
+          "minute": 60,
+          "type": "sub_out",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-14",
+          "detail": "Mattéo Lizen"
+        },
+        {
+          "id": "rbfa-7565603-60-out-Théodore",
+          "minute": 60,
+          "type": "sub_out",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-10",
+          "detail": "Aubrey Théodore"
+        },
+        {
+          "id": "rbfa-7565603-65-goal-Laurent",
+          "minute": 65,
+          "type": "goal",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-31",
+          "detail": "Alexandre Laurent"
+        },
+        {
+          "id": "rbfa-7565603-70-goal-Huberty",
+          "minute": 70,
+          "type": "goal",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-15",
+          "detail": "Kevin Huberty"
+        },
+        {
+          "id": "rbfa-7565603-70-in-Parrot",
+          "minute": 70,
+          "type": "sub_in",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-21",
+          "detail": "Florian Jean-Marie Parrot"
+        },
+        {
+          "id": "rbfa-7565603-70-out-Kobs",
+          "minute": 70,
+          "type": "sub_out",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-16",
+          "detail": "Baptiste Kobs"
+        },
+        {
+          "id": "rbfa-7565603-73-in-Xhignesse",
+          "minute": 73,
+          "type": "sub_in",
+          "teamId": "oppagne",
+          "detail": "Romain Xhignesse"
+        },
+        {
+          "id": "rbfa-7565603-73-out-Thiry",
+          "minute": 73,
+          "type": "sub_out",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-9",
+          "detail": "Noah Thiry"
+        },
+        {
+          "id": "rbfa-7565603-75-in-Richard",
+          "minute": 75,
+          "type": "sub_in",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-10",
+          "detail": "Christophe Richard"
+        },
+        {
+          "id": "rbfa-7565603-75-out-Thiéry",
+          "minute": 75,
+          "type": "sub_out",
+          "teamId": "nothomb",
+          "playerId": "p-nothomb-34",
+          "detail": "Tanguy Thiéry"
+        },
+        {
+          "id": "rbfa-7565603-75-in-Lejeune",
+          "minute": 75,
+          "type": "sub_in",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-2",
+          "detail": "Nathan Lejeune"
+        },
+        {
+          "id": "rbfa-7565603-75-out-Gerarts",
+          "minute": 75,
+          "type": "sub_out",
+          "teamId": "oppagne",
+          "playerId": "p-oppagne-18",
+          "detail": "Matheo Jaime Gerarts"
         }
       ],
       "officials": [
@@ -35262,179 +35262,179 @@
       "awayScore": 1,
       "events": [
         {
-          "id": "rbfa-7565602-undefined-in-Amel",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "vaux-sur-sure",
-          "playerId": "p-vaux-sur-sure-18",
-          "detail": "Cyril Amel"
-        },
-        {
-          "id": "rbfa-7565602-undefined-out-Dewalque",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "vaux-sur-sure",
-          "playerId": "p-vaux-sur-sure-19",
-          "detail": "Sylvain Dewalque"
-        },
-        {
-          "id": "rbfa-7565602-undefined-yellow-Weyders",
-          "minute": 0,
-          "type": "yellow",
-          "teamId": "bastogne",
-          "playerId": "p-bastogne-9",
-          "detail": "Romain Weyders"
-        },
-        {
-          "id": "rbfa-7565602-undefined-in-Brisy",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "bastogne",
-          "playerId": "p-bastogne-10",
-          "detail": "Tristan Brisy"
-        },
-        {
-          "id": "rbfa-7565602-undefined-out-Sikpe Gabiam",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "bastogne",
-          "playerId": "p-bastogne-21",
-          "detail": "Ayité Hervé Sikpe Gabiam"
-        },
-        {
-          "id": "rbfa-7565602-undefined-yellow-Marechal",
-          "minute": 0,
+          "id": "rbfa-7565602-13-yellow-Gillard",
+          "minute": 13,
           "type": "yellow",
           "teamId": "vaux-sur-sure",
-          "detail": "Albert Marechal"
+          "playerId": "p-vaux-sur-sure-4",
+          "detail": "Robin Gillard"
         },
         {
-          "id": "rbfa-7565602-undefined-in-Sensique",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "vaux-sur-sure",
-          "playerId": "p-vaux-sur-sure-16",
-          "detail": "Alan Sensique"
-        },
-        {
-          "id": "rbfa-7565602-undefined-out-Vankerkhoven",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "vaux-sur-sure",
-          "playerId": "p-vaux-sur-sure-24",
-          "detail": "Diego Vankerkhoven"
-        },
-        {
-          "id": "rbfa-7565602-undefined-goal-Sikpe Gabiam",
-          "minute": 0,
-          "type": "goal",
-          "teamId": "bastogne",
-          "playerId": "p-bastogne-21",
-          "detail": "Ayité Hervé Sikpe Gabiam"
-        },
-        {
-          "id": "rbfa-7565602-undefined-in-Manand",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "vaux-sur-sure",
-          "playerId": "p-vaux-sur-sure-12",
-          "detail": "Allan Manand"
-        },
-        {
-          "id": "rbfa-7565602-undefined-in-Noppe",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "vaux-sur-sure",
-          "playerId": "p-vaux-sur-sure-22",
-          "detail": "Gustin Noppe"
-        },
-        {
-          "id": "rbfa-7565602-undefined-out-Mahy",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "vaux-sur-sure",
-          "playerId": "p-vaux-sur-sure-11",
-          "detail": "Christophe Mahy"
-        },
-        {
-          "id": "rbfa-7565602-undefined-out-Pantusa",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "vaux-sur-sure",
-          "playerId": "p-vaux-sur-sure-13",
-          "detail": "Hugo Pantusa"
-        },
-        {
-          "id": "rbfa-7565602-undefined-in-Pelenga",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "bastogne",
-          "playerId": "p-bastogne-19",
-          "detail": "Berly Pelenga"
-        },
-        {
-          "id": "rbfa-7565602-undefined-in-Pierre",
-          "minute": 0,
-          "type": "sub_in",
-          "teamId": "bastogne",
-          "playerId": "p-bastogne-16",
-          "detail": "Romeo Pierre"
-        },
-        {
-          "id": "rbfa-7565602-undefined-out-Chisogne",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "bastogne",
-          "playerId": "p-bastogne-23",
-          "detail": "Tom Chisogne"
-        },
-        {
-          "id": "rbfa-7565602-undefined-out-Louvins",
-          "minute": 0,
-          "type": "sub_out",
-          "teamId": "bastogne",
-          "playerId": "p-bastogne-6",
-          "detail": "Yohan Louvins"
-        },
-        {
-          "id": "rbfa-7565602-undefined-yellow-Mahy",
-          "minute": 0,
-          "type": "yellow",
-          "teamId": "vaux-sur-sure",
-          "playerId": "p-vaux-sur-sure-11",
-          "detail": "Christophe Mahy"
-        },
-        {
-          "id": "rbfa-7565602-undefined-goal-Wattiaux",
-          "minute": 0,
-          "type": "goal",
-          "teamId": "vaux-sur-sure",
-          "playerId": "p-vaux-sur-sure-26",
-          "detail": "Boris Wattiaux"
-        },
-        {
-          "id": "rbfa-7565602-undefined-in-Macoir",
-          "minute": 0,
+          "id": "rbfa-7565602-25-in-Macoir",
+          "minute": 25,
           "type": "sub_in",
           "teamId": "bastogne",
           "playerId": "p-bastogne-7",
           "detail": "Pascal Macoir"
         },
         {
-          "id": "rbfa-7565602-undefined-out-Gruslin",
-          "minute": 0,
+          "id": "rbfa-7565602-25-out-Gruslin",
+          "minute": 25,
           "type": "sub_out",
           "teamId": "bastogne",
           "playerId": "p-bastogne-5",
           "detail": "Guillaume Gruslin"
         },
         {
-          "id": "rbfa-7565602-undefined-yellow-Gillard",
-          "minute": 0,
+          "id": "rbfa-7565602-33-goal-Wattiaux",
+          "minute": 33,
+          "type": "goal",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-26",
+          "detail": "Boris Wattiaux"
+        },
+        {
+          "id": "rbfa-7565602-40-yellow-Mahy",
+          "minute": 40,
           "type": "yellow",
           "teamId": "vaux-sur-sure",
-          "playerId": "p-vaux-sur-sure-4",
-          "detail": "Robin Gillard"
+          "playerId": "p-vaux-sur-sure-11",
+          "detail": "Christophe Mahy"
+        },
+        {
+          "id": "rbfa-7565602-46-in-Manand",
+          "minute": 46,
+          "type": "sub_in",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-12",
+          "detail": "Allan Manand"
+        },
+        {
+          "id": "rbfa-7565602-46-in-Noppe",
+          "minute": 46,
+          "type": "sub_in",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-22",
+          "detail": "Gustin Noppe"
+        },
+        {
+          "id": "rbfa-7565602-46-out-Mahy",
+          "minute": 46,
+          "type": "sub_out",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-11",
+          "detail": "Christophe Mahy"
+        },
+        {
+          "id": "rbfa-7565602-46-out-Pantusa",
+          "minute": 46,
+          "type": "sub_out",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-13",
+          "detail": "Hugo Pantusa"
+        },
+        {
+          "id": "rbfa-7565602-46-in-Pelenga",
+          "minute": 46,
+          "type": "sub_in",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-19",
+          "detail": "Berly Pelenga"
+        },
+        {
+          "id": "rbfa-7565602-46-in-Pierre",
+          "minute": 46,
+          "type": "sub_in",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-16",
+          "detail": "Romeo Pierre"
+        },
+        {
+          "id": "rbfa-7565602-46-out-Chisogne",
+          "minute": 46,
+          "type": "sub_out",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-23",
+          "detail": "Tom Chisogne"
+        },
+        {
+          "id": "rbfa-7565602-46-out-Louvins",
+          "minute": 46,
+          "type": "sub_out",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-6",
+          "detail": "Yohan Louvins"
+        },
+        {
+          "id": "rbfa-7565602-57-goal-Sikpe Gabiam",
+          "minute": 57,
+          "type": "goal",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-21",
+          "detail": "Ayité Hervé Sikpe Gabiam"
+        },
+        {
+          "id": "rbfa-7565602-65-in-Sensique",
+          "minute": 65,
+          "type": "sub_in",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-16",
+          "detail": "Alan Sensique"
+        },
+        {
+          "id": "rbfa-7565602-65-out-Vankerkhoven",
+          "minute": 65,
+          "type": "sub_out",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-24",
+          "detail": "Diego Vankerkhoven"
+        },
+        {
+          "id": "rbfa-7565602-78-yellow-Marechal",
+          "minute": 78,
+          "type": "yellow",
+          "teamId": "vaux-sur-sure",
+          "detail": "Albert Marechal"
+        },
+        {
+          "id": "rbfa-7565602-80-in-Brisy",
+          "minute": 80,
+          "type": "sub_in",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-10",
+          "detail": "Tristan Brisy"
+        },
+        {
+          "id": "rbfa-7565602-80-out-Sikpe Gabiam",
+          "minute": 80,
+          "type": "sub_out",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-21",
+          "detail": "Ayité Hervé Sikpe Gabiam"
+        },
+        {
+          "id": "rbfa-7565602-85-yellow-Weyders",
+          "minute": 85,
+          "type": "yellow",
+          "teamId": "bastogne",
+          "playerId": "p-bastogne-9",
+          "detail": "Romain Weyders"
+        },
+        {
+          "id": "rbfa-7565602-88-in-Amel",
+          "minute": 88,
+          "type": "sub_in",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-18",
+          "detail": "Cyril Amel"
+        },
+        {
+          "id": "rbfa-7565602-88-out-Dewalque",
+          "minute": 88,
+          "type": "sub_out",
+          "teamId": "vaux-sur-sure",
+          "playerId": "p-vaux-sur-sure-19",
+          "detail": "Sylvain Dewalque"
         }
       ],
       "officials": [
