@@ -15,6 +15,7 @@ import { players, teams } from "@/data/championship";
 import type { Player, PlayerSeasonStats, Team } from "@/data/types";
 import {
   formatGoalsPerMatch,
+  formatMinutesPerGoal,
   playerDisplayName,
   positionLabel,
 } from "@/lib/stats";
@@ -136,7 +137,7 @@ type PlayerRow = {
   yellowCards: number;
   secondYellows: number;
   redCards: number;
-  avgGoalMinute?: number;
+  minutesPerGoal?: number;
 };
 
 const POSITIONS = [
@@ -173,8 +174,8 @@ function rowSortValue(row: PlayerRow, key: string): SortValue {
       return row.goals;
     case "goalsAvg":
       return row.appearances > 0 ? row.goals / row.appearances : null;
-    case "avgGoalMinute":
-      return row.avgGoalMinute ?? null;
+    case "minutesPerGoal":
+      return row.minutesPerGoal ?? null;
     case "assists":
       return row.assists;
     case "appearances":
@@ -223,7 +224,7 @@ function buildRows(seasonStats: PlayerSeasonStats[]): PlayerRow[] {
       secondYellows: stats?.secondYellows ?? 0,
       redCards: stats?.redCards ?? 0,
     };
-    if (stats?.avgGoalMinute != null) row.avgGoalMinute = stats.avgGoalMinute;
+    if (stats?.minutesPerGoal != null) row.minutesPerGoal = stats.minutesPerGoal;
     rows.push(row);
   }
   return rows.sort((a, b) => {
@@ -649,14 +650,13 @@ function LeaderTable({
                     title="Buts par match joué"
                   />
                   <SortableTh
-                    label="Quand"
-                    column="avgGoalMinute"
+                    label="Min/but"
+                    column="minutesPerGoal"
                     sortKey={sortKey}
                     sortDir={sortDir}
                     onSort={requestSort}
-                    preferDesc
                     className="hidden text-center sm:table-cell"
-                    title="Minute moyenne à laquelle le joueur marque"
+                    title="Un but toutes les X minutes (minutes jouées ÷ buts)"
                   />
                 </>
               )}
@@ -700,9 +700,10 @@ function LeaderTable({
                 assists,
                 appearances,
                 minutes,
-                avgGoalMinute,
+                minutesPerGoal,
               } = row;
               const goalsAvg = formatGoalsPerMatch(goals, appearances);
+              const minPerGoal = formatMinutesPerGoal(minutes, goals);
               return (
                 <TableRow key={player.id} className="content-auto">
                   <TableCell className="text-center font-display font-bold text-muted-foreground">
@@ -720,7 +721,9 @@ function LeaderTable({
                       {team.shortName}
                       {mode === "goals" && goals > 0
                         ? ` · moy. ${goalsAvg}${
-                            avgGoalMinute != null ? ` · ~${avgGoalMinute}′` : ""
+                            minutesPerGoal != null
+                              ? ` · 1/${minutesPerGoal}′`
+                              : ""
                           }`
                         : ""}
                     </p>
@@ -744,8 +747,15 @@ function LeaderTable({
                       <TableCell className="text-center font-display tabular-nums text-muted-foreground">
                         {goalsAvg}
                       </TableCell>
-                      <TableCell className="hidden text-center font-display tabular-nums text-muted-foreground sm:table-cell">
-                        {avgGoalMinute != null ? `${avgGoalMinute}′` : "—"}
+                      <TableCell
+                        className="hidden text-center font-display tabular-nums text-muted-foreground sm:table-cell"
+                        title={
+                          minutesPerGoal != null
+                            ? `Un but toutes les ${minutesPerGoal} minutes`
+                            : undefined
+                        }
+                      >
+                        {minPerGoal}
                       </TableCell>
                     </>
                   )}

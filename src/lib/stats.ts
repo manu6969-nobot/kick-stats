@@ -45,6 +45,7 @@ export function getPlayerStats(
   if (!manual) return derived;
   if (!derived) return manual;
   const goals = Math.max(manual.goals, derived.goals);
+  const minutes = Math.max(manual.minutes, derived.minutes);
   return {
     playerId,
     appearances: Math.max(manual.appearances, derived.appearances),
@@ -56,11 +57,9 @@ export function getPlayerStats(
     yellowCards: Math.max(manual.yellowCards, derived.yellowCards),
     secondYellows: Math.max(manual.secondYellows ?? 0, derived.secondYellows ?? 0),
     redCards: Math.max(manual.redCards, derived.redCards),
-    minutes: Math.max(manual.minutes, derived.minutes),
-    avgGoalMinute:
-      goals > 0
-        ? (derived.avgGoalMinute ?? manual.avgGoalMinute)
-        : undefined,
+    minutes,
+    minutesPerGoal:
+      goals > 0 && minutes > 0 ? Math.round(minutes / goals) : undefined,
   };
 }
 
@@ -71,6 +70,12 @@ export function formatGoalsPerMatch(goals: number, appearances: number): string 
     minimumFractionDigits: 1,
     maximumFractionDigits: 1,
   });
+}
+
+/** Minutes jouées par but (un but toutes les X′). */
+export function formatMinutesPerGoal(minutes: number, goals: number): string {
+  if (goals <= 0 || minutes <= 0) return "—";
+  return `${Math.round(minutes / goals)}′`;
 }
 
 export function formatDate(iso: string): string {
@@ -373,6 +378,7 @@ export function getAllPlayerSeasonStats(
     if (!cur) byId.set(s.playerId, { ...s });
     else {
       const goals = Math.max(cur.goals, s.goals);
+      const minutes = Math.max(cur.minutes, s.minutes);
       byId.set(s.playerId, {
         playerId: s.playerId,
         appearances: Math.max(cur.appearances, s.appearances),
@@ -384,9 +390,9 @@ export function getAllPlayerSeasonStats(
         yellowCards: Math.max(cur.yellowCards, s.yellowCards),
         secondYellows: Math.max(cur.secondYellows ?? 0, s.secondYellows ?? 0),
         redCards: Math.max(cur.redCards, s.redCards),
-        minutes: Math.max(cur.minutes, s.minutes),
-        avgGoalMinute:
-          goals > 0 ? (s.avgGoalMinute ?? cur.avgGoalMinute) : undefined,
+        minutes,
+        minutesPerGoal:
+          goals > 0 && minutes > 0 ? Math.round(minutes / goals) : undefined,
       });
     }
   }

@@ -166,6 +166,6 @@ export interface PlayerSeasonStats {
   secondYellows: number;
   redCards: number;
   minutes: number;
-  /** Minute moyenne des buts (temps forts), arrondie. */
-  avgGoalMinute?: number;
+  /** Minutes jouées / but (un but toutes les X′), arrondi. */
+  minutesPerGoal?: number;
 }

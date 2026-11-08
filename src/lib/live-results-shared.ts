@@ -111,7 +111,6 @@ export function computePlayerStatsFromMatches(
   allMatches: Match[]
 ): PlayerSeasonStats[] {
   const map = new Map<string, PlayerSeasonStats>();
-  const goalMinuteSum = new Map<string, number>();
 
   const ensure = (playerId: string) => {
     let row = map.get(playerId);
@@ -162,10 +161,6 @@ export function computePlayerStatsFromMatches(
     for (const ev of match.events) {
       if (ev.type === "goal" && ev.playerId) {
         ensure(ev.playerId).goals += 1;
-        goalMinuteSum.set(
-          ev.playerId,
-          (goalMinuteSum.get(ev.playerId) || 0) + (Number(ev.minute) || 0)
-        );
       }
       if (ev.assistId) ensure(ev.assistId).assists += 1;
       if (ev.type === "sub_in" && ev.playerId) ensure(ev.playerId).subsIn += 1;
@@ -182,9 +177,8 @@ export function computePlayerStatsFromMatches(
   }
 
   for (const row of map.values()) {
-    if (row.goals > 0) {
-      const sum = goalMinuteSum.get(row.playerId) || 0;
-      row.avgGoalMinute = Math.round(sum / row.goals);
+    if (row.goals > 0 && row.minutes > 0) {
+      row.minutesPerGoal = Math.round(row.minutes / row.goals);
     }
   }
 

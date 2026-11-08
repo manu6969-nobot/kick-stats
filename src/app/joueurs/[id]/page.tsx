@@ -8,6 +8,7 @@ import { listPlayerGoals } from "@/lib/live-results-shared";
 import {
   formatDate,
   formatGoalsPerMatch,
+  formatMinutesPerGoal,
   getBaseMatch,
   getPlayer,
   getPlayerStats,
@@ -57,7 +58,8 @@ export default async function JoueurPage({
   const avgMinutes =
     appearances > 0 ? Math.round(minutes / appearances) : 0;
   const goalsPerMatch = formatGoalsPerMatch(goals, appearances);
-  const avgGoalMinute = stats?.avgGoalMinute;
+  const minutesPerGoal = stats?.minutesPerGoal;
+  const minPerGoalLabel = formatMinutesPerGoal(minutes, goals);
   const goalLog = listPlayerGoals(player.id, allMatches);
   const cards: { label: string; value: string | number }[] = [
     { label: "Matchs", value: appearances },
@@ -68,8 +70,8 @@ export default async function JoueurPage({
     { label: "Moy. min", value: avgMinutes },
     { label: "Buts", value: goals },
     { label: "Buts/match", value: goalsPerMatch },
-    ...(avgGoalMinute != null
-      ? [{ label: "Minute moy.", value: `${avgGoalMinute}′` }]
+    ...(minutesPerGoal != null
+      ? [{ label: "1 but /", value: minPerGoalLabel }]
       : []),
     ...(assists > 0 ? [{ label: "Passes D.", value: assists }] : []),
     { label: "Jaunes", value: stats?.yellowCards ?? 0 },
@@ -135,8 +137,8 @@ export default async function JoueurPage({
           <PageHeader
             title="Quand il marque"
             description={
-              avgGoalMinute != null
-                ? `Minute moyenne ${avgGoalMinute}′ · ${goalsPerMatch} but${goals > 1 ? "s" : ""} / match`
+              minutesPerGoal != null
+                ? `Un but toutes les ${minutesPerGoal}′ · ${goalsPerMatch} but${goals > 1 ? "s" : ""} / match`
                 : "Minutes des buts issus des temps forts."
             }
           />
