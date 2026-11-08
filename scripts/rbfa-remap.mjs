@@ -150,15 +150,18 @@ function flattenEvents(detail, homeKickId, awayKickId, players) {
   const out = [];
   const rbfaHome = detail.homeTeam?.id;
   for (const group of detail.events || []) {
+    // RBFA: la minute est sur GroupedEvents, pas sur MatchDetailEvent.
+    const groupMinute = Number(group.minute) || 0;
     for (const side of ["home", "away"]) {
       for (const ev of group[side] || []) {
         const type = mapEventKind(ev.kind);
         if (!type) continue;
         const teamId =
           ev.teamId === rbfaHome || side === "home" ? homeKickId : awayKickId;
+        const minute = Number(ev.minute) || groupMinute;
         out.push({
-          id: `rbfa-${detail.id}-${ev.minute}-${ev.kind}-${ev.lastName || "x"}`,
-          minute: Number(ev.minute) || 0,
+          id: `rbfa-${detail.id}-${minute}-${ev.kind}-${ev.lastName || "x"}`,
+          minute,
           type,
           teamId,
           playerId: findPlayerId(
