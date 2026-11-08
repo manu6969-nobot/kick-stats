@@ -72,15 +72,7 @@ export function StandingsTabs({ standings }: { standings: StandingRow[] }) {
         ))}
       </div>
 
-      {tab === "general" && (
-        <div className="space-y-4">
-          <StandingsTable rows={standings} />
-          <p className="text-sm text-muted-foreground">
-            Or : places européennes · Rouge : zone de descente en P2 (3
-            derniers, indicatif).
-          </p>
-        </div>
-      )}
+      {tab === "general" && <StandingsTable rows={standings} />}
 
       {tab === "home" && (
         <SplitTable

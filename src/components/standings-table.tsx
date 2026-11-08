@@ -54,6 +54,7 @@ export function StandingsTable({
           {rows.map((row, index) => {
             const team = getTeam(row.teamId)!;
             const rank = index + 1;
+            const leader = rank === 1;
             const relegationZone =
               spots > 0 && rows.length >= spots && rank > rows.length - spots;
             return (
@@ -61,14 +62,14 @@ export function StandingsTable({
                 key={row.teamId}
                 className={cn(
                   highlightTeamId === row.teamId && "bg-primary/5",
-                  rank <= 2 && "border-l-2 border-l-score",
-                  relegationZone &&
-                    "border-l-2 border-l-loss/70 bg-loss/[0.06]"
+                  leader && "border-l-4 border-l-win bg-win/15",
+                  relegationZone && "border-l-4 border-l-loss bg-loss/15"
                 )}
               >
                 <TableCell
                   className={cn(
                     "text-center font-display font-bold text-muted-foreground",
+                    leader && "text-win",
                     relegationZone && "text-loss"
                   )}
                   title={relegationZone ? "Zone de descente en P2" : undefined}
