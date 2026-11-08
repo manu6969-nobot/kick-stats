@@ -76,7 +76,8 @@ export function StandingsTabs({ standings }: { standings: StandingRow[] }) {
         <div className="space-y-4">
           <StandingsTable rows={standings} />
           <p className="text-sm text-muted-foreground">
-            Or : places européennes · Rouge : zone de relégation (indicatif).
+            Or : places européennes · Rouge : zone de descente en P2 (3
+            derniers, indicatif).
           </p>
         </div>
       )}

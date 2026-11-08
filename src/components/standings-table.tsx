@@ -17,11 +17,15 @@ export function StandingsTable({
   rows,
   highlightTeamId,
   compact = false,
+  /** Nombre de places en zone de descente (P2). 0 = désactivé (ex. aperçu home). */
+  relegationSpots = 3,
 }: {
   rows: StandingRow[];
   highlightTeamId?: string;
   compact?: boolean;
+  relegationSpots?: number;
 }) {
+  const spots = compact ? 0 : relegationSpots;
   return (
     <div className="overflow-x-auto rounded-xl border border-border/80 bg-card shadow-sm">
       <Table>
@@ -50,16 +54,25 @@ export function StandingsTable({
           {rows.map((row, index) => {
             const team = getTeam(row.teamId)!;
             const rank = index + 1;
+            const relegationZone =
+              spots > 0 && rows.length >= spots && rank > rows.length - spots;
             return (
               <TableRow
                 key={row.teamId}
                 className={cn(
                   highlightTeamId === row.teamId && "bg-primary/5",
                   rank <= 2 && "border-l-2 border-l-score",
-                  rank === rows.length && "border-l-2 border-l-loss/60"
+                  relegationZone &&
+                    "border-l-2 border-l-loss/70 bg-loss/[0.06]"
                 )}
               >
-                <TableCell className="text-center font-display font-bold text-muted-foreground">
+                <TableCell
+                  className={cn(
+                    "text-center font-display font-bold text-muted-foreground",
+                    relegationZone && "text-loss"
+                  )}
+                  title={relegationZone ? "Zone de descente en P2" : undefined}
+                >
                   {rank}
                 </TableCell>
                 <TableCell>
