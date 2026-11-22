@@ -91,7 +91,7 @@ function findPlayer(teamId, firstName, lastName) {
   return undefined;
 }
 
-function addObs(teamId, firstName, lastName, shirt) {
+function addObs(teamId, firstName, lastName, shirt, dateIso) {
   const n = Number(shirt);
   if (!Number.isFinite(n) || n <= 0) return;
   const p = findPlayer(teamId, firstName, lastName);
@@ -101,12 +101,15 @@ function addObs(teamId, firstName, lastName, shirt) {
     row = {
       playerId: p.id,
       teamId,
-      shirts: new Map(),
+      shirts: new Map(), // n -> count
+      shirtLastSeen: new Map(), // n -> dateIso
       firstNames: new Map(),
     };
     obsByKey.set(p.id, row);
   }
   row.shirts.set(n, (row.shirts.get(n) || 0) + 1);
+  const prev = row.shirtLastSeen.get(n) || "";
+  if (dateIso && dateIso > prev) row.shirtLastSeen.set(n, dateIso);
   const fn = String(firstName || "").trim();
   if (fn) row.firstNames.set(fn, (row.firstNames.get(fn) || 0) + 1);
 }
@@ -114,13 +117,17 @@ function addObs(teamId, firstName, lastName, shirt) {
 for (const detail of Object.values(raw.details || {})) {
   const homeKick = rbfaToKick.get(String(detail.homeTeam?.id));
   const awayKick = rbfaToKick.get(String(detail.awayTeam?.id));
+  const dateIso = String(detail.startTime || detail.startDateTime || "").slice(
+    0,
+    10
+  );
   for (const side of ["home", "away"]) {
     const teamId = side === "home" ? homeKick : awayKick;
     if (!teamId) continue;
     for (const group of [...(detail.lineup || []), ...(detail.substitutes || [])]) {
       const p = group[side];
       if (!p?.lastName) continue;
-      addObs(teamId, p.firstName || "", p.lastName, p.shirtNumber);
+      addObs(teamId, p.firstName || "", p.lastName, p.shirtNumber, dateIso);
     }
   }
 }
@@ -129,50 +136,99 @@ function dominant(map) {
   return [...map.entries()].sort((a, b) => b[1] - a[1] || a[0] - b[0])[0];
 }
 
-/** Propositions par équipe avec résolution de collisions */
-const updates = []; // { id, oldNumber, newNumber, oldFirst, newFirst?, confidence }
+/** Classement dossards : plus fréquent, puis plus récent. */
+function rankedShirts(row) {
+  return [...row.shirts.entries()]
+    .map(([n, count]) => ({
+      n,
+      count,
+      lastSeen: row.shirtLastSeen.get(n) || "",
+    }))
+    .sort(
+      (a, b) =>
+        b.count - a.count ||
+        b.lastSeen.localeCompare(a.lastSeen) ||
+        a.n - b.n
+    );
+}
+
+/** Propositions par équipe — n° le plus courant ; collisions départagées. */
+const updates = [];
 const skipped = [];
 const byTeamProps = new Map();
 
 for (const [playerId, row] of obsByKey) {
-  const shirts = [...row.shirts.entries()].sort((a, b) => b[1] - a[1] || a[0] - b[0]);
+  const shirts = rankedShirts(row);
   if (!byTeamProps.has(row.teamId)) byTeamProps.set(row.teamId, []);
   byTeamProps.get(row.teamId).push({
     playerId,
     shirts,
     firstNames: row.firstNames,
-    confidence: shirts[0][1],
+    confidence: shirts[0]?.count || 0,
   });
 }
 
 for (const [teamId, list] of byTeamProps) {
-  list.sort((a, b) => b.confidence - a.confidence);
   const teamPlayers = players.filter((p) => p.teamId === teamId);
   const assigned = new Map(); // playerId -> number
   const taken = new Set();
+  const pending = new Set(list.map((p) => p.playerId));
+  const byId = new Map(list.map((p) => [p.playerId, p]));
 
-  // 1) Attribuer d’abord les dossards RBFA (priorité = fiabilité)
+  // Boucle : chacun propose son n° le plus courant encore libre ;
+  // si plusieurs veulent le même, gagne le plus fréquent (puis le plus récent).
+  let guard = 0;
+  while (pending.size && guard++ < 500) {
+    const proposals = new Map(); // shirt -> claimants
+    for (const playerId of pending) {
+      const prop = byId.get(playerId);
+      const best = prop.shirts.find((s) => !taken.has(s.n));
+      if (!best) continue;
+      if (!proposals.has(best.n)) proposals.set(best.n, []);
+      proposals.get(best.n).push({
+        playerId,
+        count: best.count,
+        lastSeen: best.lastSeen,
+      });
+    }
+    if (!proposals.size) break;
+
+    let progressed = false;
+    for (const [shirt, claimants] of proposals) {
+      claimants.sort(
+        (a, b) =>
+          b.count - a.count ||
+          b.lastSeen.localeCompare(a.lastSeen) ||
+          a.playerId.localeCompare(b.playerId)
+      );
+      // N’assigne le gagnant que s’il est seul, ou si on départage clairement
+      const winner = claimants[0];
+      assigned.set(winner.playerId, shirt);
+      taken.add(shirt);
+      pending.delete(winner.playerId);
+      progressed = true;
+    }
+    if (!progressed) break;
+  }
+
   for (const prop of list) {
     const player = players.find((p) => p.id === prop.playerId);
-    let shirt = null;
-    for (const [n] of prop.shirts) {
-      if (!taken.has(n)) {
-        shirt = n;
-        break;
-      }
-    }
+    let shirt = assigned.get(prop.playerId);
     if (shirt == null) {
+      // Plus aucun dossard RBFA libre → prochain n° libre
+      shirt = 1;
+      while (taken.has(shirt)) shirt += 1;
+      assigned.set(player.id, shirt);
+      taken.add(shirt);
       skipped.push({
         playerId: prop.playerId,
         teamId,
         name: `${player.firstName} ${player.lastName}`,
-        wanted: prop.shirts.map(([n, c]) => `#${n}×${c}`).join(", "),
-        reason: "collision",
+        wanted: prop.shirts.map((s) => `#${s.n}×${s.count}`).join(", "),
+        assigned: shirt,
+        reason: "aucun dossard RBFA libre — n° libre attribué",
       });
-      continue;
     }
-    assigned.set(player.id, shirt);
-    taken.add(shirt);
 
     const fnDom = dominant(prop.firstNames);
     const newFirst =
@@ -183,6 +239,7 @@ for (const [teamId, list] of byTeamProps) {
         ? fnDom[0]
         : undefined;
 
+    const conf = prop.shirts.find((s) => s.n === shirt)?.count || 0;
     if (shirt !== player.number || newFirst) {
       updates.push({
         id: player.id,
@@ -192,12 +249,12 @@ for (const [teamId, list] of byTeamProps) {
         newNumber: shirt,
         oldFirst: player.firstName,
         newFirst,
-        confidence: prop.confidence,
+        confidence: conf,
       });
     }
   }
 
-  // 2) Joueurs sans obs RBFA : garder l’ancien n° s’il est libre, sinon prochain libre
+  // Joueurs sans obs RBFA : garder l’ancien n° s’il est libre, sinon prochain libre
   const withoutObs = teamPlayers.filter((p) => !assigned.has(p.id));
   withoutObs.sort((a, b) => a.number - b.number);
   for (const player of withoutObs) {
