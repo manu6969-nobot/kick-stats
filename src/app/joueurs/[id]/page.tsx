@@ -4,7 +4,10 @@ import { PageHeader } from "@/components/page-header";
 import { TeamBadge } from "@/components/team-badge";
 import { players } from "@/data/championship";
 import { getMergedMatches } from "@/lib/live-results";
-import { listPlayerGoals } from "@/lib/live-results-shared";
+import {
+  listPlayerAppearances,
+  listPlayerGoals,
+} from "@/lib/live-results-shared";
 import {
   formatDate,
   formatGoalsPerMatch,
@@ -16,8 +19,8 @@ import {
   playerDisplayName,
   positionLabel,
 } from "@/lib/stats";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-
 
 export const revalidate = 60;
 export function generateStaticParams() {
@@ -61,12 +64,26 @@ export default async function JoueurPage({
   const minutesPerGoal = stats?.minutesPerGoal;
   const minPerGoalLabel = formatMinutesPerGoal(minutes, goals);
   const goalLog = listPlayerGoals(player.id, allMatches);
-  const cards: { label: string; value: string | number }[] = [
-    { label: "Matchs", value: appearances },
+  const appearanceLog = listPlayerAppearances(player.id, allMatches);
+
+  const cards: {
+    label: string;
+    value: string | number;
+    href?: string;
+  }[] = [
+    {
+      label: "Matchs",
+      value: appearances,
+      href: appearanceLog.length ? "#temps-de-jeu" : undefined,
+    },
     { label: "Titulaire", value: stats?.starts ?? 0 },
     { label: "Entrées", value: stats?.subsIn ?? 0 },
     { label: "Sorties", value: stats?.subsOut ?? 0 },
-    { label: "Minutes", value: minutes },
+    {
+      label: "Minutes",
+      value: minutes,
+      href: appearanceLog.length ? "#temps-de-jeu" : undefined,
+    },
     { label: "Moy. min", value: avgMinutes },
     { label: "Buts", value: goals },
     { label: "Buts/match", value: goalsPerMatch },
@@ -116,21 +133,93 @@ export default async function JoueurPage({
           description="Temps de jeu et buts issus des feuilles RBFA (compositions + temps forts)."
         />
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 lg:grid-cols-5">
-          {cards.map((card) => (
-            <div
-              key={card.label}
-              className="rounded-xl border border-border/80 bg-card px-3 py-4 text-center shadow-sm sm:px-4 sm:py-5"
-            >
-              <p className="text-[11px] uppercase tracking-wider text-muted-foreground sm:text-xs">
-                {card.label}
-              </p>
-              <p className="mt-1 font-display text-2xl font-bold tabular-nums text-pitch sm:text-3xl">
-                {card.value}
-              </p>
-            </div>
-          ))}
+          {cards.map((card) => {
+            const inner = (
+              <>
+                <p className="text-[11px] uppercase tracking-wider text-muted-foreground sm:text-xs">
+                  {card.label}
+                </p>
+                <p className="mt-1 font-display text-2xl font-bold tabular-nums text-pitch sm:text-3xl">
+                  {card.value}
+                </p>
+              </>
+            );
+            const className = cn(
+              "rounded-xl border border-border/80 bg-card px-3 py-4 text-center shadow-sm sm:px-4 sm:py-5",
+              card.href &&
+                "transition hover:border-primary/40 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+            );
+            return card.href ? (
+              <a key={card.label} href={card.href} className={className}>
+                {inner}
+              </a>
+            ) : (
+              <div key={card.label} className={className}>
+                {inner}
+              </div>
+            );
+          })}
         </div>
       </section>
+
+      {appearanceLog.length > 0 && (
+        <section id="temps-de-jeu" className="animate-rise-delay-2 scroll-mt-24">
+          <PageHeader
+            title="Temps de jeu"
+            description={`${minutes}′ sur ${appearances} match${appearances > 1 ? "s" : ""}${
+              avgMinutes > 0 ? ` · moyenne ${avgMinutes}′` : ""
+            }`}
+          />
+          <ul className="divide-y divide-border/70 overflow-hidden rounded-xl border border-border/80 bg-card shadow-sm">
+            {appearanceLog.map((row) => {
+              const match =
+                allMatches.find((m) => m.id === row.matchId) ||
+                getBaseMatch(row.matchId);
+              const home = match ? getTeam(match.homeTeamId) : null;
+              const away = match ? getTeam(match.awayTeamId) : null;
+              const label =
+                home && away
+                  ? `${home.shortName} – ${away.shortName}`
+                  : row.matchId;
+              const score =
+                match?.homeScore != null && match?.awayScore != null
+                  ? `${match.homeScore}–${match.awayScore}`
+                  : null;
+              const roleParts: string[] = [];
+              if (row.started) roleParts.push("Titulaire");
+              else if (row.subIn != null) roleParts.push(`Entrée ${row.subIn}′`);
+              else roleParts.push("Remplaçant");
+              if (row.subOut != null) roleParts.push(`Sortie ${row.subOut}′`);
+
+              return (
+                <li
+                  key={row.matchId}
+                  className="flex items-center justify-between gap-3 px-4 py-3 text-sm"
+                >
+                  <div className="min-w-0">
+                    <Link
+                      href={`/matchs/${row.matchId}`}
+                      className="font-medium hover:text-primary"
+                    >
+                      {label}
+                      {score ? (
+                        <span className="text-muted-foreground"> · {score}</span>
+                      ) : null}
+                    </Link>
+                    <p className="text-xs text-muted-foreground">
+                      {match ? formatDate(match.date) : row.date}
+                      {roleParts.length ? ` · ${roleParts.join(" · ")}` : ""}
+                    </p>
+                  </div>
+                  <span className="shrink-0 font-display text-lg font-bold tabular-nums text-pitch">
+                    {row.minutes}′
+                  </span>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      )}
 
       {goalLog.length > 0 && (
         <section className="animate-rise-delay-2">

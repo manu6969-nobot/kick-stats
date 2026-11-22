@@ -211,6 +211,55 @@ export function listPlayerGoals(playerId: string, allMatches: Match[]) {
   );
 }
 
+/** Temps de jeu match par match (compositions RBFA, sinon fallback événements). */
+export function listPlayerAppearances(playerId: string, allMatches: Match[]) {
+  const out: {
+    matchId: string;
+    date: string;
+    minutes: number;
+    started: boolean;
+    subIn?: number;
+    subOut?: number;
+  }[] = [];
+
+  for (const match of allMatches) {
+    if (match.status !== "finished" && match.status !== "live") continue;
+
+    const app = match.appearances?.find((a) => a.playerId === playerId);
+    if (app) {
+      const subIn = match.events.find(
+        (e) => e.type === "sub_in" && e.playerId === playerId
+      );
+      const subOut = match.events.find(
+        (e) => e.type === "sub_out" && e.playerId === playerId
+      );
+      out.push({
+        matchId: match.id,
+        date: match.date,
+        minutes: Math.max(0, app.minutes || 0),
+        started: Boolean(app.started),
+        subIn: subIn ? Number(subIn.minute) || undefined : undefined,
+        subOut: subOut ? Number(subOut.minute) || undefined : undefined,
+      });
+      continue;
+    }
+
+    // Sans feuille de match : cité dans les temps forts → 90′ (même règle stats).
+    const involved = match.events.some(
+      (e) => e.playerId === playerId || e.assistId === playerId
+    );
+    if (!involved) continue;
+    out.push({
+      matchId: match.id,
+      date: match.date,
+      minutes: 90,
+      started: true,
+    });
+  }
+
+  return out.sort((a, b) => a.date.localeCompare(b.date));
+}
+
 export function eventLabel(type: MatchEvent["type"]): string {
   switch (type) {
     case "goal":
