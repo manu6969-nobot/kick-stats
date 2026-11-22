@@ -234,7 +234,7 @@ export type TeamScorer = {
   redCards: number;
 };
 
-/** Stats saison pour la fiche club, dérivées des résultats / temps forts. */
+/** Stats saison pour la fiche club (scores + compositions RBFA + temps forts). */
 export function getTeamSeasonStats(
   teamId: TeamId,
   allMatches: Match[] = baseMatches,
@@ -302,10 +302,25 @@ export function getTeamSeasonStats(
     if (conceded === 0) cleanSheets += 1;
     if (scored === 0) failedToScore += 1;
 
-    const involved = new Set<string>();
+    // Apparitions : même source que les fiches joueurs (compositions),
+    // sinon fallback « cité dans les temps forts ».
+    const teamApps = (match.appearances ?? []).filter(
+      (a) => a.teamId === teamId && a.playerId
+    );
+    if (teamApps.length) {
+      for (const a of teamApps) bumpScorer(a.playerId, "appearances");
+    } else {
+      const involved = new Set<string>();
+      for (const ev of match.events ?? []) {
+        if (ev.teamId !== teamId) continue;
+        if (ev.playerId) involved.add(ev.playerId);
+        if (ev.assistId) involved.add(ev.assistId);
+      }
+      for (const pid of involved) bumpScorer(pid, "appearances");
+    }
+
     for (const ev of match.events ?? []) {
       if (ev.teamId !== teamId) continue;
-      if (ev.playerId) involved.add(ev.playerId);
 
       if (ev.type === "yellow") {
         yellowCards += 1;
@@ -328,7 +343,6 @@ export function getTeamSeasonStats(
         }
       }
     }
-    for (const pid of involved) bumpScorer(pid, "appearances");
   }
 
   const points = won * 3 + drawn;

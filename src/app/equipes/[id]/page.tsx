@@ -199,7 +199,7 @@ export default async function EquipePage({
                         <p className="text-xs text-muted-foreground">
                           {positionLabel(player.position)}
                           {scorer.appearances > 0
-                            ? ` · vu dans ${scorer.appearances} feuille${scorer.appearances > 1 ? "s" : ""}`
+                            ? ` · ${scorer.appearances} match${scorer.appearances > 1 ? "s" : ""}`
                             : ""}
                         </p>
                       </div>
@@ -218,7 +218,7 @@ export default async function EquipePage({
       <section className="animate-rise-delay-2 space-y-4">
         <PageHeader
           title="Effectif"
-          description="Trié par buts puis apparitions dans les temps forts."
+          description="Trié par buts puis matchs joués (compositions RBFA)."
         />
         <div className="overflow-hidden rounded-xl border border-border/80 bg-card">
           <ul className="divide-y divide-border/70">
@@ -249,7 +249,7 @@ export default async function EquipePage({
                           {goals} B
                         </p>
                         <p className="text-xs text-muted-foreground">
-                          {apps > 0 ? `${apps} feuille${apps > 1 ? "s" : ""}` : "—"}
+                          {apps > 0 ? `${apps} match${apps > 1 ? "s" : ""}` : "—"}
                         </p>
                       </div>
                       <div className="flex items-center gap-1.5">
