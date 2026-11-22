@@ -62,9 +62,22 @@ export function StandingsTable({
                 key={row.teamId}
                 className={cn(
                   highlightTeamId === row.teamId && "bg-primary/5",
-                  leader && "border-l-4 border-l-win bg-win/15",
-                  relegationZone && "border-l-4 border-l-loss bg-loss/15"
+                  leader && "border-l-4 border-l-win",
+                  relegationZone && "border-l-4 border-l-loss"
                 )}
+                style={
+                  leader
+                    ? {
+                        backgroundColor:
+                          "color-mix(in srgb, var(--win) 22%, transparent)",
+                      }
+                    : relegationZone
+                      ? {
+                          backgroundColor:
+                            "color-mix(in srgb, var(--loss) 28%, transparent)",
+                        }
+                      : undefined
+                }
               >
                 <TableCell
                   className={cn(
@@ -79,7 +92,11 @@ export function StandingsTable({
                 <TableCell>
                   <Link
                     href={`/equipes/${team.id}`}
-                    className="flex items-center gap-2.5 font-medium hover:text-primary"
+                    className={cn(
+                      "flex items-center gap-2.5 font-medium hover:text-primary",
+                      leader && "text-win",
+                      relegationZone && "text-loss"
+                    )}
                   >
                     <TeamBadge team={team} size="sm" />
                     <span className="hidden sm:inline">{team.name}</span>
@@ -115,7 +132,13 @@ export function StandingsTable({
                 >
                   {row.goalDiff > 0 ? `+${row.goalDiff}` : row.goalDiff}
                 </TableCell>
-                <TableCell className="text-center font-display text-base font-bold tabular-nums">
+                <TableCell
+                  className={cn(
+                    "text-center font-display text-base font-bold tabular-nums",
+                    leader && "text-win",
+                    relegationZone && "text-loss"
+                  )}
+                >
                   {row.points}
                 </TableCell>
                 {!compact && (
