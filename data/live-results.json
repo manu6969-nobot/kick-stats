@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T10:05:15.327Z",
+  "updatedAt": "2026-11-22T02:48:23.402Z",
   "matches": {
     "m1": {
       "status": "finished",
@@ -35636,6 +35636,78 @@
           "minutes": 44
         }
       ]
+    },
+    "m96": {
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 1,
+      "events": [],
+      "appearances": [],
+      "officials": []
+    },
+    "m101": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 1,
+      "events": [],
+      "appearances": [],
+      "officials": []
+    },
+    "m100": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 0,
+      "events": [],
+      "appearances": [],
+      "officials": []
+    },
+    "m99": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 1,
+      "events": [],
+      "appearances": [],
+      "officials": []
+    },
+    "m97": {
+      "status": "finished",
+      "homeScore": 1,
+      "awayScore": 0,
+      "events": [],
+      "appearances": [],
+      "officials": []
+    },
+    "m98": {
+      "status": "finished",
+      "homeScore": 2,
+      "awayScore": 3,
+      "events": [],
+      "appearances": [],
+      "officials": []
+    },
+    "m102": {
+      "status": "finished",
+      "homeScore": 0,
+      "awayScore": 2,
+      "events": [],
+      "appearances": [],
+      "officials": []
+    },
+    "m103": {
+      "status": "finished",
+      "homeScore": 3,
+      "awayScore": 1,
+      "events": [],
+      "appearances": [],
+      "officials": []
+    },
+    "m104": {
+      "status": "finished",
+      "homeScore": 4,
+      "awayScore": 1,
+      "events": [],
+      "appearances": [],
+      "officials": []
     }
   }
 }
