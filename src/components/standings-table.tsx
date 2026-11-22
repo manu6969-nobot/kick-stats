@@ -41,8 +41,8 @@ export function StandingsTable({
                 <TableHead className="hidden text-center sm:table-cell">P</TableHead>
               </>
             )}
-            <TableHead className="hidden text-center md:table-cell">BP</TableHead>
-            <TableHead className="hidden text-center md:table-cell">BC</TableHead>
+            <TableHead className="text-center">BP</TableHead>
+            <TableHead className="text-center">BC</TableHead>
             <TableHead className="text-center">Diff</TableHead>
             <TableHead className="text-center font-bold">Pts</TableHead>
             {!compact && (
@@ -117,10 +117,10 @@ export function StandingsTable({
                     </TableCell>
                   </>
                 )}
-                <TableCell className="hidden text-center tabular-nums md:table-cell">
+                <TableCell className="text-center tabular-nums">
                   {row.goalsFor}
                 </TableCell>
-                <TableCell className="hidden text-center tabular-nums md:table-cell">
+                <TableCell className="text-center tabular-nums">
                   {row.goalsAgainst}
                 </TableCell>
                 <TableCell
