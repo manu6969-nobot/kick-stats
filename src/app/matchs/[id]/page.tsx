@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MatchEventsTimeline } from "@/components/match-events-timeline";
+import { MatchLineups } from "@/components/match-lineups";
 import { StatBar } from "@/components/stat-bar";
 import { TeamBadge } from "@/components/team-badge";
 import { Badge } from "@/components/ui/badge";
@@ -118,6 +119,15 @@ export default async function MatchPage({
           )}
         </div>
       </section>
+
+      {(match.appearances?.length ?? 0) > 0 && (
+        <MatchLineups
+          home={home}
+          away={away}
+          appearances={match.appearances!}
+          events={match.events}
+        />
+      )}
 
       {match.events.length > 0 && (
         <section className="animate-rise-delay-1 space-y-4">
