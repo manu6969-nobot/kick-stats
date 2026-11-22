@@ -1,0 +1,3483 @@
+{
+  "updatedAt": "2026-11-22T03:51:56.541Z",
+  "detailsUsed": 15,
+  "updates": [
+    {
+      "id": "p-houffalize-4",
+      "teamId": "houffalize",
+      "name": "Lucas Vandeloise",
+      "oldNumber": 4,
+      "newNumber": 1,
+      "oldFirst": "Lucas",
+      "confidence": 2
+    },
+    {
+      "id": "p-houffalize-15",
+      "teamId": "houffalize",
+      "name": "Xavier Tombal",
+      "oldNumber": 15,
+      "newNumber": 3,
+      "oldFirst": "Xavier",
+      "confidence": 2
+    },
+    {
+      "id": "p-houffalize-30",
+      "teamId": "houffalize",
+      "name": "Noa Fautré",
+      "oldNumber": 30,
+      "newNumber": 10,
+      "oldFirst": "Noa",
+      "confidence": 2
+    },
+    {
+      "id": "p-houffalize-32",
+      "teamId": "houffalize",
+      "name": "Jules Horman",
+      "oldNumber": 32,
+      "newNumber": 17,
+      "oldFirst": "Jules",
+      "confidence": 2
+    },
+    {
+      "id": "p-houffalize-8",
+      "teamId": "houffalize",
+      "name": "Corentin Fautré",
+      "oldNumber": 8,
+      "newNumber": 20,
+      "oldFirst": "Corentin",
+      "confidence": 2
+    },
+    {
+      "id": "p-houffalize-6",
+      "teamId": "houffalize",
+      "name": "Sebastien Clotuche",
+      "oldNumber": 6,
+      "newNumber": 21,
+      "oldFirst": "Sebastien",
+      "confidence": 2
+    },
+    {
+      "id": "p-houffalize-29",
+      "teamId": "houffalize",
+      "name": "Saidou Diallo",
+      "oldNumber": 29,
+      "newNumber": 25,
+      "oldFirst": "Saidou",
+      "confidence": 2
+    },
+    {
+      "id": "p-houffalize-14",
+      "teamId": "houffalize",
+      "name": "Xavier Renquin",
+      "oldNumber": 14,
+      "newNumber": 30,
+      "oldFirst": "Xavier",
+      "confidence": 2
+    },
+    {
+      "id": "p-houffalize-26",
+      "teamId": "houffalize",
+      "name": "Ilias Idmansour",
+      "oldNumber": 26,
+      "newNumber": 34,
+      "oldFirst": "Ilias",
+      "confidence": 2
+    },
+    {
+      "id": "p-houffalize-16",
+      "teamId": "houffalize",
+      "name": "Aryl Toussaint",
+      "oldNumber": 16,
+      "newNumber": 88,
+      "oldFirst": "Aryl",
+      "confidence": 2
+    },
+    {
+      "id": "p-houffalize-12",
+      "teamId": "houffalize",
+      "name": "Noan Pirotte",
+      "oldNumber": 12,
+      "newNumber": 5,
+      "oldFirst": "Noan",
+      "confidence": 2
+    },
+    {
+      "id": "p-houffalize-23",
+      "teamId": "houffalize",
+      "name": "Jul Fautré",
+      "oldNumber": 23,
+      "newNumber": 24,
+      "oldFirst": "Jul",
+      "confidence": 2
+    },
+    {
+      "id": "p-houffalize-36",
+      "teamId": "houffalize",
+      "name": "Diego Vaguet",
+      "oldNumber": 36,
+      "newNumber": 29,
+      "oldFirst": "Diego",
+      "confidence": 2
+    },
+    {
+      "id": "p-houffalize-25",
+      "teamId": "houffalize",
+      "name": "Maxence Gengoux",
+      "oldNumber": 25,
+      "newNumber": 47,
+      "oldFirst": "Maxence",
+      "confidence": 1
+    },
+    {
+      "id": "p-houffalize-1",
+      "teamId": "houffalize",
+      "name": "Thomas Dabe",
+      "oldNumber": 1,
+      "newNumber": 31,
+      "oldFirst": "Thomas",
+      "confidence": 1
+    },
+    {
+      "id": "p-houffalize-18",
+      "teamId": "houffalize",
+      "name": "François Bastin",
+      "oldNumber": 18,
+      "newNumber": 8,
+      "oldFirst": "François",
+      "confidence": 1
+    },
+    {
+      "id": "p-houffalize-21",
+      "teamId": "houffalize",
+      "name": "Michael Chisogne",
+      "oldNumber": 21,
+      "newNumber": 12,
+      "oldFirst": "Michael",
+      "confidence": 1
+    },
+    {
+      "id": "p-houffalize-3",
+      "teamId": "houffalize",
+      "name": "Neo Mathieu",
+      "oldNumber": 3,
+      "newNumber": 4,
+      "oldFirst": "Neo",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-houffalize-5",
+      "teamId": "houffalize",
+      "name": "Romain Andrianne",
+      "oldNumber": 5,
+      "newNumber": 6,
+      "oldFirst": "Romain",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-houffalize-10",
+      "teamId": "houffalize",
+      "name": "Edouard Horman",
+      "oldNumber": 10,
+      "newNumber": 11,
+      "oldFirst": "Edouard",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-houffalize-11",
+      "teamId": "houffalize",
+      "name": "Bradley Marx",
+      "oldNumber": 11,
+      "newNumber": 13,
+      "oldFirst": "Bradley",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-houffalize-13",
+      "teamId": "houffalize",
+      "name": "Sam Prémont",
+      "oldNumber": 13,
+      "newNumber": 14,
+      "oldFirst": "Sam",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-houffalize-17",
+      "teamId": "houffalize",
+      "name": "Leo Trempont",
+      "oldNumber": 17,
+      "newNumber": 15,
+      "oldFirst": "Leo",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-houffalize-20",
+      "teamId": "houffalize",
+      "name": "Thomas Blaise",
+      "oldNumber": 20,
+      "newNumber": 16,
+      "oldFirst": "Thomas",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-houffalize-24",
+      "teamId": "houffalize",
+      "name": "Timothee Freid",
+      "oldNumber": 24,
+      "newNumber": 18,
+      "oldFirst": "Timothee",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-houffalize-31",
+      "teamId": "houffalize",
+      "name": "Jean-François Gueibe",
+      "oldNumber": 31,
+      "newNumber": 23,
+      "oldFirst": "Jean-François",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-houffalize-34",
+      "teamId": "houffalize",
+      "name": "Arthur Lambert",
+      "oldNumber": 34,
+      "newNumber": 26,
+      "oldFirst": "Arthur",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-bercheux-1",
+      "teamId": "bercheux",
+      "name": "Trystan Barthélémy",
+      "oldNumber": 1,
+      "newNumber": 31,
+      "oldFirst": "Trystan",
+      "confidence": 2
+    },
+    {
+      "id": "p-bercheux-10",
+      "teamId": "bercheux",
+      "name": "Esteban Poncelet",
+      "oldNumber": 10,
+      "newNumber": 4,
+      "oldFirst": "Esteban",
+      "confidence": 2
+    },
+    {
+      "id": "p-bercheux-22",
+      "teamId": "bercheux",
+      "name": "Bryan Collignon",
+      "oldNumber": 22,
+      "newNumber": 9,
+      "oldFirst": "Bryan",
+      "confidence": 2
+    },
+    {
+      "id": "p-bercheux-26",
+      "teamId": "bercheux",
+      "name": "Lenny Vermierdt",
+      "oldNumber": 26,
+      "newNumber": 10,
+      "oldFirst": "Lenny",
+      "confidence": 2
+    },
+    {
+      "id": "p-bercheux-12",
+      "teamId": "bercheux",
+      "name": "Clement Bozet",
+      "oldNumber": 12,
+      "newNumber": 19,
+      "oldFirst": "Clement",
+      "confidence": 2
+    },
+    {
+      "id": "p-bercheux-11",
+      "teamId": "bercheux",
+      "name": "Gilles Poncelet",
+      "oldNumber": 11,
+      "newNumber": 27,
+      "oldFirst": "Gilles",
+      "confidence": 2
+    },
+    {
+      "id": "p-bercheux-3",
+      "teamId": "bercheux",
+      "name": "Romain Berg",
+      "oldNumber": 3,
+      "newNumber": 30,
+      "oldFirst": "Romain",
+      "confidence": 2
+    },
+    {
+      "id": "p-bercheux-20",
+      "teamId": "bercheux",
+      "name": "Jordan Schinckus",
+      "oldNumber": 20,
+      "newNumber": 42,
+      "oldFirst": "Jordan",
+      "confidence": 2
+    },
+    {
+      "id": "p-bercheux-9",
+      "teamId": "bercheux",
+      "name": "Antoine Pierret",
+      "oldNumber": 9,
+      "newNumber": 6,
+      "oldFirst": "Antoine",
+      "confidence": 2
+    },
+    {
+      "id": "p-bercheux-6",
+      "teamId": "bercheux",
+      "name": "Benjamin Gravé",
+      "oldNumber": 6,
+      "newNumber": 12,
+      "oldFirst": "Benjamin",
+      "confidence": 2
+    },
+    {
+      "id": "p-bercheux-8",
+      "teamId": "bercheux",
+      "name": "Mathis Lockman",
+      "oldNumber": 8,
+      "newNumber": 3,
+      "oldFirst": "Mathis",
+      "confidence": 1
+    },
+    {
+      "id": "p-bercheux-14",
+      "teamId": "bercheux",
+      "name": "Charles Copine",
+      "oldNumber": 14,
+      "newNumber": 24,
+      "oldFirst": "Charles",
+      "confidence": 1
+    },
+    {
+      "id": "p-bercheux-30",
+      "teamId": "bercheux",
+      "name": "Jean-Marie Toubon",
+      "oldNumber": 30,
+      "newNumber": 13,
+      "oldFirst": "Jean-Marie",
+      "confidence": 1
+    },
+    {
+      "id": "p-bercheux-5",
+      "teamId": "bercheux",
+      "name": "Cyprien Goosse",
+      "oldNumber": 5,
+      "newNumber": 22,
+      "oldFirst": "Cyprien",
+      "confidence": 1
+    },
+    {
+      "id": "p-bercheux-18",
+      "teamId": "bercheux",
+      "name": "Nathan Guebenne",
+      "oldNumber": 18,
+      "newNumber": 15,
+      "oldFirst": "Nathan",
+      "confidence": 1
+    },
+    {
+      "id": "p-bercheux-7",
+      "teamId": "bercheux",
+      "name": "Jordan Grégoire",
+      "oldNumber": 7,
+      "newNumber": 21,
+      "oldFirst": "Jordan",
+      "confidence": 1
+    },
+    {
+      "id": "p-bercheux-25",
+      "teamId": "bercheux",
+      "name": "Arthur Hubert",
+      "oldNumber": 25,
+      "newNumber": 28,
+      "oldFirst": "Arthur",
+      "confidence": 1
+    },
+    {
+      "id": "p-bercheux-24",
+      "teamId": "bercheux",
+      "name": "Andrea Gusbin",
+      "oldNumber": 24,
+      "newNumber": 25,
+      "oldFirst": "Andrea",
+      "confidence": 1
+    },
+    {
+      "id": "p-bercheux-4",
+      "teamId": "bercheux",
+      "name": "Thomas Debiève",
+      "oldNumber": 4,
+      "newNumber": 1,
+      "oldFirst": "Thomas",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-bercheux-13",
+      "teamId": "bercheux",
+      "name": "Martin Bozet",
+      "oldNumber": 13,
+      "newNumber": 5,
+      "oldFirst": "Martin",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-bercheux-15",
+      "teamId": "bercheux",
+      "name": "Robin Dessé",
+      "oldNumber": 15,
+      "newNumber": 7,
+      "oldFirst": "Robin",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-bercheux-19",
+      "teamId": "bercheux",
+      "name": "Maxime Merche",
+      "oldNumber": 19,
+      "newNumber": 8,
+      "oldFirst": "Maxime",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-bercheux-21",
+      "teamId": "bercheux",
+      "name": "Antoine Strepenne",
+      "oldNumber": 21,
+      "newNumber": 11,
+      "oldFirst": "Antoine",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-bercheux-27",
+      "teamId": "bercheux",
+      "name": "Maxime Bossicart",
+      "oldNumber": 27,
+      "newNumber": 14,
+      "oldFirst": "Maxime",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-bercheux-28",
+      "teamId": "bercheux",
+      "name": "Yoann Clausse",
+      "oldNumber": 28,
+      "newNumber": 18,
+      "oldFirst": "Yoann",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-aye-18",
+      "teamId": "aye",
+      "name": "William Walhin",
+      "oldNumber": 18,
+      "newNumber": 3,
+      "oldFirst": "William",
+      "confidence": 2
+    },
+    {
+      "id": "p-aye-15",
+      "teamId": "aye",
+      "name": "Noah Marotte",
+      "oldNumber": 15,
+      "newNumber": 4,
+      "oldFirst": "Noah",
+      "confidence": 2
+    },
+    {
+      "id": "p-aye-8",
+      "teamId": "aye",
+      "name": "Matheo Lux",
+      "oldNumber": 8,
+      "newNumber": 5,
+      "oldFirst": "Matheo",
+      "confidence": 2
+    },
+    {
+      "id": "p-aye-22",
+      "teamId": "aye",
+      "name": "Theo Philippe",
+      "oldNumber": 22,
+      "newNumber": 7,
+      "oldFirst": "Theo",
+      "confidence": 2
+    },
+    {
+      "id": "p-aye-1",
+      "teamId": "aye",
+      "name": "Florian Lejeune",
+      "oldNumber": 1,
+      "newNumber": 21,
+      "oldFirst": "Florian",
+      "confidence": 1
+    },
+    {
+      "id": "p-aye-16",
+      "teamId": "aye",
+      "name": "Louis-Simon Menten",
+      "oldNumber": 16,
+      "newNumber": 2,
+      "oldFirst": "Louis-Simon",
+      "confidence": 1
+    },
+    {
+      "id": "p-aye-17",
+      "teamId": "aye",
+      "name": "William Vincent",
+      "oldNumber": 17,
+      "newNumber": 8,
+      "oldFirst": "William",
+      "confidence": 1
+    },
+    {
+      "id": "p-aye-28",
+      "teamId": "aye",
+      "name": "Bastian Godefroid",
+      "oldNumber": 28,
+      "newNumber": 9,
+      "oldFirst": "Bastian",
+      "confidence": 1
+    },
+    {
+      "id": "p-aye-27",
+      "teamId": "aye",
+      "name": "Nael Fouarge",
+      "oldNumber": 27,
+      "newNumber": 10,
+      "oldFirst": "Nael",
+      "confidence": 1
+    },
+    {
+      "id": "p-aye-19",
+      "teamId": "aye",
+      "name": "Arnaud Lecaillié",
+      "oldNumber": 19,
+      "newNumber": 11,
+      "oldFirst": "Arnaud",
+      "confidence": 1
+    },
+    {
+      "id": "p-aye-6",
+      "teamId": "aye",
+      "name": "Denis Gérard",
+      "oldNumber": 6,
+      "newNumber": 13,
+      "oldFirst": "Denis",
+      "confidence": 1
+    },
+    {
+      "id": "p-aye-11",
+      "teamId": "aye",
+      "name": "Romain Vincent",
+      "oldNumber": 11,
+      "newNumber": 14,
+      "oldFirst": "Romain",
+      "confidence": 1
+    },
+    {
+      "id": "p-aye-9",
+      "teamId": "aye",
+      "name": "Burim Mustafaj",
+      "oldNumber": 9,
+      "newNumber": 16,
+      "oldFirst": "Burim",
+      "confidence": 1
+    },
+    {
+      "id": "p-aye-7",
+      "teamId": "aye",
+      "name": "Damien Hayaux",
+      "oldNumber": 7,
+      "newNumber": 12,
+      "oldFirst": "Damien",
+      "confidence": 1
+    },
+    {
+      "id": "p-aye-2",
+      "teamId": "aye",
+      "name": "Logan Mathieu",
+      "oldNumber": 2,
+      "newNumber": 99,
+      "oldFirst": "Logan",
+      "confidence": 1
+    },
+    {
+      "id": "p-aye-20",
+      "teamId": "aye",
+      "name": "Cyril Mahin",
+      "oldNumber": 20,
+      "newNumber": 23,
+      "oldFirst": "Cyril",
+      "confidence": 1
+    },
+    {
+      "id": "p-aye-3",
+      "teamId": "aye",
+      "name": "Pierre-Antoine Collard",
+      "oldNumber": 3,
+      "newNumber": 1,
+      "oldFirst": "Pierre-Antoine",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-aye-4",
+      "teamId": "aye",
+      "name": "Dylan Geuns",
+      "oldNumber": 4,
+      "newNumber": 6,
+      "oldFirst": "Dylan",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-aye-5",
+      "teamId": "aye",
+      "name": "Bastian Godfroid",
+      "oldNumber": 5,
+      "newNumber": 15,
+      "oldFirst": "Bastian",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-aye-10",
+      "teamId": "aye",
+      "name": "Lucas Samray",
+      "oldNumber": 10,
+      "newNumber": 17,
+      "oldFirst": "Lucas",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-aye-12",
+      "teamId": "aye",
+      "name": "Nael Fourage",
+      "oldNumber": 12,
+      "newNumber": 18,
+      "oldFirst": "Nael",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-aye-13",
+      "teamId": "aye",
+      "name": "Jayson Jean",
+      "oldNumber": 13,
+      "newNumber": 19,
+      "oldFirst": "Jayson",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-aye-14",
+      "teamId": "aye",
+      "name": "Tom Léonard",
+      "oldNumber": 14,
+      "newNumber": 20,
+      "oldFirst": "Tom",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-aye-21",
+      "teamId": "aye",
+      "name": "Steve Peeters",
+      "oldNumber": 21,
+      "newNumber": 22,
+      "oldFirst": "Steve",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-aye-23",
+      "teamId": "aye",
+      "name": "Axel Renard",
+      "oldNumber": 23,
+      "newNumber": 24,
+      "oldFirst": "Axel",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-aye-24",
+      "teamId": "aye",
+      "name": "Brian Savoye",
+      "oldNumber": 24,
+      "newNumber": 25,
+      "oldFirst": "Brian",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-aye-25",
+      "teamId": "aye",
+      "name": "Yann Tistaert",
+      "oldNumber": 25,
+      "newNumber": 26,
+      "oldFirst": "Yann",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-aye-26",
+      "teamId": "aye",
+      "name": "Marvin Etienne",
+      "oldNumber": 26,
+      "newNumber": 27,
+      "oldFirst": "Marvin",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-harre-manhay-24",
+      "teamId": "harre-manhay",
+      "name": "Sohail Moufanin",
+      "oldNumber": 24,
+      "newNumber": 6,
+      "oldFirst": "Sohail",
+      "confidence": 2
+    },
+    {
+      "id": "p-harre-manhay-19",
+      "teamId": "harre-manhay",
+      "name": "Alhassane Keita",
+      "oldNumber": 19,
+      "newNumber": 9,
+      "oldFirst": "Alhassane",
+      "confidence": 2
+    },
+    {
+      "id": "p-harre-manhay-17",
+      "teamId": "harre-manhay",
+      "name": "Jerome Roberty",
+      "oldNumber": 17,
+      "newNumber": 10,
+      "oldFirst": "Jerome",
+      "confidence": 2
+    },
+    {
+      "id": "p-harre-manhay-9",
+      "teamId": "harre-manhay",
+      "name": "Dorian Beaujean",
+      "oldNumber": 9,
+      "newNumber": 11,
+      "oldFirst": "Dorian",
+      "confidence": 2
+    },
+    {
+      "id": "p-harre-manhay-10",
+      "teamId": "harre-manhay",
+      "name": "Elias Courail",
+      "oldNumber": 10,
+      "newNumber": 22,
+      "oldFirst": "Elias",
+      "confidence": 2
+    },
+    {
+      "id": "p-harre-manhay-4",
+      "teamId": "harre-manhay",
+      "name": "MAttaquanteo Levaux",
+      "oldNumber": 4,
+      "newNumber": 23,
+      "oldFirst": "MAttaquanteo",
+      "newFirst": "Mattéo Jean",
+      "confidence": 2
+    },
+    {
+      "id": "p-harre-manhay-18",
+      "teamId": "harre-manhay",
+      "name": "Johan Ella Ella",
+      "oldNumber": 18,
+      "newNumber": 96,
+      "oldFirst": "Johan",
+      "confidence": 2
+    },
+    {
+      "id": "p-harre-manhay-20",
+      "teamId": "harre-manhay",
+      "name": "William Rasquin",
+      "oldNumber": 20,
+      "newNumber": 17,
+      "oldFirst": "William",
+      "confidence": 2
+    },
+    {
+      "id": "p-harre-manhay-16",
+      "teamId": "harre-manhay",
+      "name": "Assoma Ovi",
+      "oldNumber": 16,
+      "newNumber": 20,
+      "oldFirst": "Assoma",
+      "confidence": 2
+    },
+    {
+      "id": "p-harre-manhay-22",
+      "teamId": "harre-manhay",
+      "name": "Ugochukwu Precious Chikatara",
+      "oldNumber": 22,
+      "newNumber": 70,
+      "oldFirst": "Ugochukwu Precious",
+      "confidence": 2
+    },
+    {
+      "id": "p-harre-manhay-7",
+      "teamId": "harre-manhay",
+      "name": "Florian Samray",
+      "oldNumber": 7,
+      "newNumber": 5,
+      "oldFirst": "Florian",
+      "confidence": 1
+    },
+    {
+      "id": "p-harre-manhay-8",
+      "teamId": "harre-manhay",
+      "name": "Prince Apeke",
+      "oldNumber": 8,
+      "newNumber": 55,
+      "oldFirst": "Prince",
+      "confidence": 1
+    },
+    {
+      "id": "p-harre-manhay-2",
+      "teamId": "harre-manhay",
+      "name": "Thomas Rosala",
+      "oldNumber": 2,
+      "newNumber": 21,
+      "oldFirst": "Thomas",
+      "confidence": 1
+    },
+    {
+      "id": "p-harre-manhay-5",
+      "teamId": "harre-manhay",
+      "name": "Romain Maréchal",
+      "oldNumber": 5,
+      "newNumber": 16,
+      "oldFirst": "Romain",
+      "confidence": 1
+    },
+    {
+      "id": "p-harre-manhay-11",
+      "teamId": "harre-manhay",
+      "name": "Diego Guarino",
+      "oldNumber": 11,
+      "newNumber": 35,
+      "oldFirst": "Diego",
+      "confidence": 1
+    },
+    {
+      "id": "p-harre-manhay-6",
+      "teamId": "harre-manhay",
+      "name": "Loic Pirquet",
+      "oldNumber": 6,
+      "newNumber": 2,
+      "oldFirst": "Loic",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-harre-manhay-21",
+      "teamId": "harre-manhay",
+      "name": "Sada Sy",
+      "oldNumber": 21,
+      "newNumber": 4,
+      "oldFirst": "Sada",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-harre-manhay-23",
+      "teamId": "harre-manhay",
+      "name": "Patrick Fabere",
+      "oldNumber": 23,
+      "newNumber": 7,
+      "oldFirst": "Patrick",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-vaux-sur-sure-1",
+      "teamId": "vaux-sur-sure",
+      "name": "Gilles Batter",
+      "oldNumber": 1,
+      "newNumber": 25,
+      "oldFirst": "Gilles",
+      "confidence": 2
+    },
+    {
+      "id": "p-vaux-sur-sure-3",
+      "teamId": "vaux-sur-sure",
+      "name": "Noe Flamant",
+      "oldNumber": 3,
+      "newNumber": 2,
+      "oldFirst": "Noe",
+      "confidence": 2
+    },
+    {
+      "id": "p-vaux-sur-sure-9",
+      "teamId": "vaux-sur-sure",
+      "name": "Fabien Guissen",
+      "oldNumber": 9,
+      "newNumber": 8,
+      "oldFirst": "Fabien",
+      "confidence": 2
+    },
+    {
+      "id": "p-vaux-sur-sure-23",
+      "teamId": "vaux-sur-sure",
+      "name": "David Schoumaker",
+      "oldNumber": 23,
+      "newNumber": 10,
+      "oldFirst": "David",
+      "confidence": 2
+    },
+    {
+      "id": "p-vaux-sur-sure-24",
+      "teamId": "vaux-sur-sure",
+      "name": "Diego Vankerkhoven",
+      "oldNumber": 24,
+      "newNumber": 11,
+      "oldFirst": "Diego",
+      "confidence": 2
+    },
+    {
+      "id": "p-vaux-sur-sure-13",
+      "teamId": "vaux-sur-sure",
+      "name": "Hugo Pantusa",
+      "oldNumber": 13,
+      "newNumber": 16,
+      "oldFirst": "Hugo",
+      "confidence": 2
+    },
+    {
+      "id": "p-vaux-sur-sure-19",
+      "teamId": "vaux-sur-sure",
+      "name": "Sylvain Dewalque",
+      "oldNumber": 19,
+      "newNumber": 17,
+      "oldFirst": "Sylvain",
+      "confidence": 2
+    },
+    {
+      "id": "p-vaux-sur-sure-26",
+      "teamId": "vaux-sur-sure",
+      "name": "Boris Wattiaux",
+      "oldNumber": 26,
+      "newNumber": 23,
+      "oldFirst": "Boris",
+      "confidence": 2
+    },
+    {
+      "id": "p-vaux-sur-sure-5",
+      "teamId": "vaux-sur-sure",
+      "name": "Arnaud Pinson",
+      "oldNumber": 5,
+      "newNumber": 24,
+      "oldFirst": "Arnaud",
+      "confidence": 2
+    },
+    {
+      "id": "p-vaux-sur-sure-22",
+      "teamId": "vaux-sur-sure",
+      "name": "Gustin Noppe",
+      "oldNumber": 22,
+      "newNumber": 6,
+      "oldFirst": "Gustin",
+      "confidence": 2
+    },
+    {
+      "id": "p-vaux-sur-sure-16",
+      "teamId": "vaux-sur-sure",
+      "name": "Alan Sensique",
+      "oldNumber": 16,
+      "newNumber": 7,
+      "oldFirst": "Alan",
+      "confidence": 2
+    },
+    {
+      "id": "p-vaux-sur-sure-12",
+      "teamId": "vaux-sur-sure",
+      "name": "Allan Manand",
+      "oldNumber": 12,
+      "newNumber": 18,
+      "oldFirst": "Allan",
+      "confidence": 2
+    },
+    {
+      "id": "p-vaux-sur-sure-11",
+      "teamId": "vaux-sur-sure",
+      "name": "Christophe Mahy",
+      "oldNumber": 11,
+      "newNumber": 21,
+      "oldFirst": "Christophe",
+      "confidence": 1
+    },
+    {
+      "id": "p-vaux-sur-sure-18",
+      "teamId": "vaux-sur-sure",
+      "name": "Cyril Amel",
+      "oldNumber": 18,
+      "newNumber": 22,
+      "oldFirst": "Cyril",
+      "confidence": 1
+    },
+    {
+      "id": "p-vaux-sur-sure-15",
+      "teamId": "vaux-sur-sure",
+      "name": "Igor Sass",
+      "oldNumber": 15,
+      "newNumber": 12,
+      "oldFirst": "Igor",
+      "confidence": 1
+    },
+    {
+      "id": "p-vaux-sur-sure-17",
+      "teamId": "vaux-sur-sure",
+      "name": "Louka Van Daele",
+      "oldNumber": 17,
+      "newNumber": 27,
+      "oldFirst": "Louka",
+      "confidence": 1
+    },
+    {
+      "id": "p-vaux-sur-sure-2",
+      "teamId": "vaux-sur-sure",
+      "name": "Nils Dachelet",
+      "oldNumber": 2,
+      "newNumber": 1,
+      "oldFirst": "Nils",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-vaux-sur-sure-6",
+      "teamId": "vaux-sur-sure",
+      "name": "Thomas Poncelet",
+      "oldNumber": 6,
+      "newNumber": 3,
+      "oldFirst": "Thomas",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-vaux-sur-sure-7",
+      "teamId": "vaux-sur-sure",
+      "name": "Boris Watriaux",
+      "oldNumber": 7,
+      "newNumber": 5,
+      "oldFirst": "Boris",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-vaux-sur-sure-8",
+      "teamId": "vaux-sur-sure",
+      "name": "Laurent Detaille",
+      "oldNumber": 8,
+      "newNumber": 9,
+      "oldFirst": "Laurent",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-vaux-sur-sure-10",
+      "teamId": "vaux-sur-sure",
+      "name": "Hugo Léonard",
+      "oldNumber": 10,
+      "newNumber": 13,
+      "oldFirst": "Hugo",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-vaux-sur-sure-21",
+      "teamId": "vaux-sur-sure",
+      "name": "Alexandre Mahy",
+      "oldNumber": 21,
+      "newNumber": 15,
+      "oldFirst": "Alexandre",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-vaux-sur-sure-25",
+      "teamId": "vaux-sur-sure",
+      "name": "Tom Goffin",
+      "oldNumber": 25,
+      "newNumber": 19,
+      "oldFirst": "Tom",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-bastogne-2",
+      "teamId": "bastogne",
+      "name": "Jordan Louis",
+      "oldNumber": 2,
+      "newNumber": 1,
+      "oldFirst": "Jordan",
+      "confidence": 2
+    },
+    {
+      "id": "p-bastogne-9",
+      "teamId": "bastogne",
+      "name": "Romain Weyders",
+      "oldNumber": 9,
+      "newNumber": 4,
+      "oldFirst": "Romain",
+      "confidence": 2
+    },
+    {
+      "id": "p-bastogne-8",
+      "teamId": "bastogne",
+      "name": "Gillian Van Den Eynde",
+      "oldNumber": 8,
+      "newNumber": 6,
+      "oldFirst": "Gillian",
+      "confidence": 2
+    },
+    {
+      "id": "p-bastogne-17",
+      "teamId": "bastogne",
+      "name": "MAttaquantis Poitoux",
+      "oldNumber": 17,
+      "newNumber": 8,
+      "oldFirst": "MAttaquantis",
+      "newFirst": "Mattis Christophe",
+      "confidence": 2
+    },
+    {
+      "id": "p-bastogne-3",
+      "teamId": "bastogne",
+      "name": "MAttaquantias Belche",
+      "oldNumber": 3,
+      "newNumber": 9,
+      "oldFirst": "MAttaquantias",
+      "newFirst": "Mattias",
+      "confidence": 2
+    },
+    {
+      "id": "p-bastogne-15",
+      "teamId": "bastogne",
+      "name": "Liam Muller",
+      "oldNumber": 15,
+      "newNumber": 10,
+      "oldFirst": "Liam",
+      "confidence": 2
+    },
+    {
+      "id": "p-bastogne-12",
+      "teamId": "bastogne",
+      "name": "Cyril Degives",
+      "oldNumber": 12,
+      "newNumber": 13,
+      "oldFirst": "Cyril",
+      "confidence": 2
+    },
+    {
+      "id": "p-bastogne-23",
+      "teamId": "bastogne",
+      "name": "Tom Chisogne",
+      "oldNumber": 23,
+      "newNumber": 20,
+      "oldFirst": "Tom",
+      "confidence": 2
+    },
+    {
+      "id": "p-bastogne-6",
+      "teamId": "bastogne",
+      "name": "Yohan Louvins",
+      "oldNumber": 6,
+      "newNumber": 21,
+      "oldFirst": "Yohan",
+      "confidence": 2
+    },
+    {
+      "id": "p-bastogne-10",
+      "teamId": "bastogne",
+      "name": "Tristan Brisy",
+      "oldNumber": 10,
+      "newNumber": 7,
+      "oldFirst": "Tristan",
+      "confidence": 2
+    },
+    {
+      "id": "p-bastogne-16",
+      "teamId": "bastogne",
+      "name": "Romeo Pierre",
+      "oldNumber": 16,
+      "newNumber": 18,
+      "oldFirst": "Romeo",
+      "confidence": 2
+    },
+    {
+      "id": "p-bastogne-7",
+      "teamId": "bastogne",
+      "name": "Pascal Macoir",
+      "oldNumber": 7,
+      "newNumber": 22,
+      "oldFirst": "Pascal",
+      "confidence": 2
+    },
+    {
+      "id": "p-bastogne-19",
+      "teamId": "bastogne",
+      "name": "Berly Pelenga",
+      "oldNumber": 19,
+      "newNumber": 23,
+      "oldFirst": "Berly",
+      "confidence": 2
+    },
+    {
+      "id": "p-bastogne-5",
+      "teamId": "bastogne",
+      "name": "Guillaume Gruslin",
+      "oldNumber": 5,
+      "newNumber": 19,
+      "oldFirst": "Guillaume",
+      "confidence": 1
+    },
+    {
+      "id": "p-bastogne-20",
+      "teamId": "bastogne",
+      "name": "Basile Poitoux",
+      "oldNumber": 20,
+      "newNumber": 17,
+      "oldFirst": "Basile",
+      "confidence": 1
+    },
+    {
+      "id": "p-bastogne-1",
+      "teamId": "bastogne",
+      "name": "Nicolas Labranche",
+      "oldNumber": 1,
+      "newNumber": 2,
+      "oldFirst": "Nicolas",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-bastogne-4",
+      "teamId": "bastogne",
+      "name": "Antoine Dufays",
+      "oldNumber": 4,
+      "newNumber": 3,
+      "oldFirst": "Antoine",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-bastogne-13",
+      "teamId": "bastogne",
+      "name": "Quentin Glaude",
+      "oldNumber": 13,
+      "newNumber": 5,
+      "oldFirst": "Quentin",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-bastogne-18",
+      "teamId": "bastogne",
+      "name": "Basile Didderen",
+      "oldNumber": 18,
+      "newNumber": 12,
+      "oldFirst": "Basile",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-bastogne-21",
+      "teamId": "bastogne",
+      "name": "Herve Sikpe",
+      "oldNumber": 21,
+      "newNumber": 15,
+      "oldFirst": "Herve",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-bastogne-22",
+      "teamId": "bastogne",
+      "name": "William Stilmant",
+      "oldNumber": 22,
+      "newNumber": 16,
+      "oldFirst": "William",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-nothomb-33",
+      "teamId": "nothomb",
+      "name": "Olivier Schmit",
+      "oldNumber": 33,
+      "newNumber": 2,
+      "oldFirst": "Olivier",
+      "confidence": 2
+    },
+    {
+      "id": "p-nothomb-17",
+      "teamId": "nothomb",
+      "name": "Jean Limpach",
+      "oldNumber": 17,
+      "newNumber": 6,
+      "oldFirst": "Jean",
+      "confidence": 2
+    },
+    {
+      "id": "p-nothomb-9",
+      "teamId": "nothomb",
+      "name": "Antoine Parisse",
+      "oldNumber": 9,
+      "newNumber": 8,
+      "oldFirst": "Antoine",
+      "confidence": 2
+    },
+    {
+      "id": "p-nothomb-27",
+      "teamId": "nothomb",
+      "name": "Martin Mairlot",
+      "oldNumber": 27,
+      "newNumber": 9,
+      "oldFirst": "Martin",
+      "confidence": 2
+    },
+    {
+      "id": "p-nothomb-34",
+      "teamId": "nothomb",
+      "name": "Tanguy Thiéry",
+      "oldNumber": 34,
+      "newNumber": 10,
+      "oldFirst": "Tanguy",
+      "confidence": 2
+    },
+    {
+      "id": "p-nothomb-6",
+      "teamId": "nothomb",
+      "name": "Mathieu Laffargue",
+      "oldNumber": 6,
+      "newNumber": 14,
+      "oldFirst": "Mathieu",
+      "confidence": 2
+    },
+    {
+      "id": "p-nothomb-4",
+      "teamId": "nothomb",
+      "name": "Sylvain Bechet",
+      "oldNumber": 4,
+      "newNumber": 15,
+      "oldFirst": "Sylvain",
+      "confidence": 2
+    },
+    {
+      "id": "p-nothomb-31",
+      "teamId": "nothomb",
+      "name": "Alexandre Laurent",
+      "oldNumber": 31,
+      "newNumber": 18,
+      "oldFirst": "Alexandre",
+      "confidence": 2
+    },
+    {
+      "id": "p-nothomb-16",
+      "teamId": "nothomb",
+      "name": "Baptiste Kobs",
+      "oldNumber": 16,
+      "newNumber": 21,
+      "oldFirst": "Baptiste",
+      "confidence": 2
+    },
+    {
+      "id": "p-nothomb-14",
+      "teamId": "nothomb",
+      "name": "Arnaud Gérard",
+      "oldNumber": 14,
+      "newNumber": 17,
+      "oldFirst": "Arnaud",
+      "confidence": 2
+    },
+    {
+      "id": "p-nothomb-25",
+      "teamId": "nothomb",
+      "name": "MAttaquanteo Hannard",
+      "oldNumber": 25,
+      "newNumber": 23,
+      "oldFirst": "MAttaquanteo",
+      "newFirst": "Mattéo",
+      "confidence": 2
+    },
+    {
+      "id": "p-nothomb-15",
+      "teamId": "nothomb",
+      "name": "Kevin Huberty",
+      "oldNumber": 15,
+      "newNumber": 22,
+      "oldFirst": "Kevin",
+      "confidence": 1
+    },
+    {
+      "id": "p-nothomb-10",
+      "teamId": "nothomb",
+      "name": "Christophe Richard",
+      "oldNumber": 10,
+      "newNumber": 3,
+      "oldFirst": "Christophe",
+      "confidence": 1
+    },
+    {
+      "id": "p-nothomb-21",
+      "teamId": "nothomb",
+      "name": "Florian Parrot",
+      "oldNumber": 21,
+      "newNumber": 16,
+      "oldFirst": "Florian",
+      "confidence": 1
+    },
+    {
+      "id": "p-nothomb-13",
+      "teamId": "nothomb",
+      "name": "Lucas Dubru",
+      "oldNumber": 13,
+      "newNumber": 19,
+      "oldFirst": "Lucas",
+      "confidence": 1
+    },
+    {
+      "id": "p-nothomb-29",
+      "teamId": "nothomb",
+      "name": "Kristijan Sicaja",
+      "oldNumber": 29,
+      "newNumber": 24,
+      "oldFirst": "Kristijan",
+      "confidence": 1
+    },
+    {
+      "id": "p-nothomb-2",
+      "teamId": "nothomb",
+      "name": "Arnaud Carboni",
+      "oldNumber": 2,
+      "newNumber": 4,
+      "oldFirst": "Arnaud",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-nothomb-3",
+      "teamId": "nothomb",
+      "name": "Amaury Duroy",
+      "oldNumber": 3,
+      "newNumber": 5,
+      "oldFirst": "Amaury",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-nothomb-5",
+      "teamId": "nothomb",
+      "name": "Eliott Devillet",
+      "oldNumber": 5,
+      "newNumber": 7,
+      "oldFirst": "Eliott",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-nothomb-7",
+      "teamId": "nothomb",
+      "name": "Luca Larrucia",
+      "oldNumber": 7,
+      "newNumber": 11,
+      "oldFirst": "Luca",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-nothomb-8",
+      "teamId": "nothomb",
+      "name": "Marvin Lefèvre",
+      "oldNumber": 8,
+      "newNumber": 12,
+      "oldFirst": "Marvin",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-nothomb-11",
+      "teamId": "nothomb",
+      "name": "Tanguy Thierry",
+      "oldNumber": 11,
+      "newNumber": 13,
+      "oldFirst": "Tanguy",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-nothomb-12",
+      "teamId": "nothomb",
+      "name": "Hugo Windeshausen",
+      "oldNumber": 12,
+      "newNumber": 20,
+      "oldFirst": "Hugo",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-nothomb-18",
+      "teamId": "nothomb",
+      "name": "Gilles Mairlot",
+      "oldNumber": 18,
+      "newNumber": 25,
+      "oldFirst": "Gilles",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-nothomb-19",
+      "teamId": "nothomb",
+      "name": "Nathan Meyers",
+      "oldNumber": 19,
+      "newNumber": 26,
+      "oldFirst": "Nathan",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-nothomb-20",
+      "teamId": "nothomb",
+      "name": "Yohann Ngassam",
+      "oldNumber": 20,
+      "newNumber": 27,
+      "oldFirst": "Yohann",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-nothomb-22",
+      "teamId": "nothomb",
+      "name": "Joakim Rosman",
+      "oldNumber": 22,
+      "newNumber": 28,
+      "oldFirst": "Joakim",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-nothomb-23",
+      "teamId": "nothomb",
+      "name": "Gauthier Stevenot",
+      "oldNumber": 23,
+      "newNumber": 29,
+      "oldFirst": "Gauthier",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-nothomb-24",
+      "teamId": "nothomb",
+      "name": "Enzo Chioccolini",
+      "oldNumber": 24,
+      "newNumber": 30,
+      "oldFirst": "Enzo",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-nothomb-26",
+      "teamId": "nothomb",
+      "name": "Victor Klein",
+      "oldNumber": 26,
+      "newNumber": 31,
+      "oldFirst": "Victor",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-nothomb-28",
+      "teamId": "nothomb",
+      "name": "Mohammed Mezouari",
+      "oldNumber": 28,
+      "newNumber": 32,
+      "oldFirst": "Mohammed",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-nothomb-30",
+      "teamId": "nothomb",
+      "name": "Luca Laruccia",
+      "oldNumber": 30,
+      "newNumber": 33,
+      "oldFirst": "Luca",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-nothomb-32",
+      "teamId": "nothomb",
+      "name": "Brandon Ries",
+      "oldNumber": 32,
+      "newNumber": 34,
+      "oldFirst": "Brandon",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-oppagne-8",
+      "teamId": "oppagne",
+      "name": "Orhan Prévot",
+      "oldNumber": 8,
+      "newNumber": 2,
+      "oldFirst": "Orhan",
+      "confidence": 2
+    },
+    {
+      "id": "p-oppagne-7",
+      "teamId": "oppagne",
+      "name": "David Polis",
+      "oldNumber": 7,
+      "newNumber": 5,
+      "oldFirst": "David",
+      "confidence": 2
+    },
+    {
+      "id": "p-oppagne-14",
+      "teamId": "oppagne",
+      "name": "MAttaquanteo Lizen",
+      "oldNumber": 14,
+      "newNumber": 9,
+      "oldFirst": "MAttaquanteo",
+      "newFirst": "Mattéo",
+      "confidence": 2
+    },
+    {
+      "id": "p-oppagne-16",
+      "teamId": "oppagne",
+      "name": "Quentin Piret",
+      "oldNumber": 16,
+      "newNumber": 11,
+      "oldFirst": "Quentin",
+      "confidence": 2
+    },
+    {
+      "id": "p-oppagne-18",
+      "teamId": "oppagne",
+      "name": "Matheo Gerarts",
+      "oldNumber": 18,
+      "newNumber": 16,
+      "oldFirst": "Matheo",
+      "confidence": 2
+    },
+    {
+      "id": "p-oppagne-12",
+      "teamId": "oppagne",
+      "name": "Martin Bonjean",
+      "oldNumber": 12,
+      "newNumber": 18,
+      "oldFirst": "Martin",
+      "confidence": 2
+    },
+    {
+      "id": "p-oppagne-15",
+      "teamId": "oppagne",
+      "name": "Wannes Petitjean",
+      "oldNumber": 15,
+      "newNumber": 30,
+      "oldFirst": "Wannes",
+      "confidence": 2
+    },
+    {
+      "id": "p-oppagne-25",
+      "teamId": "oppagne",
+      "name": "Fabrice Sambi Lokonga",
+      "oldNumber": 25,
+      "newNumber": 48,
+      "oldFirst": "Fabrice",
+      "confidence": 2
+    },
+    {
+      "id": "p-oppagne-1",
+      "teamId": "oppagne",
+      "name": "Harold Gilot",
+      "oldNumber": 1,
+      "newNumber": 8,
+      "oldFirst": "Harold",
+      "confidence": 1
+    },
+    {
+      "id": "p-oppagne-9",
+      "teamId": "oppagne",
+      "name": "Noah Thiry",
+      "oldNumber": 9,
+      "newNumber": 6,
+      "oldFirst": "Noah",
+      "confidence": 1
+    },
+    {
+      "id": "p-oppagne-6",
+      "teamId": "oppagne",
+      "name": "Louis Hugot",
+      "oldNumber": 6,
+      "newNumber": 13,
+      "oldFirst": "Louis",
+      "confidence": 1
+    },
+    {
+      "id": "p-oppagne-2",
+      "teamId": "oppagne",
+      "name": "Nathan Lejeune",
+      "oldNumber": 2,
+      "newNumber": 1,
+      "oldFirst": "Nathan",
+      "confidence": 1
+    },
+    {
+      "id": "p-oppagne-13",
+      "teamId": "oppagne",
+      "name": "Martin Dropsy",
+      "oldNumber": 13,
+      "newNumber": 4,
+      "oldFirst": "Martin",
+      "confidence": 1
+    },
+    {
+      "id": "p-oppagne-3",
+      "teamId": "oppagne",
+      "name": "Noa Carlier",
+      "oldNumber": 3,
+      "newNumber": 12,
+      "oldFirst": "Noa",
+      "confidence": 1
+    },
+    {
+      "id": "p-oppagne-21",
+      "teamId": "oppagne",
+      "name": "Sacha Nélissen",
+      "oldNumber": 21,
+      "newNumber": 19,
+      "oldFirst": "Sacha",
+      "confidence": 1
+    },
+    {
+      "id": "p-oppagne-11",
+      "teamId": "oppagne",
+      "name": "Dylan Warnier",
+      "oldNumber": 11,
+      "newNumber": 55,
+      "oldFirst": "Dylan",
+      "confidence": 1
+    },
+    {
+      "id": "p-oppagne-4",
+      "teamId": "oppagne",
+      "name": "Justin Cornélis",
+      "oldNumber": 4,
+      "newNumber": 3,
+      "oldFirst": "Justin",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-oppagne-5",
+      "teamId": "oppagne",
+      "name": "Erwin Englebert",
+      "oldNumber": 5,
+      "newNumber": 7,
+      "oldFirst": "Erwin",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-oppagne-19",
+      "teamId": "oppagne",
+      "name": "MAttaquanteo Jamoul",
+      "oldNumber": 19,
+      "newNumber": 14,
+      "oldFirst": "MAttaquanteo",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-assenois-5",
+      "teamId": "assenois",
+      "name": "Theo Dechamps",
+      "oldNumber": 5,
+      "newNumber": 8,
+      "oldFirst": "Theo",
+      "confidence": 2
+    },
+    {
+      "id": "p-assenois-16",
+      "teamId": "assenois",
+      "name": "Lucas Thiry",
+      "oldNumber": 16,
+      "newNumber": 10,
+      "oldFirst": "Lucas",
+      "confidence": 2
+    },
+    {
+      "id": "p-assenois-20",
+      "teamId": "assenois",
+      "name": "Nicolas Aubry",
+      "oldNumber": 20,
+      "newNumber": 12,
+      "oldFirst": "Nicolas",
+      "confidence": 2
+    },
+    {
+      "id": "p-assenois-12",
+      "teamId": "assenois",
+      "name": "Willy Bihina",
+      "oldNumber": 12,
+      "newNumber": 20,
+      "oldFirst": "Willy",
+      "confidence": 2
+    },
+    {
+      "id": "p-assenois-9",
+      "teamId": "assenois",
+      "name": "Lucas Macalli",
+      "oldNumber": 9,
+      "newNumber": 25,
+      "oldFirst": "Lucas",
+      "confidence": 2
+    },
+    {
+      "id": "p-assenois-14",
+      "teamId": "assenois",
+      "name": "Arnold Nkokolo",
+      "oldNumber": 14,
+      "newNumber": 39,
+      "oldFirst": "Arnold",
+      "confidence": 2
+    },
+    {
+      "id": "p-assenois-8",
+      "teamId": "assenois",
+      "name": "Mathis Ledain",
+      "oldNumber": 8,
+      "newNumber": 66,
+      "oldFirst": "Mathis",
+      "confidence": 2
+    },
+    {
+      "id": "p-assenois-21",
+      "teamId": "assenois",
+      "name": "Julien Debra",
+      "oldNumber": 21,
+      "newNumber": 80,
+      "oldFirst": "Julien",
+      "confidence": 2
+    },
+    {
+      "id": "p-assenois-11",
+      "teamId": "assenois",
+      "name": "Cyril Poncin",
+      "oldNumber": 11,
+      "newNumber": 6,
+      "oldFirst": "Cyril",
+      "confidence": 2
+    },
+    {
+      "id": "p-assenois-19",
+      "teamId": "assenois",
+      "name": "Jeremy Wauthy",
+      "oldNumber": 19,
+      "newNumber": 11,
+      "oldFirst": "Jeremy",
+      "confidence": 2
+    },
+    {
+      "id": "p-assenois-13",
+      "teamId": "assenois",
+      "name": "Treseor Ndikumana",
+      "oldNumber": 13,
+      "newNumber": 19,
+      "oldFirst": "Treseor",
+      "confidence": 2
+    },
+    {
+      "id": "p-assenois-6",
+      "teamId": "assenois",
+      "name": "Matheo Gavroy",
+      "oldNumber": 6,
+      "newNumber": 23,
+      "oldFirst": "Matheo",
+      "confidence": 2
+    },
+    {
+      "id": "p-assenois-23",
+      "teamId": "assenois",
+      "name": "Thomas Macalli",
+      "oldNumber": 23,
+      "newNumber": 7,
+      "oldFirst": "Thomas",
+      "confidence": 1
+    },
+    {
+      "id": "p-assenois-18",
+      "teamId": "assenois",
+      "name": "Joaquin Villalba",
+      "oldNumber": 18,
+      "newNumber": 5,
+      "oldFirst": "Joaquin",
+      "confidence": 1
+    },
+    {
+      "id": "p-assenois-7",
+      "teamId": "assenois",
+      "name": "Charles Heyard",
+      "oldNumber": 7,
+      "newNumber": 2,
+      "oldFirst": "Charles",
+      "confidence": 1
+    },
+    {
+      "id": "p-assenois-2",
+      "teamId": "assenois",
+      "name": "Bertrand Nique",
+      "oldNumber": 2,
+      "newNumber": 3,
+      "oldFirst": "Bertrand",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-assenois-3",
+      "teamId": "assenois",
+      "name": "Nikola Ara",
+      "oldNumber": 3,
+      "newNumber": 9,
+      "oldFirst": "Nikola",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-assenois-10",
+      "teamId": "assenois",
+      "name": "Guillaume Martin",
+      "oldNumber": 10,
+      "newNumber": 13,
+      "oldFirst": "Guillaume",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-assenois-25",
+      "teamId": "assenois",
+      "name": "Emile Widart",
+      "oldNumber": 25,
+      "newNumber": 14,
+      "oldFirst": "Emile",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-roy-21",
+      "teamId": "roy",
+      "name": "Vincent Dulaunoy",
+      "oldNumber": 21,
+      "newNumber": 10,
+      "oldFirst": "Vincent",
+      "confidence": 2
+    },
+    {
+      "id": "p-roy-14",
+      "teamId": "roy",
+      "name": "Antoine Borrey",
+      "oldNumber": 14,
+      "newNumber": 11,
+      "oldFirst": "Antoine",
+      "confidence": 2
+    },
+    {
+      "id": "p-roy-4",
+      "teamId": "roy",
+      "name": "Igor Crowin",
+      "oldNumber": 4,
+      "newNumber": 15,
+      "oldFirst": "Igor",
+      "confidence": 2
+    },
+    {
+      "id": "p-roy-19",
+      "teamId": "roy",
+      "name": "Valentin Raskin",
+      "oldNumber": 19,
+      "newNumber": 17,
+      "oldFirst": "Valentin",
+      "confidence": 2
+    },
+    {
+      "id": "p-roy-7",
+      "teamId": "roy",
+      "name": "Henri Magonette",
+      "oldNumber": 7,
+      "newNumber": 21,
+      "oldFirst": "Henri",
+      "confidence": 2
+    },
+    {
+      "id": "p-roy-23",
+      "teamId": "roy",
+      "name": "Mathys Raskin",
+      "oldNumber": 23,
+      "newNumber": 22,
+      "oldFirst": "Mathys",
+      "confidence": 2
+    },
+    {
+      "id": "p-roy-6",
+      "teamId": "roy",
+      "name": "Nicolas Laloux",
+      "oldNumber": 6,
+      "newNumber": 2,
+      "oldFirst": "Nicolas",
+      "confidence": 2
+    },
+    {
+      "id": "p-roy-25",
+      "teamId": "roy",
+      "name": "Alessandro Piergentili",
+      "oldNumber": 25,
+      "newNumber": 19,
+      "oldFirst": "Alessandro",
+      "confidence": 2
+    },
+    {
+      "id": "p-roy-12",
+      "teamId": "roy",
+      "name": "Tom Wallens",
+      "oldNumber": 12,
+      "newNumber": 6,
+      "oldFirst": "Tom",
+      "confidence": 1
+    },
+    {
+      "id": "p-roy-22",
+      "teamId": "roy",
+      "name": "Julien Fievet",
+      "oldNumber": 22,
+      "newNumber": 9,
+      "oldFirst": "Julien",
+      "confidence": 1
+    },
+    {
+      "id": "p-roy-8",
+      "teamId": "roy",
+      "name": "Parker Mateke",
+      "oldNumber": 8,
+      "newNumber": 14,
+      "oldFirst": "Parker",
+      "confidence": 1
+    },
+    {
+      "id": "p-roy-15",
+      "teamId": "roy",
+      "name": "William Guillaume",
+      "oldNumber": 15,
+      "newNumber": 33,
+      "oldFirst": "William",
+      "confidence": 1
+    },
+    {
+      "id": "p-roy-13",
+      "teamId": "roy",
+      "name": "Maxime Alié",
+      "oldNumber": 13,
+      "newNumber": 7,
+      "oldFirst": "Maxime",
+      "confidence": 1
+    },
+    {
+      "id": "p-roy-9",
+      "teamId": "roy",
+      "name": "Mevlut Mola",
+      "oldNumber": 9,
+      "newNumber": 8,
+      "oldFirst": "Mevlut",
+      "confidence": 1
+    },
+    {
+      "id": "p-roy-26",
+      "teamId": "roy",
+      "name": "Louis Poirrier",
+      "oldNumber": 26,
+      "newNumber": 18,
+      "oldFirst": "Louis",
+      "confidence": 1
+    },
+    {
+      "id": "p-roy-17",
+      "teamId": "roy",
+      "name": "John Mathot",
+      "oldNumber": 17,
+      "newNumber": 13,
+      "oldFirst": "John",
+      "confidence": 1
+    },
+    {
+      "id": "p-roy-2",
+      "teamId": "roy",
+      "name": "Loic Roisin",
+      "oldNumber": 2,
+      "newNumber": 3,
+      "oldFirst": "Loic",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-roy-3",
+      "teamId": "roy",
+      "name": "Baptiste Alié",
+      "oldNumber": 3,
+      "newNumber": 4,
+      "oldFirst": "Baptiste",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-roy-10",
+      "teamId": "roy",
+      "name": "Mathias Nijskens",
+      "oldNumber": 10,
+      "newNumber": 12,
+      "oldFirst": "Mathias",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-roy-11",
+      "teamId": "roy",
+      "name": "Thomas Pirson",
+      "oldNumber": 11,
+      "newNumber": 16,
+      "oldFirst": "Thomas",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-roy-16",
+      "teamId": "roy",
+      "name": "Rodrigue Klein",
+      "oldNumber": 16,
+      "newNumber": 20,
+      "oldFirst": "Rodrigue",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-roy-18",
+      "teamId": "roy",
+      "name": "Damien Mathy",
+      "oldNumber": 18,
+      "newNumber": 23,
+      "oldFirst": "Damien",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-roy-20",
+      "teamId": "roy",
+      "name": "Julien Ravaux",
+      "oldNumber": 20,
+      "newNumber": 24,
+      "oldFirst": "Julien",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-roy-24",
+      "teamId": "roy",
+      "name": "François Chanly",
+      "oldNumber": 24,
+      "newNumber": 25,
+      "oldFirst": "François",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-ochamps-1",
+      "teamId": "ochamps",
+      "name": "Theo Lempereur",
+      "oldNumber": 1,
+      "newNumber": 18,
+      "oldFirst": "Theo",
+      "confidence": 2
+    },
+    {
+      "id": "p-ochamps-8",
+      "teamId": "ochamps",
+      "name": "Gilles Schroeder",
+      "oldNumber": 8,
+      "newNumber": 5,
+      "oldFirst": "Gilles",
+      "confidence": 2
+    },
+    {
+      "id": "p-ochamps-15",
+      "teamId": "ochamps",
+      "name": "Thomas Baudot",
+      "oldNumber": 15,
+      "newNumber": 7,
+      "oldFirst": "Thomas",
+      "confidence": 2
+    },
+    {
+      "id": "p-ochamps-7",
+      "teamId": "ochamps",
+      "name": "Julien Robinet",
+      "oldNumber": 7,
+      "newNumber": 9,
+      "oldFirst": "Julien",
+      "confidence": 2
+    },
+    {
+      "id": "p-ochamps-12",
+      "teamId": "ochamps",
+      "name": "Simon Hutin",
+      "oldNumber": 12,
+      "newNumber": 10,
+      "oldFirst": "Simon",
+      "confidence": 2
+    },
+    {
+      "id": "p-ochamps-19",
+      "teamId": "ochamps",
+      "name": "Luka Oury",
+      "oldNumber": 19,
+      "newNumber": 11,
+      "oldFirst": "Luka",
+      "confidence": 2
+    },
+    {
+      "id": "p-ochamps-14",
+      "teamId": "ochamps",
+      "name": "Mathieu Perreaux",
+      "oldNumber": 14,
+      "newNumber": 13,
+      "oldFirst": "Mathieu",
+      "confidence": 2
+    },
+    {
+      "id": "p-ochamps-9",
+      "teamId": "ochamps",
+      "name": "Henri Doyen",
+      "oldNumber": 9,
+      "newNumber": 15,
+      "oldFirst": "Henri",
+      "confidence": 2
+    },
+    {
+      "id": "p-ochamps-6",
+      "teamId": "ochamps",
+      "name": "Noah Maury",
+      "oldNumber": 6,
+      "newNumber": 16,
+      "oldFirst": "Noah",
+      "confidence": 2
+    },
+    {
+      "id": "p-ochamps-13",
+      "teamId": "ochamps",
+      "name": "Baptiste Jourdan",
+      "oldNumber": 13,
+      "newNumber": 17,
+      "oldFirst": "Baptiste",
+      "confidence": 2
+    },
+    {
+      "id": "p-ochamps-21",
+      "teamId": "ochamps",
+      "name": "Thomas Van Autgaerden",
+      "oldNumber": 21,
+      "newNumber": 4,
+      "oldFirst": "Thomas",
+      "confidence": 2
+    },
+    {
+      "id": "p-ochamps-11",
+      "teamId": "ochamps",
+      "name": "Augustin Gillet",
+      "oldNumber": 11,
+      "newNumber": 14,
+      "oldFirst": "Augustin",
+      "confidence": 2
+    },
+    {
+      "id": "p-ochamps-10",
+      "teamId": "ochamps",
+      "name": "Matheo Giboux",
+      "oldNumber": 10,
+      "newNumber": 6,
+      "oldFirst": "Matheo",
+      "confidence": 1
+    },
+    {
+      "id": "p-ochamps-2",
+      "teamId": "ochamps",
+      "name": "Pierre Chardome",
+      "oldNumber": 2,
+      "newNumber": 19,
+      "oldFirst": "Pierre",
+      "confidence": 1
+    },
+    {
+      "id": "p-ochamps-16",
+      "teamId": "ochamps",
+      "name": "Louis Colleaux",
+      "oldNumber": 16,
+      "newNumber": 22,
+      "oldFirst": "Louis",
+      "confidence": 1
+    },
+    {
+      "id": "p-ochamps-4",
+      "teamId": "ochamps",
+      "name": "Theo Cottin",
+      "oldNumber": 4,
+      "newNumber": 1,
+      "oldFirst": "Theo",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-ochamps-5",
+      "teamId": "ochamps",
+      "name": "Baptiste Grandjean",
+      "oldNumber": 5,
+      "newNumber": 2,
+      "oldFirst": "Baptiste",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-ochamps-17",
+      "teamId": "ochamps",
+      "name": "Martin Delwiche",
+      "oldNumber": 17,
+      "newNumber": 8,
+      "oldFirst": "Martin",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-ochamps-18",
+      "teamId": "ochamps",
+      "name": "MAttaquanteo Muller",
+      "oldNumber": 18,
+      "newNumber": 12,
+      "oldFirst": "MAttaquanteo",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-ochamps-22",
+      "teamId": "ochamps",
+      "name": "Maxime Bigonville",
+      "oldNumber": 22,
+      "newNumber": 21,
+      "oldFirst": "Maxime",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-libin-2",
+      "teamId": "libin",
+      "name": "Axel Istace",
+      "oldNumber": 2,
+      "newNumber": 1,
+      "oldFirst": "Axel",
+      "confidence": 2
+    },
+    {
+      "id": "p-libin-12",
+      "teamId": "libin",
+      "name": "Matheo Bourgeois",
+      "oldNumber": 12,
+      "newNumber": 6,
+      "oldFirst": "Matheo",
+      "confidence": 2
+    },
+    {
+      "id": "p-libin-4",
+      "teamId": "libin",
+      "name": "Geoffrey Cavelier",
+      "oldNumber": 4,
+      "newNumber": 10,
+      "oldFirst": "Geoffrey",
+      "confidence": 2
+    },
+    {
+      "id": "p-libin-16",
+      "teamId": "libin",
+      "name": "Nathan Poncelet",
+      "oldNumber": 16,
+      "newNumber": 12,
+      "oldFirst": "Nathan",
+      "confidence": 2
+    },
+    {
+      "id": "p-libin-10",
+      "teamId": "libin",
+      "name": "Anthony Soyer",
+      "oldNumber": 10,
+      "newNumber": 13,
+      "oldFirst": "Anthony",
+      "confidence": 2
+    },
+    {
+      "id": "p-libin-15",
+      "teamId": "libin",
+      "name": "Corentin Poncelet",
+      "oldNumber": 15,
+      "newNumber": 14,
+      "oldFirst": "Corentin",
+      "confidence": 2
+    },
+    {
+      "id": "p-libin-25",
+      "teamId": "libin",
+      "name": "Hugo Nicolas",
+      "oldNumber": 25,
+      "newNumber": 15,
+      "oldFirst": "Hugo",
+      "confidence": 2
+    },
+    {
+      "id": "p-libin-6",
+      "teamId": "libin",
+      "name": "Romain Lefort",
+      "oldNumber": 6,
+      "newNumber": 17,
+      "oldFirst": "Romain",
+      "confidence": 2
+    },
+    {
+      "id": "p-libin-22",
+      "teamId": "libin",
+      "name": "Thomas Lefort",
+      "oldNumber": 22,
+      "newNumber": 19,
+      "oldFirst": "Thomas",
+      "confidence": 2
+    },
+    {
+      "id": "p-libin-8",
+      "teamId": "libin",
+      "name": "Alexis Mays",
+      "oldNumber": 8,
+      "newNumber": 47,
+      "oldFirst": "Alexis",
+      "confidence": 2
+    },
+    {
+      "id": "p-libin-5",
+      "teamId": "libin",
+      "name": "Mano Clarinval",
+      "oldNumber": 5,
+      "newNumber": 2,
+      "oldFirst": "Mano",
+      "confidence": 2
+    },
+    {
+      "id": "p-libin-23",
+      "teamId": "libin",
+      "name": "Hugo Molitor",
+      "oldNumber": 23,
+      "newNumber": 7,
+      "oldFirst": "Hugo",
+      "confidence": 2
+    },
+    {
+      "id": "p-libin-17",
+      "teamId": "libin",
+      "name": "Louis Robert",
+      "oldNumber": 17,
+      "newNumber": 8,
+      "oldFirst": "Louis",
+      "confidence": 2
+    },
+    {
+      "id": "p-libin-19",
+      "teamId": "libin",
+      "name": "Nael Zeghdane",
+      "oldNumber": 19,
+      "newNumber": 16,
+      "oldFirst": "Nael",
+      "confidence": 1
+    },
+    {
+      "id": "p-libin-26",
+      "teamId": "libin",
+      "name": "William Philippe",
+      "oldNumber": 26,
+      "newNumber": 11,
+      "oldFirst": "William",
+      "confidence": 1
+    },
+    {
+      "id": "p-libin-1",
+      "teamId": "libin",
+      "name": "Killian Brasseur",
+      "oldNumber": 1,
+      "newNumber": 3,
+      "oldFirst": "Killian",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-libin-3",
+      "teamId": "libin",
+      "name": "Victor Breithof",
+      "oldNumber": 3,
+      "newNumber": 4,
+      "oldFirst": "Victor",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-libin-7",
+      "teamId": "libin",
+      "name": "William Ligot",
+      "oldNumber": 7,
+      "newNumber": 5,
+      "oldFirst": "William",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-libin-11",
+      "teamId": "libin",
+      "name": "MAttaquanteo Tassin",
+      "oldNumber": 11,
+      "newNumber": 18,
+      "oldFirst": "MAttaquanteo",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-libin-13",
+      "teamId": "libin",
+      "name": "Benoit Delhez",
+      "oldNumber": 13,
+      "newNumber": 20,
+      "oldFirst": "Benoit",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-libin-14",
+      "teamId": "libin",
+      "name": "Moustapha Diaby",
+      "oldNumber": 14,
+      "newNumber": 21,
+      "oldFirst": "Moustapha",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-libin-18",
+      "teamId": "libin",
+      "name": "Louis Schingtienne",
+      "oldNumber": 18,
+      "newNumber": 22,
+      "oldFirst": "Louis",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-libin-20",
+      "teamId": "libin",
+      "name": "Dylan Curé",
+      "oldNumber": 20,
+      "newNumber": 23,
+      "oldFirst": "Dylan",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-libin-21",
+      "teamId": "libin",
+      "name": "Mathys Hotua",
+      "oldNumber": 21,
+      "newNumber": 24,
+      "oldFirst": "Mathys",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-libin-24",
+      "teamId": "libin",
+      "name": "Yannick Murego",
+      "oldNumber": 24,
+      "newNumber": 25,
+      "oldFirst": "Yannick",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-marloie-1",
+      "teamId": "marloie",
+      "name": "Charles Delmé",
+      "oldNumber": 1,
+      "newNumber": 99,
+      "oldFirst": "Charles",
+      "confidence": 2
+    },
+    {
+      "id": "p-marloie-6",
+      "teamId": "marloie",
+      "name": "Samuel Muller",
+      "oldNumber": 6,
+      "newNumber": 3,
+      "oldFirst": "Samuel",
+      "confidence": 2
+    },
+    {
+      "id": "p-marloie-4",
+      "teamId": "marloie",
+      "name": "Louis Lambert",
+      "oldNumber": 4,
+      "newNumber": 8,
+      "oldFirst": "Louis",
+      "confidence": 2
+    },
+    {
+      "id": "p-marloie-17",
+      "teamId": "marloie",
+      "name": "Tony Djim",
+      "oldNumber": 17,
+      "newNumber": 9,
+      "oldFirst": "Tony",
+      "confidence": 2
+    },
+    {
+      "id": "p-marloie-5",
+      "teamId": "marloie",
+      "name": "Ivan Lucas",
+      "oldNumber": 5,
+      "newNumber": 13,
+      "oldFirst": "Ivan",
+      "confidence": 2
+    },
+    {
+      "id": "p-marloie-26",
+      "teamId": "marloie",
+      "name": "Charlin Ioakimidou",
+      "oldNumber": 26,
+      "newNumber": 16,
+      "oldFirst": "Charlin",
+      "confidence": 2
+    },
+    {
+      "id": "p-marloie-16",
+      "teamId": "marloie",
+      "name": "Meissa Dia",
+      "oldNumber": 16,
+      "newNumber": 19,
+      "oldFirst": "Meissa",
+      "confidence": 2
+    },
+    {
+      "id": "p-marloie-7",
+      "teamId": "marloie",
+      "name": "Ismael Soumahoro",
+      "oldNumber": 7,
+      "newNumber": 45,
+      "oldFirst": "Ismael",
+      "confidence": 2
+    },
+    {
+      "id": "p-marloie-19",
+      "teamId": "marloie",
+      "name": "Benoit Leleu",
+      "oldNumber": 19,
+      "newNumber": 55,
+      "oldFirst": "Benoit",
+      "confidence": 2
+    },
+    {
+      "id": "p-marloie-20",
+      "teamId": "marloie",
+      "name": "Edgar Mbazoa",
+      "oldNumber": 20,
+      "newNumber": 11,
+      "oldFirst": "Edgar",
+      "confidence": 2
+    },
+    {
+      "id": "p-marloie-12",
+      "teamId": "marloie",
+      "name": "Maxime Lambert",
+      "oldNumber": 12,
+      "newNumber": 23,
+      "oldFirst": "Maxime",
+      "confidence": 2
+    },
+    {
+      "id": "p-marloie-14",
+      "teamId": "marloie",
+      "name": "Besfort Arifi",
+      "oldNumber": 14,
+      "newNumber": 34,
+      "oldFirst": "Besfort",
+      "confidence": 2
+    },
+    {
+      "id": "p-marloie-21",
+      "teamId": "marloie",
+      "name": "Samy Bouterbiat",
+      "oldNumber": 21,
+      "newNumber": 37,
+      "oldFirst": "Samy",
+      "confidence": 1
+    },
+    {
+      "id": "p-marloie-24",
+      "teamId": "marloie",
+      "name": "Geoffrey Hayon",
+      "oldNumber": 24,
+      "newNumber": 22,
+      "oldFirst": "Geoffrey",
+      "confidence": 1
+    },
+    {
+      "id": "p-marloie-25",
+      "teamId": "marloie",
+      "name": "Ayoub Hmidet",
+      "oldNumber": 25,
+      "newNumber": 42,
+      "oldFirst": "Ayoub",
+      "confidence": 1
+    },
+    {
+      "id": "p-marloie-3",
+      "teamId": "marloie",
+      "name": "Guillaume Despas",
+      "oldNumber": 3,
+      "newNumber": 1,
+      "oldFirst": "Guillaume",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-marloie-8",
+      "teamId": "marloie",
+      "name": "Baptiste Benassy",
+      "oldNumber": 8,
+      "newNumber": 4,
+      "oldFirst": "Baptiste",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-marloie-9",
+      "teamId": "marloie",
+      "name": "Ayoub Huet",
+      "oldNumber": 9,
+      "newNumber": 5,
+      "oldFirst": "Ayoub",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-marloie-11",
+      "teamId": "marloie",
+      "name": "Driss Kochchif",
+      "oldNumber": 11,
+      "newNumber": 6,
+      "oldFirst": "Driss",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-marloie-13",
+      "teamId": "marloie",
+      "name": "Santi Mosquera",
+      "oldNumber": 13,
+      "newNumber": 7,
+      "oldFirst": "Santi",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-marloie-22",
+      "teamId": "marloie",
+      "name": "Charlie Dave",
+      "oldNumber": 22,
+      "newNumber": 12,
+      "oldFirst": "Charlie",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-marloie-23",
+      "teamId": "marloie",
+      "name": "Romain De Bruycker",
+      "oldNumber": 23,
+      "newNumber": 14,
+      "oldFirst": "Romain",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-gouvy-2",
+      "teamId": "gouvy",
+      "name": "Theo Scheid",
+      "oldNumber": 2,
+      "newNumber": 74,
+      "oldFirst": "Theo",
+      "confidence": 2
+    },
+    {
+      "id": "p-gouvy-27",
+      "teamId": "gouvy",
+      "name": "Mathieu Lentz",
+      "oldNumber": 27,
+      "newNumber": 2,
+      "oldFirst": "Mathieu",
+      "confidence": 2
+    },
+    {
+      "id": "p-gouvy-8",
+      "teamId": "gouvy",
+      "name": "Lucas Scheid",
+      "oldNumber": 8,
+      "newNumber": 4,
+      "oldFirst": "Lucas",
+      "confidence": 2
+    },
+    {
+      "id": "p-gouvy-9",
+      "teamId": "gouvy",
+      "name": "Louis Stasser",
+      "oldNumber": 9,
+      "newNumber": 5,
+      "oldFirst": "Louis",
+      "confidence": 2
+    },
+    {
+      "id": "p-gouvy-15",
+      "teamId": "gouvy",
+      "name": "Yanis Zitella",
+      "oldNumber": 15,
+      "newNumber": 6,
+      "oldFirst": "Yanis",
+      "confidence": 2
+    },
+    {
+      "id": "p-gouvy-19",
+      "teamId": "gouvy",
+      "name": "Lilian Guillaume",
+      "oldNumber": 19,
+      "newNumber": 10,
+      "oldFirst": "Lilian",
+      "confidence": 2
+    },
+    {
+      "id": "p-gouvy-6",
+      "teamId": "gouvy",
+      "name": "Justin Piette",
+      "oldNumber": 6,
+      "newNumber": 12,
+      "oldFirst": "Justin",
+      "confidence": 2
+    },
+    {
+      "id": "p-gouvy-11",
+      "teamId": "gouvy",
+      "name": "Florent Dewalque",
+      "oldNumber": 11,
+      "newNumber": 13,
+      "oldFirst": "Florent",
+      "confidence": 2
+    },
+    {
+      "id": "p-gouvy-20",
+      "teamId": "gouvy",
+      "name": "Goran Hougardy",
+      "oldNumber": 20,
+      "newNumber": 17,
+      "oldFirst": "Goran",
+      "confidence": 2
+    },
+    {
+      "id": "p-gouvy-22",
+      "teamId": "gouvy",
+      "name": "Jordan Poncin",
+      "oldNumber": 22,
+      "newNumber": 11,
+      "oldFirst": "Jordan",
+      "confidence": 2
+    },
+    {
+      "id": "p-gouvy-16",
+      "teamId": "gouvy",
+      "name": "Hugo Amory",
+      "oldNumber": 16,
+      "newNumber": 19,
+      "oldFirst": "Hugo",
+      "confidence": 2
+    },
+    {
+      "id": "p-gouvy-17",
+      "teamId": "gouvy",
+      "name": "Mathys Amory",
+      "oldNumber": 17,
+      "newNumber": 23,
+      "oldFirst": "Mathys",
+      "confidence": 2
+    },
+    {
+      "id": "p-gouvy-4",
+      "teamId": "gouvy",
+      "name": "Robin Bouillon",
+      "oldNumber": 4,
+      "newNumber": 16,
+      "oldFirst": "Robin",
+      "confidence": 1
+    },
+    {
+      "id": "p-gouvy-10",
+      "teamId": "gouvy",
+      "name": "Kieran Cleymans",
+      "oldNumber": 10,
+      "newNumber": 21,
+      "oldFirst": "Kieran",
+      "confidence": 1
+    },
+    {
+      "id": "p-gouvy-5",
+      "teamId": "gouvy",
+      "name": "Nathan Demeuse",
+      "oldNumber": 5,
+      "newNumber": 7,
+      "oldFirst": "Nathan",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-gouvy-7",
+      "teamId": "gouvy",
+      "name": "Nathan Rasquin",
+      "oldNumber": 7,
+      "newNumber": 8,
+      "oldFirst": "Nathan",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-gouvy-12",
+      "teamId": "gouvy",
+      "name": "Nathan Prévot",
+      "oldNumber": 12,
+      "newNumber": 9,
+      "oldFirst": "Nathan",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-gouvy-13",
+      "teamId": "gouvy",
+      "name": "Alois Wergifosse",
+      "oldNumber": 13,
+      "newNumber": 14,
+      "oldFirst": "Alois",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-gouvy-14",
+      "teamId": "gouvy",
+      "name": "Loan Winand",
+      "oldNumber": 14,
+      "newNumber": 15,
+      "oldFirst": "Loan",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-gouvy-21",
+      "teamId": "gouvy",
+      "name": "Aurélien Mathieu",
+      "oldNumber": 21,
+      "newNumber": 20,
+      "oldFirst": "Aurélien",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-gouvy-23",
+      "teamId": "gouvy",
+      "name": "Julien Blaise",
+      "oldNumber": 23,
+      "newNumber": 22,
+      "oldFirst": "Julien",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-arlon-1",
+      "teamId": "arlon",
+      "name": "Heatcliff Collin",
+      "oldNumber": 1,
+      "newNumber": 23,
+      "oldFirst": "Heatcliff",
+      "confidence": 1
+    },
+    {
+      "id": "p-arlon-31",
+      "teamId": "arlon",
+      "name": "Henry James Kirkpatrick",
+      "oldNumber": 31,
+      "newNumber": 4,
+      "oldFirst": "Henry James",
+      "confidence": 1
+    },
+    {
+      "id": "p-arlon-9",
+      "teamId": "arlon",
+      "name": "Yassin Neetens",
+      "oldNumber": 9,
+      "newNumber": 6,
+      "oldFirst": "Yassin",
+      "confidence": 1
+    },
+    {
+      "id": "p-arlon-25",
+      "teamId": "arlon",
+      "name": "Aurelien Joachim",
+      "oldNumber": 25,
+      "newNumber": 7,
+      "oldFirst": "Aurelien",
+      "confidence": 1
+    },
+    {
+      "id": "p-arlon-28",
+      "teamId": "arlon",
+      "name": "Yann Njia",
+      "oldNumber": 28,
+      "newNumber": 9,
+      "oldFirst": "Yann",
+      "confidence": 1
+    },
+    {
+      "id": "p-arlon-16",
+      "teamId": "arlon",
+      "name": "Martin Montagne",
+      "oldNumber": 16,
+      "newNumber": 13,
+      "oldFirst": "Martin",
+      "confidence": 1
+    },
+    {
+      "id": "p-arlon-12",
+      "teamId": "arlon",
+      "name": "Mathieu Bossennec",
+      "oldNumber": 12,
+      "newNumber": 25,
+      "oldFirst": "Mathieu",
+      "confidence": 1
+    },
+    {
+      "id": "p-arlon-7",
+      "teamId": "arlon",
+      "name": "Hugo Georges",
+      "oldNumber": 7,
+      "newNumber": 27,
+      "oldFirst": "Hugo",
+      "confidence": 1
+    },
+    {
+      "id": "p-arlon-22",
+      "teamId": "arlon",
+      "name": "Romain Daoust",
+      "oldNumber": 22,
+      "newNumber": 67,
+      "oldFirst": "Romain",
+      "confidence": 1
+    },
+    {
+      "id": "p-arlon-20",
+      "teamId": "arlon",
+      "name": "Virgilio Camara Semedo",
+      "oldNumber": 20,
+      "newNumber": 71,
+      "oldFirst": "Virgilio",
+      "confidence": 1
+    },
+    {
+      "id": "p-arlon-30",
+      "teamId": "arlon",
+      "name": "Jorge Frunze",
+      "oldNumber": 30,
+      "newNumber": 85,
+      "oldFirst": "Jorge",
+      "confidence": 1
+    },
+    {
+      "id": "p-arlon-2",
+      "teamId": "arlon",
+      "name": "Karl Sacré",
+      "oldNumber": 2,
+      "newNumber": 1,
+      "oldFirst": "Karl",
+      "confidence": 1
+    },
+    {
+      "id": "p-arlon-32",
+      "teamId": "arlon",
+      "name": "Jean-Baptiste Lhommel",
+      "oldNumber": 32,
+      "newNumber": 17,
+      "oldFirst": "Jean-Baptiste",
+      "confidence": 1
+    },
+    {
+      "id": "p-arlon-29",
+      "teamId": "arlon",
+      "name": "Kamil Barzaq",
+      "oldNumber": 29,
+      "newNumber": 33,
+      "oldFirst": "Kamil",
+      "confidence": 1
+    },
+    {
+      "id": "p-arlon-4",
+      "teamId": "arlon",
+      "name": "Lilian Cachbach",
+      "oldNumber": 4,
+      "newNumber": 2,
+      "oldFirst": "Lilian",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-arlon-6",
+      "teamId": "arlon",
+      "name": "Edouard Davies",
+      "oldNumber": 6,
+      "newNumber": 8,
+      "oldFirst": "Edouard",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-arlon-8",
+      "teamId": "arlon",
+      "name": "Quentin Lejeune",
+      "oldNumber": 8,
+      "newNumber": 10,
+      "oldFirst": "Quentin",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-arlon-10",
+      "teamId": "arlon",
+      "name": "Tom Trogh",
+      "oldNumber": 10,
+      "newNumber": 12,
+      "oldFirst": "Tom",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-arlon-13",
+      "teamId": "arlon",
+      "name": "Esteban Erdeljan",
+      "oldNumber": 13,
+      "newNumber": 14,
+      "oldFirst": "Esteban",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-arlon-14",
+      "teamId": "arlon",
+      "name": "Mathieu Henry",
+      "oldNumber": 14,
+      "newNumber": 15,
+      "oldFirst": "Mathieu",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-arlon-15",
+      "teamId": "arlon",
+      "name": "Henry Kilpatrick",
+      "oldNumber": 15,
+      "newNumber": 16,
+      "oldFirst": "Henry",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-arlon-17",
+      "teamId": "arlon",
+      "name": "Gaetan Rocca",
+      "oldNumber": 17,
+      "newNumber": 18,
+      "oldFirst": "Gaetan",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-arlon-18",
+      "teamId": "arlon",
+      "name": "Samad Zane",
+      "oldNumber": 18,
+      "newNumber": 19,
+      "oldFirst": "Samad",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-arlon-19",
+      "teamId": "arlon",
+      "name": "Kelly Aigbedion",
+      "oldNumber": 19,
+      "newNumber": 20,
+      "oldFirst": "Kelly",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-arlon-23",
+      "teamId": "arlon",
+      "name": "Quentin Filograsso",
+      "oldNumber": 23,
+      "newNumber": 22,
+      "oldFirst": "Quentin",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-arlon-27",
+      "teamId": "arlon",
+      "name": "Lehyan Makaci",
+      "oldNumber": 27,
+      "newNumber": 28,
+      "oldFirst": "Lehyan",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-florenville-6",
+      "teamId": "florenville",
+      "name": "Corentin Guiot",
+      "oldNumber": 6,
+      "newNumber": 2,
+      "oldFirst": "Corentin",
+      "confidence": 1
+    },
+    {
+      "id": "p-florenville-13",
+      "teamId": "florenville",
+      "name": "Simon Dupuis",
+      "oldNumber": 13,
+      "newNumber": 3,
+      "oldFirst": "Simon",
+      "confidence": 1
+    },
+    {
+      "id": "p-florenville-8",
+      "teamId": "florenville",
+      "name": "Mathis Mouton",
+      "oldNumber": 8,
+      "newNumber": 6,
+      "oldFirst": "Mathis",
+      "confidence": 1
+    },
+    {
+      "id": "p-florenville-19",
+      "teamId": "florenville",
+      "name": "Victor Emond",
+      "oldNumber": 19,
+      "newNumber": 9,
+      "oldFirst": "Victor",
+      "confidence": 1
+    },
+    {
+      "id": "p-florenville-3",
+      "teamId": "florenville",
+      "name": "Mathieu Charbeau",
+      "oldNumber": 3,
+      "newNumber": 22,
+      "oldFirst": "Mathieu",
+      "confidence": 1
+    },
+    {
+      "id": "p-florenville-14",
+      "teamId": "florenville",
+      "name": "Romain Evrard",
+      "oldNumber": 14,
+      "newNumber": 27,
+      "oldFirst": "Romain",
+      "confidence": 1
+    },
+    {
+      "id": "p-florenville-7",
+      "teamId": "florenville",
+      "name": "Brian Moing",
+      "oldNumber": 7,
+      "newNumber": 28,
+      "oldFirst": "Brian",
+      "confidence": 1
+    },
+    {
+      "id": "p-florenville-11",
+      "teamId": "florenville",
+      "name": "Baptiste Beernaert",
+      "oldNumber": 11,
+      "newNumber": 77,
+      "oldFirst": "Baptiste",
+      "confidence": 1
+    },
+    {
+      "id": "p-florenville-17",
+      "teamId": "florenville",
+      "name": "Baptiste Piret",
+      "oldNumber": 17,
+      "newNumber": 99,
+      "oldFirst": "Baptiste",
+      "confidence": 1
+    },
+    {
+      "id": "p-florenville-18",
+      "teamId": "florenville",
+      "name": "Bachir Bah",
+      "oldNumber": 18,
+      "newNumber": 7,
+      "oldFirst": "Bachir",
+      "confidence": 1
+    },
+    {
+      "id": "p-florenville-9",
+      "teamId": "florenville",
+      "name": "Kevin Ollier",
+      "oldNumber": 9,
+      "newNumber": 8,
+      "oldFirst": "Kevin",
+      "confidence": 1
+    },
+    {
+      "id": "p-florenville-22",
+      "teamId": "florenville",
+      "name": "Corentin Serge Corvisy",
+      "oldNumber": 22,
+      "newNumber": 20,
+      "oldFirst": "Corentin Serge",
+      "confidence": 1
+    },
+    {
+      "id": "p-florenville-2",
+      "teamId": "florenville",
+      "name": "Kylian Gérard",
+      "oldNumber": 2,
+      "newNumber": 4,
+      "oldFirst": "Kylian",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-florenville-4",
+      "teamId": "florenville",
+      "name": "Guillaume Dedecker",
+      "oldNumber": 4,
+      "newNumber": 5,
+      "oldFirst": "Guillaume",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-florenville-5",
+      "teamId": "florenville",
+      "name": "Maxime Gomez",
+      "oldNumber": 5,
+      "newNumber": 10,
+      "oldFirst": "Maxime",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-florenville-10",
+      "teamId": "florenville",
+      "name": "MAttaquanteo Steunou",
+      "oldNumber": 10,
+      "newNumber": 11,
+      "oldFirst": "MAttaquanteo",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    },
+    {
+      "id": "p-florenville-20",
+      "teamId": "florenville",
+      "name": "Quentin Lecler",
+      "oldNumber": 20,
+      "newNumber": 13,
+      "oldFirst": "Quentin",
+      "confidence": 0,
+      "reason": "déplacé (n° pris par dossard RBFA)"
+    }
+  ],
+  "skipped": [
+    {
+      "playerId": "p-aye-24",
+      "teamId": "aye",
+      "name": "Brian Savoye",
+      "wanted": "#10×1",
+      "reason": "collision"
+    },
+    {
+      "playerId": "p-aye-13",
+      "teamId": "aye",
+      "name": "Jayson Jean",
+      "wanted": "#14×1",
+      "reason": "collision"
+    },
+    {
+      "playerId": "p-oppagne-5",
+      "teamId": "oppagne",
+      "name": "Erwin Englebert",
+      "wanted": "#8×1",
+      "reason": "collision"
+    },
+    {
+      "playerId": "p-roy-28",
+      "teamId": "roy",
+      "name": "Canpolat Soysal",
+      "wanted": "#33×1",
+      "reason": "collision"
+    }
+  ],
+  "stats": {
+    "players": 444,
+    "withObs": 263,
+    "numberChanges": 368,
+    "nameChanges": 5,
+    "collisions": 4
+  }
+}

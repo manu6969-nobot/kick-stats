@@ -186,7 +186,7 @@ export const players: Player[] = [
   {
     id: "p-arlon-1",
     teamId: "arlon",
-    number: 1,
+    number: 23,
     firstName: "Heatcliff",
     lastName: "Collin",
     position: "GB",
@@ -196,7 +196,7 @@ export const players: Player[] = [
   {
     id: "p-arlon-2",
     teamId: "arlon",
-    number: 2,
+    number: 1,
     firstName: "Karl",
     lastName: "Sacré",
     position: "GB",
@@ -216,7 +216,7 @@ export const players: Player[] = [
   {
     id: "p-arlon-4",
     teamId: "arlon",
-    number: 4,
+    number: 2,
     firstName: "Lilian",
     lastName: "Cachbach",
     position: "DEF",
@@ -236,7 +236,7 @@ export const players: Player[] = [
   {
     id: "p-arlon-6",
     teamId: "arlon",
-    number: 6,
+    number: 8,
     firstName: "Edouard",
     lastName: "Davies",
     position: "DEF",
@@ -246,7 +246,7 @@ export const players: Player[] = [
   {
     id: "p-arlon-7",
     teamId: "arlon",
-    number: 7,
+    number: 27,
     firstName: "Hugo",
     lastName: "Georges",
     position: "DEF",
@@ -256,7 +256,7 @@ export const players: Player[] = [
   {
     id: "p-arlon-8",
     teamId: "arlon",
-    number: 8,
+    number: 10,
     firstName: "Quentin",
     lastName: "Lejeune",
     position: "DEF",
@@ -266,7 +266,7 @@ export const players: Player[] = [
   {
     id: "p-arlon-9",
     teamId: "arlon",
-    number: 9,
+    number: 6,
     firstName: "Yassin",
     lastName: "Neetens",
     position: "DEF",
@@ -276,7 +276,7 @@ export const players: Player[] = [
   {
     id: "p-arlon-10",
     teamId: "arlon",
-    number: 10,
+    number: 12,
     firstName: "Tom",
     lastName: "Trogh",
     position: "DEF",
@@ -296,7 +296,7 @@ export const players: Player[] = [
   {
     id: "p-arlon-12",
     teamId: "arlon",
-    number: 12,
+    number: 25,
     firstName: "Mathieu",
     lastName: "Bossennec",
     position: "MIL",
@@ -306,7 +306,7 @@ export const players: Player[] = [
   {
     id: "p-arlon-13",
     teamId: "arlon",
-    number: 13,
+    number: 14,
     firstName: "Esteban",
     lastName: "Erdeljan",
     position: "MIL",
@@ -316,7 +316,7 @@ export const players: Player[] = [
   {
     id: "p-arlon-14",
     teamId: "arlon",
-    number: 14,
+    number: 15,
     firstName: "Mathieu",
     lastName: "Henry",
     position: "MIL",
@@ -326,7 +326,7 @@ export const players: Player[] = [
   {
     id: "p-arlon-15",
     teamId: "arlon",
-    number: 15,
+    number: 16,
     firstName: "Henry",
     lastName: "Kilpatrick",
     position: "MIL",
@@ -336,7 +336,7 @@ export const players: Player[] = [
   {
     id: "p-arlon-16",
     teamId: "arlon",
-    number: 16,
+    number: 13,
     firstName: "Martin",
     lastName: "Montagne",
     position: "MIL",
@@ -346,7 +346,7 @@ export const players: Player[] = [
   {
     id: "p-arlon-17",
     teamId: "arlon",
-    number: 17,
+    number: 18,
     firstName: "Gaetan",
     lastName: "Rocca",
     position: "MIL",
@@ -356,7 +356,7 @@ export const players: Player[] = [
   {
     id: "p-arlon-18",
     teamId: "arlon",
-    number: 18,
+    number: 19,
     firstName: "Samad",
     lastName: "Zane",
     position: "MIL",
@@ -366,7 +366,7 @@ export const players: Player[] = [
   {
     id: "p-arlon-19",
     teamId: "arlon",
-    number: 19,
+    number: 20,
     firstName: "Kelly",
     lastName: "Aigbedion",
     position: "ATT",
@@ -376,7 +376,7 @@ export const players: Player[] = [
   {
     id: "p-arlon-20",
     teamId: "arlon",
-    number: 20,
+    number: 71,
     firstName: "Virgilio",
     lastName: "Camara Semedo",
     position: "ATT",
@@ -396,7 +396,7 @@ export const players: Player[] = [
   {
     id: "p-arlon-22",
     teamId: "arlon",
-    number: 22,
+    number: 67,
     firstName: "Romain",
     lastName: "Daoust",
     position: "ATT",
@@ -406,7 +406,7 @@ export const players: Player[] = [
   {
     id: "p-arlon-23",
     teamId: "arlon",
-    number: 23,
+    number: 22,
     firstName: "Quentin",
     lastName: "Filograsso",
     position: "ATT",
@@ -426,7 +426,7 @@ export const players: Player[] = [
   {
     id: "p-arlon-25",
     teamId: "arlon",
-    number: 25,
+    number: 7,
     firstName: "Aurelien",
     lastName: "Joachim",
     position: "ATT",
@@ -446,7 +446,7 @@ export const players: Player[] = [
   {
     id: "p-arlon-27",
     teamId: "arlon",
-    number: 27,
+    number: 28,
     firstName: "Lehyan",
     lastName: "Makaci",
     position: "ATT",
@@ -456,7 +456,7 @@ export const players: Player[] = [
   {
     id: "p-arlon-28",
     teamId: "arlon",
-    number: 28,
+    number: 9,
     firstName: "Yann",
     lastName: "Njia",
     position: "ATT",
@@ -476,7 +476,7 @@ export const players: Player[] = [
   {
     id: "p-assenois-2",
     teamId: "assenois",
-    number: 2,
+    number: 3,
     firstName: "Bertrand",
     lastName: "Nique",
     position: "GB",
@@ -486,7 +486,7 @@ export const players: Player[] = [
   {
     id: "p-assenois-3",
     teamId: "assenois",
-    number: 3,
+    number: 9,
     firstName: "Nikola",
     lastName: "Ara",
     position: "DEF",
@@ -506,7 +506,7 @@ export const players: Player[] = [
   {
     id: "p-assenois-5",
     teamId: "assenois",
-    number: 5,
+    number: 8,
     firstName: "Theo",
     lastName: "Dechamps",
     position: "DEF",
@@ -516,7 +516,7 @@ export const players: Player[] = [
   {
     id: "p-assenois-6",
     teamId: "assenois",
-    number: 6,
+    number: 23,
     firstName: "Matheo",
     lastName: "Gavroy",
     position: "DEF",
@@ -526,7 +526,7 @@ export const players: Player[] = [
   {
     id: "p-assenois-7",
     teamId: "assenois",
-    number: 7,
+    number: 2,
     firstName: "Charles",
     lastName: "Heyard",
     position: "DEF",
@@ -536,7 +536,7 @@ export const players: Player[] = [
   {
     id: "p-assenois-8",
     teamId: "assenois",
-    number: 8,
+    number: 66,
     firstName: "Mathis",
     lastName: "Ledain",
     position: "DEF",
@@ -546,7 +546,7 @@ export const players: Player[] = [
   {
     id: "p-assenois-9",
     teamId: "assenois",
-    number: 9,
+    number: 25,
     firstName: "Lucas",
     lastName: "Macalli",
     position: "DEF",
@@ -556,7 +556,7 @@ export const players: Player[] = [
   {
     id: "p-assenois-10",
     teamId: "assenois",
-    number: 10,
+    number: 13,
     firstName: "Guillaume",
     lastName: "Martin",
     position: "DEF",
@@ -566,7 +566,7 @@ export const players: Player[] = [
   {
     id: "p-assenois-11",
     teamId: "assenois",
-    number: 11,
+    number: 6,
     firstName: "Cyril",
     lastName: "Poncin",
     position: "DEF",
@@ -576,7 +576,7 @@ export const players: Player[] = [
   {
     id: "p-assenois-12",
     teamId: "assenois",
-    number: 12,
+    number: 20,
     firstName: "Willy",
     lastName: "Bihina",
     position: "MIL",
@@ -586,7 +586,7 @@ export const players: Player[] = [
   {
     id: "p-assenois-13",
     teamId: "assenois",
-    number: 13,
+    number: 19,
     firstName: "Treseor",
     lastName: "Ndikumana",
     position: "MIL",
@@ -596,7 +596,7 @@ export const players: Player[] = [
   {
     id: "p-assenois-14",
     teamId: "assenois",
-    number: 14,
+    number: 39,
     firstName: "Arnold",
     lastName: "Nkokolo",
     position: "MIL",
@@ -616,7 +616,7 @@ export const players: Player[] = [
   {
     id: "p-assenois-16",
     teamId: "assenois",
-    number: 16,
+    number: 10,
     firstName: "Lucas",
     lastName: "Thiry",
     position: "MIL",
@@ -636,7 +636,7 @@ export const players: Player[] = [
   {
     id: "p-assenois-18",
     teamId: "assenois",
-    number: 18,
+    number: 5,
     firstName: "Joaquin",
     lastName: "Villalba",
     position: "MIL",
@@ -646,7 +646,7 @@ export const players: Player[] = [
   {
     id: "p-assenois-19",
     teamId: "assenois",
-    number: 19,
+    number: 11,
     firstName: "Jeremy",
     lastName: "Wauthy",
     position: "MIL",
@@ -656,7 +656,7 @@ export const players: Player[] = [
   {
     id: "p-assenois-20",
     teamId: "assenois",
-    number: 20,
+    number: 12,
     firstName: "Nicolas",
     lastName: "Aubry",
     position: "ATT",
@@ -666,7 +666,7 @@ export const players: Player[] = [
   {
     id: "p-assenois-21",
     teamId: "assenois",
-    number: 21,
+    number: 80,
     firstName: "Julien",
     lastName: "Debra",
     position: "ATT",
@@ -686,7 +686,7 @@ export const players: Player[] = [
   {
     id: "p-assenois-23",
     teamId: "assenois",
-    number: 23,
+    number: 7,
     firstName: "Thomas",
     lastName: "Macalli",
     position: "ATT",
@@ -706,7 +706,7 @@ export const players: Player[] = [
   {
     id: "p-assenois-25",
     teamId: "assenois",
-    number: 25,
+    number: 14,
     firstName: "Emile",
     lastName: "Widart",
     position: "ATT",
@@ -716,7 +716,7 @@ export const players: Player[] = [
   {
     id: "p-aye-1",
     teamId: "aye",
-    number: 1,
+    number: 21,
     firstName: "Florian",
     lastName: "Lejeune",
     position: "GB",
@@ -726,7 +726,7 @@ export const players: Player[] = [
   {
     id: "p-aye-2",
     teamId: "aye",
-    number: 2,
+    number: 99,
     firstName: "Logan",
     lastName: "Mathieu",
     position: "GB",
@@ -736,7 +736,7 @@ export const players: Player[] = [
   {
     id: "p-aye-3",
     teamId: "aye",
-    number: 3,
+    number: 1,
     firstName: "Pierre-Antoine",
     lastName: "Collard",
     position: "DEF",
@@ -746,7 +746,7 @@ export const players: Player[] = [
   {
     id: "p-aye-4",
     teamId: "aye",
-    number: 4,
+    number: 6,
     firstName: "Dylan",
     lastName: "Geuns",
     position: "DEF",
@@ -756,7 +756,7 @@ export const players: Player[] = [
   {
     id: "p-aye-5",
     teamId: "aye",
-    number: 5,
+    number: 15,
     firstName: "Bastian",
     lastName: "Godfroid",
     position: "DEF",
@@ -766,7 +766,7 @@ export const players: Player[] = [
   {
     id: "p-aye-6",
     teamId: "aye",
-    number: 6,
+    number: 13,
     firstName: "Denis",
     lastName: "Gérard",
     position: "DEF",
@@ -776,7 +776,7 @@ export const players: Player[] = [
   {
     id: "p-aye-7",
     teamId: "aye",
-    number: 7,
+    number: 12,
     firstName: "Damien",
     lastName: "Hayaux",
     position: "DEF",
@@ -786,7 +786,7 @@ export const players: Player[] = [
   {
     id: "p-aye-8",
     teamId: "aye",
-    number: 8,
+    number: 5,
     firstName: "Matheo",
     lastName: "Lux",
     position: "DEF",
@@ -796,7 +796,7 @@ export const players: Player[] = [
   {
     id: "p-aye-9",
     teamId: "aye",
-    number: 9,
+    number: 16,
     firstName: "Burim",
     lastName: "Mustafaj",
     position: "DEF",
@@ -806,7 +806,7 @@ export const players: Player[] = [
   {
     id: "p-aye-10",
     teamId: "aye",
-    number: 10,
+    number: 17,
     firstName: "Lucas",
     lastName: "Samray",
     position: "DEF",
@@ -816,7 +816,7 @@ export const players: Player[] = [
   {
     id: "p-aye-11",
     teamId: "aye",
-    number: 11,
+    number: 14,
     firstName: "Romain",
     lastName: "Vincent",
     position: "DEF",
@@ -826,7 +826,7 @@ export const players: Player[] = [
   {
     id: "p-aye-12",
     teamId: "aye",
-    number: 12,
+    number: 18,
     firstName: "Nael",
     lastName: "Fourage",
     position: "MIL",
@@ -836,7 +836,7 @@ export const players: Player[] = [
   {
     id: "p-aye-13",
     teamId: "aye",
-    number: 13,
+    number: 19,
     firstName: "Jayson",
     lastName: "Jean",
     position: "MIL",
@@ -846,7 +846,7 @@ export const players: Player[] = [
   {
     id: "p-aye-14",
     teamId: "aye",
-    number: 14,
+    number: 20,
     firstName: "Tom",
     lastName: "Léonard",
     position: "MIL",
@@ -856,7 +856,7 @@ export const players: Player[] = [
   {
     id: "p-aye-15",
     teamId: "aye",
-    number: 15,
+    number: 4,
     firstName: "Noah",
     lastName: "Marotte",
     position: "MIL",
@@ -866,7 +866,7 @@ export const players: Player[] = [
   {
     id: "p-aye-16",
     teamId: "aye",
-    number: 16,
+    number: 2,
     firstName: "Louis-Simon",
     lastName: "Menten",
     position: "MIL",
@@ -876,7 +876,7 @@ export const players: Player[] = [
   {
     id: "p-aye-17",
     teamId: "aye",
-    number: 17,
+    number: 8,
     firstName: "William",
     lastName: "Vincent",
     position: "MIL",
@@ -886,7 +886,7 @@ export const players: Player[] = [
   {
     id: "p-aye-18",
     teamId: "aye",
-    number: 18,
+    number: 3,
     firstName: "William",
     lastName: "Walhin",
     position: "MIL",
@@ -896,7 +896,7 @@ export const players: Player[] = [
   {
     id: "p-aye-19",
     teamId: "aye",
-    number: 19,
+    number: 11,
     firstName: "Arnaud",
     lastName: "Lecaillié",
     position: "ATT",
@@ -906,7 +906,7 @@ export const players: Player[] = [
   {
     id: "p-aye-20",
     teamId: "aye",
-    number: 20,
+    number: 23,
     firstName: "Cyril",
     lastName: "Mahin",
     position: "ATT",
@@ -916,7 +916,7 @@ export const players: Player[] = [
   {
     id: "p-aye-21",
     teamId: "aye",
-    number: 21,
+    number: 22,
     firstName: "Steve",
     lastName: "Peeters",
     position: "ATT",
@@ -926,7 +926,7 @@ export const players: Player[] = [
   {
     id: "p-aye-22",
     teamId: "aye",
-    number: 22,
+    number: 7,
     firstName: "Theo",
     lastName: "Philippe",
     position: "ATT",
@@ -936,7 +936,7 @@ export const players: Player[] = [
   {
     id: "p-aye-23",
     teamId: "aye",
-    number: 23,
+    number: 24,
     firstName: "Axel",
     lastName: "Renard",
     position: "ATT",
@@ -946,7 +946,7 @@ export const players: Player[] = [
   {
     id: "p-aye-24",
     teamId: "aye",
-    number: 24,
+    number: 25,
     firstName: "Brian",
     lastName: "Savoye",
     position: "ATT",
@@ -956,7 +956,7 @@ export const players: Player[] = [
   {
     id: "p-aye-25",
     teamId: "aye",
-    number: 25,
+    number: 26,
     firstName: "Yann",
     lastName: "Tistaert",
     position: "ATT",
@@ -966,7 +966,7 @@ export const players: Player[] = [
   {
     id: "p-bastogne-1",
     teamId: "bastogne",
-    number: 1,
+    number: 2,
     firstName: "Nicolas",
     lastName: "Labranche",
     position: "GB",
@@ -976,7 +976,7 @@ export const players: Player[] = [
   {
     id: "p-bastogne-2",
     teamId: "bastogne",
-    number: 2,
+    number: 1,
     firstName: "Jordan",
     lastName: "Louis",
     position: "GB",
@@ -986,8 +986,8 @@ export const players: Player[] = [
   {
     id: "p-bastogne-3",
     teamId: "bastogne",
-    number: 3,
-    firstName: "MAttaquantias",
+    number: 9,
+    firstName: "Mattias",
     lastName: "Belche",
     position: "DEF",
     nationality: "BEL",
@@ -996,7 +996,7 @@ export const players: Player[] = [
   {
     id: "p-bastogne-4",
     teamId: "bastogne",
-    number: 4,
+    number: 3,
     firstName: "Antoine",
     lastName: "Dufays",
     position: "DEF",
@@ -1006,7 +1006,7 @@ export const players: Player[] = [
   {
     id: "p-bastogne-5",
     teamId: "bastogne",
-    number: 5,
+    number: 19,
     firstName: "Guillaume",
     lastName: "Gruslin",
     position: "DEF",
@@ -1016,7 +1016,7 @@ export const players: Player[] = [
   {
     id: "p-bastogne-6",
     teamId: "bastogne",
-    number: 6,
+    number: 21,
     firstName: "Yohan",
     lastName: "Louvins",
     position: "DEF",
@@ -1026,7 +1026,7 @@ export const players: Player[] = [
   {
     id: "p-bastogne-7",
     teamId: "bastogne",
-    number: 7,
+    number: 22,
     firstName: "Pascal",
     lastName: "Macoir",
     position: "DEF",
@@ -1036,7 +1036,7 @@ export const players: Player[] = [
   {
     id: "p-bastogne-8",
     teamId: "bastogne",
-    number: 8,
+    number: 6,
     firstName: "Gillian",
     lastName: "Van Den Eynde",
     position: "DEF",
@@ -1046,7 +1046,7 @@ export const players: Player[] = [
   {
     id: "p-bastogne-9",
     teamId: "bastogne",
-    number: 9,
+    number: 4,
     firstName: "Romain",
     lastName: "Weyders",
     position: "DEF",
@@ -1056,7 +1056,7 @@ export const players: Player[] = [
   {
     id: "p-bastogne-10",
     teamId: "bastogne",
-    number: 10,
+    number: 7,
     firstName: "Tristan",
     lastName: "Brisy",
     position: "MIL",
@@ -1076,7 +1076,7 @@ export const players: Player[] = [
   {
     id: "p-bastogne-12",
     teamId: "bastogne",
-    number: 12,
+    number: 13,
     firstName: "Cyril",
     lastName: "Degives",
     position: "MIL",
@@ -1086,7 +1086,7 @@ export const players: Player[] = [
   {
     id: "p-bastogne-13",
     teamId: "bastogne",
-    number: 13,
+    number: 5,
     firstName: "Quentin",
     lastName: "Glaude",
     position: "MIL",
@@ -1106,7 +1106,7 @@ export const players: Player[] = [
   {
     id: "p-bastogne-15",
     teamId: "bastogne",
-    number: 15,
+    number: 10,
     firstName: "Liam",
     lastName: "Muller",
     position: "MIL",
@@ -1116,7 +1116,7 @@ export const players: Player[] = [
   {
     id: "p-bastogne-16",
     teamId: "bastogne",
-    number: 16,
+    number: 18,
     firstName: "Romeo",
     lastName: "Pierre",
     position: "MIL",
@@ -1126,8 +1126,8 @@ export const players: Player[] = [
   {
     id: "p-bastogne-17",
     teamId: "bastogne",
-    number: 17,
-    firstName: "MAttaquantis",
+    number: 8,
+    firstName: "Mattis Christophe",
     lastName: "Poitoux",
     position: "MIL",
     nationality: "BEL",
@@ -1136,7 +1136,7 @@ export const players: Player[] = [
   {
     id: "p-bastogne-18",
     teamId: "bastogne",
-    number: 18,
+    number: 12,
     firstName: "Basile",
     lastName: "Didderen",
     position: "ATT",
@@ -1146,7 +1146,7 @@ export const players: Player[] = [
   {
     id: "p-bastogne-19",
     teamId: "bastogne",
-    number: 19,
+    number: 23,
     firstName: "Berly",
     lastName: "Pelenga",
     position: "ATT",
@@ -1156,7 +1156,7 @@ export const players: Player[] = [
   {
     id: "p-bastogne-20",
     teamId: "bastogne",
-    number: 20,
+    number: 17,
     firstName: "Basile",
     lastName: "Poitoux",
     position: "ATT",
@@ -1166,7 +1166,7 @@ export const players: Player[] = [
   {
     id: "p-bastogne-21",
     teamId: "bastogne",
-    number: 21,
+    number: 15,
     firstName: "Herve",
     lastName: "Sikpe",
     position: "ATT",
@@ -1176,7 +1176,7 @@ export const players: Player[] = [
   {
     id: "p-bastogne-22",
     teamId: "bastogne",
-    number: 22,
+    number: 16,
     firstName: "William",
     lastName: "Stilmant",
     position: "ATT",
@@ -1186,7 +1186,7 @@ export const players: Player[] = [
   {
     id: "p-bercheux-1",
     teamId: "bercheux",
-    number: 1,
+    number: 31,
     firstName: "Trystan",
     lastName: "Barthélémy",
     position: "GB",
@@ -1206,7 +1206,7 @@ export const players: Player[] = [
   {
     id: "p-bercheux-3",
     teamId: "bercheux",
-    number: 3,
+    number: 30,
     firstName: "Romain",
     lastName: "Berg",
     position: "DEF",
@@ -1216,7 +1216,7 @@ export const players: Player[] = [
   {
     id: "p-bercheux-4",
     teamId: "bercheux",
-    number: 4,
+    number: 1,
     firstName: "Thomas",
     lastName: "Debiève",
     position: "DEF",
@@ -1226,7 +1226,7 @@ export const players: Player[] = [
   {
     id: "p-bercheux-5",
     teamId: "bercheux",
-    number: 5,
+    number: 22,
     firstName: "Cyprien",
     lastName: "Goosse",
     position: "DEF",
@@ -1236,7 +1236,7 @@ export const players: Player[] = [
   {
     id: "p-bercheux-6",
     teamId: "bercheux",
-    number: 6,
+    number: 12,
     firstName: "Benjamin",
     lastName: "Gravé",
     position: "DEF",
@@ -1246,7 +1246,7 @@ export const players: Player[] = [
   {
     id: "p-bercheux-7",
     teamId: "bercheux",
-    number: 7,
+    number: 21,
     firstName: "Jordan",
     lastName: "Grégoire",
     position: "DEF",
@@ -1256,7 +1256,7 @@ export const players: Player[] = [
   {
     id: "p-bercheux-8",
     teamId: "bercheux",
-    number: 8,
+    number: 3,
     firstName: "Mathis",
     lastName: "Lockman",
     position: "DEF",
@@ -1266,7 +1266,7 @@ export const players: Player[] = [
   {
     id: "p-bercheux-9",
     teamId: "bercheux",
-    number: 9,
+    number: 6,
     firstName: "Antoine",
     lastName: "Pierret",
     position: "DEF",
@@ -1276,7 +1276,7 @@ export const players: Player[] = [
   {
     id: "p-bercheux-10",
     teamId: "bercheux",
-    number: 10,
+    number: 4,
     firstName: "Esteban",
     lastName: "Poncelet",
     position: "DEF",
@@ -1286,7 +1286,7 @@ export const players: Player[] = [
   {
     id: "p-bercheux-11",
     teamId: "bercheux",
-    number: 11,
+    number: 27,
     firstName: "Gilles",
     lastName: "Poncelet",
     position: "DEF",
@@ -1296,7 +1296,7 @@ export const players: Player[] = [
   {
     id: "p-bercheux-12",
     teamId: "bercheux",
-    number: 12,
+    number: 19,
     firstName: "Clement",
     lastName: "Bozet",
     position: "MIL",
@@ -1306,7 +1306,7 @@ export const players: Player[] = [
   {
     id: "p-bercheux-13",
     teamId: "bercheux",
-    number: 13,
+    number: 5,
     firstName: "Martin",
     lastName: "Bozet",
     position: "MIL",
@@ -1316,7 +1316,7 @@ export const players: Player[] = [
   {
     id: "p-bercheux-14",
     teamId: "bercheux",
-    number: 14,
+    number: 24,
     firstName: "Charles",
     lastName: "Copine",
     position: "MIL",
@@ -1326,7 +1326,7 @@ export const players: Player[] = [
   {
     id: "p-bercheux-15",
     teamId: "bercheux",
-    number: 15,
+    number: 7,
     firstName: "Robin",
     lastName: "Dessé",
     position: "MIL",
@@ -1356,7 +1356,7 @@ export const players: Player[] = [
   {
     id: "p-bercheux-18",
     teamId: "bercheux",
-    number: 18,
+    number: 15,
     firstName: "Nathan",
     lastName: "Guebenne",
     position: "MIL",
@@ -1366,7 +1366,7 @@ export const players: Player[] = [
   {
     id: "p-bercheux-19",
     teamId: "bercheux",
-    number: 19,
+    number: 8,
     firstName: "Maxime",
     lastName: "Merche",
     position: "MIL",
@@ -1376,7 +1376,7 @@ export const players: Player[] = [
   {
     id: "p-bercheux-20",
     teamId: "bercheux",
-    number: 20,
+    number: 42,
     firstName: "Jordan",
     lastName: "Schinckus",
     position: "MIL",
@@ -1386,7 +1386,7 @@ export const players: Player[] = [
   {
     id: "p-bercheux-21",
     teamId: "bercheux",
-    number: 21,
+    number: 11,
     firstName: "Antoine",
     lastName: "Strepenne",
     position: "MIL",
@@ -1396,7 +1396,7 @@ export const players: Player[] = [
   {
     id: "p-bercheux-22",
     teamId: "bercheux",
-    number: 22,
+    number: 9,
     firstName: "Bryan",
     lastName: "Collignon",
     position: "ATT",
@@ -1416,7 +1416,7 @@ export const players: Player[] = [
   {
     id: "p-bercheux-24",
     teamId: "bercheux",
-    number: 24,
+    number: 25,
     firstName: "Andrea",
     lastName: "Gusbin",
     position: "ATT",
@@ -1426,7 +1426,7 @@ export const players: Player[] = [
   {
     id: "p-bercheux-25",
     teamId: "bercheux",
-    number: 25,
+    number: 28,
     firstName: "Arthur",
     lastName: "Hubert",
     position: "ATT",
@@ -1436,7 +1436,7 @@ export const players: Player[] = [
   {
     id: "p-bercheux-26",
     teamId: "bercheux",
-    number: 26,
+    number: 10,
     firstName: "Lenny",
     lastName: "Vermierdt",
     position: "ATT",
@@ -1456,7 +1456,7 @@ export const players: Player[] = [
   {
     id: "p-florenville-2",
     teamId: "florenville",
-    number: 2,
+    number: 4,
     firstName: "Kylian",
     lastName: "Gérard",
     position: "GB",
@@ -1466,7 +1466,7 @@ export const players: Player[] = [
   {
     id: "p-florenville-3",
     teamId: "florenville",
-    number: 3,
+    number: 22,
     firstName: "Mathieu",
     lastName: "Charbeau",
     position: "DEF",
@@ -1476,7 +1476,7 @@ export const players: Player[] = [
   {
     id: "p-florenville-4",
     teamId: "florenville",
-    number: 4,
+    number: 5,
     firstName: "Guillaume",
     lastName: "Dedecker",
     position: "DEF",
@@ -1486,7 +1486,7 @@ export const players: Player[] = [
   {
     id: "p-florenville-5",
     teamId: "florenville",
-    number: 5,
+    number: 10,
     firstName: "Maxime",
     lastName: "Gomez",
     position: "DEF",
@@ -1496,7 +1496,7 @@ export const players: Player[] = [
   {
     id: "p-florenville-6",
     teamId: "florenville",
-    number: 6,
+    number: 2,
     firstName: "Corentin",
     lastName: "Guiot",
     position: "DEF",
@@ -1506,7 +1506,7 @@ export const players: Player[] = [
   {
     id: "p-florenville-7",
     teamId: "florenville",
-    number: 7,
+    number: 28,
     firstName: "Brian",
     lastName: "Moing",
     position: "DEF",
@@ -1516,7 +1516,7 @@ export const players: Player[] = [
   {
     id: "p-florenville-8",
     teamId: "florenville",
-    number: 8,
+    number: 6,
     firstName: "Mathis",
     lastName: "Mouton",
     position: "DEF",
@@ -1526,7 +1526,7 @@ export const players: Player[] = [
   {
     id: "p-florenville-9",
     teamId: "florenville",
-    number: 9,
+    number: 8,
     firstName: "Kevin",
     lastName: "Ollier",
     position: "DEF",
@@ -1536,7 +1536,7 @@ export const players: Player[] = [
   {
     id: "p-florenville-10",
     teamId: "florenville",
-    number: 10,
+    number: 11,
     firstName: "MAttaquanteo",
     lastName: "Steunou",
     position: "DEF",
@@ -1546,7 +1546,7 @@ export const players: Player[] = [
   {
     id: "p-florenville-11",
     teamId: "florenville",
-    number: 11,
+    number: 77,
     firstName: "Baptiste",
     lastName: "Beernaert",
     position: "MIL",
@@ -1566,7 +1566,7 @@ export const players: Player[] = [
   {
     id: "p-florenville-13",
     teamId: "florenville",
-    number: 13,
+    number: 3,
     firstName: "Simon",
     lastName: "Dupuis",
     position: "MIL",
@@ -1576,7 +1576,7 @@ export const players: Player[] = [
   {
     id: "p-florenville-14",
     teamId: "florenville",
-    number: 14,
+    number: 27,
     firstName: "Romain",
     lastName: "Evrard",
     position: "MIL",
@@ -1606,7 +1606,7 @@ export const players: Player[] = [
   {
     id: "p-florenville-17",
     teamId: "florenville",
-    number: 17,
+    number: 99,
     firstName: "Baptiste",
     lastName: "Piret",
     position: "MIL",
@@ -1616,7 +1616,7 @@ export const players: Player[] = [
   {
     id: "p-florenville-18",
     teamId: "florenville",
-    number: 18,
+    number: 7,
     firstName: "Bachir",
     lastName: "Bah",
     position: "ATT",
@@ -1626,7 +1626,7 @@ export const players: Player[] = [
   {
     id: "p-florenville-19",
     teamId: "florenville",
-    number: 19,
+    number: 9,
     firstName: "Victor",
     lastName: "Emond",
     position: "ATT",
@@ -1636,7 +1636,7 @@ export const players: Player[] = [
   {
     id: "p-florenville-20",
     teamId: "florenville",
-    number: 20,
+    number: 13,
     firstName: "Quentin",
     lastName: "Lecler",
     position: "ATT",
@@ -1666,7 +1666,7 @@ export const players: Player[] = [
   {
     id: "p-gouvy-2",
     teamId: "gouvy",
-    number: 2,
+    number: 74,
     firstName: "Theo",
     lastName: "Scheid",
     position: "GB",
@@ -1686,7 +1686,7 @@ export const players: Player[] = [
   {
     id: "p-gouvy-4",
     teamId: "gouvy",
-    number: 4,
+    number: 16,
     firstName: "Robin",
     lastName: "Bouillon",
     position: "DEF",
@@ -1696,7 +1696,7 @@ export const players: Player[] = [
   {
     id: "p-gouvy-5",
     teamId: "gouvy",
-    number: 5,
+    number: 7,
     firstName: "Nathan",
     lastName: "Demeuse",
     position: "DEF",
@@ -1706,7 +1706,7 @@ export const players: Player[] = [
   {
     id: "p-gouvy-6",
     teamId: "gouvy",
-    number: 6,
+    number: 12,
     firstName: "Justin",
     lastName: "Piette",
     position: "DEF",
@@ -1716,7 +1716,7 @@ export const players: Player[] = [
   {
     id: "p-gouvy-7",
     teamId: "gouvy",
-    number: 7,
+    number: 8,
     firstName: "Nathan",
     lastName: "Rasquin",
     position: "DEF",
@@ -1726,7 +1726,7 @@ export const players: Player[] = [
   {
     id: "p-gouvy-8",
     teamId: "gouvy",
-    number: 8,
+    number: 4,
     firstName: "Lucas",
     lastName: "Scheid",
     position: "DEF",
@@ -1736,7 +1736,7 @@ export const players: Player[] = [
   {
     id: "p-gouvy-9",
     teamId: "gouvy",
-    number: 9,
+    number: 5,
     firstName: "Louis",
     lastName: "Stasser",
     position: "DEF",
@@ -1746,7 +1746,7 @@ export const players: Player[] = [
   {
     id: "p-gouvy-10",
     teamId: "gouvy",
-    number: 10,
+    number: 21,
     firstName: "Kieran",
     lastName: "Cleymans",
     position: "MIL",
@@ -1756,7 +1756,7 @@ export const players: Player[] = [
   {
     id: "p-gouvy-11",
     teamId: "gouvy",
-    number: 11,
+    number: 13,
     firstName: "Florent",
     lastName: "Dewalque",
     position: "MIL",
@@ -1766,7 +1766,7 @@ export const players: Player[] = [
   {
     id: "p-gouvy-12",
     teamId: "gouvy",
-    number: 12,
+    number: 9,
     firstName: "Nathan",
     lastName: "Prévot",
     position: "MIL",
@@ -1776,7 +1776,7 @@ export const players: Player[] = [
   {
     id: "p-gouvy-13",
     teamId: "gouvy",
-    number: 13,
+    number: 14,
     firstName: "Alois",
     lastName: "Wergifosse",
     position: "MIL",
@@ -1786,7 +1786,7 @@ export const players: Player[] = [
   {
     id: "p-gouvy-14",
     teamId: "gouvy",
-    number: 14,
+    number: 15,
     firstName: "Loan",
     lastName: "Winand",
     position: "MIL",
@@ -1796,7 +1796,7 @@ export const players: Player[] = [
   {
     id: "p-gouvy-15",
     teamId: "gouvy",
-    number: 15,
+    number: 6,
     firstName: "Yanis",
     lastName: "Zitella",
     position: "MIL",
@@ -1806,7 +1806,7 @@ export const players: Player[] = [
   {
     id: "p-gouvy-16",
     teamId: "gouvy",
-    number: 16,
+    number: 19,
     firstName: "Hugo",
     lastName: "Amory",
     position: "ATT",
@@ -1816,7 +1816,7 @@ export const players: Player[] = [
   {
     id: "p-gouvy-17",
     teamId: "gouvy",
-    number: 17,
+    number: 23,
     firstName: "Mathys",
     lastName: "Amory",
     position: "ATT",
@@ -1836,7 +1836,7 @@ export const players: Player[] = [
   {
     id: "p-gouvy-19",
     teamId: "gouvy",
-    number: 19,
+    number: 10,
     firstName: "Lilian",
     lastName: "Guillaume",
     position: "ATT",
@@ -1846,7 +1846,7 @@ export const players: Player[] = [
   {
     id: "p-gouvy-20",
     teamId: "gouvy",
-    number: 20,
+    number: 17,
     firstName: "Goran",
     lastName: "Hougardy",
     position: "ATT",
@@ -1856,7 +1856,7 @@ export const players: Player[] = [
   {
     id: "p-gouvy-21",
     teamId: "gouvy",
-    number: 21,
+    number: 20,
     firstName: "Aurélien",
     lastName: "Mathieu",
     position: "ATT",
@@ -1866,7 +1866,7 @@ export const players: Player[] = [
   {
     id: "p-gouvy-22",
     teamId: "gouvy",
-    number: 22,
+    number: 11,
     firstName: "Jordan",
     lastName: "Poncin",
     position: "ATT",
@@ -1886,7 +1886,7 @@ export const players: Player[] = [
   {
     id: "p-harre-manhay-2",
     teamId: "harre-manhay",
-    number: 2,
+    number: 21,
     firstName: "Thomas",
     lastName: "Rosala",
     position: "GB",
@@ -1906,8 +1906,8 @@ export const players: Player[] = [
   {
     id: "p-harre-manhay-4",
     teamId: "harre-manhay",
-    number: 4,
-    firstName: "MAttaquanteo",
+    number: 23,
+    firstName: "Mattéo Jean",
     lastName: "Levaux",
     position: "DEF",
     nationality: "BEL",
@@ -1916,7 +1916,7 @@ export const players: Player[] = [
   {
     id: "p-harre-manhay-5",
     teamId: "harre-manhay",
-    number: 5,
+    number: 16,
     firstName: "Romain",
     lastName: "Maréchal",
     position: "DEF",
@@ -1926,7 +1926,7 @@ export const players: Player[] = [
   {
     id: "p-harre-manhay-6",
     teamId: "harre-manhay",
-    number: 6,
+    number: 2,
     firstName: "Loic",
     lastName: "Pirquet",
     position: "DEF",
@@ -1936,7 +1936,7 @@ export const players: Player[] = [
   {
     id: "p-harre-manhay-7",
     teamId: "harre-manhay",
-    number: 7,
+    number: 5,
     firstName: "Florian",
     lastName: "Samray",
     position: "DEF",
@@ -1946,7 +1946,7 @@ export const players: Player[] = [
   {
     id: "p-harre-manhay-8",
     teamId: "harre-manhay",
-    number: 8,
+    number: 55,
     firstName: "Prince",
     lastName: "Apeke",
     position: "MIL",
@@ -1956,7 +1956,7 @@ export const players: Player[] = [
   {
     id: "p-harre-manhay-9",
     teamId: "harre-manhay",
-    number: 9,
+    number: 11,
     firstName: "Dorian",
     lastName: "Beaujean",
     position: "MIL",
@@ -1966,7 +1966,7 @@ export const players: Player[] = [
   {
     id: "p-harre-manhay-10",
     teamId: "harre-manhay",
-    number: 10,
+    number: 22,
     firstName: "Elias",
     lastName: "Courail",
     position: "MIL",
@@ -1976,7 +1976,7 @@ export const players: Player[] = [
   {
     id: "p-harre-manhay-11",
     teamId: "harre-manhay",
-    number: 11,
+    number: 35,
     firstName: "Diego",
     lastName: "Guarino",
     position: "MIL",
@@ -2026,7 +2026,7 @@ export const players: Player[] = [
   {
     id: "p-harre-manhay-16",
     teamId: "harre-manhay",
-    number: 16,
+    number: 20,
     firstName: "Assoma",
     lastName: "Ovi",
     position: "MIL",
@@ -2036,7 +2036,7 @@ export const players: Player[] = [
   {
     id: "p-harre-manhay-17",
     teamId: "harre-manhay",
-    number: 17,
+    number: 10,
     firstName: "Jerome",
     lastName: "Roberty",
     position: "MIL",
@@ -2046,7 +2046,7 @@ export const players: Player[] = [
   {
     id: "p-harre-manhay-18",
     teamId: "harre-manhay",
-    number: 18,
+    number: 96,
     firstName: "Johan",
     lastName: "Ella Ella",
     position: "ATT",
@@ -2056,7 +2056,7 @@ export const players: Player[] = [
   {
     id: "p-harre-manhay-19",
     teamId: "harre-manhay",
-    number: 19,
+    number: 9,
     firstName: "Alhassane",
     lastName: "Keita",
     position: "ATT",
@@ -2066,7 +2066,7 @@ export const players: Player[] = [
   {
     id: "p-harre-manhay-20",
     teamId: "harre-manhay",
-    number: 20,
+    number: 17,
     firstName: "William",
     lastName: "Rasquin",
     position: "ATT",
@@ -2076,7 +2076,7 @@ export const players: Player[] = [
   {
     id: "p-harre-manhay-21",
     teamId: "harre-manhay",
-    number: 21,
+    number: 4,
     firstName: "Sada",
     lastName: "Sy",
     position: "ATT",
@@ -2086,7 +2086,7 @@ export const players: Player[] = [
   {
     id: "p-houffalize-1",
     teamId: "houffalize",
-    number: 1,
+    number: 31,
     firstName: "Thomas",
     lastName: "Dabe",
     position: "GB",
@@ -2106,7 +2106,7 @@ export const players: Player[] = [
   {
     id: "p-houffalize-3",
     teamId: "houffalize",
-    number: 3,
+    number: 4,
     firstName: "Neo",
     lastName: "Mathieu",
     position: "GB",
@@ -2116,7 +2116,7 @@ export const players: Player[] = [
   {
     id: "p-houffalize-4",
     teamId: "houffalize",
-    number: 4,
+    number: 1,
     firstName: "Lucas",
     lastName: "Vandeloise",
     position: "GB",
@@ -2126,7 +2126,7 @@ export const players: Player[] = [
   {
     id: "p-houffalize-5",
     teamId: "houffalize",
-    number: 5,
+    number: 6,
     firstName: "Romain",
     lastName: "Andrianne",
     position: "DEF",
@@ -2136,7 +2136,7 @@ export const players: Player[] = [
   {
     id: "p-houffalize-6",
     teamId: "houffalize",
-    number: 6,
+    number: 21,
     firstName: "Sebastien",
     lastName: "Clotuche",
     position: "DEF",
@@ -2156,7 +2156,7 @@ export const players: Player[] = [
   {
     id: "p-houffalize-8",
     teamId: "houffalize",
-    number: 8,
+    number: 20,
     firstName: "Corentin",
     lastName: "Fautré",
     position: "DEF",
@@ -2176,7 +2176,7 @@ export const players: Player[] = [
   {
     id: "p-houffalize-10",
     teamId: "houffalize",
-    number: 10,
+    number: 11,
     firstName: "Edouard",
     lastName: "Horman",
     position: "DEF",
@@ -2186,7 +2186,7 @@ export const players: Player[] = [
   {
     id: "p-houffalize-11",
     teamId: "houffalize",
-    number: 11,
+    number: 13,
     firstName: "Bradley",
     lastName: "Marx",
     position: "DEF",
@@ -2196,7 +2196,7 @@ export const players: Player[] = [
   {
     id: "p-houffalize-12",
     teamId: "houffalize",
-    number: 12,
+    number: 5,
     firstName: "Noan",
     lastName: "Pirotte",
     position: "DEF",
@@ -2206,7 +2206,7 @@ export const players: Player[] = [
   {
     id: "p-houffalize-13",
     teamId: "houffalize",
-    number: 13,
+    number: 14,
     firstName: "Sam",
     lastName: "Prémont",
     position: "DEF",
@@ -2216,7 +2216,7 @@ export const players: Player[] = [
   {
     id: "p-houffalize-14",
     teamId: "houffalize",
-    number: 14,
+    number: 30,
     firstName: "Xavier",
     lastName: "Renquin",
     position: "DEF",
@@ -2226,7 +2226,7 @@ export const players: Player[] = [
   {
     id: "p-houffalize-15",
     teamId: "houffalize",
-    number: 15,
+    number: 3,
     firstName: "Xavier",
     lastName: "Tombal",
     position: "DEF",
@@ -2236,7 +2236,7 @@ export const players: Player[] = [
   {
     id: "p-houffalize-16",
     teamId: "houffalize",
-    number: 16,
+    number: 88,
     firstName: "Aryl",
     lastName: "Toussaint",
     position: "DEF",
@@ -2246,7 +2246,7 @@ export const players: Player[] = [
   {
     id: "p-houffalize-17",
     teamId: "houffalize",
-    number: 17,
+    number: 15,
     firstName: "Leo",
     lastName: "Trempont",
     position: "DEF",
@@ -2256,7 +2256,7 @@ export const players: Player[] = [
   {
     id: "p-houffalize-18",
     teamId: "houffalize",
-    number: 18,
+    number: 8,
     firstName: "François",
     lastName: "Bastin",
     position: "MIL",
@@ -2276,7 +2276,7 @@ export const players: Player[] = [
   {
     id: "p-houffalize-20",
     teamId: "houffalize",
-    number: 20,
+    number: 16,
     firstName: "Thomas",
     lastName: "Blaise",
     position: "MIL",
@@ -2286,7 +2286,7 @@ export const players: Player[] = [
   {
     id: "p-houffalize-21",
     teamId: "houffalize",
-    number: 21,
+    number: 12,
     firstName: "Michael",
     lastName: "Chisogne",
     position: "MIL",
@@ -2306,7 +2306,7 @@ export const players: Player[] = [
   {
     id: "p-houffalize-23",
     teamId: "houffalize",
-    number: 23,
+    number: 24,
     firstName: "Jul",
     lastName: "Fautré",
     position: "MIL",
@@ -2316,7 +2316,7 @@ export const players: Player[] = [
   {
     id: "p-houffalize-24",
     teamId: "houffalize",
-    number: 24,
+    number: 18,
     firstName: "Timothee",
     lastName: "Freid",
     position: "MIL",
@@ -2326,7 +2326,7 @@ export const players: Player[] = [
   {
     id: "p-houffalize-25",
     teamId: "houffalize",
-    number: 25,
+    number: 47,
     firstName: "Maxence",
     lastName: "Gengoux",
     position: "MIL",
@@ -2336,7 +2336,7 @@ export const players: Player[] = [
   {
     id: "p-houffalize-26",
     teamId: "houffalize",
-    number: 26,
+    number: 34,
     firstName: "Ilias",
     lastName: "Idmansour",
     position: "MIL",
@@ -2366,7 +2366,7 @@ export const players: Player[] = [
   {
     id: "p-houffalize-29",
     teamId: "houffalize",
-    number: 29,
+    number: 25,
     firstName: "Saidou",
     lastName: "Diallo",
     position: "ATT",
@@ -2376,7 +2376,7 @@ export const players: Player[] = [
   {
     id: "p-houffalize-30",
     teamId: "houffalize",
-    number: 30,
+    number: 10,
     firstName: "Noa",
     lastName: "Fautré",
     position: "ATT",
@@ -2386,7 +2386,7 @@ export const players: Player[] = [
   {
     id: "p-houffalize-31",
     teamId: "houffalize",
-    number: 31,
+    number: 23,
     firstName: "Jean-François",
     lastName: "Gueibe",
     position: "ATT",
@@ -2396,7 +2396,7 @@ export const players: Player[] = [
   {
     id: "p-houffalize-32",
     teamId: "houffalize",
-    number: 32,
+    number: 17,
     firstName: "Jules",
     lastName: "Horman",
     position: "ATT",
@@ -2416,7 +2416,7 @@ export const players: Player[] = [
   {
     id: "p-houffalize-34",
     teamId: "houffalize",
-    number: 34,
+    number: 26,
     firstName: "Arthur",
     lastName: "Lambert",
     position: "ATT",
@@ -2436,7 +2436,7 @@ export const players: Player[] = [
   {
     id: "p-houffalize-36",
     teamId: "houffalize",
-    number: 36,
+    number: 29,
     firstName: "Diego",
     lastName: "Vaguet",
     position: "ATT",
@@ -2446,7 +2446,7 @@ export const players: Player[] = [
   {
     id: "p-libin-1",
     teamId: "libin",
-    number: 1,
+    number: 3,
     firstName: "Killian",
     lastName: "Brasseur",
     position: "GB",
@@ -2456,7 +2456,7 @@ export const players: Player[] = [
   {
     id: "p-libin-2",
     teamId: "libin",
-    number: 2,
+    number: 1,
     firstName: "Axel",
     lastName: "Istace",
     position: "GB",
@@ -2466,7 +2466,7 @@ export const players: Player[] = [
   {
     id: "p-libin-3",
     teamId: "libin",
-    number: 3,
+    number: 4,
     firstName: "Victor",
     lastName: "Breithof",
     position: "DEF",
@@ -2476,7 +2476,7 @@ export const players: Player[] = [
   {
     id: "p-libin-4",
     teamId: "libin",
-    number: 4,
+    number: 10,
     firstName: "Geoffrey",
     lastName: "Cavelier",
     position: "DEF",
@@ -2486,7 +2486,7 @@ export const players: Player[] = [
   {
     id: "p-libin-5",
     teamId: "libin",
-    number: 5,
+    number: 2,
     firstName: "Mano",
     lastName: "Clarinval",
     position: "DEF",
@@ -2496,7 +2496,7 @@ export const players: Player[] = [
   {
     id: "p-libin-6",
     teamId: "libin",
-    number: 6,
+    number: 17,
     firstName: "Romain",
     lastName: "Lefort",
     position: "DEF",
@@ -2506,7 +2506,7 @@ export const players: Player[] = [
   {
     id: "p-libin-7",
     teamId: "libin",
-    number: 7,
+    number: 5,
     firstName: "William",
     lastName: "Ligot",
     position: "DEF",
@@ -2516,7 +2516,7 @@ export const players: Player[] = [
   {
     id: "p-libin-8",
     teamId: "libin",
-    number: 8,
+    number: 47,
     firstName: "Alexis",
     lastName: "Mays",
     position: "DEF",
@@ -2536,7 +2536,7 @@ export const players: Player[] = [
   {
     id: "p-libin-10",
     teamId: "libin",
-    number: 10,
+    number: 13,
     firstName: "Anthony",
     lastName: "Soyer",
     position: "DEF",
@@ -2546,7 +2546,7 @@ export const players: Player[] = [
   {
     id: "p-libin-11",
     teamId: "libin",
-    number: 11,
+    number: 18,
     firstName: "MAttaquanteo",
     lastName: "Tassin",
     position: "DEF",
@@ -2556,7 +2556,7 @@ export const players: Player[] = [
   {
     id: "p-libin-12",
     teamId: "libin",
-    number: 12,
+    number: 6,
     firstName: "Matheo",
     lastName: "Bourgeois",
     position: "MIL",
@@ -2566,7 +2566,7 @@ export const players: Player[] = [
   {
     id: "p-libin-13",
     teamId: "libin",
-    number: 13,
+    number: 20,
     firstName: "Benoit",
     lastName: "Delhez",
     position: "MIL",
@@ -2576,7 +2576,7 @@ export const players: Player[] = [
   {
     id: "p-libin-14",
     teamId: "libin",
-    number: 14,
+    number: 21,
     firstName: "Moustapha",
     lastName: "Diaby",
     position: "MIL",
@@ -2586,7 +2586,7 @@ export const players: Player[] = [
   {
     id: "p-libin-15",
     teamId: "libin",
-    number: 15,
+    number: 14,
     firstName: "Corentin",
     lastName: "Poncelet",
     position: "MIL",
@@ -2596,7 +2596,7 @@ export const players: Player[] = [
   {
     id: "p-libin-16",
     teamId: "libin",
-    number: 16,
+    number: 12,
     firstName: "Nathan",
     lastName: "Poncelet",
     position: "MIL",
@@ -2606,7 +2606,7 @@ export const players: Player[] = [
   {
     id: "p-libin-17",
     teamId: "libin",
-    number: 17,
+    number: 8,
     firstName: "Louis",
     lastName: "Robert",
     position: "MIL",
@@ -2616,7 +2616,7 @@ export const players: Player[] = [
   {
     id: "p-libin-18",
     teamId: "libin",
-    number: 18,
+    number: 22,
     firstName: "Louis",
     lastName: "Schingtienne",
     position: "MIL",
@@ -2626,7 +2626,7 @@ export const players: Player[] = [
   {
     id: "p-libin-19",
     teamId: "libin",
-    number: 19,
+    number: 16,
     firstName: "Nael",
     lastName: "Zeghdane",
     position: "MIL",
@@ -2636,7 +2636,7 @@ export const players: Player[] = [
   {
     id: "p-libin-20",
     teamId: "libin",
-    number: 20,
+    number: 23,
     firstName: "Dylan",
     lastName: "Curé",
     position: "ATT",
@@ -2646,7 +2646,7 @@ export const players: Player[] = [
   {
     id: "p-libin-21",
     teamId: "libin",
-    number: 21,
+    number: 24,
     firstName: "Mathys",
     lastName: "Hotua",
     position: "ATT",
@@ -2656,7 +2656,7 @@ export const players: Player[] = [
   {
     id: "p-libin-22",
     teamId: "libin",
-    number: 22,
+    number: 19,
     firstName: "Thomas",
     lastName: "Lefort",
     position: "ATT",
@@ -2666,7 +2666,7 @@ export const players: Player[] = [
   {
     id: "p-libin-23",
     teamId: "libin",
-    number: 23,
+    number: 7,
     firstName: "Hugo",
     lastName: "Molitor",
     position: "ATT",
@@ -2676,7 +2676,7 @@ export const players: Player[] = [
   {
     id: "p-libin-24",
     teamId: "libin",
-    number: 24,
+    number: 25,
     firstName: "Yannick",
     lastName: "Murego",
     position: "ATT",
@@ -2686,7 +2686,7 @@ export const players: Player[] = [
   {
     id: "p-libin-25",
     teamId: "libin",
-    number: 25,
+    number: 15,
     firstName: "Hugo",
     lastName: "Nicolas",
     position: "ATT",
@@ -2696,7 +2696,7 @@ export const players: Player[] = [
   {
     id: "p-libin-26",
     teamId: "libin",
-    number: 26,
+    number: 11,
     firstName: "William",
     lastName: "Philippe",
     position: "ATT",
@@ -2706,7 +2706,7 @@ export const players: Player[] = [
   {
     id: "p-marloie-1",
     teamId: "marloie",
-    number: 1,
+    number: 99,
     firstName: "Charles",
     lastName: "Delmé",
     position: "GB",
@@ -2726,7 +2726,7 @@ export const players: Player[] = [
   {
     id: "p-marloie-3",
     teamId: "marloie",
-    number: 3,
+    number: 1,
     firstName: "Guillaume",
     lastName: "Despas",
     position: "DEF",
@@ -2736,7 +2736,7 @@ export const players: Player[] = [
   {
     id: "p-marloie-4",
     teamId: "marloie",
-    number: 4,
+    number: 8,
     firstName: "Louis",
     lastName: "Lambert",
     position: "DEF",
@@ -2746,7 +2746,7 @@ export const players: Player[] = [
   {
     id: "p-marloie-5",
     teamId: "marloie",
-    number: 5,
+    number: 13,
     firstName: "Ivan",
     lastName: "Lucas",
     position: "DEF",
@@ -2756,7 +2756,7 @@ export const players: Player[] = [
   {
     id: "p-marloie-6",
     teamId: "marloie",
-    number: 6,
+    number: 3,
     firstName: "Samuel",
     lastName: "Muller",
     position: "DEF",
@@ -2766,7 +2766,7 @@ export const players: Player[] = [
   {
     id: "p-marloie-7",
     teamId: "marloie",
-    number: 7,
+    number: 45,
     firstName: "Ismael",
     lastName: "Soumahoro",
     position: "DEF",
@@ -2776,7 +2776,7 @@ export const players: Player[] = [
   {
     id: "p-marloie-8",
     teamId: "marloie",
-    number: 8,
+    number: 4,
     firstName: "Baptiste",
     lastName: "Benassy",
     position: "MIL",
@@ -2786,7 +2786,7 @@ export const players: Player[] = [
   {
     id: "p-marloie-9",
     teamId: "marloie",
-    number: 9,
+    number: 5,
     firstName: "Ayoub",
     lastName: "Huet",
     position: "MIL",
@@ -2806,7 +2806,7 @@ export const players: Player[] = [
   {
     id: "p-marloie-11",
     teamId: "marloie",
-    number: 11,
+    number: 6,
     firstName: "Driss",
     lastName: "Kochchif",
     position: "MIL",
@@ -2816,7 +2816,7 @@ export const players: Player[] = [
   {
     id: "p-marloie-12",
     teamId: "marloie",
-    number: 12,
+    number: 23,
     firstName: "Maxime",
     lastName: "Lambert",
     position: "MIL",
@@ -2826,7 +2826,7 @@ export const players: Player[] = [
   {
     id: "p-marloie-13",
     teamId: "marloie",
-    number: 13,
+    number: 7,
     firstName: "Santi",
     lastName: "Mosquera",
     position: "MIL",
@@ -2836,7 +2836,7 @@ export const players: Player[] = [
   {
     id: "p-marloie-14",
     teamId: "marloie",
-    number: 14,
+    number: 34,
     firstName: "Besfort",
     lastName: "Arifi",
     position: "ATT",
@@ -2856,7 +2856,7 @@ export const players: Player[] = [
   {
     id: "p-marloie-16",
     teamId: "marloie",
-    number: 16,
+    number: 19,
     firstName: "Meissa",
     lastName: "Dia",
     position: "ATT",
@@ -2866,7 +2866,7 @@ export const players: Player[] = [
   {
     id: "p-marloie-17",
     teamId: "marloie",
-    number: 17,
+    number: 9,
     firstName: "Tony",
     lastName: "Djim",
     position: "ATT",
@@ -2886,7 +2886,7 @@ export const players: Player[] = [
   {
     id: "p-marloie-19",
     teamId: "marloie",
-    number: 19,
+    number: 55,
     firstName: "Benoit",
     lastName: "Leleu",
     position: "ATT",
@@ -2896,7 +2896,7 @@ export const players: Player[] = [
   {
     id: "p-marloie-20",
     teamId: "marloie",
-    number: 20,
+    number: 11,
     firstName: "Edgar",
     lastName: "Mbazoa",
     position: "ATT",
@@ -2916,7 +2916,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-2",
     teamId: "nothomb",
-    number: 2,
+    number: 4,
     firstName: "Arnaud",
     lastName: "Carboni",
     position: "GB",
@@ -2926,7 +2926,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-3",
     teamId: "nothomb",
-    number: 3,
+    number: 5,
     firstName: "Amaury",
     lastName: "Duroy",
     position: "GB",
@@ -2936,7 +2936,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-4",
     teamId: "nothomb",
-    number: 4,
+    number: 15,
     firstName: "Sylvain",
     lastName: "Bechet",
     position: "DEF",
@@ -2946,7 +2946,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-5",
     teamId: "nothomb",
-    number: 5,
+    number: 7,
     firstName: "Eliott",
     lastName: "Devillet",
     position: "DEF",
@@ -2956,7 +2956,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-6",
     teamId: "nothomb",
-    number: 6,
+    number: 14,
     firstName: "Mathieu",
     lastName: "Laffargue",
     position: "DEF",
@@ -2966,7 +2966,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-7",
     teamId: "nothomb",
-    number: 7,
+    number: 11,
     firstName: "Luca",
     lastName: "Larrucia",
     position: "DEF",
@@ -2976,7 +2976,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-8",
     teamId: "nothomb",
-    number: 8,
+    number: 12,
     firstName: "Marvin",
     lastName: "Lefèvre",
     position: "DEF",
@@ -2986,7 +2986,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-9",
     teamId: "nothomb",
-    number: 9,
+    number: 8,
     firstName: "Antoine",
     lastName: "Parisse",
     position: "DEF",
@@ -2996,7 +2996,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-10",
     teamId: "nothomb",
-    number: 10,
+    number: 3,
     firstName: "Christophe",
     lastName: "Richard",
     position: "DEF",
@@ -3006,7 +3006,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-11",
     teamId: "nothomb",
-    number: 11,
+    number: 13,
     firstName: "Tanguy",
     lastName: "Thierry",
     position: "DEF",
@@ -3016,7 +3016,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-12",
     teamId: "nothomb",
-    number: 12,
+    number: 20,
     firstName: "Hugo",
     lastName: "Windeshausen",
     position: "DEF",
@@ -3026,7 +3026,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-13",
     teamId: "nothomb",
-    number: 13,
+    number: 19,
     firstName: "Lucas",
     lastName: "Dubru",
     position: "MIL",
@@ -3036,7 +3036,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-14",
     teamId: "nothomb",
-    number: 14,
+    number: 17,
     firstName: "Arnaud",
     lastName: "Gérard",
     position: "MIL",
@@ -3046,7 +3046,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-15",
     teamId: "nothomb",
-    number: 15,
+    number: 22,
     firstName: "Kevin",
     lastName: "Huberty",
     position: "MIL",
@@ -3056,7 +3056,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-16",
     teamId: "nothomb",
-    number: 16,
+    number: 21,
     firstName: "Baptiste",
     lastName: "Kobs",
     position: "MIL",
@@ -3066,7 +3066,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-17",
     teamId: "nothomb",
-    number: 17,
+    number: 6,
     firstName: "Jean",
     lastName: "Limpach",
     position: "MIL",
@@ -3076,7 +3076,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-18",
     teamId: "nothomb",
-    number: 18,
+    number: 25,
     firstName: "Gilles",
     lastName: "Mairlot",
     position: "MIL",
@@ -3086,7 +3086,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-19",
     teamId: "nothomb",
-    number: 19,
+    number: 26,
     firstName: "Nathan",
     lastName: "Meyers",
     position: "MIL",
@@ -3096,7 +3096,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-20",
     teamId: "nothomb",
-    number: 20,
+    number: 27,
     firstName: "Yohann",
     lastName: "Ngassam",
     position: "MIL",
@@ -3106,7 +3106,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-21",
     teamId: "nothomb",
-    number: 21,
+    number: 16,
     firstName: "Florian",
     lastName: "Parrot",
     position: "MIL",
@@ -3116,7 +3116,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-22",
     teamId: "nothomb",
-    number: 22,
+    number: 28,
     firstName: "Joakim",
     lastName: "Rosman",
     position: "MIL",
@@ -3126,7 +3126,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-23",
     teamId: "nothomb",
-    number: 23,
+    number: 29,
     firstName: "Gauthier",
     lastName: "Stevenot",
     position: "MIL",
@@ -3136,7 +3136,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-24",
     teamId: "nothomb",
-    number: 24,
+    number: 30,
     firstName: "Enzo",
     lastName: "Chioccolini",
     position: "ATT",
@@ -3146,8 +3146,8 @@ export const players: Player[] = [
   {
     id: "p-nothomb-25",
     teamId: "nothomb",
-    number: 25,
-    firstName: "MAttaquanteo",
+    number: 23,
+    firstName: "Mattéo",
     lastName: "Hannard",
     position: "ATT",
     nationality: "BEL",
@@ -3156,7 +3156,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-26",
     teamId: "nothomb",
-    number: 26,
+    number: 31,
     firstName: "Victor",
     lastName: "Klein",
     position: "ATT",
@@ -3166,7 +3166,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-27",
     teamId: "nothomb",
-    number: 27,
+    number: 9,
     firstName: "Martin",
     lastName: "Mairlot",
     position: "ATT",
@@ -3176,7 +3176,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-28",
     teamId: "nothomb",
-    number: 28,
+    number: 32,
     firstName: "Mohammed",
     lastName: "Mezouari",
     position: "ATT",
@@ -3186,7 +3186,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-29",
     teamId: "nothomb",
-    number: 29,
+    number: 24,
     firstName: "Kristijan",
     lastName: "Sicaja",
     position: "ATT",
@@ -3196,7 +3196,7 @@ export const players: Player[] = [
   {
     id: "p-ochamps-1",
     teamId: "ochamps",
-    number: 1,
+    number: 18,
     firstName: "Theo",
     lastName: "Lempereur",
     position: "GB",
@@ -3206,7 +3206,7 @@ export const players: Player[] = [
   {
     id: "p-ochamps-2",
     teamId: "ochamps",
-    number: 2,
+    number: 19,
     firstName: "Pierre",
     lastName: "Chardome",
     position: "DEF",
@@ -3226,7 +3226,7 @@ export const players: Player[] = [
   {
     id: "p-ochamps-4",
     teamId: "ochamps",
-    number: 4,
+    number: 1,
     firstName: "Theo",
     lastName: "Cottin",
     position: "DEF",
@@ -3236,7 +3236,7 @@ export const players: Player[] = [
   {
     id: "p-ochamps-5",
     teamId: "ochamps",
-    number: 5,
+    number: 2,
     firstName: "Baptiste",
     lastName: "Grandjean",
     position: "DEF",
@@ -3246,7 +3246,7 @@ export const players: Player[] = [
   {
     id: "p-ochamps-6",
     teamId: "ochamps",
-    number: 6,
+    number: 16,
     firstName: "Noah",
     lastName: "Maury",
     position: "DEF",
@@ -3256,7 +3256,7 @@ export const players: Player[] = [
   {
     id: "p-ochamps-7",
     teamId: "ochamps",
-    number: 7,
+    number: 9,
     firstName: "Julien",
     lastName: "Robinet",
     position: "DEF",
@@ -3266,7 +3266,7 @@ export const players: Player[] = [
   {
     id: "p-ochamps-8",
     teamId: "ochamps",
-    number: 8,
+    number: 5,
     firstName: "Gilles",
     lastName: "Schroeder",
     position: "DEF",
@@ -3276,7 +3276,7 @@ export const players: Player[] = [
   {
     id: "p-ochamps-9",
     teamId: "ochamps",
-    number: 9,
+    number: 15,
     firstName: "Henri",
     lastName: "Doyen",
     position: "MIL",
@@ -3286,7 +3286,7 @@ export const players: Player[] = [
   {
     id: "p-ochamps-10",
     teamId: "ochamps",
-    number: 10,
+    number: 6,
     firstName: "Matheo",
     lastName: "Giboux",
     position: "MIL",
@@ -3296,7 +3296,7 @@ export const players: Player[] = [
   {
     id: "p-ochamps-11",
     teamId: "ochamps",
-    number: 11,
+    number: 14,
     firstName: "Augustin",
     lastName: "Gillet",
     position: "MIL",
@@ -3306,7 +3306,7 @@ export const players: Player[] = [
   {
     id: "p-ochamps-12",
     teamId: "ochamps",
-    number: 12,
+    number: 10,
     firstName: "Simon",
     lastName: "Hutin",
     position: "MIL",
@@ -3316,7 +3316,7 @@ export const players: Player[] = [
   {
     id: "p-ochamps-13",
     teamId: "ochamps",
-    number: 13,
+    number: 17,
     firstName: "Baptiste",
     lastName: "Jourdan",
     position: "MIL",
@@ -3326,7 +3326,7 @@ export const players: Player[] = [
   {
     id: "p-ochamps-14",
     teamId: "ochamps",
-    number: 14,
+    number: 13,
     firstName: "Mathieu",
     lastName: "Perreaux",
     position: "MIL",
@@ -3336,7 +3336,7 @@ export const players: Player[] = [
   {
     id: "p-ochamps-15",
     teamId: "ochamps",
-    number: 15,
+    number: 7,
     firstName: "Thomas",
     lastName: "Baudot",
     position: "ATT",
@@ -3346,7 +3346,7 @@ export const players: Player[] = [
   {
     id: "p-ochamps-16",
     teamId: "ochamps",
-    number: 16,
+    number: 22,
     firstName: "Louis",
     lastName: "Colleaux",
     position: "ATT",
@@ -3356,7 +3356,7 @@ export const players: Player[] = [
   {
     id: "p-ochamps-17",
     teamId: "ochamps",
-    number: 17,
+    number: 8,
     firstName: "Martin",
     lastName: "Delwiche",
     position: "ATT",
@@ -3366,7 +3366,7 @@ export const players: Player[] = [
   {
     id: "p-ochamps-18",
     teamId: "ochamps",
-    number: 18,
+    number: 12,
     firstName: "MAttaquanteo",
     lastName: "Muller",
     position: "ATT",
@@ -3376,7 +3376,7 @@ export const players: Player[] = [
   {
     id: "p-ochamps-19",
     teamId: "ochamps",
-    number: 19,
+    number: 11,
     firstName: "Luka",
     lastName: "Oury",
     position: "ATT",
@@ -3396,7 +3396,7 @@ export const players: Player[] = [
   {
     id: "p-ochamps-21",
     teamId: "ochamps",
-    number: 21,
+    number: 4,
     firstName: "Thomas",
     lastName: "Van Autgaerden",
     position: "ATT",
@@ -3406,7 +3406,7 @@ export const players: Player[] = [
   {
     id: "p-oppagne-1",
     teamId: "oppagne",
-    number: 1,
+    number: 8,
     firstName: "Harold",
     lastName: "Gilot",
     position: "GB",
@@ -3416,7 +3416,7 @@ export const players: Player[] = [
   {
     id: "p-oppagne-2",
     teamId: "oppagne",
-    number: 2,
+    number: 1,
     firstName: "Nathan",
     lastName: "Lejeune",
     position: "GB",
@@ -3426,7 +3426,7 @@ export const players: Player[] = [
   {
     id: "p-oppagne-3",
     teamId: "oppagne",
-    number: 3,
+    number: 12,
     firstName: "Noa",
     lastName: "Carlier",
     position: "DEF",
@@ -3436,7 +3436,7 @@ export const players: Player[] = [
   {
     id: "p-oppagne-4",
     teamId: "oppagne",
-    number: 4,
+    number: 3,
     firstName: "Justin",
     lastName: "Cornélis",
     position: "DEF",
@@ -3446,7 +3446,7 @@ export const players: Player[] = [
   {
     id: "p-oppagne-5",
     teamId: "oppagne",
-    number: 5,
+    number: 7,
     firstName: "Erwin",
     lastName: "Englebert",
     position: "DEF",
@@ -3456,7 +3456,7 @@ export const players: Player[] = [
   {
     id: "p-oppagne-6",
     teamId: "oppagne",
-    number: 6,
+    number: 13,
     firstName: "Louis",
     lastName: "Hugot",
     position: "DEF",
@@ -3466,7 +3466,7 @@ export const players: Player[] = [
   {
     id: "p-oppagne-7",
     teamId: "oppagne",
-    number: 7,
+    number: 5,
     firstName: "David",
     lastName: "Polis",
     position: "DEF",
@@ -3476,7 +3476,7 @@ export const players: Player[] = [
   {
     id: "p-oppagne-8",
     teamId: "oppagne",
-    number: 8,
+    number: 2,
     firstName: "Orhan",
     lastName: "Prévot",
     position: "DEF",
@@ -3486,7 +3486,7 @@ export const players: Player[] = [
   {
     id: "p-oppagne-9",
     teamId: "oppagne",
-    number: 9,
+    number: 6,
     firstName: "Noah",
     lastName: "Thiry",
     position: "DEF",
@@ -3506,7 +3506,7 @@ export const players: Player[] = [
   {
     id: "p-oppagne-11",
     teamId: "oppagne",
-    number: 11,
+    number: 55,
     firstName: "Dylan",
     lastName: "Warnier",
     position: "DEF",
@@ -3516,7 +3516,7 @@ export const players: Player[] = [
   {
     id: "p-oppagne-12",
     teamId: "oppagne",
-    number: 12,
+    number: 18,
     firstName: "Martin",
     lastName: "Bonjean",
     position: "MIL",
@@ -3526,7 +3526,7 @@ export const players: Player[] = [
   {
     id: "p-oppagne-13",
     teamId: "oppagne",
-    number: 13,
+    number: 4,
     firstName: "Martin",
     lastName: "Dropsy",
     position: "MIL",
@@ -3536,8 +3536,8 @@ export const players: Player[] = [
   {
     id: "p-oppagne-14",
     teamId: "oppagne",
-    number: 14,
-    firstName: "MAttaquanteo",
+    number: 9,
+    firstName: "Mattéo",
     lastName: "Lizen",
     position: "MIL",
     nationality: "BEL",
@@ -3546,7 +3546,7 @@ export const players: Player[] = [
   {
     id: "p-oppagne-15",
     teamId: "oppagne",
-    number: 15,
+    number: 30,
     firstName: "Wannes",
     lastName: "Petitjean",
     position: "MIL",
@@ -3556,7 +3556,7 @@ export const players: Player[] = [
   {
     id: "p-oppagne-16",
     teamId: "oppagne",
-    number: 16,
+    number: 11,
     firstName: "Quentin",
     lastName: "Piret",
     position: "MIL",
@@ -3576,7 +3576,7 @@ export const players: Player[] = [
   {
     id: "p-oppagne-18",
     teamId: "oppagne",
-    number: 18,
+    number: 16,
     firstName: "Matheo",
     lastName: "Gerarts",
     position: "ATT",
@@ -3586,7 +3586,7 @@ export const players: Player[] = [
   {
     id: "p-oppagne-19",
     teamId: "oppagne",
-    number: 19,
+    number: 14,
     firstName: "MAttaquanteo",
     lastName: "Jamoul",
     position: "ATT",
@@ -3606,7 +3606,7 @@ export const players: Player[] = [
   {
     id: "p-oppagne-21",
     teamId: "oppagne",
-    number: 21,
+    number: 19,
     firstName: "Sacha",
     lastName: "Nélissen",
     position: "ATT",
@@ -3626,7 +3626,7 @@ export const players: Player[] = [
   {
     id: "p-roy-2",
     teamId: "roy",
-    number: 2,
+    number: 3,
     firstName: "Loic",
     lastName: "Roisin",
     position: "GB",
@@ -3636,7 +3636,7 @@ export const players: Player[] = [
   {
     id: "p-roy-3",
     teamId: "roy",
-    number: 3,
+    number: 4,
     firstName: "Baptiste",
     lastName: "Alié",
     position: "DEF",
@@ -3646,7 +3646,7 @@ export const players: Player[] = [
   {
     id: "p-roy-4",
     teamId: "roy",
-    number: 4,
+    number: 15,
     firstName: "Igor",
     lastName: "Crowin",
     position: "DEF",
@@ -3666,7 +3666,7 @@ export const players: Player[] = [
   {
     id: "p-roy-6",
     teamId: "roy",
-    number: 6,
+    number: 2,
     firstName: "Nicolas",
     lastName: "Laloux",
     position: "DEF",
@@ -3676,7 +3676,7 @@ export const players: Player[] = [
   {
     id: "p-roy-7",
     teamId: "roy",
-    number: 7,
+    number: 21,
     firstName: "Henri",
     lastName: "Magonette",
     position: "DEF",
@@ -3686,7 +3686,7 @@ export const players: Player[] = [
   {
     id: "p-roy-8",
     teamId: "roy",
-    number: 8,
+    number: 14,
     firstName: "Parker",
     lastName: "Mateke",
     position: "DEF",
@@ -3696,7 +3696,7 @@ export const players: Player[] = [
   {
     id: "p-roy-9",
     teamId: "roy",
-    number: 9,
+    number: 8,
     firstName: "Mevlut",
     lastName: "Mola",
     position: "DEF",
@@ -3706,7 +3706,7 @@ export const players: Player[] = [
   {
     id: "p-roy-10",
     teamId: "roy",
-    number: 10,
+    number: 12,
     firstName: "Mathias",
     lastName: "Nijskens",
     position: "DEF",
@@ -3716,7 +3716,7 @@ export const players: Player[] = [
   {
     id: "p-roy-11",
     teamId: "roy",
-    number: 11,
+    number: 16,
     firstName: "Thomas",
     lastName: "Pirson",
     position: "DEF",
@@ -3726,7 +3726,7 @@ export const players: Player[] = [
   {
     id: "p-roy-12",
     teamId: "roy",
-    number: 12,
+    number: 6,
     firstName: "Tom",
     lastName: "Wallens",
     position: "DEF",
@@ -3736,7 +3736,7 @@ export const players: Player[] = [
   {
     id: "p-roy-13",
     teamId: "roy",
-    number: 13,
+    number: 7,
     firstName: "Maxime",
     lastName: "Alié",
     position: "MIL",
@@ -3746,7 +3746,7 @@ export const players: Player[] = [
   {
     id: "p-roy-14",
     teamId: "roy",
-    number: 14,
+    number: 11,
     firstName: "Antoine",
     lastName: "Borrey",
     position: "MIL",
@@ -3756,7 +3756,7 @@ export const players: Player[] = [
   {
     id: "p-roy-15",
     teamId: "roy",
-    number: 15,
+    number: 33,
     firstName: "William",
     lastName: "Guillaume",
     position: "MIL",
@@ -3766,7 +3766,7 @@ export const players: Player[] = [
   {
     id: "p-roy-16",
     teamId: "roy",
-    number: 16,
+    number: 20,
     firstName: "Rodrigue",
     lastName: "Klein",
     position: "MIL",
@@ -3776,7 +3776,7 @@ export const players: Player[] = [
   {
     id: "p-roy-17",
     teamId: "roy",
-    number: 17,
+    number: 13,
     firstName: "John",
     lastName: "Mathot",
     position: "MIL",
@@ -3786,7 +3786,7 @@ export const players: Player[] = [
   {
     id: "p-roy-18",
     teamId: "roy",
-    number: 18,
+    number: 23,
     firstName: "Damien",
     lastName: "Mathy",
     position: "MIL",
@@ -3796,7 +3796,7 @@ export const players: Player[] = [
   {
     id: "p-roy-19",
     teamId: "roy",
-    number: 19,
+    number: 17,
     firstName: "Valentin",
     lastName: "Raskin",
     position: "MIL",
@@ -3806,7 +3806,7 @@ export const players: Player[] = [
   {
     id: "p-roy-20",
     teamId: "roy",
-    number: 20,
+    number: 24,
     firstName: "Julien",
     lastName: "Ravaux",
     position: "MIL",
@@ -3816,7 +3816,7 @@ export const players: Player[] = [
   {
     id: "p-roy-21",
     teamId: "roy",
-    number: 21,
+    number: 10,
     firstName: "Vincent",
     lastName: "Dulaunoy",
     position: "ATT",
@@ -3826,7 +3826,7 @@ export const players: Player[] = [
   {
     id: "p-roy-22",
     teamId: "roy",
-    number: 22,
+    number: 9,
     firstName: "Julien",
     lastName: "Fievet",
     position: "ATT",
@@ -3836,7 +3836,7 @@ export const players: Player[] = [
   {
     id: "p-roy-23",
     teamId: "roy",
-    number: 23,
+    number: 22,
     firstName: "Mathys",
     lastName: "Raskin",
     position: "ATT",
@@ -3846,7 +3846,7 @@ export const players: Player[] = [
   {
     id: "p-vaux-sur-sure-1",
     teamId: "vaux-sur-sure",
-    number: 1,
+    number: 25,
     firstName: "Gilles",
     lastName: "Batter",
     position: "GB",
@@ -3856,7 +3856,7 @@ export const players: Player[] = [
   {
     id: "p-vaux-sur-sure-2",
     teamId: "vaux-sur-sure",
-    number: 2,
+    number: 1,
     firstName: "Nils",
     lastName: "Dachelet",
     position: "GB",
@@ -3866,7 +3866,7 @@ export const players: Player[] = [
   {
     id: "p-vaux-sur-sure-3",
     teamId: "vaux-sur-sure",
-    number: 3,
+    number: 2,
     firstName: "Noe",
     lastName: "Flamant",
     position: "DEF",
@@ -3886,7 +3886,7 @@ export const players: Player[] = [
   {
     id: "p-vaux-sur-sure-5",
     teamId: "vaux-sur-sure",
-    number: 5,
+    number: 24,
     firstName: "Arnaud",
     lastName: "Pinson",
     position: "DEF",
@@ -3896,7 +3896,7 @@ export const players: Player[] = [
   {
     id: "p-vaux-sur-sure-6",
     teamId: "vaux-sur-sure",
-    number: 6,
+    number: 3,
     firstName: "Thomas",
     lastName: "Poncelet",
     position: "DEF",
@@ -3906,7 +3906,7 @@ export const players: Player[] = [
   {
     id: "p-vaux-sur-sure-7",
     teamId: "vaux-sur-sure",
-    number: 7,
+    number: 5,
     firstName: "Boris",
     lastName: "Watriaux",
     position: "DEF",
@@ -3916,7 +3916,7 @@ export const players: Player[] = [
   {
     id: "p-vaux-sur-sure-8",
     teamId: "vaux-sur-sure",
-    number: 8,
+    number: 9,
     firstName: "Laurent",
     lastName: "Detaille",
     position: "MIL",
@@ -3926,7 +3926,7 @@ export const players: Player[] = [
   {
     id: "p-vaux-sur-sure-9",
     teamId: "vaux-sur-sure",
-    number: 9,
+    number: 8,
     firstName: "Fabien",
     lastName: "Guissen",
     position: "MIL",
@@ -3936,7 +3936,7 @@ export const players: Player[] = [
   {
     id: "p-vaux-sur-sure-10",
     teamId: "vaux-sur-sure",
-    number: 10,
+    number: 13,
     firstName: "Hugo",
     lastName: "Léonard",
     position: "MIL",
@@ -3946,7 +3946,7 @@ export const players: Player[] = [
   {
     id: "p-vaux-sur-sure-11",
     teamId: "vaux-sur-sure",
-    number: 11,
+    number: 21,
     firstName: "Christophe",
     lastName: "Mahy",
     position: "MIL",
@@ -3956,7 +3956,7 @@ export const players: Player[] = [
   {
     id: "p-vaux-sur-sure-12",
     teamId: "vaux-sur-sure",
-    number: 12,
+    number: 18,
     firstName: "Allan",
     lastName: "Manand",
     position: "MIL",
@@ -3966,7 +3966,7 @@ export const players: Player[] = [
   {
     id: "p-vaux-sur-sure-13",
     teamId: "vaux-sur-sure",
-    number: 13,
+    number: 16,
     firstName: "Hugo",
     lastName: "Pantusa",
     position: "MIL",
@@ -3986,7 +3986,7 @@ export const players: Player[] = [
   {
     id: "p-vaux-sur-sure-15",
     teamId: "vaux-sur-sure",
-    number: 15,
+    number: 12,
     firstName: "Igor",
     lastName: "Sass",
     position: "MIL",
@@ -3996,7 +3996,7 @@ export const players: Player[] = [
   {
     id: "p-vaux-sur-sure-16",
     teamId: "vaux-sur-sure",
-    number: 16,
+    number: 7,
     firstName: "Alan",
     lastName: "Sensique",
     position: "MIL",
@@ -4006,7 +4006,7 @@ export const players: Player[] = [
   {
     id: "p-vaux-sur-sure-17",
     teamId: "vaux-sur-sure",
-    number: 17,
+    number: 27,
     firstName: "Louka",
     lastName: "Van Daele",
     position: "MIL",
@@ -4016,7 +4016,7 @@ export const players: Player[] = [
   {
     id: "p-vaux-sur-sure-18",
     teamId: "vaux-sur-sure",
-    number: 18,
+    number: 22,
     firstName: "Cyril",
     lastName: "Amel",
     position: "ATT",
@@ -4026,7 +4026,7 @@ export const players: Player[] = [
   {
     id: "p-vaux-sur-sure-19",
     teamId: "vaux-sur-sure",
-    number: 19,
+    number: 17,
     firstName: "Sylvain",
     lastName: "Dewalque",
     position: "ATT",
@@ -4046,7 +4046,7 @@ export const players: Player[] = [
   {
     id: "p-vaux-sur-sure-21",
     teamId: "vaux-sur-sure",
-    number: 21,
+    number: 15,
     firstName: "Alexandre",
     lastName: "Mahy",
     position: "ATT",
@@ -4056,7 +4056,7 @@ export const players: Player[] = [
   {
     id: "p-vaux-sur-sure-22",
     teamId: "vaux-sur-sure",
-    number: 22,
+    number: 6,
     firstName: "Gustin",
     lastName: "Noppe",
     position: "ATT",
@@ -4066,7 +4066,7 @@ export const players: Player[] = [
   {
     id: "p-vaux-sur-sure-23",
     teamId: "vaux-sur-sure",
-    number: 23,
+    number: 10,
     firstName: "David",
     lastName: "Schoumaker",
     position: "ATT",
@@ -4076,7 +4076,7 @@ export const players: Player[] = [
   {
     id: "p-vaux-sur-sure-24",
     teamId: "vaux-sur-sure",
-    number: 24,
+    number: 11,
     firstName: "Diego",
     lastName: "Vankerkhoven",
     position: "ATT",
@@ -4086,7 +4086,7 @@ export const players: Player[] = [
   {
     id: "p-arlon-29",
     teamId: "arlon",
-    number: 29,
+    number: 33,
     firstName: "Kamil",
     lastName: "Barzaq",
     position: "MIL",
@@ -4096,7 +4096,7 @@ export const players: Player[] = [
   {
     id: "p-arlon-30",
     teamId: "arlon",
-    number: 30,
+    number: 85,
     firstName: "Jorge",
     lastName: "Frunze",
     position: "MIL",
@@ -4106,7 +4106,7 @@ export const players: Player[] = [
   {
     id: "p-arlon-31",
     teamId: "arlon",
-    number: 31,
+    number: 4,
     firstName: "Henry James",
     lastName: "Kirkpatrick",
     position: "MIL",
@@ -4116,7 +4116,7 @@ export const players: Player[] = [
   {
     id: "p-arlon-32",
     teamId: "arlon",
-    number: 32,
+    number: 17,
     firstName: "Jean-Baptiste",
     lastName: "Lhommel",
     position: "MIL",
@@ -4136,7 +4136,7 @@ export const players: Player[] = [
   {
     id: "p-aye-26",
     teamId: "aye",
-    number: 26,
+    number: 27,
     firstName: "Marvin",
     lastName: "Etienne",
     position: "MIL",
@@ -4146,7 +4146,7 @@ export const players: Player[] = [
   {
     id: "p-aye-27",
     teamId: "aye",
-    number: 27,
+    number: 10,
     firstName: "Nael",
     lastName: "Fouarge",
     position: "MIL",
@@ -4156,7 +4156,7 @@ export const players: Player[] = [
   {
     id: "p-aye-28",
     teamId: "aye",
-    number: 28,
+    number: 9,
     firstName: "Bastian",
     lastName: "Godefroid",
     position: "MIL",
@@ -4166,7 +4166,7 @@ export const players: Player[] = [
   {
     id: "p-bastogne-23",
     teamId: "bastogne",
-    number: 23,
+    number: 20,
     firstName: "Tom",
     lastName: "Chisogne",
     position: "MIL",
@@ -4186,7 +4186,7 @@ export const players: Player[] = [
   {
     id: "p-bercheux-27",
     teamId: "bercheux",
-    number: 27,
+    number: 14,
     firstName: "Maxime",
     lastName: "Bossicart",
     position: "MIL",
@@ -4196,7 +4196,7 @@ export const players: Player[] = [
   {
     id: "p-bercheux-28",
     teamId: "bercheux",
-    number: 28,
+    number: 18,
     firstName: "Yoann",
     lastName: "Clausse",
     position: "MIL",
@@ -4216,7 +4216,7 @@ export const players: Player[] = [
   {
     id: "p-bercheux-30",
     teamId: "bercheux",
-    number: 30,
+    number: 13,
     firstName: "Jean-Marie",
     lastName: "Toubon",
     position: "MIL",
@@ -4226,7 +4226,7 @@ export const players: Player[] = [
   {
     id: "p-florenville-22",
     teamId: "florenville",
-    number: 22,
+    number: 20,
     firstName: "Corentin Serge",
     lastName: "Corvisy",
     position: "MIL",
@@ -4266,7 +4266,7 @@ export const players: Player[] = [
   {
     id: "p-gouvy-23",
     teamId: "gouvy",
-    number: 23,
+    number: 22,
     firstName: "Julien",
     lastName: "Blaise",
     position: "MIL",
@@ -4306,7 +4306,7 @@ export const players: Player[] = [
   {
     id: "p-gouvy-27",
     teamId: "gouvy",
-    number: 27,
+    number: 2,
     firstName: "Mathieu",
     lastName: "Lentz",
     position: "MIL",
@@ -4326,7 +4326,7 @@ export const players: Player[] = [
   {
     id: "p-harre-manhay-22",
     teamId: "harre-manhay",
-    number: 22,
+    number: 70,
     firstName: "Ugochukwu Precious",
     lastName: "Chikatara",
     position: "MIL",
@@ -4336,7 +4336,7 @@ export const players: Player[] = [
   {
     id: "p-harre-manhay-23",
     teamId: "harre-manhay",
-    number: 23,
+    number: 7,
     firstName: "Patrick",
     lastName: "Fabere",
     position: "MIL",
@@ -4346,7 +4346,7 @@ export const players: Player[] = [
   {
     id: "p-harre-manhay-24",
     teamId: "harre-manhay",
-    number: 24,
+    number: 6,
     firstName: "Sohail",
     lastName: "Moufanin",
     position: "MIL",
@@ -4386,7 +4386,7 @@ export const players: Player[] = [
   {
     id: "p-marloie-21",
     teamId: "marloie",
-    number: 21,
+    number: 37,
     firstName: "Samy",
     lastName: "Bouterbiat",
     position: "MIL",
@@ -4396,7 +4396,7 @@ export const players: Player[] = [
   {
     id: "p-marloie-22",
     teamId: "marloie",
-    number: 22,
+    number: 12,
     firstName: "Charlie",
     lastName: "Dave",
     position: "MIL",
@@ -4406,7 +4406,7 @@ export const players: Player[] = [
   {
     id: "p-marloie-23",
     teamId: "marloie",
-    number: 23,
+    number: 14,
     firstName: "Romain",
     lastName: "De Bruycker",
     position: "MIL",
@@ -4416,7 +4416,7 @@ export const players: Player[] = [
   {
     id: "p-marloie-24",
     teamId: "marloie",
-    number: 24,
+    number: 22,
     firstName: "Geoffrey",
     lastName: "Hayon",
     position: "MIL",
@@ -4426,7 +4426,7 @@ export const players: Player[] = [
   {
     id: "p-marloie-25",
     teamId: "marloie",
-    number: 25,
+    number: 42,
     firstName: "Ayoub",
     lastName: "Hmidet",
     position: "MIL",
@@ -4436,7 +4436,7 @@ export const players: Player[] = [
   {
     id: "p-marloie-26",
     teamId: "marloie",
-    number: 26,
+    number: 16,
     firstName: "Charlin",
     lastName: "Ioakimidou",
     position: "MIL",
@@ -4446,7 +4446,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-30",
     teamId: "nothomb",
-    number: 30,
+    number: 33,
     firstName: "Luca",
     lastName: "Laruccia",
     position: "MIL",
@@ -4456,7 +4456,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-31",
     teamId: "nothomb",
-    number: 31,
+    number: 18,
     firstName: "Alexandre",
     lastName: "Laurent",
     position: "MIL",
@@ -4466,7 +4466,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-32",
     teamId: "nothomb",
-    number: 32,
+    number: 34,
     firstName: "Brandon",
     lastName: "Ries",
     position: "MIL",
@@ -4476,7 +4476,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-33",
     teamId: "nothomb",
-    number: 33,
+    number: 2,
     firstName: "Olivier",
     lastName: "Schmit",
     position: "MIL",
@@ -4486,7 +4486,7 @@ export const players: Player[] = [
   {
     id: "p-nothomb-34",
     teamId: "nothomb",
-    number: 34,
+    number: 10,
     firstName: "Tanguy",
     lastName: "Thiéry",
     position: "MIL",
@@ -4496,7 +4496,7 @@ export const players: Player[] = [
   {
     id: "p-ochamps-22",
     teamId: "ochamps",
-    number: 22,
+    number: 21,
     firstName: "Maxime",
     lastName: "Bigonville",
     position: "MIL",
@@ -4546,7 +4546,7 @@ export const players: Player[] = [
   {
     id: "p-oppagne-25",
     teamId: "oppagne",
-    number: 25,
+    number: 48,
     firstName: "Fabrice",
     lastName: "Sambi Lokonga",
     position: "MIL",
@@ -4556,7 +4556,7 @@ export const players: Player[] = [
   {
     id: "p-roy-24",
     teamId: "roy",
-    number: 24,
+    number: 25,
     firstName: "François",
     lastName: "Chanly",
     position: "MIL",
@@ -4566,7 +4566,7 @@ export const players: Player[] = [
   {
     id: "p-roy-25",
     teamId: "roy",
-    number: 25,
+    number: 19,
     firstName: "Alessandro",
     lastName: "Piergentili",
     position: "MIL",
@@ -4576,7 +4576,7 @@ export const players: Player[] = [
   {
     id: "p-roy-26",
     teamId: "roy",
-    number: 26,
+    number: 18,
     firstName: "Louis",
     lastName: "Poirrier",
     position: "MIL",
@@ -4606,7 +4606,7 @@ export const players: Player[] = [
   {
     id: "p-vaux-sur-sure-25",
     teamId: "vaux-sur-sure",
-    number: 25,
+    number: 19,
     firstName: "Tom",
     lastName: "Goffin",
     position: "MIL",
@@ -4616,7 +4616,7 @@ export const players: Player[] = [
   {
     id: "p-vaux-sur-sure-26",
     teamId: "vaux-sur-sure",
-    number: 26,
+    number: 23,
     firstName: "Boris",
     lastName: "Wattiaux",
     position: "MIL",
